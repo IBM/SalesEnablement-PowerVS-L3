@@ -16,13 +16,15 @@ Parts 6 through 8 introduce a few more technical aspects of {{offering.name}} in
 
 Finally, in Part 9, learn where to find additional resources about {{offering.name}}.
 
+Before jumping to part 1, please read the guidance below. Reading and understanding the information will save you time while completing the steps in this guide.
+
 ## Helpful tips for using this demonstration guide and environment
 
 The {{guide.name}} is organized in parts and sub-parts or chapters. Most chapters contain numbered steps, which are actions that you will perform.
 
 Throughout the guide, you will see images that are examples of what you should be seeing in the IBM Cloud Portal, IBM Cloud Shell, and PowerVS instances consoles. In some images, you will see the following styles of highlighting:
 
-- Action highlight box: Illustrates where you should click,  enter, or select an item:
+- Action highlight box: Illustrates where you should click, enter, or select an item:
 
 ![](_attachments/ClickActionRectangle.png)
 
@@ -54,7 +56,8 @@ Click the play button ![](_attachments/ClickThruPlayButton.png) in the middle of
 
 The following acronyms are used throughout this demonstration guide:
 
-    - IBM Power Systems Virtual Server (PowerVS)
-    - Virtual Machine (VM)
     - Control (ctrl) - The control key on your keyboard
     - Command (cmd) - The command key on your keyboard
+    - IBM Power Systems Virtual Server (PowerVS)
+    - IBM Technology Zone (TechZone)
+    - Virtual Machine (VM)
