@@ -1,0 +1,109 @@
+# Project info
+site_name: IBM Power Systems Virtual Server Level 3 Demonstration Guide
+site_description: IBM Power Systems Virtual Server Sales Enablement Level 3 Demonstration Guide
+site_author: Andrew R. Jones (andrewj@us.ibm.com)
+copyright: Copyright &copy; 2022 IBM
+
+# Repository
+repo_name: IBM/SalesEnablement-PowerVS-L3
+#repo_url: https://github.com/IBM/SalesEnablement-PowerVS-L3
+#edit_uri: edit/master/docs
+docs_dir: docs
+
+
+nav:
+  - Introduction: 'index.md'
+  - Part 1 - Overview:
+    - 'Introduction': 'Part 1/01.01 Introduction.md'
+  - Part 2 - Provisioning a PowerVS service instance:
+    - 'Introduction': 'Part 2/01.01 Introduction.md'
+  - Part 3 - Provisioning a PowerVS instances:
+    - 'Introduction': 'Part 3/01.01 Introduction.md'
+  - Part 4 - Managing PowerVS instances:
+    - 'Introduction': 'Part 4/01.01 Introduction.md'
+  - Part 5 - Accessing PowerVS instances:
+    - 'Introduction': 'Part 5/01.01 Introduction.md'
+  - Part 6 - Explore PowerVS server placement groups:
+    - 'Introduction': 'Part 6/01.01 Introduction.md'
+  - Part 7 - Explore PowerVS images:
+    - 'Introduction': 'Part 7/01.01 Introduction.md'
+  - Part 8 - Use the PowerVS command line interfaces:
+    - 'Introduction': 'Part 8/01.01 Introduction.md'
+  - Part 9 - Next steps:
+    - 'Introduction': 'Part 9/01.01 Introduction.md'
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - content.code.annotate
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+plugins:
+    - search
+    - mkdocs-video
+    - macros
+
+markdown_extensions:
+  - sane_lists
+  - pymdownx.details
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.keys
+  - attr_list
+
+extra:
+  generator: false
+  learningplan:
+    name: "IBM Power Systems Virtual Server - Level 3"
+    url: "https://yourlearning.ibm.com/activity/PLAN-7D757C8B58E7"
+  offering:
+    name: "IBM Power Systems Virtual Server"
+  guide:
+    name: "IBM Power Systems Virtual Server - Level 3 Demonstration Guide"
+    url: "https://ibm.github.io/SalesEnablement-PowerVS-L3/"
+  tz_environment:
+    name: "IBM Power Systems Virtual Server - Sales Enablment L3"
+    url: "https://techzone.ibm.com/my/reservations"
+  account: "2435442 - ITZ - Satellite"
+  powerVS:
+    serviceInstanceName: "PowerVS-service"
+    serviceInstanceRG: "Default"
+    serviceInstanceLocation: "Dallas"
+    placementGroup1: "AffinityGroup"
+    placementGroup2: "AntiAffinityGroup"
+  aixServer1:
+    name: "AIX-vm-1"
+    privateIP: "192.168.129.29"
+    publicIP: "52.117.38.29"
+    additonalVolumeName: "aix-volume-1"
+  aixServer2:
+    name: "AIX-vm-2"
+    privateIP: "192.168.129.26"
+    publicIP: "52.117.38.26"
+    additonalVolumeName: "aix-volume-1"
+  rhServer1:
+    name: "RH-vm-1"
+    privateIP: "192.168.129.28"
+    publicIP: "52.117.38.28"
+    additonalVolumeName: "RH-volume-1"
+  rhServer2:
+    name: "RH-vm-2"
+    privateIP: "192.168.129.30"
+    publicIP: "52.117.38.30"
+    additonalVolumeName: "RH-volume-2"

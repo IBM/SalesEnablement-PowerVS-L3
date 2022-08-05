@@ -1,0 +1,18 @@
+#!/bin/bash
+export REMOTESERVERS=(52.117.38.29 52.117.38.26 52.117.38.28 52.117.38.30)
+export USERNAME=${1}
+export KEYFILE=${USERNAME}-key
+export ROOTKEYFILE=PowerVS-id_rsa
+
+# remove the public and private key files if they exist
+[ -f ${KEYFILE} ] && rm ${KEYFILE}
+[ -f ${KEYFILE}.pub ] && rm ${KEYFILE}.pub
+
+
+for REMOTESERVER in ${REMOTESERVERS[@]}
+do
+        echo removing ${USERNAME} to server: ${REMOTESERVER}
+        ssh -q -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null -F none -i ${ROOTKEYFILE} root@${REMOTESERVER} /usr/sbin/userdel -r ${USERNAME}
+        echo 
+done
+
