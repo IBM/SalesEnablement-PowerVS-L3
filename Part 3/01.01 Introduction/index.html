@@ -397,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Part 4/01.01 Introduction.md" class="md-nav__link">
+      <a href="../../Part%204/01.01%20Introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -445,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Part 5/01.01 Introduction.md" class="md-nav__link">
+      <a href="../../Part%205/01.01%20Introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -493,7 +493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Part 6/01.01 Introduction.md" class="md-nav__link">
+      <a href="../../Part%206/01.01%20Introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -541,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Part 7/01.01 Introduction.md" class="md-nav__link">
+      <a href="../../Part%207/01.01%20Introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -589,7 +589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Part 8/01.01 Introduction.md" class="md-nav__link">
+      <a href="../../Part%208/01.01%20Introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -637,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Part 9/01.01 Introduction.md" class="md-nav__link">
+      <a href="../../Part%209/01.01%20Introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -666,35 +666,8 @@
 
   <h1>Introduction</h1>
 
-<p>IBM Cloud Satellite provides the ability to deploy Kubernetes resources to Red Hat OpenShift on IBM Cloud clusters that run in IBM Cloud, IBM Cloud Satellite Locations, and on-premises. This capability is called Satellite Config. You can learn more about Satellite Config <a href="https://cloud.ibm.com/docs/satellite?topic=satellite-cluster-config#satcon-terminology" target="_blank">here</a>. Satellite Config is a continuous delivery tool based on the Razee open source project. You can learn more about Razee <a href="https://razee.io" target="_blank">here</a>.</p>
-<p>You already learned about <strong>Locations</strong> and <strong>Clusters</strong>, but there are additional Satellite key concepts you should be familiar with. They are:</p>
-<ul>
-<li>Cluster groups</li>
-</ul>
-<p>A cluster group specifies a set of Red Hat OpenShift on IBM Cloud clusters that are registered with the Satellite Config component and that are included in a Satellite configuration. Red Hat OpenShift on IBM Cloud clusters that run in your location are automatically registered and can be added to a cluster group. Clusters that run in IBM Cloud must be manually registered with the Satellite Config component before you can add them to a cluster group.</p>
-<ul>
-<li>Links</li>
-</ul>
-<p>With Satellite Link endpoints, you can allow software that runs in your Satellite location to connect to a service, server, or application that runs outside of the Satellite Location. Links can also allow software that is connected to the IBM Cloud private network to connect to a service, server, or application that runs in your Satellite Location.</p>
-<p>To establish the connection, you must specify the destination resource's fully qualified domain name (FQDN) or IP address, port, the connection protocol, and any authentication methods at the endpoint. The endpoint is registered with the Satellite Link component of your Location's Satellite control plane. To help you maintain enterprise security and audit compliance, Satellite Link additionally provides built-in controls to restrict client access to endpoints, and to log and audit traffic that flows over endpoints.</p>
-<p>Satellite Links are not used in these demonstrations but are an important concept to understand. For more information on Links, read the documentation <a href="https://cloud.ibm.com/docs/satellite?topic=satellite-link-location-cloud" target="_blank">here</a>.</p>
-<ul>
-<li>Configuration</li>
-</ul>
-<p>A Satellite configurations, also referred to as <strong>Satellite Conifg</strong>, is a continuous delivery tool that you can use to consistently roll out versions of your apps across clusters in your Satellite location. For more information, see <a href="https://cloud.ibm.com/docs/satellite?topic=satellite-setup-clusters-satconfig" target="_blank">Deploying Red Hat OpenShift resources across clusters with Satellite configurations</a>.</p>
-<ul>
-<li>Version</li>
-</ul>
-<p>A version represents a Kubernetes resource file that you upload or manually create for a Satellite configuration. You can include any Kubernetes resource in your version and upload as many versions to a configuration as you like. Kubernetes uses YAML (Yet Another Markup Language) for resource files. For help developing a Kubernetes YAML resource file, see <a href="https://cloud.ibm.com/docs/openshift?topic=openshift-openshift_apps" target="_blank">Developing apps to run on OpenShift</a>.</p>
-<ul>
-<li>Subscription</li>
-</ul>
-<p>A Satellite subscription is created for a Satellite configuration and specifies which version of the Kubernetes resource that you uploaded is deployed to one or more cluster groups. The Red Hat OpenShift on IBM Cloud clusters in your cluster group can exist in your Satellite Location or in IBM Cloud.</p>
-<p>Up until now, the demonstrations you have gone through have been focused on creating satellite locations and deploying Red Hat OpenShift on IBM Cloud to a Satellite Location.  In this part, you will learn to demonstrate one of the key business values of IBM Cloud Satellite ... the ability to easily deploy and update applications across IBM Cloud Satellite Locations.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>The images in this demonstration guide may differ from what you see when performing the steps. This will typically be due to changes in the IBM Cloud portal user interface, additional objects in lists, etc. These differences should not affect the demonstration.</p>
-</div>
+<p>TO BE WRITTEN</p>
+<p>In the next part of the demonstration script, learn what about PowerVS virtual machines (VMs) and how they are provisioned. Note, PowerVS VMs are referred to as <strong>instances</strong> in the IBM Cloud Portal and in the PowerVS documentation.</p>
 
               
             </article>
@@ -722,6 +695,21 @@
           </div>
         </a>
       
+      
+        
+        <a href="../../Part%204/01.01%20Introduction/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Introduction
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   
