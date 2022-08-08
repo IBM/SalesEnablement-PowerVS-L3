@@ -22,9 +22,9 @@ Note: Tags can also be added to the service to assist in grouping, sorting, and 
 8. Click the **I have read and agree to the following license agreements** check box.
 9. Click **Create**.
 
-Provisioning a new PowerVS service typically takes about ***ADD VALUE HERE***.  Once the provisioning completes, the new PowerVS service can be found in the **services and software** section of the IBM Cloud Portal dashboard.
+Provisioning a new PowerVS service typically takes about ***ADD VALUE HERE***. Once the provisioning completes, the new PowerVS service can be found in the **services and software** section of the IBM Cloud Portal dashboard.
 
 10. Click **Services and software**.
 11. Click the **PowerVS-service** under **Services and software**.
 
-The PowerVS service is now ready to be populated with virtual server **instances**.  In the next Part of the demonstration guide, learn how to provision an **instance**.
+The PowerVS service is now ready to be populated with virtual server **instances**. In the next Part of the demonstration guide, learn how to provision an **instance**.
