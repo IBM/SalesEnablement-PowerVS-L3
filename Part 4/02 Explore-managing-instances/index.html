@@ -17,7 +17,7 @@
     
     
       
-        <title>Introduction - IBM Power Systems Virtual Server Level 3 Demonstration Guide</title>
+        <title>Managing instances - IBM Power Systems Virtual Server Level 3 Demonstration Guide</title>
       
     
     
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Managing instances
             
           </span>
         </div>
@@ -263,14 +263,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
@@ -291,19 +289,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Part%202/01%20Introduction/" class="md-nav__link">
         Introduction
       </a>
-      
     </li>
   
 
@@ -315,7 +305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02%20Watch-service/" class="md-nav__link">
+      <a href="../../Part%202/02%20Watch-service/" class="md-nav__link">
         Watch a service being provisioned
       </a>
     </li>
@@ -329,7 +319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03%20Clickthru-service/" class="md-nav__link">
+      <a href="../../Part%202/03%20Clickthru-service/" class="md-nav__link">
         Click through demonstration of a service being provisioned
       </a>
     </li>
@@ -425,12 +415,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
@@ -453,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Part%204/01%20Introduction/" class="md-nav__link">
+      <a href="../01%20Introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -465,11 +457,19 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Part%204/02%20Explore-managing-instances/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Managing instances
       </a>
+      
     </li>
   
 
@@ -734,16 +734,41 @@
               
                 
 
-  <h1>Introduction</h1>
+  <h1>Managing instances</h1>
 
-<p>Before you create a PowerVS virtual server, you must understand the difference in terminology between a PowerVS <strong>service</strong> and a PowerVS <strong>instance</strong>. Think of the PowerVS <strong>service</strong> as a container for all PowerVS <strong>instances</strong> at a specific geographic region. The <strong>service</strong> is available from the Resource list in the IBM Cloud Portal. The <strong>service</strong> can contain multiple <strong>instances</strong>. For example, you can have two <strong>services</strong>, one in Dallas, Texas, and another in Washington, D.C. Each <strong>service</strong> can contain multiple <strong>instances</strong>. A <strong>service</strong> must be associated with an IBM Cloud <strong>resource group</strong> which helps in grouping resources and assigning permissions. To learn more, refer to <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-getting-started" target="_blank">Getting Started with IBM Power Systems Virtual Server</a>.</p>
-<p>The key parameters for a PowerVS service are:</p>
-<ul>
-<li><strong>Datacenter location:</strong> As of August 2022, PowerVS is co-located with 15 IBM Cloud datacenters located around the world. When selecting a datacenter, consider choosing the datacenter located nearest the majority of the end users that will be accessing the workloads running in PowerVS.</li>
-<li><strong>Service name:</strong> The PowerVS service name will appear in the IBM Cloud Portal under the provisioned services. Specify a name that is easily understood and recognized.</li>
-<li><strong>Resource group:</strong> Resource groups are used to organize resources in your IBM Cloud account. Administrative and access rights for all PowerVS resources are associated with the PowerVS service and not individual PowerVS instances (VMs). Once a PowerVS service is assigned to a resource group, the resource group can not be changed.</li>
-</ul>
-<p>In the next chapter, view a video of a PowerVS service being provisioned.</p>
+<p>Through the IBM Cloud Portal or APIs, administrators with the appropriate IBM Cloud Portal access can manipulate PowerVS instances without needing to directly access the instance operating system.</p>
+<p>In the video below, watch how easy it is to demonstrate 3 management capabilities of a PowerVS instance: create an image (snapshot), add memory, and attach additional storage.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If the video appears blurry, click the fullscreen <img alt="" src="_attachments/FullScreenVideo.png" /> or <img alt="" src="_attachments/FullScreenVideo3.png" /> icon.</p>
+</div>
+<p><strong>INSERT VIDEO LINK HERE</strong></p>
+<p>In the above video, the actions described were performed. In most cases, the video was edited to speed up the video during the time required to complete the action. When performing client demonstrations it is often best to perform a "baking show" style of demonstrations especially when actions take longer than a minute or two to complete, or have a high risk of failure.  While the actions performed here are low risk, as seen in the video they do take some time to complete.</p>
+<p>Using your IBM Cloud credentials and the IBM Cloud portal, complete the following 3 scenarios of managing PowerVS instances using the "baking show" demonstration technique.  Note, an error message like the one below will be encountered if an attempt is made to complete an action. This is normal, as full access to the shared environment is <strong>not</strong> provided. To avoid the error message, simply click the <strong>Cancel</strong> button on the action dialog. If performing a live client demonstration, or for IBM employees completing the Stand and Deliver for the IBM Power Systems Virtual Server - Level 3 badge, tell the audience why the action is being canceled but explain what would typically happen if the action was completed.</p>
+<p><strong>INSERT ERROR MESSAGE</strong></p>
+<ol>
+<li>open the portal in anew browser tab/window</li>
+<li>if not already opened, go to dashboard</li>
+<li>change account</li>
+<li>click services and software</li>
+<li>click powervs-service</li>
+<li>click VM xyz</li>
+<li>click VM actions</li>
+<li>click capture and export</li>
+<li>select the boot volumes</li>
+<li>select Image catalog for export destination</li>
+<li>enter a catalog image name</li>
+<li>Note; capture and export button is now active, but hit serviceInstanceLocation</li>
+<li>return to instance details page</li>
+<li>Click <strong>Edit details</strong></li>
+<li>Click the <strong>+</strong> icon under the Memory field until the value is 4 GB.</li>
+<li>Click the <strong>I have read the service agreement and agree to the terms.</strong> checkbox.</li>
+<li>Note the <strong>Save edits and order</strong> button is now active.</li>
+<li>Click <strong>Cancel</strong></li>
+<li>return  to instance details page
+19.</li>
+</ol>
+<p><strong><em> question are boot volumes 25 GB or 100GB?? make consistent</em></strong></p>
 
               
             </article>
@@ -757,7 +782,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../Part%201/01%20Introduction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction" rel="prev">
+        <a href="../01%20Introduction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -773,13 +798,13 @@
       
       
         
-        <a href="../02%20Watch-service/" class="md-footer__link md-footer__link--next" aria-label="Next: Watch a service being provisioned" rel="next">
+        <a href="../../Part%205/01%20Introduction/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Watch a service being provisioned
+              Introduction
             </div>
           </div>
           <div class="md-footer__button md-icon">

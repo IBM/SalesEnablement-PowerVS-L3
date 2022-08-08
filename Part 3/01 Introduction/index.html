@@ -461,6 +461,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%204/02%20Explore-managing-instances/" class="md-nav__link">
+        Managing instances
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -731,7 +745,7 @@
 <li><strong>SSH key:</strong> A SSH public/private key pair is required to to access the instance. Learn more about using and generating SSH keys <a href="https://cloud.ibm.com/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key" target="_blank">here</a>.</li>
 <li><strong>Operating system:</strong> PowerVS instances can run either IBM AIX, IBM i, or Linux operating systems (OS). Several Linux images are available specifically for servers that will run SAP.</li>
 <li><strong>OS image:</strong> Users have the ability to choose an operating system image from the PowerVS image catalog or users can bring their own image. Each supported OS has a specific set of images in the PowerVS catalog for supported OS versions. Each instance is provisioned with a 25 gigabyte (GB) boot volume.</li>
-<li><strong>Storage tier:</strong> PowerVS supports both Tier 1 and Tier 3 storage. Tier 1 provides a maximum of 100 input/output operations per second (IOPs) per GB, while Tier 3 provides a maximum of 3 IOPS/GB.</li>
+<li><strong>Storage tier:</strong> PowerVS supports both Tier 1 and Tier 3 storage. Tier 1 provides a maximum of 100 input/output operations per second (IOPs) per GB, while Tier 3 provides a maximum of 3 IOPS/GB. Tier 3 storage should only be utilized for non-production workloads.</li>
 <li><strong>Storage pool affinity:</strong> Three storage pool affinity options are available: Auto-select, affinity, and anti-affinity. The affinity option specifies requires the boot volume to be placed in the same pool as another existing instance or existing boot volume. The new storage volume(s) for the instance will be placed in the same storage pool where the affinity object resides. The anti-affinity specifies a different pool should be used from that of another existing instance or existing boot volume.</li>
 <li><strong>Machine type:</strong> Two IBM Power Systems machine types are supported: s922 and e980. Learn more about these s922 <a href="https://www.ibm.com/products/power-system-s922" target="_blank">here</a> and the e980 <a href="https://www.ibm.com/products/power-system-e980" target="blank">here</a>.</li>
 <li><strong>Core type:</strong> PowerVS supports <strong>shared uncapped</strong>, <strong>shared capped</strong>, and <strong>dedicated</strong> cores. Shared uncapped cores are shared among other clients. Shared capped cores are shared, but resources do not expand beyond those that are requested (used mostly for licensing). Dedicated cores are allocated for a specific client (used for specific third-party considerations). Learn more about core types <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor" target="_blank">here</a>.</li>
