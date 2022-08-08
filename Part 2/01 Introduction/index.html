@@ -17,7 +17,7 @@
     
     
       
-        <title>Introduction - IBM Power Systems Virtual Server Level 3 Demonstration Guide</title>
+        <title>01 Introduction - IBM Power Systems Virtual Server Level 3 Demonstration Guide</title>
       
     
     
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              01 Introduction
             
           </span>
         </div>
@@ -243,7 +243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Part%201/01.01%20Introduction/" class="md-nav__link">
+      <a href="../../Part 1/01.01 Introduction.md" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -291,7 +291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Part%202/01.01%20Introduction/" class="md-nav__link">
+      <a href="../../Part 2/01.01 Introduction.md" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -305,7 +305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Part%202/01.02%20Watch-service/" class="md-nav__link">
+      <a href="../../Part 2/01.02 Watch-service.md" class="md-nav__link">
         Watch a service instance being provisioned
       </a>
     </li>
@@ -319,7 +319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Part%202/01.03%20Clickthru-service/" class="md-nav__link">
+      <a href="../../Part 2/01.03 Clickthru-service.md" class="md-nav__link">
         Click through demonstration of a service instance being provisioned
       </a>
     </li>
@@ -367,7 +367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Part%203/01.01%20Introduction/" class="md-nav__link">
+      <a href="../../Part 3/01.01 Introduction.md" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -415,7 +415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Part%204/01.01%20Introduction/" class="md-nav__link">
+      <a href="../../Part 4/01.01 Introduction.md" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -435,14 +435,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
       
       
@@ -463,19 +461,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Part 5/01.01 Introduction.md" class="md-nav__link">
         Introduction
       </a>
-      
     </li>
   
 
@@ -521,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Part%206/01.01%20Introduction/" class="md-nav__link">
+      <a href="../../Part 6/01.01 Introduction.md" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -569,7 +559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Part%207/01.01%20Introduction/" class="md-nav__link">
+      <a href="../../Part 7/01.01 Introduction.md" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -617,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Part%208/01.01%20Introduction/" class="md-nav__link">
+      <a href="../../Part 8/01.01 Introduction.md" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -665,7 +655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Part%209/01.01%20Introduction/" class="md-nav__link">
+      <a href="../../Part 9/01.01 Introduction.md" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -692,10 +682,16 @@
               
                 
 
-  <h1>Introduction</h1>
+  <h1>01 Introduction</h1>
 
-<p>TO BE WRITTEN</p>
-<p>In the next part of the demonstration script, learn what about PowerVS virtual machines (VMs) and how they are provisioned. Note, PowerVS VMs are referred to as <strong>instances</strong> in the IBM Cloud Portal and in the PowerVS documentation.</p>
+<p>Before you create a PowerVS virtual server, you must understand the difference in terminology between a PowerVS <strong>service</strong> and a PowerVS <strong>instance</strong>. Think of the PowerVS <strong>service</strong> as a container for all PowerVS <strong>instances</strong> at a specific geographic region. The <strong>service</strong> is available from the Resource list in the IBM Cloud Portal. The <strong>service</strong> can contain multiple <strong>instances</strong>. For example, you can have two <strong>services</strong>, one in Dallas, Texas, and another in Washington, D.C. Each <strong>service</strong> can contain multiple <strong>instances</strong>. A <strong>service</strong> must be associated with an IBM Cloud <strong>resource group</strong> which helps in grouping resources and assigning permissions. To learn more, refer to <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-getting-started" target="_blank">Getting Started with IBM Power Systems Virtual Server</a>.</p>
+<p>The key parameters for a PowerVS service are:</p>
+<ul>
+<li><strong>Datacenter location:</strong> As of August 2022, PowerVS is co-located with 15 IBM Cloud datacenters located around the world. When selecting a datacenter, consider choosing the datacenter located nearest the majority of the end users that will be accessing the workloads running in PowerVS.</li>
+<li><strong>Service name:</strong> The PowerVS service name will appear in the IBM Cloud Portal under the provisioned services. Specify a name that is easily understood and recognized.</li>
+<li><strong>Resource group:</strong> Resource groups are used to organize resources in your IBM Cloud account. Administrative and access rights for all PowerVS resources are associated with the PowerVS service and not individual PowerVS instances (VMs). Once a PowerVS service is assigned to a resource group, the resource group can not be changed.</li>
+</ul>
+<p>In the next chapter, view a video of a PowerVS service being provisioned.</p>
 
               
             </article>
@@ -705,41 +701,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../../Part%204/01.01%20Introduction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Introduction
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../Part%206/01.01%20Introduction/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Introduction
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
