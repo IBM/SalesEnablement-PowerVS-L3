@@ -14,25 +14,27 @@ docs_dir: docs
 nav:
   - Introduction: 'index.md'
   - Part 1 - Overview:
-    - 'Introduction': 'Part 1/01.01 Introduction.md'
-  - Part 2 - Provisioning a PowerVS service instance:
-    - 'Introduction': 'Part 2/01.01 Introduction.md'
-    - 'Watch a service instance being provisioned': 'Part 2/01.02 Watch-service.md'
-    - 'Click through demonstration of a service instance being provisioned': 'Part 2/01.03 Clickthru-service.md'
+    - 'Introduction': 'Part 1/01 Introduction.md'
+  - Part 2 - Provisioning a PowerVS service:
+    - 'Introduction': 'Part 2/01 Introduction.md'
+    - 'Watch a service being provisioned': 'Part 2/02 Watch-service.md'
+    - 'Click through demonstration of a service being provisioned': 'Part 2/03 Clickthru-service.md'
   - Part 3 - Provisioning a PowerVS instances:
-    - 'Introduction': 'Part 3/01.01 Introduction.md'
+    - 'Introduction': 'Part 3/01 Introduction.md'
+    - 'Watch a instance being provisioned': 'Part 3/02 Watch-instance.md'
+    - 'Click through demonstration of a service instance being provisioned': 'Part 3/03 Clickthru-insatnce.md'
   - Part 4 - Managing PowerVS instances:
-    - 'Introduction': 'Part 4/01.01 Introduction.md'
+    - 'Introduction': 'Part 4/01 Introduction.md'
   - Part 5 - Accessing PowerVS instances:
-    - 'Introduction': 'Part 5/01.01 Introduction.md'
+    - 'Introduction': 'Part 5/01 Introduction.md'
   - Part 6 - Explore PowerVS server placement groups:
-    - 'Introduction': 'Part 6/01.01 Introduction.md'
+    - 'Introduction': 'Part 6/01 Introduction.md'
   - Part 7 - Explore PowerVS images:
-    - 'Introduction': 'Part 7/01.01 Introduction.md'
+    - 'Introduction': 'Part 7/01 Introduction.md'
   - Part 8 - Use the PowerVS command line interfaces:
-    - 'Introduction': 'Part 8/01.01 Introduction.md'
+    - 'Introduction': 'Part 8/01 Introduction.md'
   - Part 9 - Next steps:
-    - 'Introduction': 'Part 9/01.01 Introduction.md'
+    - 'Introduction': 'Part 9/01 Introduction.md'
 
 theme:
   name: material
