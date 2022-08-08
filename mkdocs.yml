@@ -22,7 +22,7 @@ nav:
   - Part 3 - Provisioning a PowerVS instances:
     - 'Introduction': 'Part 3/01 Introduction.md'
     - 'Watch a instance being provisioned': 'Part 3/02 Watch-instance.md'
-    - 'Click through demonstration of a service instance being provisioned': 'Part 3/03 Clickthru-insatnce.md'
+    - 'Click through demonstration of a service instance being provisioned': 'Part 3/03 Clickthru-instance.md'
   - Part 4 - Managing PowerVS instances:
     - 'Introduction': 'Part 4/01 Introduction.md'
   - Part 5 - Accessing PowerVS instances:
