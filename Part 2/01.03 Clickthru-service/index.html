@@ -17,7 +17,7 @@
     
     
       
-        <title>Introduction - IBM Power Systems Virtual Server Level 3 Demonstration Guide</title>
+        <title>01.03 Clickthru service - IBM Power Systems Virtual Server Level 3 Demonstration Guide</title>
       
     
     
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              01.03 Clickthru service
             
           </span>
         </div>
@@ -263,14 +263,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
@@ -291,19 +289,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../01.01%20Introduction/" class="md-nav__link">
         Introduction
       </a>
-      
     </li>
   
 
@@ -692,19 +682,38 @@
               
                 
 
-  <h1>Introduction</h1>
+  <h1>01.03 Clickthru service</h1>
 
-<p>Before you create a PowerVS virtual server, you must understand the difference in terminology between a PowerVS <strong>service</strong> and a PowerVS <strong>instance</strong>. Think of the PowerVS <strong>service</strong> as a container for all PowerVS <strong>instances</strong> at a specific geographic region. The <strong>service</strong> is available from the Resource list in the IBM Cloud Portal. The <strong>service</strong> can contain multiple <strong>instances</strong>. For example, you can have two <strong>services</strong>, one in Dallas, Texas, and another in Washington, D.C. Each <strong>service</strong> can contain multiple <strong>instances</strong>. A <strong>service</strong> must be associated with an IBM Cloud <strong>resource group</strong> which helps in grouping resources and assigning permissions. To learn more, refer to <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-getting-started" target="_blank">Getting Started with IBM Power Systems Virtual Server</a>.</p>
-<p>The key parameters for a PowerVS service are:</p>
-<ul>
-<li>Datacenter location
-  As of August 2022, PowerVS is co-located with 15 IBM Cloud datacenters located around the world. When selecting a datacenter, consider choosing the datacenter located nearest the majority of the end users that will be accessing the workloads running in PowerVS.</li>
-<li>Service name
-  The PowerVS service name will appear in the IBM Cloud Portal under the provisioned services. Specify a name that is easily understood and recognized.</li>
-<li>Resource group
-  Resource groups are used to organize resources in your IBM Cloud account. Administrative and access rights for all PowerVS resources are associated with the PowerVS service and not individual PowerVS instances (VMs). Once a PowerVS service is assigned to a resource group, the resource group can not be changed.</li>
-</ul>
-<p>In the next chapter, view a video of a PowerVS service being provisioned.</p>
+<p>Now it is time for you to provision a PowerVS service. Use the click-thru demonstration below to practice provisioning a PowerVS service.</p>
+<p><strong><em>Move below to last chapter in this section</em></strong>
+In the next part of the demonstration script, learn what about PowerVS virtual machines (VMs) and how they are provisioned. Note, PowerVS VMs are referred to as <strong>instances</strong> in the IBM Cloud Portal and in the PowerVS documentation.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you are not sure where to click, simply click anywhere on the screen and the spot to click next will be highlighted.</p>
+</div>
+<ol>
+<li>
+<p>Open the link below and then click the play button <img alt="" src="../_attachments/ClickThruPlayButton.png" /> to begin the demonstration.</p>
+<p><strong>Click-thru demo:</strong> <a href="https://ibm.github.io/SalesEnablement-Satellite-L3-Sales/includes/SatLocationCreation/index.html" target ="_blank">Create an IBM Cloud Satellite Location</a></p>
+</li>
+<li>
+<p>Click the <strong>IBM Cloud hamburger menu</strong> icon <img alt="" src="_attachments/HamburgerMenu.png" />.</p>
+</li>
+<li>Click <strong>Satellite</strong>.</li>
+<li>Click <strong>Overview</strong>.</li>
+<li>Click <strong>Create a Satellite Location +</strong>.</li>
+<li>Click the <strong>AWS Quick Start</strong> tile.</li>
+<li>Click in the <strong>AWS access key ID</strong> entry field.</li>
+</ol>
+<p>Note: the access key will automatically be entered. The AWS keys are not provided as part of this demonstration to keep it secured so the environment can be shared by others.</p>
+<ol start="8">
+<li>Click in the <strong>AWS secret access key</strong> entry field.</li>
+<li>Click <strong>Fetch options from AWS</strong>.</li>
+<li>Click the <strong>Edit</strong> icon for the <strong>AWS environment</strong> section.</li>
+<li>Click the <strong>us-east-2 - US East (Ohio)</strong> option.</li>
+<li>Click <strong>Done editing</strong>.</li>
+<li>Click the <strong>Edit</strong> icon for the <strong>AWS EC2 instances</strong> section.</li>
+</ol>
 
               
             </article>
@@ -714,41 +723,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../../Part%201/01.01%20Introduction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Introduction
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../Part%203/01.01%20Introduction/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Introduction
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
