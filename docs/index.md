@@ -61,8 +61,12 @@ The following acronyms are used throughout this demonstration guide:
 
     - Control (ctrl) - The control key on your keyboard
     - Command (cmd) - The command key on your keyboard
+    - Gigabyte (GB)
     - IBM Power Systems Virtual Server (PowerVS)
     - IBM Technology Zone (TechZone)
+    - Input/output operations per second (IOPs)
+    - Operating System (OS)
+    - Random access memory (RAM)
     - Virtual Machine (VM)
 
 You are now ready to proceed to Part 1.

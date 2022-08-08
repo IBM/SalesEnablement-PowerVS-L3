@@ -16,4 +16,4 @@ This demonstration environment has multiple purposes. First, it is meant to educ
 !!! important
     The focus of the demonstration is on the Infrastructure as a Service capability of PowerVS and not on the operating systems supported by the offering: AIX, IBM i, and Linux.
 
-In Part 2, learn about PowerVS service instances and how they are provisioned.
+In Part 2, learn about PowerVS **services** and how they are provisioned.
