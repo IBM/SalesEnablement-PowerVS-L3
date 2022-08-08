@@ -1,4 +1,6 @@
-Now it is time for you to provision a PowerVS service. Use the click-thru demonstration below to practice provisioning a PowerVS service. Note, fields that require a text entry (e.g. service name) are pre-populated in the click-thru demonstration.
+Now it is time for you to provision a PowerVS service. Use the click-thru demonstration below to practice provisioning a PowerVS service. The click-thru demonstration corresponds to the video from the previous chapter. Refer to the video for talking points if the click-thru demonstration is utilized with clients.
+
+Note, fields that require a text entry (e.g. service name) are pre-populated in the click-thru demonstration.
 
 !!! tip
     Not sure where to click or what to do next? Simply click anywhere on the screen and the spot to click next will be highlighted.

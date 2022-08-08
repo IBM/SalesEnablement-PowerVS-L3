@@ -25,6 +25,7 @@ nav:
     - 'Click through demonstration of a service instance being provisioned': 'Part 3/03 Clickthru-instance.md'
   - Part 4 - Managing PowerVS instances:
     - 'Introduction': 'Part 4/01 Introduction.md'
+    - 'Managing instances': 'Part 4/02 Explore-managing-instances.md'
   - Part 5 - Accessing PowerVS instances:
     - 'Introduction': 'Part 5/01 Introduction.md'
   - Part 6 - Explore PowerVS server placement groups:

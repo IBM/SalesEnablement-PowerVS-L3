@@ -1,4 +1,6 @@
-Now it is time for to provision a PowerVS instance. Use the click-thru demonstration below to practice provisioning a PowerVS instance. Note, fields that require a text entry (e.g. instance name) are pre-populated in the click-thru demonstration.
+Now it is time for to provision a PowerVS instance. Use the click-thru demonstration below to practice provisioning a PowerVS instance. The click-thru demonstration corresponds to the video from the previous chapter. Refer to the video for talking points if the click-thru demonstration is utilized with clients.
+
+Note, fields that require a text entry (e.g. instance name) are pre-populated in the click-thru demonstration.
 
 !!! tip
     Not sure where to click or what to do next? Simply click anywhere on the screen and the spot to click next will be highlighted.
@@ -15,7 +17,7 @@ The next steps refer to the entries in the **General** section of the **Create v
 
 5. Click the **Add to a server placement group** check box.
 6. Click the **Select a server placement group** pull-down.
-7. Click **{{placementGroup1}}**.
+7. Click **{{powerVS.placementGroup1}}**.
 8. Click the **Select VM pinning** pull-down.
 9. Click **Soft**.
 10. Click the **Select SSH key** pull-down.
