@@ -1,10 +1,8 @@
 Welcome to the {{guide.name}}. The goal of this demonstration guide is to provide IBM and Business Partner Sales and Technical Sales the knowledge and tools to perform introductory demonstrations of {{offering.name}} (PowerVS).
 
- There are 9 parts to this demonstration guide as seen in the left hand navigation. To complete the {{learningplan.name}} badge requirements, IBM and Business Partner **sellers** must complete Parts 1, 2, 3, 4, 5, and 9 of this demonstration guide. The IBM and Business Partner **technical sellers** must complete all sections. The associated Learning Plan Stand and Deliver rubrics (IBM) and quizzes (Business Partners) are based upon the sections required for the respective roles. **Sellers are welcome and encouraged to complete all sections.**
+There are 9 parts to this demonstration guide as seen in the left hand navigation. To complete the {{learningplan.name}} badge requirements, IBM and Business Partner **sellers** must complete Parts 1, 2, 3, 4, 5, and 9 of this demonstration guide. IBM and Business Partner **technical sellers** must complete all sections. The associated Learning Plan Stand and Deliver rubrics (IBM) and quizzes (Business Partners) are based upon the sections required for the respective roles. **All are welcome and encouraged to complete all sections.**
 
-Each of the parts of this guide have detailed steps for demonstrating {{offering.name}}. Click on each part name in the left hand navigation bar to expand the section.
-
-In parts 1, 2, and 3, you learn how the demonstration environment was built and how to perform a "baking show" style demonstration using the IBM Cloud Portal, click-thru demonstrations, and videos. Note that you will not be provisioning new PowerVS services or virtual machines, rather you will access pre-provisioned resources. Utilizing the pre-provisioned, shared environment will save you time and save IBM money.
+In Parts 1, 2, and 3, you learn how the demonstration environment was built, and how to perform a "baking show" style demonstration using the IBM Cloud Portal, click-thru demonstrations, and videos. You will not be provisioning new PowerVS services or virtual machines, rather you will access pre-provisioned resources. Utilizing the pre-provisioned, shared environment will save you time and save IBM money.
 
 In Part 4, learn how to use the IBM Cloud Portal to manage PowerVS instances.
 
@@ -12,9 +10,9 @@ In Part 5, learn how to access the pre-provisioned PowerVS instances using the I
 
 Parts 1 through 5 provide a good foundation for performing a high-level, customer facing demonstration of {{offering.name}}.
 
-Parts 6 through 8 introduce a few more technical aspects of {{offering.name}} including using the PowerVS IBM Cloud command line interface (CLI) plugin.
+Parts 6 through 8 introduce several more technical aspects of {{offering.name}} including using the PowerVS IBM Cloud command line interface (CLI) plugin.
 
-Finally, in Part 9, learn where to find additional resources about {{offering.name}}.
+Finally, in Part 9, learn where to find additional resources about {{offering.name}}, and how to complete your {{learningplan.name}} badge.
 
 Before jumping to part 1, please read the guidance below. Reading and understanding the information will save you time while completing the steps in this guide.
 
@@ -22,7 +20,12 @@ Before jumping to part 1, please read the guidance below. Reading and understand
 
 The {{guide.name}} is organized in parts and sub-parts or chapters. Most chapters contain numbered steps, which are actions that you will perform.
 
-Throughout the guide, you will see images that are examples of what you should be seeing in the IBM Cloud Portal, IBM Cloud Shell, and PowerVS instances consoles. In some images, you will see the following styles of highlighting:
+Throughout the guide, you will see images that are examples of what you should be seeing in the IBM Cloud Portal, IBM Cloud Shell, and PowerVS instances consoles.
+
+!!! warning
+    The IBM Cloud Portal and {{offering.name}} changes on a regular basis and may differ from the iamges captured in this guide.
+
+In some images, you will see the following styles of highlighting:
 
 - Action highlight box: Illustrates where you should click, enter, or select an item:
 
@@ -39,7 +42,7 @@ Throughout the guide, you will see images that are examples of what you should b
 
 ![](_attachments/Usage-Clipboard.png)
 
-Additionally, there are several "click-thru" demonstrations. Links to click-thru demonstrations will open in a new browser window or tab with a screen similar to the image below.
+Additionally, there are several "click-thru" demonstrations. Links to click-thru demonstrations will open in a new browser window or tab with a screen similar to the image below. ***UPDATE THE IMAGE BELOW***
 
 ![](_attachments/ClickThruStartPage.png)
 
@@ -61,3 +64,5 @@ The following acronyms are used throughout this demonstration guide:
     - IBM Power Systems Virtual Server (PowerVS)
     - IBM Technology Zone (TechZone)
     - Virtual Machine (VM)
+
+You are now ready to proceed to Part 1.
