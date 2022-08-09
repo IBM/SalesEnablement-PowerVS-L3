@@ -17,7 +17,7 @@
     
     
       
-        <title>Introduction - IBM Power Systems Virtual Server Level 3 Demonstration Guide</title>
+        <title>Access an instance - IBM Power Systems Virtual Server Level 3 Demonstration Guide</title>
       
     
     
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Access an instance
             
           </span>
         </div>
@@ -477,12 +477,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -505,7 +507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Part%205/01%20Introduction/" class="md-nav__link">
+      <a href="../01%20Introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -517,11 +519,19 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Part%205/02%20Access-instance/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Access an instance
       </a>
+      
     </li>
   
 
@@ -635,14 +645,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
       
       
       
@@ -663,19 +671,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Part%208/01%20Introduction/" class="md-nav__link">
         Introduction
       </a>
-      
     </li>
   
 
@@ -748,10 +748,54 @@
               
                 
 
-  <h1>Introduction</h1>
+  <h1>Access an instance</h1>
 
-<p>TO BE WRITTEN</p>
-<p>In the next part of the demonstration script, learn what about PowerVS virtual machines (VMs) and how they are provisioned. Note, PowerVS VMs are referred to as <strong>instances</strong> in the IBM Cloud Portal and in the PowerVS documentation.</p>
+<p>Accessing PowerVS instances will depending on several factors, including the operating system the instances is running and the network connectivity available.  Remote login tools like Secure Socket Shell (SSH), telnet, and other terminal emulators can be used to access instances. Note these tools will vary by operating system. PowerVS also provides access to running instances using a web-based console tool. In most cases, clients will deploy PowerVS instances using a secured network like Direct Link or Virtual Private Network (VPN). Learn more about the PowerVS network connectivity options <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-about-virtual-server#public-private-networks" target="_blank">here</a>.</p>
+<p>To quickly demonstrate the value of PowerVS, this demonstration environment and all running instances are provisioned with a public, Internet facing network interface. Follow the steps below to login to a running PowerVS instance using the IBM Cloud Shell and SSH. You can learn more about SSH and SSH keys <a href="https://en.wikipedia.org/wiki/Secure_Shell" target="_blank">here</a>.</p>
+<ol>
+<li>Open a browser window/tab to the IBM Cloud Portal: cloud.ibm.command</li>
+<li>Switch to the 2435442 - ITZ - Satellite Cloud account.</li>
+<li>Click the IBM Cloud Shell icon ![]images</li>
+</ol>
+<p>The next steps are performed in using the IBM Cloud Shell window that was opened. First, you need to create a SSH public key file using the key provided in your IBM Technolgoy Zone's reservation welcome e-mail. The public key will look like:</p>
+<p>ssh-rsa abunchofjumbleduplettersandnumbersandspecialcharaters/thatarerandomandhardtoundesrtandbut!!provideasecuremeansofconenctingtoopeartingsytesmsthatsupportssh/andpossiblyotherprotocols123478thereisalsoaprivatekeyassociatedwithpublickey+yourprivatekeywaspacedontherunniningsinstanceaspartoftheibmtehnolgyzoneprovisioningprocess+thiswillallowyoutoaccesstheinstanceinrunninginthepowervsservice= ibmtechzone@ibmtechzone.ibm.com</p>
+<p>A private key was also provisioned at the same time and copied to the running PowerVS instances.</p>
+<ol start="4">
+<li>Copy your public key from the TechZone welcome e-mail using your operating system's copy to clipboard capabilities (e.g. highlight the text starting with <strong>ssh-rsa</strong> to the end of the key and then use <span class="keys"><kbd class="key-control">Ctrl</kbd></span><strong>+c</strong> or <span class="keys"><kbd class="key-command">Cmd</kbd></span><strong>+c</strong>.)</li>
+<li>In the IBM Cloud Shell window, enter the following string, but do not hit enter.</li>
+</ol>
+<p>cat "</p>
+<ol start="6">
+<li>Paste your public key into the IBM Cloud Shell window using either <span class="keys"><kbd class="key-control">Ctrl</kbd></span><strong>+v</strong> or <span class="keys"><kbd class="key-command">Cmd</kbd></span><strong>+v</strong>.</li>
+<li>In the IBM Cloud Shell window, after the text you just pasted, enter the following and press enter:</li>
+</ol>
+<p><code>" &gt; mykey</code></p>
+<ol start="8">
+<li>To verify, run the following command in the IBM Cloud Shell.</li>
+</ol>
+<p><code>cat mykey</code></p>
+<p>Sample output:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&gt; cat mykey
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>ssh-rsa abunchofjumbleduplettersandnumbersandspecialcharaters/thatarerandomandhardtoundesrtandbut!!provideasecuremeansofconenctingtoopeartingsytesmsthatsupportssh/andpossiblyotherprotocols123478thereisalsoaprivatekeyassociatedwithpublickey+yourprivatekeywaspacedontherunniningsinstanceaspartoftheibmtehnolgyzoneprovisioningprocess+thiswillallowyoutoaccesstheinstanceinrunninginthepowervsservice= ibmtechzone@ibmtechzone.ibm.com
+</code></pre></div>
+<ol start="9">
+<li>Using the value of the <strong>UserName</strong> field found in your TechZone reservation, use ssh to log into the AIX-vm-1 instance. You must substitute your UserName in place of the string <strong>UserName</strong> in the command below:</li>
+</ol>
+<p>ssh -i mykey <strong>UserName</strong>@52.117.38.29</p>
+<p>sample output:</p>
+<ol start="10">
+<li>Try running a few commands:</li>
+</ol>
+<p><code>ls -laR</code></p>
+<p>Sample output:</p>
+<p><code>who</code></p>
+<p>Sample output:</p>
+<p>To explore further, use the following public IP addresses to access the other instances:</p>
+<p>table
+AIX-vm-2 52.117.38.26
+RH-vm-1 52.117.38.28
+RH-vm-2 52.117.38.30</p>
+<p>For IBM and Business Partners wishing to complete the IBM Power Systems Virtual Server - Level 3 for Sales, please proceed to Part 9. <strong><em>ADD internal link to Part 9</em></strong> For technical sellers please proceed to the next Part to explore PowerVS server placement groups.</p>
 
               
             </article>
@@ -765,7 +809,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../Part%207/01%20Introduction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction" rel="prev">
+        <a href="../01%20Introduction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -781,7 +825,7 @@
       
       
         
-        <a href="../../Part%209/01%20Introduction/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction" rel="next">
+        <a href="../../Part%206/01%20Introduction/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
