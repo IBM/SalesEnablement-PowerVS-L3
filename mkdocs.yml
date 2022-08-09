@@ -28,6 +28,7 @@ nav:
     - 'Managing instances': 'Part 4/02 Explore-managing-instances.md'
   - Part 5 - Accessing PowerVS instances:
     - 'Introduction': 'Part 5/01 Introduction.md'
+    - 'Access an instance': 'Part 5/02 Access-instance.md'
   - Part 6 - Explore PowerVS server placement groups:
     - 'Introduction': 'Part 6/01 Introduction.md'
   - Part 7 - Explore PowerVS images:

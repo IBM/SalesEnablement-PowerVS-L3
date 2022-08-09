@@ -68,9 +68,12 @@ The following acronyms are used throughout this demonstration guide:
     - Gigabyte (GB)
     - IBM Power Systems Virtual Server (PowerVS)
     - IBM Technology Zone (TechZone)
+    - Infrastructure as a Service (IaaS)
     - Input/output operations per second (IOPs)
+    - Internet Protocol (IP)
     - Operating System (OS)
     - Random access memory (RAM)
+    - Secure Socket Shell (SSH)
     - User identification (ID)
     - Virtual Machine (VM)
 

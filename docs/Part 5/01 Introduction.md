@@ -1,3 +1,3 @@
-TO BE WRITTEN
+{{offering.name}} is an Infrastructure as a Service (IaaS) offering. PowerVS allows clients to rapidly provision new instances running AIX, IBM i, or Linux. Ultimately, clients will want to deploy applications on those machines.  The applications that clients choose to deploy will vary widely. They may include middleware like databases, third party software products like SAP, or applications they have developed themselves. To install these applications, they need to access the instance and install the software.
 
-In the next part of the demonstration script, learn what about PowerVS virtual machines (VMs) and how they are provisioned. Note, PowerVS VMs are referred to as **instances** in the IBM Cloud Portal and in the PowerVS documentation.
+In the next chapter, learn how to access a running instance by using secure socket shell (SSH).
