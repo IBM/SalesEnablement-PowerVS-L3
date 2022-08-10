@@ -57,7 +57,7 @@ theme:
 plugins:
     - mkdocs-video
     - macros
-    - mkpdfs
+    - with-pdf
 
 
 markdown_extensions:
