@@ -32,9 +32,9 @@ nav:
   - Part 6 - Explore other PowerVS topics:
     - 'Introduction': 'Part 6/01 Introduction.md'
   - Part 7 - Use the PowerVS command line interfaces (CLI):
-    - 'Introduction': 'Part 8/01 Introduction.md'
+    - 'Introduction': 'Part 7/01 Introduction.md'
   - Part 8 - Next steps:
-    - 'Introduction': 'Part 9/01 Next steps.md'
+    - 'Introduction': 'Part 8/01 Next steps.md'
 
 theme:
   name: material
