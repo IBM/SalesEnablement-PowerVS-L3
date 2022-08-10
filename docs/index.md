@@ -1,6 +1,6 @@
 Welcome to the {{guide.name}}. The goal of this demonstration guide is to provide IBM and Business Partner Sales and Technical Sales the knowledge and tools to perform introductory demonstrations of {{offering.name}} (PowerVS).
 
-There are 9 parts to this demonstration guide as seen in the left hand navigation. To complete the {{learningplan.name}} badge requirements, IBM and Business Partner **sellers** must complete Parts 1, 2, 3, 4, 5, and 9 of this demonstration guide. IBM and Business Partner **technical sellers** must complete all sections. The associated Learning Plan Stand and Deliver rubrics (IBM) and quizzes (Business Partners) are based upon the sections required for the respective roles. **All are welcome and encouraged to complete all sections.**
+There are 9 parts to this demonstration guide as seen in the left hand navigation. To complete the {{learningplan.name}} badge requirements, IBM and Business Partner **sellers** must complete Parts 1, 2, 3, 4, 5, and 8 of this demonstration guide. IBM and Business Partner **technical sellers** must complete all sections. The associated Learning Plan Stand and Deliver rubrics (IBM) and quizzes (Business Partners) are based upon the sections required for the respective roles. **All are welcome and encouraged to complete all sections.**
 
 !!! tip "Business Partner Tip"
     To complete the {{learningplan.name}} badge, all Business Partners must complete a 5 question quiz. **The quiz is focused on validating completion of this demonstration script, and not general knowledge of PowerVS.** It is highly recommended to complete the quiz while the IBM Technology Zone environment is active. Several of the questions ask about specific settings or content that is seen in the IBM Cloud Portal.
@@ -13,9 +13,9 @@ In Part 5, learn how to access the pre-provisioned PowerVS instances using the I
 
 Parts 1 through 5 provide a good foundation for performing a high-level, customer facing demonstration of {{offering.name}}.
 
-Parts 6 through 8 introduce several more technical aspects of {{offering.name}} including using the PowerVS IBM Cloud command line interface (CLI) plugin.
+Parts 6 and 7 introduce several more technical aspects of {{offering.name}} including using the PowerVS IBM Cloud command line interface (CLI) plugin.
 
-Finally, in Part 9, learn where to find additional resources about {{offering.name}}, and how to complete the {{learningplan.name}} badge.
+Finally, in Part 8, learn where to find additional resources about {{offering.name}}, and how to complete the {{learningplan.name}} badge.
 
 Before jumping to part 1, please read the guidance below. Reading and understanding the information will save time while completing the steps in this guide.
 
