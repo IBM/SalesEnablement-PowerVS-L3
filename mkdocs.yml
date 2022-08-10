@@ -55,8 +55,6 @@ theme:
         name: Switch to light mode
 
 plugins:
-    - pdf-export:
-        combined: true
     - mkdocs-video
     - macros
 
