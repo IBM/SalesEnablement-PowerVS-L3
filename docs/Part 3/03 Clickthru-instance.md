@@ -52,7 +52,7 @@ The next steps refer to the entries in the **Storage volumes** section of the **
 
 The next steps refer to the entries in the **Networking** section of the **Create virtual server instance** form.
 
-Note: for this demonstration, the instance will be provisioned using a public network (Internet facing). Using the public network makes demonstrating access to instances easy, but most production deployments of PowerVS will utilize private networks and control access using Direct Link, Virtual Private Network (VPN), or Megaport Software Defined Network (SDN). To learn more about PowerVS networking options, look <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect" target="_blank"> here</a>.
+Note: for this demonstration, the instance will be provisioned using a public network (Internet facing). Using the public network makes demonstrating access to instances easy, but most production deployments of PowerVS will utilize private networks and control access using Direct Link, Virtual Private Network (VPN), or Megaport Software Defined Network (SDN). To learn more about PowerVS networking options, look <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-network-architecture-diagrams" target="_blank"> here</a>.
 
 28. Toggle the **Public networks** button to **On**.
 29. Click the **Finish** button under the **Networking** section.

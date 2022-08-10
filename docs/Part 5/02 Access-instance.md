@@ -4,7 +4,7 @@ To quickly demonstrate the value of PowerVS, this demonstration environment and 
 
 1. Open a browser window/tab to the IBM Cloud Portal: cloud.ibm.command
 2. Switch to the {{account}} Cloud account.
-3. Click the IBM Cloud Shell icon ![]images
+3. Click the IBM Cloud Shell icon ![](_attachments/CloudShellIcon.png)
 
 The next steps are performed in using the IBM Cloud Shell window that was opened. First, you need to create a SSH public key file using the key provided in your IBM Technolgoy Zone's reservation welcome e-mail. The public key will look like:
 
@@ -40,7 +40,7 @@ ssh -i mykey **UserName**@{{aixServer1.publicIP}}
 sample output:
 
 
-10. Try running a few commands:
+10. Try running a few OS commands:
 
 ```ls -laR```
 
@@ -57,4 +57,6 @@ table
 {{rhServer1.name}} {{rhServer1.publicIP}}
 {{rhServer2.name}} {{rhServer2.publicIP}}
 
-For IBM and Business Partners wishing to complete the {{learningplan.name}} for Sales, please proceed to Part 9. ***ADD internal link to Part 9*** For technical sellers please proceed to the next Part to explore PowerVS server placement groups.
+Use the ```ssh -i mykey **UserName**@**IP address**``` command to connect to the other servers. Be sure to replace **UserName** with the **UserName field found in your TechZone reservation.
+
+For IBM and Business Partners wishing to complete the {{learningplan.name}} for Sales, please proceed to Part 9. ***ADD internal link to Part 9*** For technical sellers please proceed to the next Part and explore PowerVS server placement groups.

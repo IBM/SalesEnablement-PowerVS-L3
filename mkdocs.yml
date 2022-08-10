@@ -29,14 +29,12 @@ nav:
   - Part 5 - Accessing PowerVS instances:
     - 'Introduction': 'Part 5/01 Introduction.md'
     - 'Access an instance': 'Part 5/02 Access-instance.md'
-  - Part 6 - Explore PowerVS server placement groups:
+  - Part 6 - Explore other PowerVS topics:
     - 'Introduction': 'Part 6/01 Introduction.md'
-  - Part 7 - Explore PowerVS images:
-    - 'Introduction': 'Part 7/01 Introduction.md'
-  - Part 8 - Use the PowerVS command line interfaces:
+  - Part 7 - Use the PowerVS command line interfaces:
     - 'Introduction': 'Part 8/01 Introduction.md'
-  - Part 9 - Next steps:
-    - 'Introduction': 'Part 9/01 Introduction.md'
+  - Part 8 - Next steps:
+    - 'Introduction': 'Part 9/01 Next steps.md'
 
 theme:
   name: material
