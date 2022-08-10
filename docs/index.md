@@ -63,9 +63,13 @@ Click the play button ![](_attachments/ClickThruPlayButton.png) in the middle of
 The following acronyms are used throughout this demonstration guide:
 
     - Application programming interfaces (APIs)
+    - Classless inter-domain routing (CIDR)
     - Control (ctrl) - The control key on keyboard
     - Command (cmd) - The command key on keyboard
+    - Disaster Recovery (DR)
     - Gigabyte (GB)
+    - High Availability (HA)
+    - IBM Cloud Object Storage (COS)
     - IBM Power Systems Virtual Server (PowerVS)
     - IBM Technology Zone (TechZone)
     - Infrastructure as a Service (IaaS)

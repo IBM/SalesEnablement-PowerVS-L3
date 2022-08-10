@@ -1,3 +1,3 @@
-TO BE WRITTEN
+{{offering.name}} provides command line interfaces (CLI) as a plugin to the IBM Cloud CLI. The PowerVS CLIs provide system administrators the ability to programmatically manage their PowerVS environment with out having to use the IBM Cloud Portal.
 
-In the next part of the demonstration script, learn what about PowerVS virtual machines (VMs) and how they are provisioned. Note, PowerVS VMs are referred to as **instances** in the IBM Cloud Portal and in the PowerVS documentation.
+In the next chapter, use the IBM Cloud Shell to learn more about the PowerVS CLIs.
