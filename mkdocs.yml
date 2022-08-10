@@ -58,7 +58,7 @@ plugins:
     - search
     - mkdocs-video
     - macros
-    - with-pdf
+    - pdf-export
 
 markdown_extensions:
   - sane_lists
