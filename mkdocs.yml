@@ -55,9 +55,7 @@ theme:
         name: Switch to light mode
 
 plugins:
-    - pdf-export:
-      verbose: true
-      media_type: print- search
+    - pdf-export
     - mkdocs-video
     - macros
 
