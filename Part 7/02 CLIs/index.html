@@ -17,7 +17,7 @@
     
     
       
-        <title>Click through demonstration of a service instance being provisioned - IBM Power Systems Virtual Server Level 3 Demonstration Guide</title>
+        <title>Command line exercises - IBM Power Systems Virtual Server Level 3 Demonstration Guide</title>
       
     
     
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Click through demonstration of a service instance being provisioned
+              Command line exercises
             
           </span>
         </div>
@@ -306,14 +306,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
@@ -336,7 +334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01%20Introduction/" class="md-nav__link">
+      <a href="../../Part%203/01%20Introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -350,7 +348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02%20Watch-instance/" class="md-nav__link">
+      <a href="../../Part%203/02%20Watch-instance/" class="md-nav__link">
         Watch a instance being provisioned
       </a>
     </li>
@@ -362,19 +360,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Part%203/03%20Clickthru-instance/" class="md-nav__link">
         Click through demonstration of a service instance being provisioned
       </a>
-      
     </li>
   
 
@@ -564,12 +554,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
       
       
       
@@ -592,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Part%207/01%20Introduction/" class="md-nav__link">
+      <a href="../01%20Introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -604,11 +596,19 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Part%207/02%20CLIs/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Command line exercises
       </a>
+      
     </li>
   
 
@@ -681,71 +681,18 @@
               
                 
 
-  <h1>Click through demonstration of a service instance being provisioned</h1>
+  <h1>Command line exercises</h1>
 
-<p>Now it is time for to provision a PowerVS instance. Use the click-thru demonstration below to practice provisioning a PowerVS instance. The click-thru demonstration corresponds to the video from the previous chapter. Refer to the video for talking points if the click-thru demonstration is utilized with clients.</p>
-<p>Note, fields that require a text entry (e.g. instance name) are pre-populated in the click-thru demonstration.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Not sure where to click or what to do next? Simply click anywhere on the screen and the spot to click next will be highlighted.</p>
-</div>
+<p>In this exercise, explore several of the PowerVS CLIs. It is important to remember you are using a shared environment and have limited administrative permissions. The CLIs being executed here are command that only require "read" access to the environment. CLIs also exist to create and modify the PowerVS resources, you will just not have sufficient permissions to execute those commands in the shared environment.  Attempting to do so will result in an error.</p>
+<p>For this exercise, the IBM Cloud Shell will be used. IBM Cloud Shell gives users complete control of their cloud resources, applications and infrastructure, from any web browser. IBM Cloud Shell provides pre-authenticated access to the latest tools and programming languages for cloud-based development, deployment and management of services and applications — all in a secure shell. IBM Cloud Shell is instantly accessible from the IBM Cloud portal. The IBM command line interface (CLI) along with all the IBM Cloud CLI plugins are pre-installed in IBM Cloud Shell, including the PowerVS CLIs.</p>
+<p>It is also possible to install the IBM Cloud CLIs and PowerVS CLI plugin other systems, like personal desktops, development servers, etc. To learn more about installing the PowerVS CLI locally click <a href="https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference" target="_blank">here</a>.</p>
+<p>To get started, first open the IBM Cloud Shell from the IBM Cloud portal:</p>
 <ol>
-<li>
-<p>Open the link below and then click the play button <img alt="" src="../_attachments/ClickThruPlayButton.png" /> to begin the demonstration.</p>
-<p><strong>Click-thru demo:</strong> <a href="https://ibm.github.io/SalesEnablement-Satellite-L3-Sales/includes/SatLocationCreation/index.html" target ="_blank">Create an IBM Cloud Satellite Location</a></p>
-</li>
-<li>
-<p>Click the <strong>Services and software</strong> link under <strong>Resource summary</strong> on the IBM Cloud Portal dashboard.</p>
-</li>
-<li>Click the <strong>PowerVS-service</strong> entry under <strong>Services and Software</strong>.</li>
-<li>Click the <strong>Create instance+</strong> button.</li>
+<li>Open a browser window/tab to the IBM Cloud Portal: <a href="https://cloud.ibm.com" target="_blank">https://cloud.ibm.com</a>.</li>
+<li>Switch to the 2435442 - ITZ - Satellite Cloud account.
+<img alt="" src="_attachments/SwitchAccounts.png" /></li>
+<li>Click the IBM Cloud Shell icon <img alt="" src="_attachments/CloudShellIcon.png" /></li>
 </ol>
-<p>The next steps refer to the entries in the <strong>General</strong> section of the <strong>Create virtual server instance</strong> form.</p>
-<ol start="5">
-<li>Click the <strong>Add to a server placement group</strong> check box.</li>
-<li>Click the <strong>Select a server placement group</strong> pull-down.</li>
-<li>Click <strong>AffinityGroup</strong>.</li>
-<li>Click the <strong>Select VM pinning</strong> pull-down.</li>
-<li>Click <strong>Soft</strong>.</li>
-<li>Click the <strong>Select SSH key</strong> pull-down.</li>
-<li>Click <strong>PowerVS-sshkey</strong>.</li>
-<li>Click the <strong>Continue</strong> button under the <strong>General</strong> section.</li>
-</ol>
-<p>The next steps refer to the entries in the <strong>Boot image</strong> section of the <strong>Create virtual server instance</strong> form.</p>
-<ol start="13">
-<li>Click the <strong>Select the OS</strong> pull-down.</li>
-<li>Click <strong>Linux</strong>.</li>
-<li>Click the <strong>Select an image</strong> pull-down.</li>
-<li>Click <strong>RHEL8-SP6</strong>. Note: <strong>RHEL8-SP6</strong> stands for Red Hat Enterprise Linux version 8 service pack 6.</li>
-<li>Click the <strong>Select storage tier</strong>  pull-down.</li>
-<li>Click <strong>Tier 3 (3 IPOs / GB)</strong>.</li>
-<li>Click the <strong>Auto-select pool</strong> tile.</li>
-<li>Click the <strong>Continue</strong> button under the <strong>Boot image</strong> section.</li>
-</ol>
-<p>The next steps refer to the entries in the <strong>Profile</strong> section of the <strong>Create virtual server instance</strong> form.</p>
-<p>Note: the <strong>Machine type</strong> option is not editable since a server placement group was selected.  When an affinity server placement policy is selected, all VMS must be of the same machine type. The default of .25 cores and 2 GB of memory will be used.</p>
-<ol start="21">
-<li>Click the <strong>Shared uncapped</strong> core type radio button.</li>
-<li>Click the <strong>Continue</strong> button under the <strong>Profile</strong> section.</li>
-</ol>
-<p>The next steps refer to the entries in the <strong>Storage volumes</strong> section of the <strong>Create virtual server instance</strong> form.</p>
-<ol start="23">
-<li>Click the <strong>Create volume +</strong> button.</li>
-<li>Click the <strong>+</strong> icon for the <strong>Size</strong> field.</li>
-<li>Toggle the <strong>Shareable</strong> button to <strong>On</strong>.</li>
-<li>Click the <strong>Create and attach</strong>  button.</li>
-<li>Click the <strong>Continue</strong> button under the <strong>Storage volumes</strong> section.</li>
-</ol>
-<p>The next steps refer to the entries in the <strong>Networking</strong> section of the <strong>Create virtual server instance</strong> form.</p>
-<p>Note: for this demonstration, the instance will be provisioned using a public network (Internet facing). Using the public network makes demonstrating access to instances easy, but most production deployments of PowerVS will utilize private networks and control access using Direct Link, Virtual Private Network (VPN), or Megaport Software Defined Network (SDN). To learn more about PowerVS networking options, look <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-network-architecture-diagrams" target="_blank"> here</a>.</p>
-<ol start="28">
-<li>Toggle the <strong>Public networks</strong> button to <strong>On</strong>.</li>
-<li>Click the <strong>Finish</strong> button under the <strong>Networking</strong> section.</li>
-<li>Click the <strong>I agree to the Terms and Conditions</strong> checkbox.</li>
-<li>Click <strong>Create</strong>.</li>
-</ol>
-<p>The PowerVS instance is now being provisioned.  This process typically takes less than 5 minutes. Notice the value under the <strong>Status</strong> column of the <strong>Virtual server instances</strong> table. Once the status changes to an <strong>Active</strong> state, the instance is ready to be accessed.</p>
-<p>In the next part of the demonstration script, learn how to use the IBM Cloud Portal to manage PowerVS instances.</p>
 
               
             </article>
@@ -759,7 +706,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../02%20Watch-instance/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Watch a instance being provisioned" rel="prev">
+        <a href="../01%20Introduction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -768,20 +715,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Watch a instance being provisioned
+              Introduction
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../Part%204/01%20Introduction/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction" rel="next">
+        <a href="../../Part%208/01%20Next%20steps/" class="md-footer__link md-footer__link--next" aria-label="Next: Next steps" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Introduction
+              Next steps
             </div>
           </div>
           <div class="md-footer__button md-icon">
