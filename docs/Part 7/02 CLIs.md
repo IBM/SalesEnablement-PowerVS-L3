@@ -10,3 +10,6 @@ To get started, first open the IBM Cloud Shell from the IBM Cloud portal:
 2. Switch to the {{account}} Cloud account.
 ![](_attachments/SwitchAccounts.png)
 3. Click the IBM Cloud Shell icon ![](_attachments/CloudShellIcon.png)
+
+
+***To be written***
