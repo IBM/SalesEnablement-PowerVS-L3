@@ -58,7 +58,9 @@ plugins:
     - search
     - mkdocs-video
     - macros
-    - pdf-export
+    - pdf-export:
+      verbose: true
+      media_type: print
 
 markdown_extensions:
   - sane_lists
