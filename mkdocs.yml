@@ -31,7 +31,7 @@ nav:
     - 'Access an instance': 'Part 5/02 Access-instance.md'
   - Part 6 - Explore other PowerVS topics:
     - 'Introduction': 'Part 6/01 Introduction.md'
-  - Part 7 - Use the PowerVS command line interfaces:
+  - Part 7 - Use the PowerVS command line interfaces (CLI):
     - 'Introduction': 'Part 8/01 Introduction.md'
   - Part 8 - Next steps:
     - 'Introduction': 'Part 9/01 Next steps.md'
