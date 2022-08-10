@@ -55,12 +55,12 @@ theme:
         name: Switch to light mode
 
 plugins:
-    - search
-    - mkdocs-video
-    - macros
     - pdf-export:
       verbose: true
-      media_type: print
+      media_type: print- search
+    - mkdocs-video
+    - macros
+
 
 markdown_extensions:
   - sane_lists
