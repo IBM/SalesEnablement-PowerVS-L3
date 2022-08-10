@@ -34,7 +34,7 @@ nav:
     - 'Server placment groups': 'Part 6/02 ServerPlacementGroups.md'
     - 'Storage volumes, boot volumes, and images': 'Part 6/03 Volumes.md'
     - 'Subnets, Cloud connections, and VPN connections': 'Part 6/04 Subnets.md'
-    - 'Additional services catalog': 'AdditionalServices.md'
+    - 'Additional services catalog': 'Part 6/05 AdditionalServices.md'
   - Part 7 - Use the PowerVS command line interfaces (CLI):
     - 'Introduction': 'Part 7/01 Introduction.md'
     - 'Command line exercises': 'Part 7/02 CLIs.md'
