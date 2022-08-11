@@ -10,7 +10,7 @@ On a per PowerVS instance (VM) basis, using the IBM Cloud Portal or IBM Cloud Po
    - Delete the instance
    - Capture and export an image of the instance
 
-In addition, some instances can be modified.  Depending on core type, operating system, etc., a client can:
+In addition, some instances can be modified. Depending on core type, operating system, etc., a client can:
 
    - Change VM pinning (soft, hard)
    - Change core type (Shared uncapped, Shared capped, Dedicated)

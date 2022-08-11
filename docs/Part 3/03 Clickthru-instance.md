@@ -29,15 +29,15 @@ The next steps refer to the entries in the **Boot image** section of the **Creat
 13. Click the **Select the OS** pull-down.
 14. Click **Linux**.
 15. Click the **Select an image** pull-down.
-16. Click **RHEL8-SP6**. Note: **RHEL8-SP6** stands for Red Hat Enterprise Linux version 8 service pack 6.
-17. Click the **Select storage tier**  pull-down.
+16. Click **RHEL8-SP6**. Note: **RHEL8-SP6** is short for **Red Hat Enterprise Linux version 8 service pack 6**.
+17. Click the **Select storage tier** pull-down.
 18. Click **Tier 3 (3 IPOs / GB)**.
 19. Click the **Auto-select pool** tile.
 20. Click the **Continue** button under the **Boot image** section.
 
 The next steps refer to the entries in the **Profile** section of the **Create virtual server instance** form.
 
-Note: the **Machine type** option is not editable since a server placement group was selected.  When an affinity server placement policy is selected, all VMS must be of the same machine type. The default of .25 cores and 2 GB of memory will be used.
+Note: the **Machine type** option is not editable since a server placement group was selected. When an affinity server placement policy is selected, all instances must be of the same machine type. The default of .25 cores and 2 GB of memory will be used.
 
 21. Click the **Shared uncapped** core type radio button.
 22. Click the **Continue** button under the **Profile** section.
@@ -47,7 +47,7 @@ The next steps refer to the entries in the **Storage volumes** section of the **
 23. Click the **Create volume +** button.
 24. Click the **+** icon for the **Size** field.
 25. Toggle the **Shareable** button to **On**.
-26. Click the **Create and attach**  button.
+26. Click the **Create and attach** button.
 27. Click the **Continue** button under the **Storage volumes** section.
 
 The next steps refer to the entries in the **Networking** section of the **Create virtual server instance** form.
@@ -59,6 +59,6 @@ Note: for this demonstration, the instance will be provisioned using a public ne
 30. Click the **I agree to the Terms and Conditions** checkbox.
 31. Click **Create**.
 
-The PowerVS instance is now being provisioned.  This process typically takes less than 5 minutes. Notice the value under the **Status** column of the **Virtual server instances** table. Once the status changes to an **Active** state, the instance is ready to be accessed.
+The PowerVS instance is now being provisioned. This process typically takes less than 5 minutes. Notice the value under the **Status** column of the **Virtual server instances** table. Once the status changes to an **Active** state, the instance is ready to be accessed.
 
 In the next part of the demonstration script, learn how to use the IBM Cloud Portal to manage PowerVS instances.

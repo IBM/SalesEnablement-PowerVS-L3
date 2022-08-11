@@ -8,11 +8,13 @@ In the video below, watch how easy it is to demonstrate some of the management c
 
 **INSERT VIDEO LINK HERE**
 
-In the above video, the actions described were performed. In most cases, the video was edited to speed up the video during the time required to complete the action. When performing client demonstrations it is often best to perform a "baking show" style of demonstrations especially when actions take longer than a minute or two to complete, or have a high risk of failure.  While the actions performed here are low risk, as seen in the video they do take some time to complete.
+In the above video, the actions described were performed. In most cases, the video was edited to speed up the video during the time required to complete the action. When performing client demonstrations it is often best to perform a "baking show" style of demonstrations especially when actions take longer than a minute or two to complete, or have a high risk of failure. While the actions performed here are low risk, as seen in the video they do take some time to complete.
 
-Using your IBM Cloud credentials and the IBM Cloud portal, complete the following scenarios of managing PowerVS instances using the "baking show" demonstration technique.  Note, an error message like the one below will be encountered if an attempt is made to complete an action. This is normal, as full access to the shared environment is **not** provided. To avoid the error message, simply click the **Cancel** button on the action dialog. If performing a live client demonstration, or for IBM employees completing the Stand and Deliver for the {{learningplan.name}} badge, tell the audience why the action is being canceled but explain what would typically happen if the action was completed.
+Using your IBM Cloud credentials and the IBM Cloud portal, complete the following scenarios of managing PowerVS instances using the "baking show" demonstration technique. Note, an error message like the one below will be encountered if an attempt is made to complete an action.
 
-**INSERT ERROR MESSAGE**
+![](_attachments/ErrorMessage.png)
+
+This is normal, as full access to the shared environment is **not** provided. To avoid the error message, simply click the **Cancel** button on the action dialog. If performing a live client demonstration, or for IBM employees completing the Stand and Deliver for the {{learningplan.name}} badge, tell the audience why the action is being canceled but explain what would typically happen if the action was completed.
 
 1. open the portal in anew browser tab/window
 2. if not already opened, go to dashboard
