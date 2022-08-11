@@ -751,6 +751,7 @@
 <p>The next steps are performed in using the IBM Cloud Shell window that was opened. First, you need to create a SSH public key file using the key provided in your IBM Technolgoy Zone's reservation welcome e-mail. The public key will look like:</p>
 <p>ssh-rsa abunchofjumbleduplettersandnumbersandspecialcharaters/thatarerandomandhardtoundesrtandbut!!provideasecuremeansofconenctingtoopeartingsytesmsthatsupportssh/andpossiblyotherprotocols123478thereisalsoaprivatekeyassociatedwithpublickey+yourprivatekeywaspacedontherunniningsinstanceaspartoftheibmtehnolgyzoneprovisioningprocess+thiswillallowyoutoaccesstheinstanceinrunninginthepowervsservice= ibmtechzone@ibmtechzone.ibm.com</p>
 <p>A private key was also provisioned at the same time and copied to the running PowerVS instances.</p>
+<p>In most of the steps below, <strong>copy</strong> the command line using the <img alt="" src="../_attachments/CopyToClipboard.png" /> icon and paste it into the IBM Cloud Shell using <span class="keys"><kbd class="key-control">Ctrl</kbd></span><strong>+v</strong>, <span class="keys"><kbd class="key-command">Cmd</kbd></span><strong>+v</strong>, or right click and select paste at the prompt in the IBM Cloud Shell.</p>
 <ol start="4">
 <li>Copy your public key from the TechZone welcome e-mail using your operating system's copy to clipboard capabilities (e.g. highlight the text starting with <strong>ssh-rsa</strong> to the end of the key and then use <span class="keys"><kbd class="key-control">Ctrl</kbd></span><strong>+c</strong> or <span class="keys"><kbd class="key-command">Cmd</kbd></span><strong>+c</strong>.)</li>
 <li>In the IBM Cloud Shell window, enter the following string, but do not hit enter.</li>
@@ -760,34 +761,78 @@
 <li>Paste your public key into the IBM Cloud Shell window using either <span class="keys"><kbd class="key-control">Ctrl</kbd></span><strong>+v</strong> or <span class="keys"><kbd class="key-command">Cmd</kbd></span><strong>+v</strong>.</li>
 <li>In the IBM Cloud Shell window, after the text you just pasted, enter the following and press enter:</li>
 </ol>
-<p><code>" &gt; mykey</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&quot; &gt; mykey
+</code></pre></div>
+<details class="example">
+<summary>Example output</summary>
+<p>cat "ssh-rsa abunchofjumbleduplettersandnumbersandspecialcharaters/thatarerandomandhardtoundesrtandbut!!provideasecuremeansofconenctingtoopeartingsytesmsthatsupportssh/andpossiblyotherprotocols123478thereisalsoaprivatekeyassociatedwithpublickey+yourprivatekeywaspacedontherunniningsinstanceaspartoftheibmtehnolgyzoneprovisioningprocess+thiswillallowyoutoaccesstheinstanceinrunninginthepowervsservice= ibmtechzone@ibmtechzone.ibm.com" &gt; mykey</p>
+</details>
 <ol start="8">
 <li>To verify, run the following command in the IBM Cloud Shell.</li>
 </ol>
-<p><code>cat mykey</code></p>
-<p>Sample output:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&gt; cat mykey
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>ssh-rsa abunchofjumbleduplettersandnumbersandspecialcharaters/thatarerandomandhardtoundesrtandbut!!provideasecuremeansofconenctingtoopeartingsytesmsthatsupportssh/andpossiblyotherprotocols123478thereisalsoaprivatekeyassociatedwithpublickey+yourprivatekeywaspacedontherunniningsinstanceaspartoftheibmtehnolgyzoneprovisioningprocess+thiswillallowyoutoaccesstheinstanceinrunninginthepowervsservice= ibmtechzone@ibmtechzone.ibm.com
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cat mykey
 </code></pre></div>
+<details class="example">
+<summary>Example output</summary>
+<blockquote>
+<p>cat mykey
+ssh-rsa abunchofjumbleduplettersandnumbersandspecialcharaters/thatarerandomandhardtoundesrtandbut!!provideasecuremeansofconenctingtoopeartingsytesmsthatsupportssh/andpossiblyotherprotocols123478thereisalsoaprivatekeyassociatedwithpublickey+yourprivatekeywaspacedontherunniningsinstanceaspartoftheibmtehnolgyzoneprovisioningprocess+thiswillallowyoutoaccesstheinstanceinrunninginthepowervsservice= ibmtechzone@ibmtechzone.ibm.com</p>
+</blockquote>
+</details>
 <ol start="9">
 <li>Using the value of the <strong>UserName</strong> field found in your TechZone reservation, use ssh to log into the AIX-vm-1 instance. You must substitute your UserName in place of the string <strong>UserName</strong> in the command below:</li>
 </ol>
-<p>ssh -i mykey <strong>UserName</strong>@52.117.38.29</p>
-<p>sample output:</p>
+<p><code>ssh -i mykey **UserName**@52.117.38.29</code></p>
+<details class="example">
+<summary>Example output</summary>
+</details>
+<p>Your terminal is now accessing the PowerVS instance. Any commands executed at this point will be executed on that instance.</p>
 <ol start="10">
-<li>Try running a few OS commands:</li>
+<li>Try running a few OS level commands:</li>
 </ol>
-<p><code>ls -laR</code></p>
-<p>Sample output:</p>
-<p><code>who</code></p>
-<p>Sample output:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ls -laR
+</code></pre></div>
+<details class="example">
+<summary>Example output</summary>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>who
+</code></pre></div>
+<details class="example">
+<summary>Example output</summary>
+</details>
+<ol start="11">
+<li>Close the SSH connection by running the <strong>exit</strong> command.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>exit
+</code></pre></div>
+<details class="example">
+<summary>Example output</summary>
+</details>
 <p>To explore further, use the following public IP addresses to access the other instances:</p>
-<p>table
-AIX-vm-2 52.117.38.26
-RH-vm-1 52.117.38.28
-RH-vm-2 52.117.38.30</p>
+<table>
+<thead>
+<tr>
+<th>Instance name</th>
+<th>Instance public IP address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AIX-vm-2</td>
+<td>52.117.38.26</td>
+</tr>
+<tr>
+<td>RH-vm-1</td>
+<td>52.117.38.28</td>
+</tr>
+<tr>
+<td>RH-vm-2</td>
+<td>52.117.38.30</td>
+</tr>
+</tbody>
+</table>
 <p>Use the <code>ssh -i mykey **UserName**@**IP address**</code> command to connect to the other servers. Be sure to replace <strong>UserName</strong> with the **UserName field found in your TechZone reservation.</p>
-<p>For IBM and Business Partners wishing to complete the IBM Power Systems Virtual Server - Level 3 for Sales, please proceed to Part 9. <strong><em>ADD internal link to Part 9</em></strong> For technical sellers please proceed to the next Part and explore PowerVS server placement groups.</p>
+<p>For IBM and Business Partners wishing to complete the IBM Power Systems Virtual Server - Level 3 for Sales, please proceed to <a href="../" title="Part 8/01 Next steps.md">Part 8</a>. For technical sellers please proceed to the next Part and explore PowerVS server placement groups.</p>
 
               
             </article>
