@@ -87,4 +87,4 @@ To explore further, use the following public IP addresses to access the other in
 
 Use the ```ssh -i mykey UserName@IPaddress``` command to connect to the other servers. Be sure to replace **UserName** with the **UserName** field found in your TechZone reservation, and **IPaddress** with the instance's public IP address.
 
-For IBM and Business Partners wishing to complete the {{learningplan.name}} for Sales, please proceed to [Part 8]("../../Part 8/01 Next steps.md"). For technical sellers please proceed to the next Part and explore PowerVS server placement groups.
+For IBM and Business Partners wishing to complete the {{learningplan.name}} for Sales, please proceed to [Part 8]("Part 8/01 Next steps.md"). For technical sellers please proceed to the next Part and explore PowerVS server placement groups.
