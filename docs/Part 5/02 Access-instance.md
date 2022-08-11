@@ -77,11 +77,11 @@ exit
 
 To explore further, use the following public IP addresses to access the other instances:
 
-Instance name | Instance public IP address
-------------- | -------------------
-{{aixServer2.name}} | {{aixServer2.publicIP}}
-{{rhServer1.name}}  | {{rhServer1.publicIP}}
-{{rhServer2.name}}  | {{rhServer2.publicIP}}
+| Instance name | Instance public IP address |
+| ------------- | -------------------------- |
+| {{aixServer2.name}} | {{aixServer2.publicIP}} |
+| {{rhServer1.name}}  | {{rhServer1.publicIP}} |
+| {{rhServer2.name}}  | {{rhServer2.publicIP}} |
 
 Use the ```ssh -i mykey **UserName**@**IP address**``` command to connect to the other servers. Be sure to replace **UserName** with the **UserName field found in your TechZone reservation.
 
