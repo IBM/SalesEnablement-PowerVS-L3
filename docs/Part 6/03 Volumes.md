@@ -8,13 +8,15 @@ A few facts about storage volumes:
   - Affinity and anti-affinity rules can be applied to storage volumes.
 
 A few facts about boot volumes/images:
+
   - Boot volumes can be imported from IBM Cloud Object Storage (COS).
   - Boot volumes can be exported to IBM COS.
   - Affinity and anti-affinity rules can be applied to boot volumes.
   - Boot volumes (and storage volumes) of running instances can be captured (also know as a snapshot) to either the local image catalog associated with the PowerVS service or to IBM COS.
   - Captured boot images can be used to provision new instances.
 
-In the TechZone environment,
+In the TechZone environment:
+
   - Explore the **Storage volumes** page in the IBM Cloud Portal.
   ![](_attachments/StorageVolumes.png)
   - Explore the **Boot images** page in the IBM Cloud Portal.

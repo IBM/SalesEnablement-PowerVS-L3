@@ -5,7 +5,7 @@ A few facts about server placement groups:
   - By default, there is a maximum of 25 server placement groups. A support ticket needs to be raised to go beyond this limit.
   - The IBM Cloud Portal for server placement groups can only be used if the cloud account has less than 100 instances. If the account has > 100 instances, the command line interfaces (CLI) or application programming interfaces (API) must be used to create server placement groups.
 
-In the TechZone environment,
+In the TechZone environment:
 
   - Explore the **Server placement groups** page in the IBM Cloud Portal.
   ![](_attachments/ServerPlacementGroups.png)

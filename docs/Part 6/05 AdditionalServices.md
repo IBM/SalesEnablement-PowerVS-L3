@@ -1,6 +1,7 @@
 Complimentary products and services are available for {{offering.name}}.
 
-Using the TechZone environment,
+Using the TechZone environment:
+
   - Explore the **Additional services catalog** page of the PowerVS service.
   ![](_attachments/AdditionalServicesCatalog.png)
 
