@@ -16,6 +16,8 @@ ssh-rsa abunchofjumbleduplettersandnumbersandspecialcharaters/thatarerandomandha
 
 A private key was also provisioned at the same time and copied to the running PowerVS instances.
 
+In most of the steps below, **copy** the command line using the ![](_attachments/CopyToClipboard.png) icon and paste it into the IBM Cloud Shell using ++ctrl++**+v**, ++cmd++**+v**, or right click and select paste at the prompt in the IBM Cloud Shell.
+
 4. Copy your public key from the TechZone welcome e-mail using your operating system's copy to clipboard capabilities (e.g. highlight the text starting with **ssh-rsa** to the end of the key and then use ++ctrl++**+c** or ++cmd++**+c**.)
 5. In the IBM Cloud Shell window, enter the following string, but do not hit enter.
 
@@ -24,43 +26,63 @@ cat "
 6. Paste your public key into the IBM Cloud Shell window using either ++ctrl++**+v** or ++cmd++**+v**.
 7. In the IBM Cloud Shell window, after the text you just pasted, enter the following and press enter:
 
-```" > mykey```
+```
+" > mykey
+```
+
+??? example "Example output"
+    cat "ssh-rsa abunchofjumbleduplettersandnumbersandspecialcharaters/thatarerandomandhardtoundesrtandbut!!provideasecuremeansofconenctingtoopeartingsytesmsthatsupportssh/andpossiblyotherprotocols123478thereisalsoaprivatekeyassociatedwithpublickey+yourprivatekeywaspacedontherunniningsinstanceaspartoftheibmtehnolgyzoneprovisioningprocess+thiswillallowyoutoaccesstheinstanceinrunninginthepowervsservice= ibmtechzone@ibmtechzone.ibm.com" > mykey
+
 
 8. To verify, run the following command in the IBM Cloud Shell.
 
-```cat mykey```
-
-Sample output:
-
 ```
-> cat mykey
-ssh-rsa abunchofjumbleduplettersandnumbersandspecialcharaters/thatarerandomandhardtoundesrtandbut!!provideasecuremeansofconenctingtoopeartingsytesmsthatsupportssh/andpossiblyotherprotocols123478thereisalsoaprivatekeyassociatedwithpublickey+yourprivatekeywaspacedontherunniningsinstanceaspartoftheibmtehnolgyzoneprovisioningprocess+thiswillallowyoutoaccesstheinstanceinrunninginthepowervsservice= ibmtechzone@ibmtechzone.ibm.com
+cat mykey
 ```
+
+??? example "Example output"
+    > cat mykey
+    ssh-rsa abunchofjumbleduplettersandnumbersandspecialcharaters/thatarerandomandhardtoundesrtandbut!!provideasecuremeansofconenctingtoopeartingsytesmsthatsupportssh/andpossiblyotherprotocols123478thereisalsoaprivatekeyassociatedwithpublickey+yourprivatekeywaspacedontherunniningsinstanceaspartoftheibmtehnolgyzoneprovisioningprocess+thiswillallowyoutoaccesstheinstanceinrunninginthepowervsservice= ibmtechzone@ibmtechzone.ibm.com
+
 
 9. Using the value of the **UserName** field found in your TechZone reservation, use ssh to log into the {{aixServer1.name}} instance. You must substitute your UserName in place of the string **UserName** in the command below:
 
-ssh -i mykey **UserName**@{{aixServer1.publicIP}}
+```ssh -i mykey **UserName**@{{aixServer1.publicIP}}```
 
-sample output:
+??? example "Example output"
 
+Your terminal is now accessing the PowerVS instance. Any commands executed at this point will be executed on that instance.
 
-10. Try running a few OS commands:
+10. Try running a few OS level commands:
 
-```ls -laR```
+```
+ls -laR
+```
 
-Sample output:
+??? example "Example output"
 
-```who```
+```
+who
+```
 
-Sample output:
+??? example "Example output"
+
+11. Close the SSH connection by running the **exit** command.
+
+```
+exit
+```
+
+??? example "Example output"
 
 To explore further, use the following public IP addresses to access the other instances:
 
-table
-{{aixServer2.name}} {{aixServer2.publicIP}}
-{{rhServer1.name}} {{rhServer1.publicIP}}
-{{rhServer2.name}} {{rhServer2.publicIP}}
+Instance name | Instance public IP address
+------------- | -------------------
+{{aixServer2.name}} | {{aixServer2.publicIP}}
+{{rhServer1.name}}  | {{rhServer1.publicIP}}
+{{rhServer2.name}}  | {{rhServer2.publicIP}}
 
 Use the ```ssh -i mykey **UserName**@**IP address**``` command to connect to the other servers. Be sure to replace **UserName** with the **UserName field found in your TechZone reservation.
 
-For IBM and Business Partners wishing to complete the {{learningplan.name}} for Sales, please proceed to Part 9. ***ADD internal link to Part 9*** For technical sellers please proceed to the next Part and explore PowerVS server placement groups.
+For IBM and Business Partners wishing to complete the {{learningplan.name}} for Sales, please proceed to [Part 8](../'Part 8/01 Next steps.md'). For technical sellers please proceed to the next Part and explore PowerVS server placement groups.
