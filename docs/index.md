@@ -5,7 +5,7 @@ There are 9 parts to this demonstration guide as seen in the left hand navigatio
 !!! tip "Business Partner Tip"
     To complete the {{learningplan.name}} badge, all Business Partners must complete a 5 question quiz. **The quiz is focused on validating completion of this demonstration script, and not general knowledge of PowerVS.** It is highly recommended to complete the quiz while the IBM Technology Zone environment is active. Several of the questions ask about specific settings or content that is seen in the IBM Cloud Portal.
 
-In Parts 1, 2, and 3, learn how the demonstration environment was built, and how to perform a "baking show" style demonstration using the IBM Cloud Portal, click-thru demonstrations, and videos. New PowerVS resources are **not** provisioned as part of this demonstration guide.  All resources are pre-provisioned in a shared environment to save time and money.
+In Parts 1, 2, and 3, learn how the demonstration environment was built, and how to perform a "baking show" style demonstration using the IBM Cloud Portal, click-thru demonstrations, and videos. New PowerVS resources are **not** provisioned as part of this demonstration guide. All resources are pre-provisioned in a shared environment to save time and money.
 
 In Part 4, learn how to use the IBM Cloud Portal to manage PowerVS instances.
 
@@ -45,7 +45,7 @@ In some images, the following styles of highlighting are utilized:
 
 ![](_attachments/Usage-Clipboard.png)
 
-Additionally, there are several "click-thru" demonstrations. Links to click-thru demonstrations will open in a new browser window or tab with a screen similar to the image below. ***UPDATE THE IMAGE BELOW***
+Additionally, there are several "click-thru" demonstrations. Links to click-thru demonstrations will open in a new browser window or tab with a screen similar to the image below.
 
 ![](_attachments/ClickThruStartPage.png)
 

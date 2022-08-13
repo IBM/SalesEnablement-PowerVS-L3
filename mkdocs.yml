@@ -93,7 +93,7 @@ extra:
 #  account: "2435442 - ITZ - Satellite"
   account: "2305900 - ITZ - ADHOC03"
   powerVS:
-    serviceInstanceName: "PowerVS-service"
+    serviceInstanceName: "PowerVS-L3-service"
     serviceInstanceRG: "PowerVS-L3"
     serviceInstanceLocation: "Dallas"
     placementGroup1: "AffinityGroup"

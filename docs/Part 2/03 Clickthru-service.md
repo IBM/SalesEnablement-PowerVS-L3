@@ -7,7 +7,7 @@ Note, fields that require a text entry (e.g. service name) are pre-populated in 
 
 1. Open the link below and then click the play button ![](_attachments/ClickThruPlayButton.png) to begin the demonstration.
 
-    **Click-thru demo:** <a href="https://ibm.github.io/SalesEnablement-Satellite-L3-Sales/includes/SatLocationCreation/index.html" target ="_blank">Create an IBM Cloud Satellite Location</a>
+    **Click-thru demo:** <a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/ServiceCreate/index.html" target ="_blank">Create an IBM Power Systems Virtual Server service</a>
 
 2. Click the **Catalog** in the top menu bar.
 3. Enter PowerVS in the **Search** text field.
