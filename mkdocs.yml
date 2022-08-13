@@ -90,10 +90,11 @@ extra:
   tz_environment:
     name: "IBM Power Systems Virtual Server - Sales Enablment L3"
     url: "https://techzone.ibm.com/my/reservations"
-  account: "2435442 - ITZ - Satellite"
+#  account: "2435442 - ITZ - Satellite"
+  account: "2305900 - ITZ - ADHOC03"
   powerVS:
     serviceInstanceName: "PowerVS-service"
-    serviceInstanceRG: "Default"
+    serviceInstanceRG: "PowerVS-L3"
     serviceInstanceLocation: "Dallas"
     placementGroup1: "AffinityGroup"
     placementGroup2: "AntiAffinityGroup"
@@ -106,7 +107,7 @@ extra:
     name: "AIX-vm-2"
     privateIP: "192.168.129.26"
     publicIP: "52.117.38.26"
-    additonalVolumeName: "aix-volume-1"
+    additonalVolumeName: "aix-volume-2"
   rhServer1:
     name: "RH-vm-1"
     privateIP: "192.168.129.28"
