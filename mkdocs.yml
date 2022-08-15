@@ -98,6 +98,7 @@ extra:
     serviceInstanceLocation: "Dallas"
     placementGroup1: "AffinityGroup"
     placementGroup2: "AntiAffinityGroup"
+    sshKey: "PowerVS-key"
   aixServer1:
     name: "AIX-vm-1"
     privateIP: "192.168.129.29"
