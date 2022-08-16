@@ -15,17 +15,17 @@ Note, fields that require a text entry (e.g. service name) are pre-populated in 
 5. Click the **Select a location** pull-down.
 6. Click **Dallas (us-south) Region**.
 7. Click in the **Service name** text entry field.
-7. Click the **Select a resource group** pull-down.
-8. Click **{{powerVS.serviceInstanceRG}}**.
+8. Click the **Select a resource group** pull-down.
+9. Click **{{powerVS.serviceInstanceRG}}**.
 
 Note: Tags can also be added to the service to assist in grouping, sorting, and applying flexible access policies.
 
-9. Click the **I have read and agree to the following license agreements** check box.
-10. Click **Create**.
+10. Click the **I have read and agree to the following license agreements** check box.
+11. Click **Create**.
 
 Once the provisioning completes, the new PowerVS service can be found in the **Services and software** section of the IBM Cloud Portal dashboard.
 
-11. Click **Services and software**.
-12. Click the **{{powerVS.serviceInstanceName}}** under **Services and software**.
+12. Click **Services and software**.
+13. Click the **{{powerVS.serviceInstanceName}}** under **Services and software**.
 
 The PowerVS service is now ready to be populated with virtual server **instances**. In the next Part of the demonstration guide, learn how to provision an **instance**.
