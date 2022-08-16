@@ -8,7 +8,7 @@ In the video below, watch how easy it is to demonstrate some of the management c
 
 **INSERT VIDEO LINK HERE**
 
-In the above video, the actions described were performed. In most cases, the video was edited to speed up the video during the time required to complete the action. When performing client demonstrations it is often best to perform a "baking show" style of demonstrations especially when actions take longer than a minute or two to complete, or have a high risk of failure. While the actions performed here are low risk, as seen in the video they do take some time to complete.
+The video was edited to speed up the video during the time required to complete long running actions. When performing client demonstrations it is often best to perform a "baking show" style of demonstration, especially when actions take longer than a minute or two to complete, or have a high risk of failure. While the actions performed here are low risk, as seen in the video, they do take some time to complete.
 
 Using your IBM Cloud credentials and the IBM Cloud portal, complete the following scenarios of managing PowerVS instances using the "baking show" demonstration technique. Note, an error message like the one below will be encountered if an attempt is made to complete an action.
 
