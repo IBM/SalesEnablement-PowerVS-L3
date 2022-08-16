@@ -56,9 +56,9 @@ Note: for this demonstration, the instance will be provisioned using a public ne
 29. Click the **I agree to the Terms and Conditions** checkbox.
 30. Click **Create**.
 
-The PowerVS instance is now being provisioned. This process typically takes less than 5 minutes. Notice the value under the **Status** column of the **Virtual server instances** table. Once the status changes to an **Active** state, the instance is ready to be accessed.
+The PowerVS instance is now being provisioned. This process took approximately 45 minutes when creating the TechZone environment. Notice the value under the **Status** column of the **Virtual server instances** table. Once the status changes to an **Active** state, the instance is ready to be accessed.
 
 31. Click the **Refresh** icon ![](_attachments/refreshIcon.png).
-32. click the **{{rhServer1.name}}** link in the **Virtual server instances** table.
+32. Click the **{{rhServer1.name}}** link in the **Virtual server instances** table.
 
 In the next part of the demonstration script, learn how to use the IBM Cloud Portal to manage PowerVS instances.
