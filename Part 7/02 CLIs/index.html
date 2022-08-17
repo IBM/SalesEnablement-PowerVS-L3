@@ -763,12 +763,88 @@
 <p>It is also possible to install the IBM Cloud CLIs and PowerVS CLI plugin other systems, like personal desktops, development servers, etc. To learn more about installing the PowerVS CLI locally click <a href="https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference" target="_blank">here</a>.</p>
 <p>To get started, first open the IBM Cloud Shell from the IBM Cloud portal:</p>
 <ol>
-<li>Open a browser window/tab to the IBM Cloud Portal: <a href="https://cloud.ibm.com" target="_blank">https://cloud.ibm.com</a>.</li>
-<li>Switch to the 2305900 - ITZ - ADHOC03 Cloud account.
-<img alt="" src="_attachments/SwitchAccounts.png" /></li>
-<li>Click the IBM Cloud Shell icon <img alt="" src="../_attachments/CloudShellIcon.png" /></li>
+<li>If not already opened, open the IBM Cloud Portal: <a href="https://cloud.ibm.com/" target="_blank">https://cloud.ibm.com/</a> and authenticate with your IBM Cloud credentials.</li>
+<li>Change from your IBM Cloud account to the <strong>2305900 - ITZ - ADHOC03</strong> account.</li>
 </ol>
-<p><strong><em>To be written</em></strong></p>
+<p><img alt="" src="_attachments/SwitchAccounts-final.gif" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If your browser window is narrow, you may see this icon: <img alt="" src="_attachments/SwitchAccountsIcon.png" /> instead of the current account name as shown in the screen capture above.</p>
+</div>
+<ol start="3">
+<li>Click the IBM Cloud Shell icon <img alt="" src="../_attachments/CloudShellIcon.png" />.</li>
+</ol>
+<p><img alt="" src="_attachments/StartCloudShell.png" /></p>
+<p>The next steps are performed in using the IBM Cloud Shell window that was opened. First, you need to create a SSH private key file using the key provided in your IBM Technology Zone's reservation welcome e-mail.</p>
+<p>Remember, to avoid typographical errors <strong>copy</strong> the command line using the <img alt="" src="../_attachments/CopyToClipboard.png" /> icon when it is available. Then paste the contents into the IBM Cloud Shell using <span class="keys"><kbd class="key-control">Ctrl</kbd></span><strong>+v</strong>, <span class="keys"><kbd class="key-command">Cmd</kbd></span><strong>+v</strong>, or right click and select paste at the prompt in the IBM Cloud Shell.</p>
+<ol start="4">
+<li>Display all the PowerVS plugin command line options.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ibmcloud pi --help | more
+</code></pre></div>
+<details class="tip">
+<summary>Tip for novice Linux users!</summary>
+<p>If you are not familiar with Linux commands, don't worry. The command you just ran is actually 2 commands. The first is <code>ibmcloud pi --help</code>. This executes the <strong>help</strong> option of the PowerVS plugin. The second command is the <code>more</code> command which pauses the output being displayed.  The <strong>"|"</strong> or <strong>pipe</strong> character takes the output from the first command and sends it as input to the second command. If you want to learn more about Linux commands, just do a Internet search on <strong>Linux primer</strong>.</p>
+</details>
+<ol start="5">
+<li>Press the <strong>space bar</strong> to continue the output.</li>
+</ol>
+<p>Notice the last part of the message says: <strong>Enter 'ibmcloud pi help [command]' for more information about a command.</strong>. Use this to get more help on individual PowerVS plugin commands.</p>
+<ol start="6">
+<li>List all the PowerVS services provisioned in the account.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ibmcloud pi service-List
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Sample output</p>
+<p>andrew@cloudshell:~$ ibmcloud pi service-list
+ID                                                                                                                    Name
+crn:v1:bluemix:public:power-iaas:us-south:a/ba0e33c9056f470ca19de009747ec654:c8bee9ba-f208-442c-9e10-5633624d633f::   PowerVS-L3-service</p>
+</div>
+<p>To view the PowerVS instances in the service, the service target must first be set for the PowerVS plugin.</p>
+<ol start="7">
+<li>Set the service target using the instance ID of the service.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>serviceID=`ibmcloud pi service-list 2&gt;&amp;1 | tail -1 | cut -f1 -d&#39; &#39;`
+</code></pre></div>
+<details class="tip">
+<summary>Tip for novice Linux users!</summary>
+<p>The last command did 4 actions. First, it listed the service list just like in step 6, and redirected both the error and regular output to the regular output stream (<strong>2&gt;&amp;1</strong>). This output was then sent to the <strong>tail</strong> command which ignores everything but the last line (<strong>-1</strong>). Then the output from the <strong>tail</strong> command is sent to the <strong>cut</strong> command where all the output except the first field upto to the first space character is ignored (<strong>-f -d' '</strong>). And finally, the output from the <strong>cut</strong> command was stored in an environment variable called <strong>serviceID</strong>. Why did we do this? Because no one wants to type <strong>crn:v1:bluemix:public:power-iaas:us-south:a/ba0e33c9056f470ca19de009747ec654:c8bee9ba-f208-442c-9e10-5633624d633f::</strong> in order to run the next command.</p>
+</details>
+<ol start="8">
+<li>Use the <strong>$serviceID</strong> environment variable to set the target of future PowerVS plugin commands to the service.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ibmcloud pi service-target $serviceID
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Sample output</p>
+<p>andrew@cloudshell:~$ ibmcloud pi service-target $serviceID
+Targeting service crn:v1:bluemix:public:power-iaas:us-south:a/ba0e33c9056f470ca19de009747ec654:c8bee9ba-f208-442c-9e10-5633624d633f::...</p>
+</div>
+<ol start="9">
+<li>List all the PowerVS instances provisioned in the targeted PowerVS service.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ibmcloud pi instances
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Sample output</p>
+<p>andrew@cloudshell:~$ ibmcloud pi instances
+Listing instances under account ITZ - ADHOC03 as user andrew@jones-tx.com...
+ID                                     Name       Path
+e299994a-cbe8-425b-90d5-e5540dab31ec   RH_vm_2    /pcloud/v1/cloud-instances/78c351a288ba4c2f94d375a42183cb24/pvm-instances/e299994a-cbe8-425b-90d5-e5540dab31ec
+7a450de6-15df-4857-bafd-5f9b3a301301   AIX-vm-2   /pcloud/v1/cloud-instances/78c351a288ba4c2f94d375a42183cb24/pvm-instances/7a450de6-15df-4857-bafd-5f9b3a301301
+8150318a-c3e3-4091-9457-0f1062b2adab   RH-vm-1    /pcloud/v1/cloud-instances/78c351a288ba4c2f94d375a42183cb24/pvm-instances/8150318a-c3e3-4091-9457-0f1062b2adab
+36f056ec-1fd9-4456-9c0e-d2e7ebaa90df   AIX-vm-1   /pcloud/v1/cloud-instances/78c351a288ba4c2f94d375a42183cb24/pvm-instances/36f056ec-1fd9-4456-9c0e-d2e7ebaa90df</p>
+</div>
+<ol start="10">
+<li>View the details of the <strong>AIX-vm-1</strong> instance.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ibmcloud pi instance AIX-vm-1
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Sample output</p>
+<p><img alt="" src="../_attachments/server1Details.png" /></p>
+</div>
 
 
 
