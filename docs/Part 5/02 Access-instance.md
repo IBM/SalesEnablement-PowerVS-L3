@@ -12,14 +12,14 @@ Follow the steps below to log in to a running PowerVS instance using the IBM Clo
 1. If not already opened, open the IBM Cloud Portal: <a href="https://cloud.ibm.com/" target="_blank">https://cloud.ibm.com/</a> and authenticate with your IBM Cloud credentials.
 2. Change from your IBM Cloud account to the **{{account}}** account.
 
-[](_attachments/SwitchAccounts-final.gif)
+![](_attachments/SwitchAccounts-final.gif)
 
 !!! tip
     If your browser window is narrow, you may see this icon: ![](_attachments/SwitchAccountsIcon.png) instead of the current account name as shown in the screen capture above.
 
 3. Click the IBM Cloud Shell icon ![](_attachments/CloudShellIcon.png).
 
-[](_attachments/StartCloudShell.png)
+![](_attachments/StartCloudShell.png)
 
 The next steps are performed in using the IBM Cloud Shell window that was opened. First, you need to create a SSH private key file using the key provided in your IBM Technology Zone's reservation welcome e-mail.
 
@@ -33,7 +33,7 @@ NEED IMAGE HERE!!!!!!!!!!
 
 ```echo "```
 
-[](_attachments/echo1.png)
+![](_attachments/echo1.png)
 
 6. Paste your public key into the IBM Cloud Shell window using either ++ctrl++**+v** or ++cmd++**+v**.
 
@@ -45,7 +45,7 @@ NEED IMAGE HERE!!!!!!!!!!
 " > mykey
 ```
 
-[](_attachments/echo2.png)
+![](_attachments/echo2.png)
 
 8. To verify, run the following command in the IBM Cloud Shell.
 
@@ -67,7 +67,7 @@ Note, this is required to allow the next commands to work properly. There is not
 
 ```ssh -i mykey **UserName**@{{aixServer1.publicIP}}```
 
-[](_attachments/sshServer1.png)
+![](_attachments/sshServer1.png)
 
 10. Try running a few OS level commands:
 
