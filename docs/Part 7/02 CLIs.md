@@ -28,11 +28,11 @@ Remember, to avoid typographical errors **copy** the command line using the ![](
 ibmcloud pi --help | more
 ```
 ??? tip "Tip for novice Linux users!"
-    If you are not familiar with Linux commands, don't worry. The command you just ran is actually 2 commands. The first is ```ibmcloud pi --help```. This executes the **help** option of the PowerVS plugin. The second command is the ```more``` command which pauses the output being displayed.  The **"|"** or **pipe** character takes the output from the first command and sends it as input to the second command. If you want to learn more about Linux commands, just do a Internet search on **Linux primer**.
+    If you are not familiar with Linux commands, don't worry. The command you just ran is actually 2 commands. The first is ```ibmcloud pi --help```. This executes the **help** option of the PowerVS plugin. The second command is the ```more``` command which pauses the output being displayed. The **"|"** or **pipe** character takes the output from the first command and sends it as input to the second command. If you want to learn more about Linux commands, just do a Internet search on **Linux primer**.
 
 5. Press the **space bar** to continue the output.
 
-Notice the last part of the message says: **Enter 'ibmcloud pi help [command]' for more information about a command.**. Use this to get more help on individual PowerVS plugin commands.
+Notice the last part of the message says: **Enter 'ibmcloud pi help [command]' for more information about a command.** Use this to get more help on individual PowerVS plugin commands.
 
 6. List all the PowerVS services provisioned in the account.
 
@@ -73,13 +73,7 @@ ibmcloud pi instances
 ```
 
 !!! info "Sample output"
-    andrew@cloudshell:~$ ibmcloud pi instances
-    Listing instances under account ITZ - ADHOC03 as user andrew@jones-tx.com...
-    ID                                     Name       Path
-    e299994a-cbe8-425b-90d5-e5540dab31ec   RH_vm_2    /pcloud/v1/cloud-instances/78c351a288ba4c2f94d375a42183cb24/pvm-instances/e299994a-cbe8-425b-90d5-e5540dab31ec
-    7a450de6-15df-4857-bafd-5f9b3a301301   AIX-vm-2   /pcloud/v1/cloud-instances/78c351a288ba4c2f94d375a42183cb24/pvm-instances/7a450de6-15df-4857-bafd-5f9b3a301301
-    8150318a-c3e3-4091-9457-0f1062b2adab   RH-vm-1    /pcloud/v1/cloud-instances/78c351a288ba4c2f94d375a42183cb24/pvm-instances/8150318a-c3e3-4091-9457-0f1062b2adab
-    36f056ec-1fd9-4456-9c0e-d2e7ebaa90df   AIX-vm-1   /pcloud/v1/cloud-instances/78c351a288ba4c2f94d375a42183cb24/pvm-instances/36f056ec-1fd9-4456-9c0e-d2e7ebaa90df
+    ![](_attachments/instances.png)
 
 10. View the details of the **{{aixServer1.name}}** instance.
 
