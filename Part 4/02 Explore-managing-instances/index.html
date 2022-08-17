@@ -319,14 +319,14 @@
       
       
         <label class="md-nav__link" for="__nav_4">
-          Part 3 - Provisioning a PowerVS instances
+          Part 3 - Provisioning a PowerVS instance
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Part 3 - Provisioning a PowerVS instances" data-md-level="1">
+      <nav class="md-nav" aria-label="Part 3 - Provisioning a PowerVS instance" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Part 3 - Provisioning a PowerVS instances
+          Part 3 - Provisioning a PowerVS instance
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -759,44 +759,54 @@
   <h1>Managing instances</h1>
 
 <p>Through the IBM Cloud Portal or APIs, administrators with the appropriate IBM Cloud Portal access can manipulate PowerVS instances without needing to directly access the instance operating system.</p>
-<p>In the video below, watch how easy it is to demonstrate some of the management capabilities of a PowerVS instance.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>If the video appears blurry, click the fullscreen <img alt="" src="../_attachments/FullScreenVideo.png" /> or <img alt="" src="../_attachments/FullScreenVideo3.png" /> icon.</p>
-</div>
-<p><strong>INSERT VIDEO LINK HERE</strong></p>
-<p>The video was edited to speed up the video during the time required to complete long running actions. When performing client demonstrations it is often best to perform a "baking show" style of demonstration, especially when actions take longer than a minute or two to complete, or have a high risk of failure. While the actions performed here are low risk, as seen in the video, they do take some time to complete.</p>
-<p>Using your IBM Cloud credentials and the IBM Cloud portal, complete the following scenarios of managing PowerVS instances using the "baking show" demonstration technique. Note, an error message like the one below will be encountered if an attempt is made to complete an action.</p>
+<p>Using your IBM Cloud credentials and the IBM Cloud portal, complete the following scenario for managing PowerVS instances using the "baking show" demonstration technique. Note, an error message like the one below will be encountered if an attempt is made to complete an action.</p>
 <p><img alt="" src="../_attachments/ErrorMessage.png" /></p>
 <p>This is normal, as full access to the shared environment is <strong>not</strong> provided. To avoid the error message, simply click the <strong>Cancel</strong> button on the action dialog. If performing a live client demonstration, or for IBM employees completing the Stand and Deliver for the IBM Power Systems Virtual Server - Level 3 badge, tell the audience why the action is being canceled but explain what would typically happen if the action was completed.</p>
 <ol>
-<li>open the portal in anew browser tab/window</li>
-<li>if not already opened, go to dashboard</li>
-<li>change account</li>
-<li>click services and software</li>
-<li>click powervs-service</li>
-<li>click ... at far right of one of the instances in the table</li>
+<li>Open the IBM Cloud Portal: <a href="https://cloud.ibm.com/" target="_blank">https://cloud.ibm.com/</a> and authenticate with your IBM Cloud credentials.</li>
+<li>Change from your IBM Cloud account to the <strong>2305900 - ITZ - ADHOC03</strong> account.</li>
 </ol>
-<p>Notice what operations can be performed. Some operations will be disabled. For example the <strong>Start</strong> option will be disabled if the instance is already in a running state. Some of the operations will only be enabled for specific operating systems.</p>
-<p>Details of a instance and other management tasks are also available by selecting on a particular instance in the <strong>Virtual server instances</strong> table.</p>
+<p><img alt="" src="../_attachments/SwitchAccounts-final.gif" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If your browser window is narrow, you may see this icon: <img alt="" src="../_attachments/SwitchAccountsIcon.png" /> instead of the current account name as shown in the screen capture above.</p>
+</div>
+<ol start="3">
+<li>Click <strong>Services and software</strong> under <strong>Resource summary</strong> on the IBM Cloud Dashboard.</li>
+</ol>
+<p><img alt="" src="../_attachments/Dashboard.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In some cases, after switching accounts you may be prompted with an IBM Cloud new user questionnaire and/or other pop-up windows. Simply cancel these windows. If a the IBM Cloud Dashboard is not displayed as seen in the above figure, click the <strong>IBM Cloud</strong> text at top left of the IBM Cloud Portal.</p>
+</div>
+<ol start="4">
+<li>Click <strong>PowerVS-L3-service</strong> under <strong>Services and software</strong>.</li>
+</ol>
+<p><img alt="" src="../_attachments/Dashboard.png" /></p>
+<ol start="5">
+<li>Click <strong>AIX-vm-1</strong> in the <strong>Virtual server instances</strong> table.</li>
+</ol>
+<p><img alt="" src="../_attachments/InstancesTable.png" /></p>
+<ol start="6">
+<li>Click the <strong>VM actions</strong> pull-down.</li>
+</ol>
+<p><img alt="" src="../_attachments/InstanceDetails-Actions.png" /></p>
+<p>Notice the actions that can be initiated. The actions available will vary depending on the current state of the instance and the operating system of the instance.</p>
 <ol start="7">
-<li>click anywhere on the main screen (away from the pop-up menu from step 5)</li>
-<li>click the <strong>VM actions</strong> button.</li>
+<li>Click anywhere on the main screen (away from the pop-up menu from step 6).</li>
+<li>Click the <strong>Edit details</strong> link.</li>
 </ol>
-<p>Notice what operations can be performed. These actions are specific to the node, its current state, and OS.</p>
+<p><img alt="" src="../_attachments/InstanceDetails-EditDetails.png" /></p>
+<p>Explore what instance configuration options can be modified. Depending on the running state of the instance, some options may not be possible. Note, making changes to the instance always requires the user to agree to the service terms.</p>
 <ol start="9">
-<li>click <strong>VM actions</strong> button again to dismiss the actions menu.</li>
-<li>click the <strong>Edit details</strong> link</li>
-<li>Click <strong>Edit details</strong></li>
+<li>Click the <strong>Cancel</strong> link for the <strong>Edit server details</strong> dialog.</li>
 </ol>
-<p>Explore what instance configuration options can be modified. Depending on the running state of the instance, some options may not be possible.</p>
-<ol start="12">
-<li>Click the <strong>+</strong> icon under the Memory field until the value is 4 GB.</li>
-<li>Click the <strong>I have read the service agreement and agree to the terms.</strong> checkbox.</li>
-<li>Note the <strong>Save edits and order</strong> button is now active.</li>
-<li>Click <strong>Cancel</strong></li>
-<li>Click the <strong>Virtual server instances</strong> item in left hand menu bar.</li>
-</ol>
+<p>The above steps, walked through 2 aspects of managing a single PowerVS instance. Before proceeding, spend a few minutes exploring other aspects of managing PowerVS instances using the IBM Cloud Portal. Detailed steps are not provided, but typically just click the <strong>Cancel</strong> button to return to the instances detail page. Here are a few things to try:</p>
+<ul>
+<li>Click <strong>Attach storage</strong>. Notice how only existing volumes that are marked as <strong>shareable</strong> are displayed.</li>
+<li>Click <strong>Create volume</strong>. Notice it is now possible to add a <strong>Storage volume</strong> using a different tier of storage than that of the instance boot volume.</li>
+<li>Click the <strong>VM actions</strong> drop-down menu and select <strong>Captures and export</strong>. From this dialog, the storage volumes can be exported to either the PowerVS service Image catalog or to IBM Cloud Object Storage.</li>
+</ul>
 <p>In the next Part, learn how to access a running PowerVS instance.</p>
 
 
