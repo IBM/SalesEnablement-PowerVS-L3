@@ -784,12 +784,12 @@
 </code></pre></div>
 <details class="tip">
 <summary>Tip for novice Linux users!</summary>
-<p>If you are not familiar with Linux commands, don't worry. The command you just ran is actually 2 commands. The first is <code>ibmcloud pi --help</code>. This executes the <strong>help</strong> option of the PowerVS plugin. The second command is the <code>more</code> command which pauses the output being displayed.  The <strong>"|"</strong> or <strong>pipe</strong> character takes the output from the first command and sends it as input to the second command. If you want to learn more about Linux commands, just do a Internet search on <strong>Linux primer</strong>.</p>
+<p>If you are not familiar with Linux commands, don't worry. The command you just ran is actually 2 commands. The first is <code>ibmcloud pi --help</code>. This executes the <strong>help</strong> option of the PowerVS plugin. The second command is the <code>more</code> command which pauses the output being displayed. The <strong>"|"</strong> or <strong>pipe</strong> character takes the output from the first command and sends it as input to the second command. If you want to learn more about Linux commands, just do a Internet search on <strong>Linux primer</strong>.</p>
 </details>
 <ol start="5">
 <li>Press the <strong>space bar</strong> to continue the output.</li>
 </ol>
-<p>Notice the last part of the message says: <strong>Enter 'ibmcloud pi help [command]' for more information about a command.</strong>. Use this to get more help on individual PowerVS plugin commands.</p>
+<p>Notice the last part of the message says: <strong>Enter 'ibmcloud pi help [command]' for more information about a command.</strong> Use this to get more help on individual PowerVS plugin commands.</p>
 <ol start="6">
 <li>List all the PowerVS services provisioned in the account.</li>
 </ol>
@@ -828,13 +828,7 @@ Targeting service crn:v1:bluemix:public:power-iaas:us-south:a/ba0e33c9056f470ca1
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Sample output</p>
-<p>andrew@cloudshell:~$ ibmcloud pi instances
-Listing instances under account ITZ - ADHOC03 as user andrew@jones-tx.com...
-ID                                     Name       Path
-e299994a-cbe8-425b-90d5-e5540dab31ec   RH_vm_2    /pcloud/v1/cloud-instances/78c351a288ba4c2f94d375a42183cb24/pvm-instances/e299994a-cbe8-425b-90d5-e5540dab31ec
-7a450de6-15df-4857-bafd-5f9b3a301301   AIX-vm-2   /pcloud/v1/cloud-instances/78c351a288ba4c2f94d375a42183cb24/pvm-instances/7a450de6-15df-4857-bafd-5f9b3a301301
-8150318a-c3e3-4091-9457-0f1062b2adab   RH-vm-1    /pcloud/v1/cloud-instances/78c351a288ba4c2f94d375a42183cb24/pvm-instances/8150318a-c3e3-4091-9457-0f1062b2adab
-36f056ec-1fd9-4456-9c0e-d2e7ebaa90df   AIX-vm-1   /pcloud/v1/cloud-instances/78c351a288ba4c2f94d375a42183cb24/pvm-instances/36f056ec-1fd9-4456-9c0e-d2e7ebaa90df</p>
+<p><img alt="" src="../_attachments/instances.png" /></p>
 </div>
 <ol start="10">
 <li>View the details of the <strong>AIX-vm-1</strong> instance.</li>
