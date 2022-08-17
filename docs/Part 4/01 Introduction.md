@@ -6,7 +6,7 @@ On a per PowerVS instance (VM) basis, using the IBM Cloud Portal or IBM Cloud Po
    - Perform an immediate shutdown (without killing processes)
    - Restart
    - Reset
-   - Open an instance console
+   - Open a console (terminal) to the instance
    - Delete the instance
    - Capture and export an image of the instance
 

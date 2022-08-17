@@ -19,7 +19,7 @@ nav:
     - 'Introduction': 'Part 2/01 Introduction.md'
     - 'Watch a service being provisioned': 'Part 2/02 Watch-service.md'
     - 'Click through demonstration of a service being provisioned': 'Part 2/03 Clickthru-service.md'
-  - Part 3 - Provisioning a PowerVS instances:
+  - Part 3 - Provisioning a PowerVS instance:
     - 'Introduction': 'Part 3/01 Introduction.md'
     - 'Watch a instance being provisioned': 'Part 3/02 Watch-instance.md'
     - 'Click through demonstration of a service instance being provisioned': 'Part 3/03 Clickthru-instance.md'
@@ -106,16 +106,17 @@ extra:
     additonalVolumeName: "aix-volume-1"
   aixServer2:
     name: "AIX-vm-2"
-    privateIP: ""
-    publicIP: ""
+    privateIP: "192.168.130.106"
+    publicIP: "52.117.41.106"
     additonalVolumeName: "aix-volume-2"
   rhServer1:
     name: "RH-vm-1"
     privateIP: "192.168.130.107"
     publicIP: "52.117.41.107"
-    additonalVolumeName: "RH-volume-1"
+    additonalVolumeName: "rh-volume-1-39907-1"
+    additonalVolumeName2: "rh-volume-1-39907-2"
   rhServer2:
     name: "RH-vm-2"
-    privateIP: ""
-    publicIP: ""
-    additonalVolumeName: "RH-volume-2"
+    privateIP: "192.168.130.108"
+    publicIP: "52.117.41.108"
+    additonalVolumeName: "rh-volume-2"

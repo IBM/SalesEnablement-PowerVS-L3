@@ -1,47 +1,53 @@
 Through the IBM Cloud Portal or APIs, administrators with the appropriate IBM Cloud Portal access can manipulate PowerVS instances without needing to directly access the instance operating system.
 
-In the video below, watch how easy it is to demonstrate some of the management capabilities of a PowerVS instance.
-
-!!! tip
-    If the video appears blurry, click the fullscreen ![](_attachments/FullScreenVideo.png) or ![](_attachments/FullScreenVideo3.png) icon.
-
-
-**INSERT VIDEO LINK HERE**
-
-The video was edited to speed up the video during the time required to complete long running actions. When performing client demonstrations it is often best to perform a "baking show" style of demonstration, especially when actions take longer than a minute or two to complete, or have a high risk of failure. While the actions performed here are low risk, as seen in the video, they do take some time to complete.
-
-Using your IBM Cloud credentials and the IBM Cloud portal, complete the following scenarios of managing PowerVS instances using the "baking show" demonstration technique. Note, an error message like the one below will be encountered if an attempt is made to complete an action.
+Using your IBM Cloud credentials and the IBM Cloud portal, complete the following scenario for managing PowerVS instances using the "baking show" demonstration technique. Note, an error message like the one below will be encountered if an attempt is made to complete an action.
 
 ![](_attachments/ErrorMessage.png)
 
 This is normal, as full access to the shared environment is **not** provided. To avoid the error message, simply click the **Cancel** button on the action dialog. If performing a live client demonstration, or for IBM employees completing the Stand and Deliver for the {{learningplan.name}} badge, tell the audience why the action is being canceled but explain what would typically happen if the action was completed.
 
-1. open the portal in anew browser tab/window
-2. if not already opened, go to dashboard
-3. change account
-4. click services and software
-5. click powervs-service
-6. click ... at far right of one of the instances in the table
+1. Open the IBM Cloud Portal: <a href="https://cloud.ibm.com/" target="_blank">https://cloud.ibm.com/</a> and authenticate with your IBM Cloud credentials.
+2. Change from your IBM Cloud account to the **{{account}}** account.
 
-Notice what operations can be performed. Some operations will be disabled. For example the **Start** option will be disabled if the instance is already in a running state. Some of the operations will only be enabled for specific operating systems.
+![](_attachments/SwitchAccounts-final.gif)
 
-Details of a instance and other management tasks are also available by selecting on a particular instance in the **Virtual server instances** table.
+!!! tip
+    If your browser window is narrow, you may see this icon: ![](_attachments/SwitchAccountsIcon.png) instead of the current account name as shown in the screen capture above.
 
-7. click anywhere on the main screen (away from the pop-up menu from step 5)
-8. click the **VM actions** button.
+3. Click **Services and software** under **Resource summary** on the IBM Cloud Dashboard.
 
-Notice what operations can be performed. These actions are specific to the node, its current state, and OS.
+![](_attachments/Dashboard.png)
 
-9. click **VM actions** button again to dismiss the actions menu.
-10. click the **Edit details** link
-11. Click **Edit details**
+!!! Note
+    In some cases, after switching accounts you may be prompted with an IBM Cloud new user questionnaire and/or other pop-up windows. Simply cancel these windows. If a the IBM Cloud Dashboard is not displayed as seen in the above figure, click the **IBM Cloud** text at top left of the IBM Cloud Portal.
 
-Explore what instance configuration options can be modified. Depending on the running state of the instance, some options may not be possible.
+4. Click **{{powerVS.serviceInstanceName}}** under **Services and software**.
 
-12. Click the **+** icon under the Memory field until the value is 4 GB.
-13. Click the **I have read the service agreement and agree to the terms.** checkbox.
-14. Note the **Save edits and order** button is now active.
-15. Click **Cancel**
-16. Click the **Virtual server instances** item in left hand menu bar.
+![](_attachments/Dashboard.png)
+
+5. Click **{{aixServer1.name}}** in the **Virtual server instances** table.
+
+![](_attachments/InstancesTable.png)
+
+6. Click the **VM actions** pull-down.
+
+![](_attachments/InstanceDetails-Actions.png)
+
+Notice the actions that can be initiated. The actions available will vary depending on the current state of the instance and the operating system of the instance.
+
+7. Click anywhere on the main screen (away from the pop-up menu from step 6).
+8. Click the **Edit details** link.
+
+![](_attachments/InstanceDetails-EditDetails.png)
+
+Explore what instance configuration options can be modified. Depending on the running state of the instance, some options may not be possible. Note, making changes to the instance always requires the user to agree to the service terms.
+
+9. Click the **Cancel** link for the **Edit server details** dialog.
+
+The above steps, walked through 2 aspects of managing a single PowerVS instance. Before proceeding, spend a few minutes exploring other aspects of managing PowerVS instances using the IBM Cloud Portal. Detailed steps are not provided, but typically just click the **Cancel** button to return to the instances detail page. Here are a few things to try:
+
+- Click **Attach storage**. Notice how only existing volumes that are marked as **shareable** are displayed.
+- Click **Create volume**. Notice it is now possible to add a **Storage volume** using a different tier of storage than that of the instance boot volume.
+- Click the **VM actions** drop-down menu and select **Captures and export**. From this dialog, the storage volumes can be exported to either the PowerVS service Image catalog or to IBM Cloud Object Storage.
 
 In the next Part, learn how to access a running PowerVS instance.

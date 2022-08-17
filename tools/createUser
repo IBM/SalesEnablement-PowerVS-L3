@@ -1,5 +1,5 @@
 #!/bin/bash
-export REMOTESERVERS=(52.117.38.29 52.117.38.26 52.117.38.28 52.117.38.30)
+export REMOTESERVERS=(52.117.41.110 52.117.41.106 52.117.41.107 52.117.41.108)
 export USERNAME=${1}
 export KEYFILE=${USERNAME}-key
 export ROOTKEYFILE=PowerVS-id_rsa
@@ -13,5 +13,5 @@ for REMOTESERVER in ${REMOTESERVERS[@]}
 do
         echo adding ${USERNAME} to server: ${REMOTESERVER}
         ssh -q -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null -F none -i ${ROOTKEYFILE} root@${REMOTESERVER} "/usr/sbin/useradd -m ${USERNAME}; mkdir /home/${USERNAME}/.ssh; echo ${PUBLICKEY} >> /home/${USERNAME}/.ssh/authorized_keys"
-        echo 
+        echo
 done
