@@ -42,7 +42,7 @@ Notice the actions that can be initiated. The actions available will vary depend
 
 Explore what instance configuration options can be modified. Depending on the running state of the instance, some options may not be possible. Note, making changes to the instance always requires the user to agree to the service terms.
 
-9. Click the **Cancel** link for the **Edit server details** dialog.
+9. Click the **Cancel** in the **Edit server details** dialog.
 
 The above steps, walked through 2 aspects of managing a single PowerVS instance. Before proceeding, spend a few minutes exploring other aspects of managing PowerVS instances using the IBM Cloud Portal. Detailed steps are not provided, but typically just click the **Cancel** button to return to the instances detail page. Here are a few things to try:
 
