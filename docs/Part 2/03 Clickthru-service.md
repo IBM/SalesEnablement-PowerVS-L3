@@ -28,4 +28,4 @@ Once the provisioning completes, the new PowerVS service can be found in the **S
 12. Click **Services and software**.
 13. Click the **{{powerVS.serviceInstanceName}}** under **Services and software**.
 
-The PowerVS service is now ready to be populated with virtual server **instances**. In the next Part of the demonstration guide, learn how to provision an **instance**.
+The PowerVS service is now ready to be populated with virtual server **instances**. In the next part of the demonstration guide, learn how to provision an **instance**.
