@@ -61,4 +61,4 @@ The PowerVS instance is now being provisioned. This process took approximately 4
 31. Click the **Refresh** icon ![](_attachments/refreshIcon.png).
 32. Click the **{{rhServer1.name}}** link in the **Virtual server instances** table.
 
-In the next part of the demonstration script, learn how to use the IBM Cloud Portal to manage PowerVS instances.
+In the next Part of the demonstration script, learn how to use the IBM Cloud Portal to manage PowerVS instances.
