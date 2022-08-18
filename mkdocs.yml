@@ -62,9 +62,7 @@ theme:
 plugins:
     - mkdocs-video
     - macros
-    - pandoc:
-        combined: true
-
+    - search
 
 markdown_extensions:
   - sane_lists
