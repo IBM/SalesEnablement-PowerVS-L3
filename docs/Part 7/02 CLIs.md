@@ -43,9 +43,7 @@ ibmcloud pi service-list
 ```
 
 !!! info "Sample output"
-    andrew@cloudshell:~$ ibmcloud pi service-list
-    ID                                                                                                                    Name
-    crn:v1:bluemix:public:power-iaas:us-south:a/ba0e33c9056f470ca19de009747ec654:c8bee9ba-f208-442c-9e10-5633624d633f::   PowerVS-L3-service
+    ![](_attachments/service-list.png)
 
 To view the PowerVS instances in the service, the service target must first be set for the PowerVS plugin.
 
@@ -56,7 +54,7 @@ serviceID=`ibmcloud pi service-list 2>&1 | tail -1 | cut -f1 -d' '`
 ```
 
 ??? tip "Tip for novice Linux users!"
-    The last command did 4 actions. First, it listed the service list just like in step 6, and redirected both the error and regular output to the regular output stream (**2>&1**). This output was then sent to the **tail** command which ignores everything but the last line (**-1**). Then the output from the **tail** command is sent to the **cut** command where all the output except the first field upto to the first space character is ignored (**-f -d' '**). And finally, the output from the **cut** command was stored in an environment variable called **serviceID**. Why did we do this? Because no one wants to type **crn:v1:bluemix:public:power-iaas:us-south:a/ba0e33c9056f470ca19de009747ec654:c8bee9ba-f208-442c-9e10-5633624d633f::** in order to run the next command.
+    The last command did 4 actions. First, it listed the service list like in step 6 and redirected both the error and standard output to the standard output stream (**2>&1**). This output was then sent to the **tail** command which ignores everything but the last line (**-1**). Then the output from the **tail** command is sent to the **cut** command where all the output except the first field up to to the first space character is ignored (**-f -d' '**). And finally, the output from the **cut** command was stored in an environment variable called **serviceID**. Why did we do this? Because no one wants to type **crn:v1:bluemix:public:power-iaas:us-south:a/ba0e33c9056f470ca19de009747ec654:c8bee9ba-f208-442c-9e10-5633624d633f::** in order to run the next command.
 
 8. Use the **$serviceID** environment variable to set the target of future PowerVS plugin commands to the service.
 
@@ -65,8 +63,7 @@ ibmcloud pi service-target $serviceID
 ```
 
 !!! info "Sample output"
-    andrew@cloudshell:~$ ibmcloud pi service-target $serviceID
-    Targeting service crn:v1:bluemix:public:power-iaas:us-south:a/ba0e33c9056f470ca19de009747ec654:c8bee9ba-f208-442c-9e10-5633624d633f::...
+    ![](_attachments/service-target.png)
 
 9. List all the PowerVS instances provisioned in the targeted PowerVS service.
 
@@ -85,3 +82,19 @@ ibmcloud pi instance {{aixServer1.name}}
 
 !!! info "Sample output"
     ![](_attachments/server1Details.png)
+
+Thus far, all of these commands have been **read** commands. The PowerVS CLIs also support **create** and **update** commands, but remember your user ID has limited access. Try the **instance modify** command and see what happens.
+
+11. Restart the **{{rhServer1.name}}** instance.
+
+```
+ibmcloud pi instance-soft-reboot {{rhServer1.name}}
+```
+
+!!! info "Sample output"
+    ![](_attachments/instance-soft-reboot.png)
+    Note, this error message as nowhere near as informative as what you saw in the IBM Cloud portal when attempting an action your user ID does not have permission to perform. The product team has been notified, and hopefully in the near future the CLI error messages will improve.
+
+There are over 100 PowerVS CLIs. Feel free to explore these using your TechZone environment. Remember, use ```ibmcloud pi --help``` or ```ibmcloud pi <command> --help``` to get detailed information on a command's usage.
+
+That concludes the final part of the {{offring.name}} demonstration script. Proceed to **Part 8 - Next steps** for more information on completing the {{learningplan.name}} badge.
