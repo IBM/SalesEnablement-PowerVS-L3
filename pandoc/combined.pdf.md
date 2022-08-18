@@ -1,0 +1,653 @@
+Welcome to the {{guide.name}}. The goal of this demonstration guide is to provide IBM and Business Partner Sales and Technical Sales the knowledge and tools to perform introductory demonstrations of {{offering.name}} (PowerVS).
+
+There are 9 parts to this demonstration guide as seen in the left hand navigation. To complete the {{learningplan.name}} badge requirements, IBM and Business Partner **sellers** must complete Parts 1, 2, 3, 4, 5, and 8 of this demonstration guide. IBM and Business Partner **technical sellers** must complete all sections. The associated Learning Plan Stand and Deliver rubrics (IBM) and quizzes (Business Partners) are based upon the sections required for the respective roles. **All are welcome and encouraged to complete all sections.**
+
+!!! tip "Business Partner Tip"
+    To complete the {{learningplan.name}} badge, all Business Partners must complete a 5 question quiz. **The quiz is focused on validating completion of this demonstration script, and not general knowledge of PowerVS.** It is highly recommended to complete the quiz while the IBM Technology Zone environment is active. Several of the questions ask about specific settings or content that is seen in the IBM Cloud Portal.
+
+In Parts 1, 2, and 3, learn how the demonstration environment was built, and how to perform a "baking show" style demonstration using the IBM Cloud Portal, click-thru demonstrations, and videos. New PowerVS resources are **not** provisioned as part of this demonstration guide. All resources are pre-provisioned in a shared environment to save time and money.
+
+In Part 4, learn how to use the IBM Cloud Portal to manage PowerVS instances.
+
+In Part 5, learn how to access the pre-provisioned PowerVS instances using the IBM Cloud Shell.
+
+Parts 1 through 5 provide a good foundation for performing a high-level, customer facing demonstration of {{offering.name}}.
+
+Parts 6 and 7 introduce several more technical aspects of {{offering.name}} including using the PowerVS IBM Cloud command line interface (CLI) plugin.
+
+Finally, in Part 8, learn where to find additional resources about {{offering.name}}, and how to complete the {{learningplan.name}} badge.
+
+Before jumping to part 1, please read the guidance below. Reading and understanding the information will save time while completing the steps in this guide.
+
+## Helpful tips for using this demonstration guide and environment
+
+The {{guide.name}} is organized in parts and sub-parts or chapters. Most chapters contain numbered steps, which are actions to be performed.
+
+Throughout the guide, images are used as examples of the IBM Cloud Portal, IBM Cloud Shell, and PowerVS instance consoles.
+
+!!! warning
+    The IBM Cloud Portal and {{offering.name}} changes on a regular basis and may differ from the images captured in this guide.
+
+In some images, the following styles of highlighting are utilized:
+
+- Action highlight box: Illustrates where to click, enter, or select an item:
+
+![](_attachments/ClickActionRectangle.png)
+
+- Path/explore highlight box: Illustrates one of two things:
+
+    - the path to follow to get to a specific location in the user interface
+    - areas to explore
+
+![](_attachments/PathExploreHighlight.png)
+
+- Copy to clipboard box: The text is copied to the clipboard. Click the copy icon (highlighted below) and then paste using the operating systems paste function, for example, entering ++ctrl++**+v**, ++cmd++**+v**, or right click and select paste.
+
+![](_attachments/Usage-Clipboard.png)
+
+Additionally, there are several "click-thru" demonstrations. Links to click-thru demonstrations will open in a new browser window or tab with a screen similar to the image below.
+
+![](_attachments/ClickThruStartPage.png)
+
+Click the play button ![](_attachments/ClickThruPlayButton.png) in the middle of the screen to start the demo. Then, simply follow the steps in the demonstration guide. If unsure where to click, click anywhere on the screen and a highlight box will appear showing where to click next.
+
+**In this demonstration environment, full access to the IBM Cloud account is NOT provided.** User identifications (IDs) will be restricted to specific capabilities. Permission to create or modify PowerVS service instances, virtual machines (instances), networks, images, etc. is not provided.
+
+!!! warning
+    Attempting to perform an action without the appropriate permissions will result in an error message like the one below. This is not an issue with the IBM Cloud or PowerVS, rather a restriction of the demo environment and the permissions assigned to users.
+
+    ![](_attachments/ErrorMessage.png)
+
+## Acronyms
+
+The following acronyms are used throughout this demonstration guide:
+
+    - Application programming interfaces (APIs)
+    - Classless inter-domain routing (CIDR)
+    - Control (ctrl) - The control key on keyboard
+    - Command (cmd) - The command key on keyboard
+    - Disaster Recovery (DR)
+    - Gigabyte (GB)
+    - High Availability (HA)
+    - IBM Cloud Object Storage (COS)
+    - IBM Power Systems Virtual Server (PowerVS)
+    - IBM Technology Zone (TechZone)
+    - Infrastructure as a Service (IaaS)
+    - Input/output operations per second (IOPs)
+    - Internet Protocol (IP)
+    - Operating System (OS)
+    - Random access memory (RAM)
+    - Secure Socket Shell (SSH)
+    - User identification (ID)
+    - Virtual Machine (VM)
+
+It is now time to proceed to Part 1, an overview of {{offering.name}}.
+
+{{offering.name}} (PowerVS) delivers flexible compute capacity for Power Systems workloads. Integrated with the IBM Cloud platform for on-demand provisioning, this offering provides a secure and scalable server virtualization environment built upon the advanced RAS features and leading performance of the Power Systems™ platform.
+
+This IBM Technology Sales Enablement demonstration guide is part of the following Your Learning Level 3 learning plans for PowerVS:
+
+***UPDATE ALL THE LINKS BELOW***
+
+- **IBM Sales:** **Coming Soon**<a href="https://yourlearning.ibm.com/activity/PLAN-4E64FE2FDBF0" target="_blank">https://yourlearning.ibm.com/activity/PLAN-4E64FE2FDBF0</a>
+- **IBM Technical Sales:** **Coming Soon**
+- **Business Partner Sales:** **Coming Soon**
+- **Business Partner Technical Sales:** **Coming Soon**
+
+ You should be familiar with PowerVS and should have completed the {{offering.name}} <a href="https://yourlearning.ibm.com/activity/PLAN-4E64FE2FDBF0" target="_blank">Sales Foundation Badge (Level 2)</a>:
+
+- **IBM:** <a href="https://yourlearning.ibm.com/activity/PLAN-4E64FE2FDBF0" target="_blank">https://yourlearning.ibm.com/activity/PLAN-4E64FE2FDBF0</a>
+- **Business Partners:** <a href="https://learn.ibm.com/course/view.php?id=11419" target="_blank">https://learn.ibm.com/course/view.php?id=11419</a>
+
+The content here is **not** a replacement for the Level 1 and 2 content that is part of that learning plan.
+
+This demonstration environment has multiple purposes. First, it is meant to educate you on {{offering.name}} (PowerVS) and to hone your skills to perform PowerVS demonstrations. Additionally, the IBM Technology Zone (TechZone) environment, this demonstration guide and associated click-thru demos and videos can be re-used to perform client demonstrations.
+
+!!! important
+    The focus of the demonstration is on the Infrastructure as a Service capability of PowerVS and not on the operating systems supported by the offering: AIX, IBM i, and Linux.
+
+In Part 2, learn about PowerVS **services** and how they are provisioned.
+
+Before you create a PowerVS virtual server, you must understand the difference in terminology between a PowerVS **service** and a PowerVS **instance**. Think of the PowerVS **service** as a container for all PowerVS **instances** at a specific geographic region. PowerVS **instances** are virtual machines (VMs). The **service** is available from the Resource list in the IBM Cloud Portal. For example, you can have two **services**, one in Dallas, Texas, and another in Washington, D.C. Each **service** can contain multiple **instances**. A **service** must be associated with an IBM Cloud **resource group** which helps in grouping resources and assigning permissions. To learn more, refer to <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-getting-started" target="_blank">Getting Started with {{offering.name}}</a>.
+
+The key parameters for a PowerVS service are:
+
+- **Datacenter location:** As of August 2022, PowerVS is co-located with 15 IBM Cloud datacenters located around the world. When selecting a datacenter, consider choosing the datacenter located nearest the majority of the end users that will be accessing the workloads running in PowerVS.
+- **Service name:** The PowerVS service name will appear in the IBM Cloud Portal under the provisioned services. Specify a name that is easily understood and recognized.
+- **Resource group:** Resource groups are used to organize resources in your IBM Cloud account. Administrative and access rights for all PowerVS resources are associated with the PowerVS service and not individual PowerVS instances (VMs). Once a PowerVS service is assigned to a resource group, the resource group can not be changed.
+
+In the next chapter, view a video of a PowerVS service being provisioned.
+
+In this chapter, watch a video of an {{offering.name}} **service** being provisioned in the IBM Cloud Portal.
+
+This video includes audio that explains the steps being taken and things to consider while making choices on options. This video can be utilized for client demonstrations either with or without the audio.
+
+![type:video](./_videos/ServiceCreate-final.mp4)
+
+!!! tip
+    If the video appears blurry, click the fullscreen ![](_attachments/FullScreenVideo.png) or ![](_attachments/FullScreenVideo3.png) icon.
+
+Now it is time for you to provision a PowerVS service. Use the click-thru demonstration below to practice provisioning a PowerVS service. The click-thru demonstration corresponds to the video from the previous chapter. Refer to the video for talking points if the click-thru demonstration is utilized with clients.
+
+Note, fields that require a text entry (e.g. service name) are pre-populated in the click-thru demonstration.
+
+!!! tip
+    Not sure where to click or what to do next? Simply click anywhere on the screen and the spot to click next will be highlighted.
+
+1. Open the link below and then click the play button ![](_attachments/ClickThruPlayButton.png) to begin the demonstration.
+
+    **Click-thru demo:** <a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/ServiceCreate/index.html" target ="_blank">Create an IBM Power Systems Virtual Server service</a>
+
+2. Click the **Catalog** in the top menu bar.
+3. Click in the **Catalog search** text entry field.
+4. Click the **Power Systems Virtual Server** tile.
+5. Click the **Select a location** pull-down.
+6. Click **Dallas (us-south) Region**.
+7. Click in the **Service name** text entry field.
+8. Click the **Select a resource group** pull-down.
+9. Click **{{powerVS.serviceInstanceRG}}**.
+
+Note: Tags can also be added to the service to assist in grouping, sorting, and applying flexible access policies.
+
+10. Click the **I have read and agree to the following license agreements** check box.
+11. Click **Create**.
+
+Once the provisioning completes, the new PowerVS service can be found in the **Services and software** section of the IBM Cloud Portal dashboard.
+
+12. Click **Services and software**.
+13. Click the **{{powerVS.serviceInstanceName}}** under **Services and software**.
+
+The PowerVS service is now ready to be populated with virtual server **instances**. In the next part of the demonstration guide, learn how to provision an **instance**.
+
+IBM Systems Virtual Servers are located in the IBM data centers, distinct from the IBM Cloud servers with separate networks and direct-attached storage. The environment is in its own pod and the internal networks are fenced but offer connectivity options to meet customer requirements. This infrastructure design enables {{offering.name}} to maintain key enterprise software certification and support as the PowerVS architecture is identical to certified on-premises infrastructure. The virtual servers, also known as instances, logical partitions (LPAR), or virtual machines (VMs) run on IBM Power Systems hardware with the PowerVM hypervisor.
+
+The key parameters for a PowerVS instance are:
+
+- **Instance name:** The PowerVS instance name will appear in the IBM Cloud Portal under the list of instances within a service. Specify a name that is easily understood and recognized.
+- **Server placement group:** Server placement groups provide control over the host or server on which a new virtual machine (VM) is placed. By using server placement groups, high availability solutions can be created within a data center. Apply an affinity or anti-affinity policy to each VM instance within a server placement group. After creating a placement group, provision a new VM instance in the placement group. When setting a placement group with an affinity policy, all VMs in that placement group are launched on the same server. When setting a placement group with an anti-affinity policy, all VMs in that placement group are launched on different servers. Learn more about <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-placement-groups" target="_blank">placement groups<a/>.
+- **VM pinning policy:** VM pinning controls the movement of VMs during disasters and other restart events. Learn more about hard and soft pinning <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-power-iaas-faqs#pinning" target="_blank">here</a>.
+- **SSH key:** An SSH public/private key pair is required to access the instance. An SSH key must be created and loaded into the IBM Cloud Portal prior to creating an instance. Learn more about using and generating SSH keys <a href="https://cloud.ibm.com/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key" target="_blank">here</a>.
+- **Operating system:** PowerVS instances can run either IBM AIX, IBM i, or Linux operating systems (OS). Several Linux images are available specifically for servers that will run SAP.
+- **OS image:** Users have the ability to choose an operating system image from the PowerVS image catalog or users can bring their own image. Each supported OS has a specific set of images in the PowerVS catalog for supported OS versions. Each instance is provisioned with a boot volume using the storage tier selected.
+- **Storage tier:** PowerVS supports both Tier 1 and Tier 3 storage. Tier 1 provides a maximum of 100 input/output operations per second (IOPs) per GB, while Tier 3 provides a maximum of 3 IOPS/GB. Tier 3 storage should only be utilized for non-production workloads.
+- **Storage pool affinity:** Three storage pool affinity options are available: auto-select, affinity, and anti-affinity. The affinity option specifies requires the boot volume to be placed in the same pool as another existing instance or existing boot volume. The new storage volume(s) for the instance will be placed in the same storage pool where the affinity object resides. The anti-affinity specifies a different pool should be used from that of another existing instance or existing boot volume.
+- **Machine type:** Two IBM Power Systems machine types are supported: s922 and e980. Learn more about these s922 <a href="https://www.ibm.com/products/power-system-s922" target="_blank">here</a> and the e980 <a href="https://www.ibm.com/products/power-system-e980" target="blank">here</a>.
+- **Core type:** PowerVS supports **shared uncapped**, **shared capped**, and **dedicated** cores. Shared uncapped cores are shared among other clients. Shared capped cores are shared, but resources do not expand beyond those that are requested (used mostly for licensing). Dedicated cores are allocated for a specific client (used for specific third-party licensing considerations). Learn more about core types <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor" target="_blank">here</a>.
+- **Number of cores:** The option for the number of cores assigned to an instance depends on the core type. Shared capped and unshared capped cores support 0.25 core increments, while dedicated cores must be assigned a full core. Note, the maximum number of cores will depend on the machine type and availability in the selected location.
+- **Amount of memory:** PowerVS instances must be provisioned with a minimum of 2GB of random access memory (RAM). The maximum amount of memory varies based upon machine type and availability in the selected location. If greater than 64GB RAM per core is specified, a higher price is charged.
+- **Additional storage volumes:** When provisioning a new instance, for additional storage, a new data volume can be created or an existing volume can be attached. Any storage volume added at this time will use the same storage tier as the boot volume specified earlier.
+- **Networking:** PowerVS instances will always be attached to a private network and can optionally be attached to a public, Internet accessible network. Use private networks to connect to existing subnets or go a new subnet can be created. Learn more about PowerVS networking <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-network-architecture-diagrams" target="_blank">here</a>.
+
+In the next chapter, view a video of a PowerVS instance being provisioned.
+
+In this chapter, watch a video of an {{offering.name}} **instance** being provisioned using the IBM Cloud Portal.
+
+The video has been edited to minimize the viewing time and does not reflect the actual provisioning time of a PowerVS **instance**. The actual provisioning time will vary, but it is typically less than 5 minutes. This video includes audio that explains the steps being taken and things to consider while making choices on options. This video can be utilized for client demonstrations either with or without the audio.
+
+Included in this video is the creation of the SSH keys to secure initial administrative (root) access to the virtual machine. Demonstrating this process to clients should be considered optional depending on your audience.
+
+![type:video](./_videos/CreateInstance-final.mp4)
+
+!!! tip
+    If the video appears blurry, click the fullscreen ![](_attachments/FullScreenVideo.png) or ![](_attachments/FullScreenVideo3.png) icon.
+
+Now it is time for to provision a PowerVS instance. Use the click-thru demonstration below to practice provisioning a PowerVS instance. Unlike the video in previous chapter the creation of the SSH keys to secure initial administrative (root) access to the virtual machine is not included in the click-thru demonstration. Refer to the video for talking points if the click-thru demonstration is utilized with clients.
+
+Note, fields that require a text entry (e.g. instance name) are pre-populated in the click-thru demonstration.
+
+!!! tip
+    Not sure where to click or what to do next? Simply click anywhere on the screen and the spot to click next will be highlighted.
+
+1. Open the link below and then click the play button ![](_attachments/ClickThruPlayButton.png) to begin the demonstration.
+
+    **Click-thru demo:** <a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/InstanceCreate/index.html" target ="_blank">Create an IBM Power Virtual Server Instance</a>
+
+2. Click the **Services and software** link under **Resource summary** on the IBM Cloud Portal dashboard.
+3. Click the **{{powerVS.serviceInstanceName}}** entry under **Services and Software**.
+4. Click the **Create instance+** button.
+
+The next steps refer to the entries in the **General** section of the **Create virtual server instance** form.
+
+5. Click in the **Instance name** text entry field.
+6. Click the **Select VM pinning** pull-down.
+7. Click **Soft**.
+8. Click the **Select SSH key** pull-down.
+9. Click **{{powerVS.sshKey}}**.
+10. Click the **Continue** button under the **General** section.
+
+The next steps refer to the entries in the **Boot image** section of the **Create virtual server instance** form.
+
+11. Click the **Select the OS** pull-down.
+12. Click **Linux**.
+13. Click the **Select an image** pull-down.
+14. Click **RHEL8-SP6**. Note: **RHEL8-SP6** is short for **Red Hat version 8 service pack 6**.
+15. Click the **Select storage tier** pull-down.
+16. Click **Tier 3 (3 IPOs / GB)**.
+17. Click the **Continue** button under the **Boot image** section.
+
+The next steps refer to the entries in the **Profile** section of the **Create virtual server instance** form.
+
+18. Click the **Machine type** pull-down.
+19. Click **s922**.
+20. Click the **Continue** button under the **Profile** section.
+
+The next steps refer to the entries in the **Storage volumes** section of the **Create virtual server instance** form.
+
+21. Click the **Create volume +** button.
+22. Click in the **Name** text entry field.
+23. Click the **+** icon for the **Number of volumes** field.
+24. Toggle the **Shareable** button to **On**.
+25. Click the **Create and attach** button.
+26. Click the **Continue** button under the **Storage volumes** section.
+
+The next steps refer to the entries in the **Networking** section of the **Create virtual server instance** form.
+
+Note: for this demonstration, the instance will be provisioned using a public network (Internet facing). Using the public network makes demonstrating access to instances easy, but most production deployments of PowerVS will utilize private networks and control access using Direct Link, Virtual Private Network (VPN), or Megaport Software Defined Network (SDN). To learn more about PowerVS networking options, look <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-network-architecture-diagrams" target="_blank"> here</a>.
+
+27. Toggle the **Public networks** button to **On**.
+28. Click the **Finish** button under the **Networking** section.
+29. Click the **I agree to the Terms and Conditions** checkbox.
+30. Click **Create**.
+
+The PowerVS instance is now being provisioned. This process took approximately 45 minutes when creating the TechZone environment. Notice the value under the **Status** column of the **Virtual server instances** table. Once the status changes to an **Active** state, the instance is ready to be accessed.
+
+31. Click the **Refresh** icon ![](_attachments/refreshIcon.png).
+32. Click the **{{rhServer1.name}}** link in the **Virtual server instances** table.
+
+In the next Part of the demonstration script, learn how to use the IBM Cloud Portal to manage PowerVS instances.
+
+Via the IBM Cloud Portal, clients can control and manage many aspects of their PowerVS deployment.
+
+On a per PowerVS instance (VM) basis, using the IBM Cloud Portal or IBM Cloud Portal application programming interfaces (APIs) clients can:
+
+   - Perform an OS shutdown
+   - Perform an immediate shutdown (without killing processes)
+   - Restart
+   - Reset
+   - Open a console (terminal) to the instance
+   - Delete the instance
+   - Capture and export an image of the instance
+
+Note, the options above may vary depending on the operating system of the PowerVS instance.
+
+In addition, some instances can be modified. Depending on core type, operating system, etc., a client can:
+
+   - Change VM pinning (soft, hard)
+   - Change core type (Shared uncapped, Shared capped, Dedicated)
+   - Change number of cores
+   - Change amount of RAM
+   - Change placement group
+
+And it is possible to attach and detach storage volumes and attach an instance to an existing network.
+
+In the next chapter, explore some of the options listed above for managing PowerVS instances.
+
+Through the IBM Cloud Portal or APIs, administrators with the appropriate IBM Cloud Portal access can manipulate PowerVS instances without needing to directly access the instance operating system.
+
+Using your IBM Cloud credentials and the IBM Cloud portal, complete the following scenario for managing PowerVS instances using the "baking show" demonstration technique. Note, an error message like the one below will be encountered if an attempt is made to complete an action.
+
+![](_attachments/ErrorMessage.png)
+
+This is normal, as full access to the shared environment is **not** provided. To avoid the error message, simply click the **Cancel** button on the action dialog. If performing a live client demonstration, or for IBM employees completing the Stand and Deliver for the {{learningplan.name}} badge, tell the audience why the action is being canceled but explain what would typically happen if the action was completed.
+
+1. Open the IBM Cloud Portal: <a href="https://cloud.ibm.com/" target="_blank">https://cloud.ibm.com/</a> and authenticate with your IBM Cloud credentials.
+2. Change from your IBM Cloud account to the **{{account}}** account.
+
+![](_attachments/SwitchAccounts-final.gif)
+
+!!! tip
+    If your browser window is narrow, you may see this icon: ![](_attachments/SwitchAccountsIcon.png) instead of the current account name as shown in the screen capture above.
+
+3. Click **Services and software** under **Resource summary** on the IBM Cloud Dashboard.
+
+![](_attachments/Dashboard.png)
+
+!!! Note
+    In some cases, after switching accounts you may be prompted with an IBM Cloud new user questionnaire and/or other pop-up windows. Simply cancel these windows. If a the IBM Cloud Dashboard is not displayed as seen in the above figure, click the **IBM Cloud** text at top left of the IBM Cloud Portal.
+
+4. Click **{{powerVS.serviceInstanceName}}** under **Services and software**.
+
+![](_attachments/Dashboard.png)
+
+5. Click **{{aixServer1.name}}** in the **Virtual server instances** table.
+
+![](_attachments/InstancesTable.png)
+
+6. Click the **VM actions** pull-down.
+
+![](_attachments/InstanceDetails-Actions.png)
+
+Notice the actions that can be initiated. The actions available will vary depending on the current state of the instance and the operating system of the instance.
+
+7. Click anywhere on the main screen (away from the pop-up menu from step 6).
+8. Click the **Edit details** link.
+
+![](_attachments/InstanceDetails-EditDetails.png)
+
+Explore what instance configuration options can be modified. Depending on the running state of the instance, some options may not be possible. Note, making changes to the instance always requires the user to agree to the service terms.
+
+9. Click the **Cancel** in the **Edit server details** dialog.
+
+The above steps, walked through 2 aspects of managing a single PowerVS instance. Before proceeding, spend a few minutes exploring other aspects of managing PowerVS instances using the IBM Cloud Portal. Detailed steps are not provided, but typically just click the **Cancel** button to return to the instances detail page. Here are a few things to try:
+
+- Click **Attach storage**. Notice how only existing volumes that are marked as **shareable** are displayed.
+- Click **Create volume**. Notice it is now possible to add a **Storage volume** using a different tier of storage than that of the instance boot volume.
+- Click the **VM actions** drop-down menu and select **Captures and export**. From this dialog, the storage volumes can be exported to either the PowerVS service Image catalog or to IBM Cloud Object Storage.
+
+In the next Part, learn how to access a running PowerVS instance.
+
+{{offering.name}} is an Infrastructure as a Service (IaaS) offering. PowerVS allows clients to rapidly provision new instances running AIX, IBM i, or Linux. Ultimately, clients will want to deploy applications on those machines. The applications that clients choose to deploy will vary widely. They may include middleware like databases, third party software products like SAP, or applications they have developed themselves. To install these applications, they need to access the instance and install the software.
+
+In the next chapter, learn how to access a running instance by using secure socket shell (SSH).
+
+Accessing a PowerVS instance will depending on several factors, including the operating system the instance is running and the network connectivity available. Remote login tools like Secure Socket Shell (SSH), telnet, and other terminal emulators can be used to access instances. PowerVS also provides access to running instances using a web-based console tool. In most cases, clients will deploy PowerVS instances using a secured network like Direct Link or Virtual Private Network (VPN). Learn more about the PowerVS network connectivity options <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-about-virtual-server#public-private-networks" target="_blank">here</a>.
+
+For this exercise, the IBM Cloud Shell will be used so no additional software is required. IBM Cloud Shell gives users complete control of their cloud resources, applications and infrastructure, from any web browser. IBM Cloud Shell provides pre-authenticated access to the latest tools and programming languages for cloud-based development, deployment and management of services and applications — all in a secure shell. IBM Cloud Shell is instantly accessible from the IBM Cloud portal.
+
+To quickly demonstrate the value of PowerVS, this demonstration environment and all running instances are provisioned with a public, Internet facing network interface.
+
+Follow the steps below to log in to a running PowerVS instance using the IBM Cloud Shell and SSH. You can learn more about SSH and SSH keys <a href="https://en.wikipedia.org/wiki/Secure_Shell" target="_blank">here</a>.
+
+!!! important
+    To complete this exercise, you will need the user identification (ID) and the SSH private key provided in your IBM Technology Zone reservation welcome letter. This information is also available on the IBM Technology Zone website under the **My Library** and **My Reservations** menu.
+
+1. If not already opened, open the IBM Cloud Portal: <a href="https://cloud.ibm.com/" target="_blank">https://cloud.ibm.com/</a> and authenticate with your IBM Cloud credentials.
+2. Change from your IBM Cloud account to the **{{account}}** account.
+
+![](_attachments/SwitchAccounts-final.gif)
+
+!!! tip
+    If your browser window is narrow, you may see this icon: ![](_attachments/SwitchAccountsIcon.png) instead of the current account name as shown in the screen capture above.
+
+3. Click the IBM Cloud Shell icon ![](_attachments/CloudShellIcon.png).
+
+![](_attachments/StartCloudShell.png)
+
+The next steps are performed in using the IBM Cloud Shell window that was opened. First, you need to create a SSH private key file using the key provided in your IBM Technology Zone's reservation welcome e-mail.
+
+Remember, to avoid typographical errors **copy** the command line using the ![](_attachments/CopyToClipboard.png) icon when it is available. Then paste the contents into the IBM Cloud Shell using ++ctrl++**+v**, ++cmd++**+v**, or right click and select paste at the prompt in the IBM Cloud Shell.
+
+4. Copy your public key from the TechZone welcome e-mail or from the reservation information on the TechZone web site. Use your operating system's copy to clipboard capabilities (e.g. highlight the text starting with **ssh-rsa** to the end of the key and then use ++ctrl++**+c** or ++cmd++**+c**.)
+
+NEED IMAGE HERE!!!!!!!!!!
+
+5. In the IBM Cloud Shell window, enter the following string, but do not hit enter.
+
+```echo "```
+
+![](_attachments/echo1.png)
+
+6. Paste your public key into the IBM Cloud Shell window using either ++ctrl++**+v** or ++cmd++**+v**.
+
+
+
+7. In the IBM Cloud Shell window, after the text you just pasted, enter the following and press enter.
+
+```
+" > mykey
+```
+
+![](_attachments/echo2.png)
+
+8. To verify, run the following command in the IBM Cloud Shell.
+
+```
+cat mykey
+```
+
+The output of the above command should be the same as the private key in your TechZone welcome letter and reservation details.
+
+9. Change the access permissions of the key file.
+
+```
+chmod 600 mykey
+```
+
+Note, this is required to allow the next commands to work properly. There is not output when this command is executed.
+
+9. Using the value of the **UserName** field found in your TechZone reservation, use ssh to log into the {{aixServer1.name}} instance. You must substitute your UserName in place of the string **UserName** in the command below:
+
+```ssh -i mykey **UserName**@{{aixServer1.publicIP}}```
+
+![](_attachments/sshServer1.png)
+
+10. Try running a few OS level commands:
+
+```
+ls -laR
+```
+
+```
+who
+```
+
+```
+ps -ef
+```
+
+All of these commands are basic OS commands. If you are familiar with AIX or Linux, feel free to try other things out on the instance. Note, your user ID has limited permissions on all PowerVS instances in this shared environment. Administrative access is not provided.
+
+11. Close the SSH connection by running the **exit** command.
+
+```
+exit
+```
+
+To explore further, use the following public IP addresses to access the other PowerVM instances:
+
+| Instance name | Instance public IP address |
+| ------------- | -------------------------- |
+| {{aixServer1.name}} | {{aixServer1.publicIP}} |
+| {{aixServer2.name}} | {{aixServer2.publicIP}} |
+| {{rhServer1.name}} | {{rhServer1.publicIP}} |
+| {{rhServer2.name}} | {{rhServer2.publicIP}} |
+
+
+Use the ```ssh -i mykey UserName@IPaddress``` command to connect to the other servers. Be sure to replace **UserName** with the **UserName** field found in your TechZone reservation, and **IPaddress** with the instance's public IP address from the table above.
+
+That concludes the required Parts of the demonstration script for IBM and Business Partners Sales. You are encouraged to complete Parts 6 and 7, but at this time you may skip to [**Part 8 - Next steps**](../Part 8/01 Next steps.md).
+
+Technical sellers proceed to the next Part and explore PowerVS server placement groups.
+
+In the earlier Parts of this demonstration script, you probably noticed additional features for managing other aspects of PowerVS instances. Below are brief introductions to some of those topics and links to more detailed information for each. Additionally, high level guidance of how to explore these topics using the IBM Cloud Portal are provided.
+
+Learn more about these advanced topics in the next chapters.
+
+Server placement groups provide control over the host or server on which a new instance is placed. By using server placement groups, high availability within a data center can be achieved. When a placement group is set with an affinity policy, all instances in that placement group are launched on the same physical server. When a placement group is set with an anti-affinity policy, all instances in that placement group are launched on different servers.
+
+A few facts about server placement groups:
+
+  - By default, there is a maximum of 25 server placement groups. A support ticket needs to be raised to go beyond this limit.
+  - The IBM Cloud Portal for server placement groups can only be used if the cloud account has less than 100 instances. If the account has > 100 instances, the command line interfaces (CLI) or application programming interfaces (API) must be used to create server placement groups.
+
+In the TechZone environment:
+
+  - Explore the **Server placement groups** page in the IBM Cloud Portal.
+  ![](_attachments/ServerPlacementGroups.png)
+
+Learn more about server placement groups <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-placement-groups" target="_blank">here</a>.
+
+Learn more about High Availability (HA) and Disaster Recovery (DR) options in PowerVS <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-ha-dr" target="_blank">here</a>.
+
+As mentioned earlier PowerVS supports both Tier 1 and Tier 3 storage volumes. Every instance consists of a boot volume and optionally additional storage volumes. While IBM manages the underlying physical storage, it is the client's responsibility to manage and protect the data on instances.
+
+A few facts about storage volumes:
+  - Storage volumes can be increased in size in 1GB increments, but not decreased.
+  - Storage volume sizes maximums will depend on availability within the selected IBM datacenter.
+  - Storage volumes can be marked as **shareable**.
+  - Storage volumes can be marked as **bootable**.
+  - Affinity and anti-affinity rules can be applied to storage volumes.
+
+A few facts about boot volumes/images:
+
+  - Boot volumes can be imported from IBM Cloud Object Storage (COS).
+  - Boot volumes can be exported to IBM COS.
+  - Affinity and anti-affinity rules can be applied to boot volumes.
+  - Boot volumes (and storage volumes) of running instances can be captured (also know as a snapshot) to either the local image catalog associated with the PowerVS service or to IBM COS.
+  - Captured boot images can be used to provision new instances.
+
+In the TechZone environment:
+
+  - Explore the **Storage volumes** page in the IBM Cloud Portal.
+  ![](_attachments/StorageVolumes.png)
+  - Explore the **Boot images** page in the IBM Cloud Portal.
+  ![](_attachments/BootImages.png)
+
+Learn more about storage volumes <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-modifying-server#modifying-volume-network" target="_blank">here</a>.
+
+Learn how to import a boot image <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-importing-boot-image" target="_blank">here</a>.
+
+A few facts about subnets:
+
+- A Classless inter-domain routing (CIDR) must be specified when creating a subnet.
+- The first IP address in the CIDR is always reserved for the gateway in all data centers.
+- The second and third IP addresses are reserved for gateway high availability (HA) in only the PowerVS colocation in the Washington, DC 04 datacenter (WDC04).
+
+A few facts about Cloud connections:
+
+  - Cloud Connect (Managed Networking Services using Megaport) is available only in USA.
+  - A maximum of 2 connections can be created.
+  - A subnet must be created prior to creating a Cloud connection.
+
+A few facts about VPN connections:
+
+  - A maximum of 4 connections can be created.
+  - A subnet must be created prior to creating a Cloud connection.
+
+In the TechZone environment:
+
+  - Explore the **Subnets** page in the IBM Cloud Portal.
+  ![](_attachments/Subnets.png)
+  - Explore the **Cloud connections** page in the IBM Cloud Portal.
+  ![](_attachments/CloudConnections.png)
+  - Explore the **VPN connections** page in the IBM Cloud Portal.
+  ![](_attachments/VPNConnections.png)
+
+Learn more about subnets <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-subnet" target="_blank">here</a>.
+
+Learn more about Cloud connections <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-cloud-connections" target="_blank">here</a>.
+
+Learn how to configure a VPN connection <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-VPN-connections" target="_blank">here</a>.
+
+Complimentary products and services are available for {{offering.name}}.
+
+Using the TechZone environment:
+
+  - Explore the **Additional services catalog** page of the PowerVS service.
+  ![](_attachments/AdditionalServicesCatalog.png)
+
+In the next Part, learn about the PowerVS command line interfaces (CLI).
+
+{{offering.name}} provides command line interfaces (CLI) as a plugin to the IBM Cloud CLI. The PowerVS CLIs provide system administrators the ability to programmatically manage their PowerVS environment with out having to use the IBM Cloud Portal.
+
+In the next chapter, use the IBM Cloud Shell to learn more about the PowerVS CLIs.
+
+In this exercise, explore several of the PowerVS CLIs. It is important to remember you are using a shared environment and have limited administrative permissions. The CLIs being executed here are command that only require "read" access to the environment. CLIs also exist to create and modify the PowerVS resources, you will just not have sufficient permissions to execute those commands in the shared environment. Attempting to do so will result in an error.
+
+For this exercise, the IBM Cloud Shell will be used. IBM Cloud Shell gives users complete control of their cloud resources, applications and infrastructure, from any web browser. IBM Cloud Shell provides pre-authenticated access to the latest tools and programming languages for cloud-based development, deployment and management of services and applications — all in a secure shell. IBM Cloud Shell is instantly accessible from the IBM Cloud portal. The IBM command line interface (CLI) along with all the IBM Cloud CLI plugins are pre-installed in IBM Cloud Shell, including the PowerVS CLIs.
+
+It is also possible to install the IBM Cloud CLIs and PowerVS CLI plugin other systems, like personal desktops, development servers, etc. To learn more about installing the PowerVS CLI locally click <a href="https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference" target="_blank">here</a>.
+
+To get started, first open the IBM Cloud Shell from the IBM Cloud portal:
+
+1. If not already opened, open the IBM Cloud Portal: <a href="https://cloud.ibm.com/" target="_blank">https://cloud.ibm.com/</a> and authenticate with your IBM Cloud credentials.
+2. Change from your IBM Cloud account to the **{{account}}** account.
+
+![](_attachments/SwitchAccounts-final.gif)
+
+!!! tip
+    If your browser window is narrow, you may see this icon: ![](_attachments/SwitchAccountsIcon.png) instead of the current account name as shown in the screen capture above.
+
+3. Click the IBM Cloud Shell icon ![](_attachments/CloudShellIcon.png).
+
+![](_attachments/StartCloudShell.png)
+
+The next steps are performed in using the IBM Cloud Shell window that was opened.
+
+First, create a SSH private key file using the key provided in your IBM Technology Zone's reservation welcome e-mail.
+
+Remember, to avoid typographical errors **copy** the command line using the ![](_attachments/CopyToClipboard.png) icon when it is available. Then paste the contents into the IBM Cloud Shell using ++ctrl++**+v**, ++cmd++**+v**, or right click and select paste at the prompt in the IBM Cloud Shell.
+
+4. Display all the PowerVS plugin command line options.
+
+```
+ibmcloud pi --help | more
+```
+??? tip "Tip for novice Linux users!"
+    If you are not familiar with Linux commands, don't worry. The command you just ran is actually 2 commands. The first is ```ibmcloud pi --help```. This executes the **help** option of the PowerVS plugin. The second command is the ```more``` command which pauses the output being displayed. The **"|"** or **pipe** character takes the output from the first command and sends it as input to the second command. If you want to learn more about Linux commands, just do a Internet search on **Linux primer**.
+
+5. Press the **space bar** to continue the output.
+
+Notice the last part of the message says: **Enter 'ibmcloud pi help [command]' for more information about a command.** Use this to get more help on individual PowerVS plugin commands.
+
+6. List all the PowerVS services provisioned in the account.
+
+```
+ibmcloud pi service-list
+```
+
+!!! info "Sample output"
+    ![](_attachments/service-list.png)
+
+To view the PowerVS instances in the service, the service target must first be set for the PowerVS plugin.
+
+7. Set the service target using the instance ID of the service.
+
+```
+serviceID=`ibmcloud pi service-list 2>&1 | tail -1 | cut -f1 -d' '`
+```
+
+??? tip "Tip for novice Linux users!"
+    The last command did 4 actions. First, it listed the service list like in step 6 and redirected both the error and standard output to the standard output stream (**2>&1**). This output was then sent to the **tail** command which ignores everything but the last line (**-1**). Then the output from the **tail** command is sent to the **cut** command where all the output except the first field up to to the first space character is ignored (**-f -d' '**). And finally, the output from the **cut** command was stored in an environment variable called **serviceID**. Why did we do this? Because no one wants to type **crn:v1:bluemix:public:power-iaas:us-south:a/ba0e33c9056f470ca19de009747ec654:c8bee9ba-f208-442c-9e10-5633624d633f::** in order to run the next command.
+
+8. Use the **$serviceID** environment variable to set the target of future PowerVS plugin commands to the service.
+
+```
+ibmcloud pi service-target $serviceID
+```
+
+!!! info "Sample output"
+    ![](_attachments/service-target.png)
+
+9. List all the PowerVS instances provisioned in the targeted PowerVS service.
+
+```
+ibmcloud pi instances
+```
+
+!!! info "Sample output"
+    ![](_attachments/instances.png)
+
+10. View the details of the **{{aixServer1.name}}** instance.
+
+```
+ibmcloud pi instance {{aixServer1.name}}
+```
+
+!!! info "Sample output"
+    ![](_attachments/server1Details.png)
+
+Thus far, all of these commands have been **read** commands. The PowerVS CLIs also support **create** and **update** commands, but remember your user ID has limited access. Try the **instance modify** command and see what happens.
+
+11. Restart the **{{rhServer1.name}}** instance.
+
+```
+ibmcloud pi instance-soft-reboot {{rhServer1.name}}
+```
+
+!!! info "Sample output"
+    ![](_attachments/instance-soft-reboot.png)
+    Note, this error message as nowhere near as informative as what you saw in the IBM Cloud portal when attempting an action your user ID does not have permission to perform. The product team has been notified, and hopefully in the near future the CLI error messages will improve.
+
+There are over 100 PowerVS CLIs. Feel free to explore these using your TechZone environment. Remember, use ```ibmcloud pi --help``` or ```ibmcloud pi <command> --help``` to get detailed information on a command's usage.
+
+That concludes the final Part of the {{offering.name}} demonstration script. Proceed to [**Part 8 - Next steps**](../Part 8/01 Next steps.md) for more information on completing the {{learningplan.name}} badge.
+
+In this demonstration guide, you learned how easy it is to provision resources with {{offering.name}} (PowerVS). You also learned some of the basics for managing PowerVS resources. But there is still more to learn about PowerVS. Links to specific PowerVS topics were provided throughout this demonstration guide. If you haven't already, take the time to read the <a href="https://cloud.ibm.com/docs/power-iaas" target="_blank">PowerVS documentation</a> to learn the full capabilities of the offering.
+
+Finally, remember to complete the {{learningplan.name}} learning plan.
+
+**IBM Sales** and **IBM Technical sales** must complete a Stand and Deliver exercise to demonstrate to your manager your newly learned ability to demonstrate PowerVS. Be sure to refer to the evaluation rubric in the learning plan when preparing your Stand and Deliver demonstration.
+
+**Business Partners** must pass the PowerVS quiz in learn.ibm.com. Remember, you will want to take the quiz while you have access to the TechZone environment. The BP quiz questions verify your use of the demonstration environment and not necessarily your knowledge of PowerVS.
+
