@@ -1,4 +1,4 @@
-In this demonstration guide, you learned how easy it is to provision resources with {{offering.name}} (PowerVS). You also learned some of the basics for managing PowerVS resources. But there is still more to learn about PowerVS. Links to specific PowerVS topics were provided throughout this demonstration guide. If you haven't already, take the time to read the <a href="https://cloud.ibm.com/docs/power-iaas" target="_blank">PowerVS documentation<a/> to learn the full capabilities of the offering.
+In this demonstration guide, you learned how easy it is to provision resources with {{offering.name}} (PowerVS). You also learned some of the basics for managing PowerVS resources. But there is still more to learn about PowerVS. Links to specific PowerVS topics were provided throughout this demonstration guide. If you haven't already, take the time to read the <a href="https://cloud.ibm.com/docs/power-iaas" target="_blank">PowerVS documentation</a> to learn the full capabilities of the offering.
 
 Finally, remember to complete the {{learningplan.name}} learning plan.
 
