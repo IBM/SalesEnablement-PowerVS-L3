@@ -26,7 +26,7 @@ The {{guide.name}} is organized in parts and sub-parts or chapters. Most chapter
 Throughout the guide, images are used as examples of the IBM Cloud Portal, IBM Cloud Shell, and PowerVS instance consoles.
 
 !!! warning
-    The IBM Cloud Portal and {{offering.name}} changes on a regular basis and may differ from the iamges captured in this guide.
+    The IBM Cloud Portal and {{offering.name}} changes on a regular basis and may differ from the images captured in this guide.
 
 In some images, the following styles of highlighting are utilized:
 
