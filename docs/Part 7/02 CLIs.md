@@ -18,7 +18,9 @@ To get started, first open the IBM Cloud Shell from the IBM Cloud portal:
 
 ![](_attachments/StartCloudShell.png)
 
-The next steps are performed in using the IBM Cloud Shell window that was opened. First, you need to create a SSH private key file using the key provided in your IBM Technology Zone's reservation welcome e-mail.
+The next steps are performed in using the IBM Cloud Shell window that was opened.
+
+First, create a SSH private key file using the key provided in your IBM Technology Zone's reservation welcome e-mail.
 
 Remember, to avoid typographical errors **copy** the command line using the ![](_attachments/CopyToClipboard.png) icon when it is available. Then paste the contents into the IBM Cloud Shell using ++ctrl++**+v**, ++cmd++**+v**, or right click and select paste at the prompt in the IBM Cloud Shell.
 
@@ -37,7 +39,7 @@ Notice the last part of the message says: **Enter 'ibmcloud pi help [command]' f
 6. List all the PowerVS services provisioned in the account.
 
 ```
-ibmcloud pi service-List
+ibmcloud pi service-list
 ```
 
 !!! info "Sample output"
