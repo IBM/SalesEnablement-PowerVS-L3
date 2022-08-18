@@ -62,7 +62,8 @@ theme:
 plugins:
     - mkdocs-video
     - macros
-    - with-pdf
+    - pandoc:
+        combined: true
 
 
 markdown_extensions:
