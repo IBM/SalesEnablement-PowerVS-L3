@@ -1,23 +1,22 @@
-Welcome to the {{guide.name}}. The goal of this demonstration guide is to provide IBM and Business Partner Sales and Technical Sales the knowledge and tools to perform introductory demonstrations of {{offering.name}} (PowerVS).
+![type:video](https://www.youtube.com/watch?v=cmGpE2AM500)
 
-There are 9 parts to this demonstration guide as seen in the left hand navigation. To complete the {{learningplan.name}} badge requirements, IBM and Business Partner **sellers** must complete Parts 1, 2, 3, 4, 5, and 8 of this demonstration guide. IBM and Business Partner **technical sellers** must complete all sections. The associated Learning Plan Stand and Deliver rubrics (IBM) and quizzes (Business Partners) are based upon the sections required for the respective roles. **All are welcome and encouraged to complete all sections.**
+!!! tip "Ways to Watch"
+    In addition to the imbedded video from YouTube, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DCGdHJ7DMdqHD8cV7Wp8f4Rg9Bgd" target="_blank">download the recording from Seismic</a>.
 
-!!! tip "Business Partner Tip"
-    To complete the {{learningplan.name}} badge, all Business Partners must complete a 5 question quiz. **The quiz is focused on validating completion of this demonstration script, and not general knowledge of PowerVS.** It is highly recommended to complete the quiz while the IBM Technology Zone environment is active. Several of the questions ask about specific settings or content that is seen in the IBM Cloud Portal.
+Welcome to the IBM Power Systems Virtual Server - Level 3 course and demonstration guide! The goal is to provide IBM and Business Partner Sales and Technical Sales with the knowledge and tools to perform hands-on demonstrations of IBM Power Systems Virtual Server (PowerVS).
 
-In Parts 1, 2, and 3, learn how the demonstration environment was built, and how to perform a "baking show" style demonstration using the IBM Cloud Portal, click-thru demonstrations, and videos. New PowerVS resources are **not** provisioned as part of this demonstration guide. All resources are pre-provisioned in a shared environment to save time and money.
+The learning material is broken up across distinct chapters. To complete the IBM Power Systems Virtual Server - Level 3 badge requirements, IBM and Business Partner sellers must complete Parts 1, 2, 3, 4, 5, and 8 of this demonstration guide. IBM and Business Partner technical sellers must complete all sections. **All are welcome and encouraged to complete all sections.**
 
-In Part 4, learn how to use the IBM Cloud Portal to manage PowerVS instances.
+All modules are accompanied by recordings and narrated instructions, delivered by your team of authors. Be sure to watch these for a visual demonstration of how to perform the hands-on lab components. In particular, **it is strongly recommended that IBM Sellers and Technical Sellers watch these recordings** — they will be useful for you as you go about creating and recording your own Stand & Deliver presentations for Level 3 accreditation.
 
-In Part 5, learn how to access the pre-provisioned PowerVS instances using the IBM Cloud Shell.
+!!! tip "IMPORTANT"
+    To receive Level 3 accreditation, IBMers and Business Partners must demonstrate mastery of the skills learned throughout the various modules of these hands-on labs and coursework. Level 3 accreditation requirements— and the way participants will be evaluated before receiving accreditation —differs depending on job role.
 
-Parts 1 through 5 provide a good foundation for performing a high-level, customer facing demonstration of {{offering.name}}.
+**Business Partners** must pass an accreditation quiz after completing the hands-on portion of the course. The quiz consists of multiple choice questions, with four possible responses (and only one correct answer) for each question. 
 
-Parts 6 and 7 introduce several more technical aspects of {{offering.name}} including using the PowerVS IBM Cloud command line interface (CLI) plugin.
+**IBM Sales and Tech Sales** must develop and record a Stand & Deliver presentation. This video is intended to simulate your delivery of a “live” demo in front of a client — on camera. IBMers will have flexibility in defining a hypothetical client, the pain points that customer has, and the goals they aspire to. The recording will then cover the seller’s hands- on demonstration and pitch to the client of the value of the IBM solution using the environments and techniques of this lab. 
 
-Finally, in Part 8, learn where to find additional resources about {{offering.name}}, and how to complete the {{learningplan.name}} badge.
-
-Before jumping to part 1, please read the guidance below. Reading and understanding the information will save time while completing the steps in this guide.
+Specific criteria that must be demonstrated as part of the Stand & Deliver recordings is provided within the documentation that accompanies the Level 3 course. Before jumping to part 1, please read the guidance below. Reading and understanding the information will save time while completing the steps in this guide.
 
 ## Helpful tips for using this demonstration guide and environment
 
