@@ -1,6 +1,6 @@
 ![type:video](./_videos/IBM Power Systems Virtual Server Level 3 - Part 2.mp4)
 !!! tip "Ways to Watch"
-    In addition to the imbedded, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DC7MhCMFHqdF384HP8b4dXgRMqhG" target="_blank">download the recording from Seismic</a>.
+    In addition to the imbedded video, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DC7MhCMFHqdF384HP8b4dXgRMqhG" target="_blank">download the recording from Seismic</a>.
 
 By the time you've enrolled in this Level 3 course, you'll already know that Power Systems Virtual Servers are located across IBM data centers, distinct from the IBM Cloud servers with separate networks and direct-attached storage. These environments operate in their own pod and the internal networks are fenced; however, they still offer connectivity options to meet customer requirements, including public internet. This carefully calibrated infrastructure enables Power Systems Virtual Server to maintain key enterprise software certification and support that customers would receive with on-premises infrastructure, but with the added flexibility and capabilities that come from an IBM Cloud deployment. With the environment provided to your for this Level 3 course via the IBM Technology Zone, we'll explore in detail how to go about configuring your infrastructure to work with private and public endpoints.
 
@@ -10,10 +10,10 @@ Before you create a PowerVS virtual server, you must understand the difference i
 
 The key parameters for a PowerVS service are:
 
-- **Datacenter location**: As of August 2022, PowerVS is co-located with 15 IBM Cloud datacenters located around the world. When selecting a datacenter, consider choosing the datacenter located nearest the majority of the end users that will be accessing the workloads running in PowerVS.
+    - **Datacenter location**: As of August 2022, PowerVS is co-located with 15 IBM Cloud datacenters located around the world. When selecting a datacenter, consider choosing the datacenter located nearest the majority of the end users that will be accessing the workloads running in PowerVS.
 
-- **Service name**: The PowerVS service name will appear in the IBM Cloud Portal under the provisioned services. Specify a name that is easily understood and recognized.
+    - **Service name**: The PowerVS service name will appear in the IBM Cloud Portal under the provisioned services. Specify a name that is easily understood and recognized.
 
-- **Resource group**: Resource groups are used to organize resources in your IBM Cloud account. Administrative and access rights for all PowerVS resources are associated with the PowerVS service and not individual PowerVS instances (VMs). Once a PowerVS service is assigned to a resource group, the resource group can not be changed.
+    - **Resource group**: Resource groups are used to organize resources in your IBM Cloud account. Administrative and access rights for all PowerVS resources are associated with the PowerVS service and not individual PowerVS instances (VMs). Once a PowerVS service is assigned to a resource group, the resource group can not be changed.
 
 In the chapter to follow, you will view a video of a PowerVS server being provisioned and replicate the steps taken yourself using a click-through guided demonstration.

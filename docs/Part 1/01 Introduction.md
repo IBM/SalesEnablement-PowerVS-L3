@@ -1,6 +1,6 @@
 ![type:video](./_videos/IBM Power Systems Virtual Server Level 3 - Part 1.mp4)
 !!! tip "Ways to Watch"
-    In addition to the imbedded, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DChpTqJ8dqGH68QMBF6jMVQC92gG" target="_blank">download the recording from Seismic</a>.
+    In addition to the imbedded video, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DChpTqJ8dqGH68QMBF6jMVQC92gG" target="_blank">download the recording from Seismic</a>.
 
 **IBM Power Systems Virtual Server** (PowerVS) delivers flexible compute capacity for Power Systems workloads. Integrated with the IBM Cloud platform for on-demand provisioning, this offering provides a secure and scalable server virtualization environment built upon the advanced RAS features and leading performance of the Power Systems platform.
 
@@ -15,7 +15,7 @@ Primarily, our goal is to focus on the Infrastructure as a Service capability of
 
 - In **Parts 1, 2, and 3**, learn how the demonstration environment was built, and how to perform a "baking show" style demonstration using the IBM Cloud Portal, click-thru demonstrations, and videos. New PowerVS resources are not provisioned as part of this demonstration guide. All resources are pre-provisioned in a shared environment to save time and money.
 - In **Part 4**, learn how to use the IBM Cloud Portal to manage PowerVS instances.
-- In **Part 5**, learn how to access the pre-provisioned PowerVS instances using the IBM Cloud Shell.
+- In **Part 5**, learn how to access the pre-provisioned PowerVS instances using IBM Cloud Shell.
 - **Parts 1 through 5** provide a good foundation for performing a high-level, customer facing demonstration of IBM Power Systems Virtual Server.
 - **Parts 6 and 7** introduce several more technical aspects of IBM Power Systems Virtual Server including using the PowerVS IBM Cloud command line interface (CLI) plugin.
 - Finally, in **Part 8**, learn where to find additional resources about IBM Power Systems Virtual Server, and how to complete the IBM Power Systems Virtual Server - Level 3 badge.
