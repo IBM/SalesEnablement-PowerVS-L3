@@ -23,7 +23,7 @@ This is normal, as full access to the shared environment is **not** provided. To
 
 4. Click **{{powerVS.serviceInstanceName}}** under **Services and software**.
 
-![](_attachments/Dashboard.png)
+![](_attachments/step4.png)
 
 5. Click **{{aixServer1.name}}** in the **Virtual server instances** table.
 
@@ -46,8 +46,6 @@ Explore what instance configuration options can be modified. Depending on the ru
 
 The above steps, walked through 2 aspects of managing a single PowerVS instance. Before proceeding, spend a few minutes exploring other aspects of managing PowerVS instances using the IBM Cloud Portal. Detailed steps are not provided, but typically just click the **Cancel** button to return to the instances detail page. Here are a few things to try:
 
-- Click **Attach storage**. Notice how only existing volumes that are marked as **shareable** are displayed.
+- Click **Attach volume**. Notice how only existing volumes that are marked as **shareable** are displayed.
 - Click **Create volume**. Notice it is now possible to add a **Storage volume** using a different tier of storage than that of the instance boot volume.
 - Click the **VM actions** drop-down menu and select **Captures and export**. From this dialog, the storage volumes can be exported to either the PowerVS service Image catalog or to IBM Cloud Object Storage.
-
-In the next Part, learn how to access a running PowerVS instance.

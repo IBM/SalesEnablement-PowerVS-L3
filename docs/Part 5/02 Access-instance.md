@@ -27,7 +27,7 @@ Remember, to avoid typographical errors **copy** the command line using the ![](
 
 4. Copy your public key from the TechZone welcome e-mail or from the reservation information on the TechZone web site. Use your operating system's copy to clipboard capabilities (e.g. highlight the text starting with **ssh-rsa** to the end of the key and then use ++ctrl++**+c** or ++cmd++**+c**.)
 
-NEED IMAGE HERE!!!!!!!!!!
+![](_attachments/part5_step4.png)
 
 5. In the IBM Cloud Shell window, enter the following string, but do not hit enter.
 
