@@ -866,7 +866,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>chmod 600 mykey
 </code></pre></div>
 <ol start="13">
-<li>We are now ready to remotely connect (SSH) to the PowerVS demonstration environment. Do so with the following command, substituing <strong><your_user_id></strong> for the value recorded in <strong>Step 6</strong>. You may receive a prompt asking whether you wish to continue connecting; if so, type <strong>Yes</strong> and then hit Return/Enter.</li>
+<li>We are now ready to remotely connect (SSH) to the PowerVS demonstration environment. Do so with the following command, substituting <strong><your_user_id></strong> for the value recorded in <strong>Step 6</strong>. You may receive a prompt asking whether you wish to continue connecting; if so, type <strong>Yes</strong> and then hit Return/Enter.</li>
 </ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ssh -i mykey &lt;your_user_id&gt;@52.117.41.110
 </code></pre></div>
@@ -874,12 +874,8 @@
 <p class="admonition-title">Sample output</p>
 <p><img alt="" src="../_attachments/part5_step13.png" /></p>
 </div>
-<details class="tip">
-<summary>Try it</summary>
-<p>You can also remotely connect via SSH to the 3 other virtual machines (VMs) that are part of the PowerVS environment, using the same method as in Step 13 but by substituting different addresses. Instead of 52.117.41.110, try connecting to 52.117.41.106 instead. Repeat the same tests for .107 and .108 as well. The welcome message will appear slightly different depending on whether your are connecting to an AIX OS or RHEL OS virtual machine. To terminate an SSH connection and return to the base IBM Cloud Shell prompt, type "exit" and hit Return.</p>
-</details>
 <ol start="14">
-<li>Try running a few OS level commands using the following commands. If you remotely connected to the other VMs in the previous step, <strong>make sure that you reconnect to the 52.117.41.110 virtual machine before continuing</strong>.</li>
+<li>Try running a few OS level commands using the following commands.</li>
 </ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ls -laR
 </code></pre></div>
