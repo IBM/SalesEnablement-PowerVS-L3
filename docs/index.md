@@ -1,6 +1,6 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cmGpE2AM500" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-One more test.
+![type:video](./_videos/IBM Power Systems Virtual Server Level 3 - Introduction.mp4).
 
 !!! tip "Ways to Watch"
     In addition to the imbedded video from YouTube, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DCGdHJ7DMdqHD8cV7Wp8f4Rg9Bgd" target="_blank">download the recording from Seismic</a>.
