@@ -17,6 +17,9 @@ All modules are accompanied by recordings and narrated instructions, delivered b
 
 Specific criteria that must be demonstrated as part of the Stand & Deliver recordings is provided within the documentation that accompanies the Level 3 course. Before jumping to part 1, please read the guidance below. Reading and understanding the information will save time while completing the steps in this guide.
 
+!!! tip "FIND HELP"
+    If at any point during the hands-on material you need help from the team of authors and other IBM experts, please connect with us via the <a href="https://ibm-technology-sales.slack.com/archives/C03PQ47KRQE" target="_blank">#cloud-platform-demo-feedback</a> Slack channel. Any comments or suggestions are also welcome in this channel.
+
 ## Helpful tips for using this demonstration guide and environment
 
 The {{guide.name}} is organized in parts and sub-parts or chapters. Most chapters contain numbered steps, which are actions to be performed.

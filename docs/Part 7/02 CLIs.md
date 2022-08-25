@@ -104,6 +104,7 @@ You'll notice that the two tables are nearly identical, save for a single field 
 12. There are numerous reasons why you might want to generate an SSH private key for managing your PowerVS environment. In fact, that's exactly what the service's administrators did in order to authorize your access to the PowerVS instance — you'll recall how you first connected to the PowerVS virtual machines remotely via the IBM Cloud Shell with the supplied key information.
 
 The IBM Cloud Shell is capable of generating an SSH key that is configured for password-less authentication (in other words, allowing users to authenticate without needing to also supply a password). You can do so using the Shell, or any Linux environment, using the following ssh-keygen command:
+
 ```
 ssh-keygen -t ed25519 -N ''
 ```
@@ -112,6 +113,10 @@ ssh-keygen -t ed25519 -N ''
     ![](_attachments/part7_step12.png)
 
 You can then use IBM Power CLIs to create a key for the instance using an imported RSA public key, which you will specify the key pair you generated a moment ago as the source. Do so using the following command. (Note: bienkoNEWKEY is the name of the IBM Power CLI-generated key that is to be created; bienkoKey is the SSH key generated earlier using the IBM Cloud Shell).
+
+!!! tip "SSH keys"
+    Be aware that the SSH key-pair generated and assigned by this step is specific to IBM Power Systems. These are distinct from ones you generated previously using the IBM Cloud Shell.
+    
 ```
 ibmcloud pi keyc bienkoNEWKEY --key bienkoKey
 ```
