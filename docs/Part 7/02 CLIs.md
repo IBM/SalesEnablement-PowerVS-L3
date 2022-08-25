@@ -81,11 +81,48 @@ ibmcloud pi instance {{aixServer1.name}}
 ```
 
 !!! info "Sample output"
-    ![](_attachments/server1Details.png)
+    ![](_attachments/part7_step10.png)
 
 Thus far, all of these commands have been **read** commands. The PowerVS CLIs also support **create** and **update** commands, but remember your user ID has limited access. Try the **instance modify** command and see what happens.
 
-11. Restart the **{{rhServer1.name}}** instance.
+
+11. Recall that our Power environment consists of a total of 4 PowerVM instances: AIX-vm-1, AIX-vm-2, RH-vm-1, and RH-vm2. Up until now we've primarily been issuing instructions to perform work against AIX-vm-1. Given that the testing environment is primarily limited to read-only actions, let's inspect one of the other VMs and determine what (if any) differences exist between the various instances.
+
+Issue the following command to the IBM Cloud Shell:
+```
+ibmcloud pi instance RH-vm-1
+```
+
+And then issue a second command:
+```
+ibmcloud pi instance AIX-vm-1
+```
+
+You'll notice that the two tables are nearly identical, save for a single field at the bottom of the AIX-vm-1 inspection output. Record the name of that field and the value it is assigned to a place where you can reference later (_**hint**_) after your lab work has concluded.
+
+
+12. There are numerous reasons why you might want to generate an SSH private key for managing your PowerVS environment. In fact, that's exactly what the service's administrators did in order to authorize your access to the PowerVS instance — you'll recall how you first connected to the PowerVS virtual machines remotely via the IBM Cloud Shell with the supplied key information.
+
+The IBM Cloud Shell is capable of generating an SSH key that is configured for password-less authentication (in other words, allowing users to authenticate without needing to also supply a password). You can do so using the Shell, or any Linux environment, using the following ssh-keygen command:
+```
+ssh-keygen -t ed25519 -N ''
+```
+
+!!! info "Sample output"
+    ![](_attachments/part7_step12.png)
+
+You can then use IBM Power CLIs to create a key for the instance using an imported RSA public key, which you will specify the key pair you generated a moment ago as the source. Do so using the following command. (Note: bienkoNEWKEY is the name of the IBM Power CLI-generated key that is to be created; bienkoKey is the SSH key generated earlier using the IBM Cloud Shell).
+```
+ibmcloud pi keyc bienkoNEWKEY --key bienkoKey
+```
+
+!!! info "Sample output"
+    ![](_attachments/part7_step12b.png)
+
+As you might have expected, the instruction fails to execute because of insufficient (locked down) permissions within this testing environment. Go ahead and experiment with other IBM Power CLIs. Many instructions and commands will meet with similar results, but it nevertheless is good practice given that there is no risk to the system within this sandbox environment.
+
+
+13. Restart the **{{rhServer1.name}}** instance.
 
 ```
 ibmcloud pi instance-soft-reboot {{rhServer1.name}}
@@ -97,4 +134,4 @@ ibmcloud pi instance-soft-reboot {{rhServer1.name}}
 
 There are over 100 PowerVS CLIs. Feel free to explore these using your TechZone environment. Remember, use ```ibmcloud pi --help``` or ```ibmcloud pi <command> --help``` to get detailed information on a command's usage.
 
-That concludes the final Part of the {{offering.name}} demonstration script. Proceed to [**Part 8 - Next steps**](../Part 8/01 Next steps.md) for more information on completing the {{learningplan.name}} badge.
+That concludes the final part of the {{offering.name}} demonstration script. Proceed to [**Part 8 - Next steps**](../Part 8/01 Next steps.md) for more information on completing the {{learningplan.name}} badge.
