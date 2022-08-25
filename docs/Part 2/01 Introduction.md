@@ -10,10 +10,10 @@ Before you create a PowerVS virtual server, you must understand the difference i
 
 The key parameters for a PowerVS service are:
 
-    - **Datacenter location**: As of August 2022, PowerVS is co-located with 15 IBM Cloud datacenters located around the world. When selecting a datacenter, consider choosing the datacenter located nearest the majority of the end users that will be accessing the workloads running in PowerVS.
+- **Datacenter location**: As of August 2022, PowerVS is co-located with 15 IBM Cloud datacenters located around the world. When selecting a datacenter, consider choosing the datacenter located nearest the majority of the end users that will be accessing the workloads running in PowerVS.
 
-    - **Service name**: The PowerVS service name will appear in the IBM Cloud Portal under the provisioned services. Specify a name that is easily understood and recognized.
+- **Service name**: The PowerVS service name will appear in the IBM Cloud Portal under the provisioned services. Specify a name that is easily understood and recognized.
 
-    - **Resource group**: Resource groups are used to organize resources in your IBM Cloud account. Administrative and access rights for all PowerVS resources are associated with the PowerVS service and not individual PowerVS instances (VMs). Once a PowerVS service is assigned to a resource group, the resource group can not be changed.
+- **Resource group**: Resource groups are used to organize resources in your IBM Cloud account. Administrative and access rights for all PowerVS resources are associated with the PowerVS service and not individual PowerVS instances (VMs). Once a PowerVS service is assigned to a resource group, the resource group can not be changed.
 
 In the chapter to follow, you will view a video of a PowerVS server being provisioned and replicate the steps taken yourself using a click-through guided demonstration.
