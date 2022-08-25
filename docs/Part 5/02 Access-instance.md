@@ -78,9 +78,7 @@ chmod 600 mykey
 
 13. We are now ready to remotely connect (SSH) to the PowerVS demonstration environment. Do so with the following command, substituting **<your_user_id>** for the value recorded in **Step 6**. You may receive a prompt asking whether you wish to continue connecting; if so, type **Yes** and then hit Return/Enter.
 
-```
-ssh -i mykey <your_user_id>@52.117.41.110
-```
+```ssh -i mykey <your_user_id>@52.117.41.110```
 
 !!! info "Sample output"
     ![](_attachments/part5_step13.png)
