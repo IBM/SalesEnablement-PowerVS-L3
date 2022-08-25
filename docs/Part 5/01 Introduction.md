@@ -7,9 +7,13 @@ IBM Power Systems Virtual Server is an Infrastructure as a Service (IaaS) offeri
 A fundamental challenge that every customer examining an expansion to cloud will face is how to connect their on-premises data sources with off-premises (cloud-based) resources and services. Doing so securely, efficiently, and cost- effectively is undeniably a challenge for organizations of every size, whether they are a mid-sized business or an enterprise company.
 
 How do you connect _to_ the IBM Cloud? There are 3 routes to take:
+
 1. Via the public internet
+
 2. Via a VPN tunnel
+
 3. Via IBM Cloud Direct Link (2.0)
+
 In most cases, clients will deploy PowerVS instances using a secured network like Direct Link or Virtual Private Network (VPN).
 
 **IBM Cloud Direct Link (2.0)** provides a level of trusted connectivity from enterprise sources to a customer's IBM Cloud private network. There are offerings of IBM Cloud Direct Link (2.0) that are specifically tailored to every customer's workload requirements or business use case.

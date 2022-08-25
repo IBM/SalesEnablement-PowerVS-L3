@@ -31,13 +31,18 @@ Remember, to avoid typographical errors **copy** the command line using the ![](
 
 5. In the IBM Cloud Shell window, enter the following string, but do not hit enter.
 
-```echo "```
+```
+echo "
+```
 
 ![](_attachments/echo1.png)
 
 6. Paste your public key into the IBM Cloud Shell window using either ++ctrl++**+v** or ++cmd++**+v**.
 
+![](_attachments/part5_step6.png)
 
+!!! warning
+    The filename you choose for the SSH public key needs to end with ".pub" and the file contents must include the BEGIN and END statements, as shown in the screenshot.
 
 7. In the IBM Cloud Shell window, after the text you just pasted, enter the following and press enter.
 
@@ -45,7 +50,6 @@ Remember, to avoid typographical errors **copy** the command line using the ![](
 " > mykey
 ```
 
-![](_attachments/echo2.png)
 
 8. To verify, run the following command in the IBM Cloud Shell.
 
@@ -65,7 +69,9 @@ Note, this is required to allow the next commands to work properly. There is not
 
 9. Using the value of the **UserName** field found in your TechZone reservation, use ssh to log into the {{aixServer1.name}} instance. You must substitute your UserName in place of the string **UserName** in the command below:
 
-```ssh -i mykey **UserName**@{{aixServer1.publicIP}}```
+```
+ssh -i mykey **UserName**@{{aixServer1.publicIP}}
+```
 
 ![](_attachments/sshServer1.png)
 
