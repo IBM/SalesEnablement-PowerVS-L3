@@ -868,13 +868,41 @@
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Sample output</p>
-<p><img alt="" src="../_attachments/server1Details.png" /></p>
+<p><img alt="" src="../_attachments/part7_step10.png" /></p>
 </div>
 <p>Thus far, all of these commands have been <strong>read</strong> commands. The PowerVS CLIs also support <strong>create</strong> and <strong>update</strong> commands, but remember your user ID has limited access. Try the <strong>instance modify</strong> command and see what happens.</p>
 <ol start="11">
+<li>Recall that our Power environment consists of a total of 4 PowerVM instances: AIX-vm-1, AIX-vm-2, RH-vm-1, and RH-vm2. Up until now we've primarily been issuing instructions to perform work against AIX-vm-1. Given that the testing environment is primarily limited to read-only actions, let's inspect one of the other VMs and determine what (if any) differences exist between the various instances.</li>
+</ol>
+<p>Issue the following command to the IBM Cloud Shell:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ibmcloud pi instance RH-vm-1
+</code></pre></div></p>
+<p>And then issue a second command:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ibmcloud pi instance AIX-vm-1
+</code></pre></div></p>
+<p>You'll notice that the two tables are nearly identical, save for a single field at the bottom of the AIX-vm-1 inspection output. Record the name of that field and the value it is assigned to a place where you can reference later (<em><strong>hint</strong></em>) after your lab work has concluded.</p>
+<ol start="12">
+<li>There are numerous reasons why you might want to generate an SSH private key for managing your PowerVS environment. In fact, that's exactly what the service's administrators did in order to authorize your access to the PowerVS instance — you'll recall how you first connected to the PowerVS virtual machines remotely via the IBM Cloud Shell with the supplied key information.</li>
+</ol>
+<p>The IBM Cloud Shell is capable of generating an SSH key that is configured for password-less authentication (in other words, allowing users to authenticate without needing to also supply a password). You can do so using the Shell, or any Linux environment, using the following ssh-keygen command:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ssh-keygen -t ed25519 -N &#39;&#39;
+</code></pre></div></p>
+<div class="admonition info">
+<p class="admonition-title">Sample output</p>
+<p><img alt="" src="../_attachments/part7_step12.png" /></p>
+</div>
+<p>You can then use IBM Power CLIs to create a key for the instance using an imported RSA public key, which you will specify the key pair you generated a moment ago as the source. Do so using the following command. (Note: bienkoNEWKEY is the name of the IBM Power CLI-generated key that is to be created; bienkoKey is the SSH key generated earlier using the IBM Cloud Shell).
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ibmcloud pi keyc bienkoNEWKEY --key bienkoKey
+</code></pre></div></p>
+<div class="admonition info">
+<p class="admonition-title">Sample output</p>
+<p><img alt="" src="../_attachments/part7_step12b.png" /></p>
+</div>
+<p>As you might have expected, the instruction fails to execute because of insufficient (locked down) permissions within this testing environment. Go ahead and experiment with other IBM Power CLIs. Many instructions and commands will meet with similar results, but it nevertheless is good practice given that there is no risk to the system within this sandbox environment.</p>
+<ol start="13">
 <li>Restart the <strong>RH-vm-1</strong> instance.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ibmcloud pi instance-soft-reboot RH-vm-1
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>ibmcloud pi instance-soft-reboot RH-vm-1
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Sample output</p>
@@ -882,7 +910,7 @@
 Note, this error message as nowhere near as informative as what you saw in the IBM Cloud portal when attempting an action your user ID does not have permission to perform. The product team has been notified, and hopefully in the near future the CLI error messages will improve.</p>
 </div>
 <p>There are over 100 PowerVS CLIs. Feel free to explore these using your TechZone environment. Remember, use <code>ibmcloud pi --help</code> or <code>ibmcloud pi &lt;command&gt; --help</code> to get detailed information on a command's usage.</p>
-<p>That concludes the final Part of the IBM Power Systems Virtual Server demonstration script. Proceed to <a href="../../Part%208/01%20Next%20steps/"><strong>Part 8 - Next steps</strong></a> for more information on completing the IBM Power Systems Virtual Server - Level 3 badge.</p>
+<p>That concludes the final part of the IBM Power Systems Virtual Server demonstration script. Proceed to <a href="../../Part%208/01%20Next%20steps/"><strong>Part 8 - Next steps</strong></a> for more information on completing the IBM Power Systems Virtual Server - Level 3 badge.</p>
 
 
 
