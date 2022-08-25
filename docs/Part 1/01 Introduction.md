@@ -1,6 +1,8 @@
-![type:video](./_videos/IBM Power Systems Virtual Server Level 3 - Part 1.mp4).
+![type:video](./_videos/IBM Power Systems Virtual Server Level 3 - Part 1.mp4)
+!!! tip "Ways to Watch"
+    In addition to the imbedded, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DChpTqJ8dqGH68QMBF6jMVQC92gG" target="_blank">download the recording from Seismic</a>.
 
-IBM Power Systems Virtual Server (PowerVS) delivers flexible compute capacity for Power Systems workloads. Integrated with the IBM Cloud platform for on-demand provisioning, this offering provides a secure and scalable server virtualization environment built upon the advanced RAS features and leading performance of the Power Systems platform.
+**IBM Power Systems Virtual Server** (PowerVS) delivers flexible compute capacity for Power Systems workloads. Integrated with the IBM Cloud platform for on-demand provisioning, this offering provides a secure and scalable server virtualization environment built upon the advanced RAS features and leading performance of the Power Systems platform.
 
 You should be familiar with PowerVS and should have completed the IBM Power Systems Virtual Server Sales Foundation Badge (Level 2) before embarking on the Level 3 content. The content here is **not** a replacement for the Level 1 and 2 content that is part of the previous learning plans, which are linked in the documentation accompanying this course.
 
