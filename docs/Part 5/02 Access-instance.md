@@ -76,7 +76,7 @@ base64 --decode ssh_private_key.pem > mykey
 chmod 600 mykey
 ```
 
-13. We are now ready to remotely connect (SSH) to the PowerVS demonstration environment. Do so with the following command, substituing **<your_user_id>** for the value recorded in **Step 6**. You may receive a prompt asking whether you wish to continue connecting; if so, type **Yes** and then hit Return/Enter.
+13. We are now ready to remotely connect (SSH) to the PowerVS demonstration environment. Do so with the following command, substituting **<your_user_id>** for the value recorded in **Step 6**. You may receive a prompt asking whether you wish to continue connecting; if so, type **Yes** and then hit Return/Enter.
 
 ```
 ssh -i mykey <your_user_id>@52.117.41.110
@@ -85,10 +85,7 @@ ssh -i mykey <your_user_id>@52.117.41.110
 !!! info "Sample output"
     ![](_attachments/part5_step13.png)
 
-??? tip "Try it"
-    You can also remotely connect via SSH to the 3 other virtual machines (VMs) that are part of the PowerVS environment, using the same method as in Step 13 but by substituting different addresses. Instead of 52.117.41.110, try connecting to 52.117.41.106 instead. Repeat the same tests for .107 and .108 as well. The welcome message will appear slightly different depending on whether your are connecting to an AIX OS or RHEL OS virtual machine. To terminate an SSH connection and return to the base IBM Cloud Shell prompt, type "exit" and hit Return.
-
-14. Try running a few OS level commands using the following commands. If you remotely connected to the other VMs in the previous step, **make sure that you reconnect to the 52.117.41.110 virtual machine before continuing**.
+14. Try running a few OS level commands using the following commands.
 
 ```
 ls -laR
