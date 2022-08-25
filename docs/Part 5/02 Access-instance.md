@@ -27,7 +27,7 @@ When satisfied, scroll down to the bottom of the page and click **Submit** to in
 
 ![](_attachments/part5_step3.png)
 
-4. You will now need to wait for IBM Technology Zone to finish provisioning your PowerVS environment — this process takes approximately 5 to 10 minutes. When ready, you will receive an email to your IBM address _and_ the <a href="https://techzone.ibm.com/my/reservations" target="_blank">Reservations<a> page will show a PowerVS tile with the status of **Ready**. If marked as ready, click anywhere on the tile to drill down into details on how to access your cluster.
+4. You will now need to wait for IBM Technology Zone to finish provisioning your PowerVS environment — this process takes approximately 5 to 10 minutes. When ready, you will receive an email to your IBM address _and_ the <a href="https://techzone.ibm.com/my/reservations" target="_blank">Reservations</a> page will show a PowerVS tile with the status of **Ready**. If marked as ready, click anywhere on the tile to drill down into details on how to access your cluster.
 
 ![](_attachments/part5_step4.png)
 !!! important
