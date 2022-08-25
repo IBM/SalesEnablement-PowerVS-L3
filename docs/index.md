@@ -12,9 +12,9 @@ All modules are accompanied by recordings and narrated instructions, delivered b
 !!! tip "IMPORTANT"
     To receive Level 3 accreditation, IBMers and Business Partners must demonstrate mastery of the skills learned throughout the various modules of these hands-on labs and coursework. Level 3 accreditation requirements— and the way participants will be evaluated before receiving accreditation —differs depending on job role.
 
-**Business Partners** must pass an accreditation quiz after completing the hands-on portion of the course. The quiz consists of multiple choice questions, with four possible responses (and only one correct answer) for each question. 
+**Business Partners** must pass an accreditation quiz after completing the hands-on portion of the course. The quiz consists of multiple choice questions, with four possible responses (and only one correct answer) for each question.
 
-**IBM Sales and Tech Sales** must develop and record a Stand & Deliver presentation. This video is intended to simulate your delivery of a “live” demo in front of a client — on camera. IBMers will have flexibility in defining a hypothetical client, the pain points that customer has, and the goals they aspire to. The recording will then cover the seller’s hands- on demonstration and pitch to the client of the value of the IBM solution using the environments and techniques of this lab. 
+**IBM Sales and Tech Sales** must develop and record a Stand & Deliver presentation. This video is intended to simulate your delivery of a “live” demo in front of a client — on camera. IBMers will have flexibility in defining a hypothetical client, the pain points that customer has, and the goals they aspire. The recording will then cover the seller’s hands- on demonstration and pitch to the client of the value of the IBM solution using the environments and techniques of this lab. 
 
 Specific criteria that must be demonstrated as part of the Stand & Deliver recordings is provided within the documentation that accompanies the Level 3 course. Before jumping to part 1, please read the guidance below. Reading and understanding the information will save time while completing the steps in this guide.
 
