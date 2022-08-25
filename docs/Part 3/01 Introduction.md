@@ -32,6 +32,6 @@ The key parameters for a PowerVS instance are:
 
     - **Additional storage volumes**: When provisioning a new instance, for additional storage, a new data volume can be created or an existing volume can be attached. Any storage volume added at this time will use the same storage tier as the boot volume specified earlier.
 
-    - **Networking**: PowerVS instances will always be attached to a private network and can optionally be attached to a public, Internet accessible network. Use private networks to connect to existing subnets or go a new subnet can be created. Learn more about PowerVS networking <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-network-architecture-diagrams" target="_blank">here</a>.
+    - **Networking**: PowerVS instances will always be attached to a private network and can optionally be attached to a public, Internet accessible network. Use private networks to connect to existing subnets or go a new subnet can be created. You can learn more about PowerVS networking <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-network-architecture-diagrams" target="_blank">here</a>.
 
 In this chapter, you will view a video of a PowerVS instance being provisioned and replicate the steps taken yourself using a click-through guided demonstration.
