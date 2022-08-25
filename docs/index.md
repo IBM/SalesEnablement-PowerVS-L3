@@ -1,5 +1,7 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cmGpE2AM500" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+One more test.
+
 !!! tip "Ways to Watch"
     In addition to the imbedded video from YouTube, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DCGdHJ7DMdqHD8cV7Wp8f4Rg9Bgd" target="_blank">download the recording from Seismic</a>.
 
@@ -14,7 +16,7 @@ All modules are accompanied by recordings and narrated instructions, delivered b
 
 **Business Partners** must pass an accreditation quiz after completing the hands-on portion of the course. The quiz consists of multiple choice questions, with four possible responses (and only one correct answer) for each question.
 
-**IBM Sales and Tech Sales** must develop and record a Stand & Deliver presentation. This video is intended to simulate your delivery of a “live” demo in front of a client — on camera. IBMers will have flexibility in defining a hypothetical client, the pain points that customer has, and the goals they aspire. The recording will then cover the seller’s hands- on demonstration and pitch to the client of the value of the IBM solution using the environments and techniques of this lab. 
+**IBM Sales and Tech Sales** must develop and record a Stand & Deliver presentation. This video is intended to simulate your delivery of a “live” demo in front of a client — on camera. IBMers will have flexibility in defining a hypothetical client, the pain points that customer has, and the goals they aspire. The recording will then cover the seller’s hands- on demonstration and pitch to the client of the value of the IBM solution using the environments and techniques of this lab.
 
 Specific criteria that must be demonstrated as part of the Stand & Deliver recordings is provided within the documentation that accompanies the Level 3 course. Before jumping to part 1, please read the guidance below. Reading and understanding the information will save time while completing the steps in this guide.
 
