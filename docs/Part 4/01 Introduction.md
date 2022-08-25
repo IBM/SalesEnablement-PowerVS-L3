@@ -12,7 +12,7 @@ Via the IBM Cloud Portal, clients can control and manage many aspects of their P
 - Delete the instance
 - Capture and export an image of the instance
 
-!!! tip "NOTE"
+!!! warning
     The API endpoint options may vary depending on the operating system of the PowerVS instance.
 
 In addition to exploring the ways in which you can programmatically interface with your PowerVS instance, we'll also examine how to modify the instance after it has been deployed. Depending on core type, operating system, and so on, a client can:
