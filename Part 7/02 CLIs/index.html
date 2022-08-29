@@ -871,6 +871,7 @@
 <p><img alt="" src="../_attachments/part7_step10.png" /></p>
 </div>
 <p>Thus far, all of these commands have been <strong>read</strong> commands. The PowerVS CLIs also support <strong>create</strong> and <strong>update</strong> commands, but remember your user ID has limited access. Try the <strong>instance modify</strong> command and see what happens.</p>
+<p><strong>Hint</strong>: Business Partners should record the value of the <strong>Storage Pool Affinity</strong> field in the output from the above command.</p>
 <ol start="11">
 <li>Recall that our Power environment consists of a total of 4 PowerVM instances: AIX-vm-1, AIX-vm-2, RH-vm-1, and RH-vm2. Up until now we've primarily been issuing instructions to perform work against AIX-vm-1. Given that the testing environment is primarily limited to read-only actions, let's inspect one of the other VMs and determine what (if any) differences exist between the various instances.</li>
 </ol>
@@ -880,7 +881,7 @@
 <p>And then issue a second command:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ibmcloud pi instance AIX-vm-1
 </code></pre></div></p>
-<p>You'll notice that the two tables are nearly identical, save for a single field at the bottom of the AIX-vm-1 inspection output. Record the name of that field and the value it is assigned to a place where you can reference later (<em><strong>hint</strong></em>) after your lab work has concluded.</p>
+<p>You'll notice that the two tables are nearly identical, save for a single field at the bottom of the AIX-vm-1 inspection output.</p>
 <ol start="12">
 <li>There are numerous reasons why you might want to generate an SSH private key for managing your PowerVS environment. In fact, that's exactly what the service's administrators did in order to authorize your access to the PowerVS instance — you'll recall how you first connected to the PowerVS virtual machines remotely via the IBM Cloud Shell with the supplied key information.</li>
 </ol>
