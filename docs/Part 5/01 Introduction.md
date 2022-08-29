@@ -1,6 +1,6 @@
 ![type:video](./_videos/IBM Power Systems Virtual Server Level 3 - Part 5.mp4)
 !!! tip "Ways to Watch"
-    In addition to the imbedded video, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DC9pbQMj66RcWGhMGdHD447pFdGV" target="_blank">download the recording from Seismic</a>.
+    In addition to the embedded video, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DC9pbQMj66RcWGhMGdHD447pFdGV" target="_blank">download the recording from Seismic</a>.
 
 IBM Power Systems Virtual Server is an Infrastructure as a Service (IaaS) offering. PowerVS allows clients to rapidly provision new instances running AIX, IBM i, or Linux. Ultimately, clients will want to deploy applications on those machines. The applications that clients choose to deploy will vary widely. They may include middleware like databases, third party software products like SAP, or applications they have developed themselves. To install these applications, they need to access the instance and install the software.
 

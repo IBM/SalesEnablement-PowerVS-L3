@@ -1,6 +1,6 @@
 ![type:video](./_videos/IBM Power Systems Virtual Server Level 3 - Part 3.mp4)
 !!! tip "Ways to Watch"
-    In addition to the imbedded video, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DC4FdB8T2dBCGGTTfc9f97JRXDQ8" target="_blank">download the recording from Seismic</a>.
+    In addition to the embedded video, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DC4FdB8T2dBCGGTTfc9f97JRXDQ8" target="_blank">download the recording from Seismic</a>.
 
 IBM Systems Virtual Servers are located in the IBM data centers, distinct from the IBM Cloud servers with separate networks and direct-attached storage. The environment is in its own pod and the internal networks are fenced but offer connectivity options to meet customer requirements. This infrastructure design enables IBM Power Systems Virtual Server to maintain key enterprise software certification and support as the PowerVS architecture is identical to certified on-premises infrastructure. The virtual servers, also known as instances, logical partitions (LPAR), or virtual machines (VMs) run on IBM Power Systems hardware with the PowerVM hypervisor.
 

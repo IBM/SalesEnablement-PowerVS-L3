@@ -1,6 +1,6 @@
 ![type:video](./_videos/IBM Power Systems Virtual Server Level 3 - Part 4.mp4)
 !!! tip "Ways to Watch"
-    In addition to the imbedded video, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DCqPC8JCP8gmFGmHFj6F96XBR8hP" target="_blank">download the recording from Seismic</a>.
+    In addition to the embedded video, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DCqPC8JCP8gmFGmHFj6F96XBR8hP" target="_blank">download the recording from Seismic</a>.
 
 Via the IBM Cloud Portal, clients can control and manage many aspects of their PowerVS deployment, either graphically using the Web interface or programmatically via APIs. As you'll explore in this section, the programmatic API endpoints provide the same capabilities— and more —from what you are able to manage via the IBM Cloud web interface. Via APIs, clients are able to:
 

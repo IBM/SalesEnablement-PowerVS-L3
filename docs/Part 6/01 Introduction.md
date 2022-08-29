@@ -1,6 +1,6 @@
 ![type:video](./_videos/IBM Power Systems Virtual Server Level 3 - Part 6.mp4)
 !!! tip "Ways to Watch"
-    In addition to the imbedded video, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DCg8HWGTc7mhVG2RDmPDf7WDRmBj" target="_blank">download the recording from Seismic</a>.
+    In addition to the embedded video, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DCg8HWGTc7mhVG2RDmPDf7WDRmBj" target="_blank">download the recording from Seismic</a>.
 
 Mentioned earlier throughout this Level 3 course are the variety of features available for managing your PowerVS instance once the infrastructure and services have been deployed. The customizability and scalability of these environments post-launch are precisely the "cloud-centric" benefits that draw customers towards an investment in PowerVS. In this chapter, we'll dive deeper into each of these advanced topics to get you up to speed on the fundamentals and provide a launching point for you to craft bespoke demonstrations on these topics for your client engagements.
 

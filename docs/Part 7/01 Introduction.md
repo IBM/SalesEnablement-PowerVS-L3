@@ -1,6 +1,6 @@
 ![type:video](./_videos/IBM Power Systems Virtual Server Level 3 - Part 7.mp4)
 !!! tip "Ways to Watch"
-    In addition to the imbedded video, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DCTPMgcFR4p688fH2Pb6g4VjcT3G" target="_blank">download the recording from Seismic</a>.
+    In addition to the embedded video, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DCTPMgcFR4p688fH2Pb6g4VjcT3G" target="_blank">download the recording from Seismic</a>.
 
 IBM Power Systems Virtual Server provides **command line interfaces (CLI)** as a plugin to the IBM Cloud CLI. The PowerVS CLIs provide system administrators the ability to programmatically manage their PowerVS environment with out having to use the IBM Cloud Portal.
 
