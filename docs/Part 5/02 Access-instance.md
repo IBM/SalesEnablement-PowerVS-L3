@@ -99,7 +99,13 @@ ps -ef
 
 All of these commands are basic OS commands. If you are familiar with AIX or Linux, feel free to try other things out on the instance. Note, your user ID has limited permissions on all PowerVS instances in this shared environment. Administrative access is not provided.
 
-15. Close the SSH connection by running the **exit** command.
+15. Run one more OS level command. **Hint**: Business Partners should record the command's output.
+
+```
+uname -a
+```
+
+16. Close the SSH connection by running the **exit** command.
 
 ```
 exit
