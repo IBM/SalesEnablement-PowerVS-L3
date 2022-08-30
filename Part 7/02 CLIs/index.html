@@ -886,18 +886,18 @@
 <li>There are numerous reasons why you might want to generate an SSH private key for managing your PowerVS environment. In fact, that's exactly what the service's administrators did in order to authorize your access to the PowerVS instance — you'll recall how you first connected to the PowerVS virtual machines remotely via the IBM Cloud Shell with the supplied key information.</li>
 </ol>
 <p>The IBM Cloud Shell is capable of generating an SSH key that is configured for password-less authentication (in other words, allowing users to authenticate without needing to also supply a password). You can do so using the Shell, or any Linux environment, using the following ssh-keygen command:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ssh-keygen -t ed25519 -N &#39;&#39;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ssh-keygen -t ed25519 -N &#39;&#39; -f newKey
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Sample output</p>
 <p><img alt="" src="../_attachments/part7_step12.png" /></p>
 </div>
-<p>You can then use IBM Power CLIs to create a key for the instance using an imported RSA public key, which you will specify the key pair you generated a moment ago as the source. Do so using the following command. (Note: bienkoNEWKEY is the name of the IBM Power CLI-generated key that is to be created; bienkoKey is the SSH key generated earlier using the IBM Cloud Shell).</p>
+<p>You can then use IBM Power CLIs to create a key for the instance using an imported RSA public key, which you will specify the key pair you generated a moment ago as the source. Do so using the following command. (Note: newKeyPOWER is the name of the IBM Power CLI-generated key that is to be created; newKey is the SSH key generated earlier using the IBM Cloud Shell).</p>
 <div class="admonition tip">
 <p class="admonition-title">SSH keys</p>
 <p>Be aware that the SSH key-pair generated and assigned by this step is specific to IBM Power Systems. These are distinct from ones you generated previously using the IBM Cloud Shell.</p>
 </div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ibmcloud pi keyc bienkoNEWKEY --key bienkoKey
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ibmcloud pi keyc newKeyPOWER --key newKey
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Sample output</p>
