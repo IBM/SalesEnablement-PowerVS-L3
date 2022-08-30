@@ -32,7 +32,7 @@ ibmcloud pi --help | more
 ??? tip "Tip for novice Linux users!"
     If you are not familiar with Linux commands, don't worry. The command you just ran is actually 2 commands. The first is ```ibmcloud pi --help```. This executes the **help** option of the PowerVS plugin. The second command is the ```more``` command which pauses the output being displayed. The **"|"** or **pipe** character takes the output from the first command and sends it as input to the second command. If you want to learn more about Linux commands, just do a Internet search on **Linux primer**.
 
-5. Press the **space bar** to continue the output.
+5. Press the **space bar** to continue the output. You may need to press space bar several times to cycle through the complete output.
 
 Notice the last part of the message says: **Enter 'ibmcloud pi help [command]' for more information about a command.** Use this to get more help on individual PowerVS plugin commands.
 
