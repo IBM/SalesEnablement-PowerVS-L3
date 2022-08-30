@@ -1,6 +1,6 @@
 ![type:video](./_videos/IBM Power Systems Virtual Server Level 3 - Part 1.mp4)
 !!! tip "Ways to Watch"
-    In addition to the imbedded video, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DChpTqJ8dqGH68QMBF6jMVQC92gG" target="_blank">download the recording from Seismic</a>.
+    In addition to the embedded video, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DChpTqJ8dqGH68QMBF6jMVQC92gG" target="_blank">download the recording from Seismic</a>.
 
 **IBM Power Systems Virtual Server** (PowerVS) delivers flexible compute capacity for Power Systems workloads. Integrated with the IBM Cloud platform for on-demand provisioning, this offering provides a secure and scalable server virtualization environment built upon the advanced RAS features and leading performance of the Power Systems platform.
 
@@ -55,6 +55,6 @@ When satisfied, scroll down to the bottom of the page and click **Submit** to in
 
 6. Just above the blue icon is a field labelled as **User ID** — record that value, as it will be needed later. It should look something like your email address (but with a period . instead of an @ sign).
 
-7. Log in to your email inbox and look for an email from **IBM Cloud** with the title **Account: You are invited to join an account in IBM Cloud**. Within the content of the email is a link to **Join Now**. Click the link and then **Accept** the invitation on the IBM Cloud portal. This will add the demonstration PowerVS instance to your IBM Cloud account.
+7. Log in to your email inbox and look for an email from **IBM Cloud** with the title **Account: You are invited to join an account in IBM Cloud**. Within the content of the email is a link to **Join Now**. Click the link and then **Accept** the invitation on the IBM Cloud portal. This will add the PowerVS instance to your IBM Cloud account.
 
 ![](_attachments/part1_step7.png)

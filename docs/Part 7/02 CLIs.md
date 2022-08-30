@@ -85,6 +85,8 @@ ibmcloud pi instance {{aixServer1.name}}
 
 Thus far, all of these commands have been **read** commands. The PowerVS CLIs also support **create** and **update** commands, but remember your user ID has limited access. Try the **instance modify** command and see what happens.
 
+**Hint**: Business Partners should record the value of the **Storage Pool Affinity** field in the output from the above command.
+
 
 11. Recall that our Power environment consists of a total of 4 PowerVM instances: AIX-vm-1, AIX-vm-2, RH-vm-1, and RH-vm2. Up until now we've primarily been issuing instructions to perform work against AIX-vm-1. Given that the testing environment is primarily limited to read-only actions, let's inspect one of the other VMs and determine what (if any) differences exist between the various instances.
 
@@ -98,8 +100,7 @@ And then issue a second command:
 ibmcloud pi instance AIX-vm-1
 ```
 
-You'll notice that the two tables are nearly identical, save for a single field at the bottom of the AIX-vm-1 inspection output. Record the name of that field and the value it is assigned to a place where you can reference later (_**hint**_) after your lab work has concluded.
-
+You'll notice that the two tables are nearly identical, save for a single field at the bottom of the AIX-vm-1 inspection output.
 
 12. There are numerous reasons why you might want to generate an SSH private key for managing your PowerVS environment. In fact, that's exactly what the service's administrators did in order to authorize your access to the PowerVS instance — you'll recall how you first connected to the PowerVS virtual machines remotely via the IBM Cloud Shell with the supplied key information.
 
