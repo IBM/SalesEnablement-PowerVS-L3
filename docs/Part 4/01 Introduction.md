@@ -2,7 +2,7 @@
 !!! tip "Ways to Watch"
     In addition to the embedded video, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DCqPC8JCP8gmFGmHFj6F96XBR8hP" target="_blank">download the recording from Seismic</a>.
 
-Via the IBM Cloud Portal, clients can control and manage many aspects of their PowerVS deployment, either graphically using the Web interface or programmatically via APIs. As you'll explore in this section, the programmatic API endpoints provide the same capabilities— and more —from what you are able to manage via the IBM Cloud web interface. Via APIs, clients are able to:
+Via the IBM Cloud Portal, clients can control and manage many aspects of their provisioned PowerVS instances. Users are able to:
 
 - Perform an OS shutdown
 - Perform an immediate shutdown (without killing processes)
@@ -13,9 +13,9 @@ Via the IBM Cloud Portal, clients can control and manage many aspects of their P
 - Capture and export an image of the instance
 
 !!! warning
-    The API endpoint options may vary depending on the operating system of the PowerVS instance.
+    The options may vary depending on the operating system of the PowerVS instance.
 
-In addition to exploring the ways in which you can programmatically interface with your PowerVS instance, we'll also examine how to modify the instance after it has been deployed. Depending on core type, operating system, and so on, a client can:
+In addition to exploring the ways to manage a PowerVS instance, examine how to modify the instance after it has been deployed. Depending on core type, operating system, and so on, a user can:
 
 - Change VM pinning (soft, hard)
 - Change core type (Shared uncapped, Shared capped, Dedicated)
@@ -24,4 +24,4 @@ In addition to exploring the ways in which you can programmatically interface wi
 - Change placement group
 - It is also possible to attach and detach storage volumes (or attach an instance to an existing network)
 
-Given that the IBM Technology Zone environment used for this course is a shared service for multiple students and geographies, safeguards have been put in place ahead of time to ensure that the environment remains stable. As such, modifications you attempt to make to these instance variables and configurations will not impact the live environment.
+Given the IBM Technology Zone environment used for this course is a shared service for multiple students and geographies, safeguards have been put in place ahead of time to ensure that the environment remains stable. Attempts to modify variables and configurations will fail.

@@ -1,6 +1,7 @@
 As mentioned earlier PowerVS supports both Tier 1 and Tier 3 storage volumes. Every instance consists of a boot volume and optionally additional storage volumes. While IBM manages the underlying physical storage, it is the client's responsibility to manage and protect the data on instances.
 
 A few facts about storage volumes:
+
   - Storage volumes can be increased in size in 1GB increments, but not decreased.
   - Storage volume sizes maximums will depend on availability within the selected IBM datacenter.
   - Storage volumes can be marked as **shareable**.

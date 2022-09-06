@@ -1,18 +1,18 @@
-In this exercise, explore several of the PowerVS CLIs. It is important to remember you are using a shared environment and have limited administrative permissions. The CLIs being executed here are command that only require "read" access to the environment. CLIs also exist to create and modify the PowerVS resources, you will just not have sufficient permissions to execute those commands in the shared environment. Attempting to do so will result in an error.
+In this exercise, explore several of the PowerVS CLIs. It is important to remember this is a shared environment and only limited administrative permissions are provided. The CLIs being executed here are commands that only require "read" access to the environment. CLIs also exist to create and modify PowerVS resources, but in this shared environment users do not have sufficient permissions to execute those commands. Attempting to do so will result in an error.
 
 For this exercise, the IBM Cloud Shell will be used. IBM Cloud Shell gives users complete control of their cloud resources, applications and infrastructure, from any web browser. IBM Cloud Shell provides pre-authenticated access to the latest tools and programming languages for cloud-based development, deployment and management of services and applications — all in a secure shell. IBM Cloud Shell is instantly accessible from the IBM Cloud portal. The IBM command line interface (CLI) along with all the IBM Cloud CLI plugins are pre-installed in IBM Cloud Shell, including the PowerVS CLIs.
 
-It is also possible to install the IBM Cloud CLIs and PowerVS CLI plugin other systems, like personal desktops, development servers, etc. To learn more about installing the PowerVS CLI locally click <a href="https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference" target="_blank">here</a>.
+It is also possible to install the IBM Cloud CLIs and PowerVS CLI plugin on other systems, like personal desktops, development servers, etc. To learn more about installing the PowerVS CLI locally click <a href="https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference" target="_blank">here</a>.
 
 To get started, first open the IBM Cloud Shell from the IBM Cloud portal:
 
 1. If not already opened, open the IBM Cloud Portal: <a href="https://cloud.ibm.com/" target="_blank">https://cloud.ibm.com/</a> and authenticate with your IBM Cloud credentials.
-2. Change from your IBM Cloud account to the **{{account}}** account.
+2. Change to the **{{account}}** account.
 
 ![](_attachments/SwitchAccounts-final.gif)
 
 !!! tip
-    If your browser window is narrow, you may see this icon: ![](_attachments/SwitchAccountsIcon.png) instead of the current account name as shown in the screen capture above.
+    If the browser window is narrow, this icon: ![](_attachments/SwitchAccountsIcon.png) may be seen instead of the current account name as shown in the screen capture above.
 
 3. Click the IBM Cloud Shell icon ![](_attachments/CloudShellIcon.png).
 
@@ -20,7 +20,7 @@ To get started, first open the IBM Cloud Shell from the IBM Cloud portal:
 
 The next steps are performed in using the IBM Cloud Shell window that was opened.
 
-First, create a SSH private key file using the key provided in your IBM Technology Zone's reservation welcome e-mail.
+First, create a SSH private key file using the key provided in the IBM Technology Zone's reservation welcome e-mail.
 
 Remember, to avoid typographical errors **copy** the command line using the ![](_attachments/CopyToClipboard.png) icon when it is available. Then paste the contents into the IBM Cloud Shell using ++ctrl++**+v**, ++cmd++**+v**, or right click and select paste at the prompt in the IBM Cloud Shell.
 
@@ -30,9 +30,9 @@ Remember, to avoid typographical errors **copy** the command line using the ![](
 ibmcloud pi --help | more
 ```
 ??? tip "Tip for novice Linux users!"
-    If you are not familiar with Linux commands, don't worry. The command you just ran is actually 2 commands. The first is ```ibmcloud pi --help```. This executes the **help** option of the PowerVS plugin. The second command is the ```more``` command which pauses the output being displayed. The **"|"** or **pipe** character takes the output from the first command and sends it as input to the second command. If you want to learn more about Linux commands, just do a Internet search on **Linux primer**.
+    Those not familiar with Linux commands, don't worry. The above command is actually 2 commands. The first is ```ibmcloud pi --help```. This executes the **help** option of the PowerVS plugin. The second command is the ```more``` command which pauses the output being displayed. The **"|"** or **pipe** character takes the output from the first command and sends it as input to the second command. To learn more about Linux commands do an Internet search on **Linux primer**.
 
-5. Press the **space bar** to continue the output. You may need to press space bar several times to cycle through the complete output.
+5. Press the **space bar** to continue the output. Continue to press space bar several times to scroll through the complete output.
 
 Notice the last part of the message says: **Enter 'ibmcloud pi help [command]' for more information about a command.** Use this to get more help on individual PowerVS plugin commands.
 
@@ -83,7 +83,7 @@ ibmcloud pi instance {{aixServer1.name}}
 !!! info "Sample output"
     ![](_attachments/part7_step10.png)
 
-Thus far, all of these commands have been **read** commands. The PowerVS CLIs also support **create** and **update** commands, but remember your user ID has limited access. Try the **instance modify** command and see what happens.
+Thus far, all of these commands have been **read** commands. The PowerVS CLIs also support **create** and **update** commands, but remember that user IDs have limited access in this shared environment. Try the **instance modify** command and see what happens.
 
 **Hint**: Business Partners should record the value of the **Storage Pool Affinity** field in the output from the above command.
 
@@ -100,11 +100,11 @@ And then issue a second command:
 ibmcloud pi instance AIX-vm-1
 ```
 
-You'll notice that the two tables are nearly identical, save for a single field at the bottom of the AIX-vm-1 inspection output.
+Notice that the two tables are nearly identical, save for a single field at the bottom of the AIX-vm-1 inspection output.
 
-12. There are numerous reasons why you might want to generate an SSH private key for managing your PowerVS environment. In fact, that's exactly what the service's administrators did in order to authorize your access to the PowerVS instance — you'll recall how you first connected to the PowerVS virtual machines remotely via the IBM Cloud Shell with the supplied key information.
+12. There are numerous reasons why one might want to generate an SSH private key for managing a PowerVS environment. In fact, that's exactly what the service's administrators did in order to authorize access to the PowerVS instance — recall first connecting to the PowerVS virtual machines remotely via the IBM Cloud Shell with the supplied key information.
 
-The IBM Cloud Shell is capable of generating an SSH key that is configured for password-less authentication (in other words, allowing users to authenticate without needing to also supply a password). You can do so using the Shell, or any Linux environment, using the following ssh-keygen command:
+The IBM Cloud Shell is capable of generating an SSH key that is configured for password-less authentication (in other words, allowing users to authenticate without needing to also supply a password). This can be done using IBM Cloud Shell, or any Linux environment, using the following ssh-keygen command:
 
 ```
 ssh-keygen -t ed25519 -N '' -f newKey
@@ -113,10 +113,10 @@ ssh-keygen -t ed25519 -N '' -f newKey
 !!! info "Sample output"
     ![](_attachments/part7_step12.png)
 
-You can then use IBM Power CLIs to create a key for the instance using an imported RSA public key, which you will specify the key pair you generated a moment ago as the source. Do so using the following command. (Note: newKeyPOWER is the name of the IBM Power CLI-generated key that is to be created; newKey is the SSH key generated earlier using the IBM Cloud Shell).
+Use the PowerVS CLIs to create a key for the instance using an imported RSA public key. Specify the key pair generated above as the source (newKey). Do so using the following command. (Note: newKeyPOWER is the name of the IBM Power CLI-generated key that is to be created; newKey is the SSH key generated earlier using the IBM Cloud Shell).
 
 !!! tip "SSH keys"
-    Be aware that the SSH key-pair generated and assigned by this step is specific to IBM Power Systems. These are distinct from ones you generated previously using the IBM Cloud Shell.
+    Be aware that the SSH key-pair generated and assigned by this step is specific to IBM Power Systems. These are distinct from ones generated previously using the IBM Cloud Shell.
 
 ```
 ibmcloud pi keyc newKeyPOWER --key newKey
@@ -125,7 +125,7 @@ ibmcloud pi keyc newKeyPOWER --key newKey
 !!! info "Sample output"
     ![](_attachments/part7_step12b.png)
 
-As you might have expected, the instruction fails to execute because of insufficient (locked down) permissions within this testing environment. Go ahead and experiment with other IBM Power CLIs. Many instructions and commands will meet with similar results, but it nevertheless is good practice given that there is no risk to the system within this sandbox environment.
+As expected, the instruction fails to execute because of insufficient (locked down) permissions within this testing environment. Next, experiment with other IBM Power CLIs. Many instructions and commands will meet with similar results, but it nevertheless is good practice given that there is no risk to the system within this sandbox environment.
 
 
 13. Restart the **{{rhServer1.name}}** instance.
@@ -136,8 +136,8 @@ ibmcloud pi instance-soft-reboot {{rhServer1.name}}
 
 !!! info "Sample output"
     ![](_attachments/instance-soft-reboot.png)
-    Note, this error message as nowhere near as informative as what you saw in the IBM Cloud portal when attempting an action your user ID does not have permission to perform. The product team has been notified, and hopefully in the near future the CLI error messages will improve.
+    Note, an enhancement request has been submitted to improve the CLI error messages.
 
-There are over 100 PowerVS CLIs. Feel free to explore these using your TechZone environment. Remember, use ```ibmcloud pi --help``` or ```ibmcloud pi <command> --help``` to get detailed information on a command's usage.
+There are over 100 PowerVS CLIs. Feel free to explore these using the TechZone environment. Remember, use ```ibmcloud pi --help``` or ```ibmcloud pi <command> --help``` to get detailed information on a command's usage.
 
-That concludes the final part of the {{offering.name}} demonstration script. Proceed to [**Part 8 - Next steps**](../Part 8/01 Next steps.md) for more information on completing the {{learningplan.name}} badge.
+This concludes the final part of the {{offering.name}} demonstration script. Proceed to [**Part 8 - Next steps**](../Part 8/01 Next steps.md) for more information on completing the {{learningplan.name}} badge.

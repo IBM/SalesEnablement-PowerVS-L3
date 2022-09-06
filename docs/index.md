@@ -13,7 +13,7 @@ All modules are accompanied by recordings and narrated instructions, delivered b
 
 **Business Partners** must pass an accreditation quiz after completing the hands-on portion of the course. The quiz consists of multiple choice questions, with four possible responses (and only one correct answer) for each question.
 
-**IBM Sales and Tech Sales** must develop and record a Stand & Deliver presentation. This video is intended to simulate your delivery of a “live” demo in front of a client — on camera. IBMers will have flexibility in defining a hypothetical client, the pain points that customer has, and the goals they aspire. The recording will then cover the seller’s hands- on demonstration and pitch to the client of the value of the IBM solution using the environments and techniques of this lab.
+**IBM Sales and Tech Sales** must develop and record a Stand & Deliver presentation. This video is intended to simulate your delivery of a “live” demo in front of a client — on camera. IBMers will have flexibility in defining a hypothetical client, the pain points that customer has, and the goals they aspire to achieve. The recording will then cover the seller’s hands-on demonstration and pitch to the client of the value of the IBM solution using the environments and techniques of this lab.
 
 Specific criteria that must be demonstrated as part of the Stand & Deliver recordings is provided within the documentation that accompanies the Level 3 course. Before jumping to part 1, please read the guidance below. Reading and understanding the information will save time while completing the steps in this guide.
 
@@ -78,6 +78,7 @@ The following acronyms are used throughout this demonstration guide:
     - Internet Protocol (IP)
     - Operating System (OS)
     - Random access memory (RAM)
+    - Reliability, Availability, and Serviceability (RAS)
     - Secure Socket Shell (SSH)
     - User identification (ID)
     - Virtual Machine (VM)

@@ -20,7 +20,7 @@ The key parameters for a PowerVS instance are:
 
 - **Storage tier**: PowerVS supports both Tier 1 and Tier 3 storage. Tier 1 provides a maximum of 100 input/output operations per second (IOPs) per GB, while Tier 3 provides a maximum of 3 IOPS/GB. Tier 3 storage should only be utilized for non-production workloads.
 
-- **Storage pool affinity**: Three storage pool affinity options are available: auto-select, affinity, and anti-affinity. The affinity option specifies requires the boot volume to be placed in the same pool as another existing instance or existing boot volume. The new storage volume(s) for the instance will be placed in the same storage pool where the affinity object resides. The anti-affinity specifies a different pool should be used from that of another existing instance or existing boot volume.
+- **Storage pool affinity**: Three storage pool affinity options are available: auto-select, affinity, and anti-affinity. The affinity option requires the boot volume to be placed in the same pool as another existing instance or existing boot volume. The new storage volume(s) for the instance will be placed in the same storage pool where the affinity object resides. The anti-affinity specifies a different pool should be used from that of another existing instance or existing boot volume.
 
 - **Machine type**: Two IBM Power Systems machine types are supported: s922 and e980. Learn more about these s922 <a href="https://www.ibm.com/products/power-system-s922" target="_blank">here</a> and the e980 <a href="https://www.ibm.com/products/power-system-e980" target="blank">here</a>.
 
@@ -32,6 +32,6 @@ The key parameters for a PowerVS instance are:
 
 - **Additional storage volumes**: When provisioning a new instance, for additional storage, a new data volume can be created or an existing volume can be attached. Any storage volume added at this time will use the same storage tier as the boot volume specified earlier.
 
-- **Networking**: PowerVS instances will always be attached to a private network and can optionally be attached to a public, Internet accessible network. Use private networks to connect to existing subnets or go a new subnet can be created. You can learn more about PowerVS networking <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-network-architecture-diagrams" target="_blank">here</a>.
+- **Networking**: PowerVS instances will always be attached to a private network and can optionally be attached to a public, Internet accessible network. Use private networks to connect to existing subnets or go a new subnet can be created. Learn more about PowerVS networking <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-network-architecture-diagrams" target="_blank">here</a>.
 
-In this chapter, you will view a video of a PowerVS instance being provisioned and replicate the steps taken yourself using a click-through guided demonstration.
+In this chapter, view a video of a PowerVS instance being provisioned and replicate the steps taken using a click-through guided demonstration.
