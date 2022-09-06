@@ -13,7 +13,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.1">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.0">
     
     
       
@@ -792,17 +792,17 @@
   <h1>Managing instances</h1>
 
 <p>Through the IBM Cloud Portal or APIs, administrators with the appropriate IBM Cloud Portal access can manipulate PowerVS instances without needing to directly access the instance operating system.</p>
-<p>Using your IBM Cloud credentials and the IBM Cloud portal, complete the following scenario for managing PowerVS instances using the "baking show" demonstration technique. Note, an error message like the one below will be encountered if an attempt is made to complete an action.</p>
+<p>Using the IBM Cloud portal, complete the following scenario for managing PowerVS instances using the "baking show" demonstration technique. Note, an error message like the one below will be encountered if an attempt is made to complete an action.</p>
 <p><img alt="" src="../_attachments/ErrorMessage.png" /></p>
 <p>This is normal, as full access to the shared environment is <strong>not</strong> provided. To avoid the error message, simply click the <strong>Cancel</strong> button on the action dialog. If performing a live client demonstration, or for IBM employees completing the Stand and Deliver for the IBM Power Systems Virtual Server - Level 3 badge, tell the audience why the action is being canceled but explain what would typically happen if the action was completed.</p>
 <ol>
-<li>Open the IBM Cloud Portal: <a href="https://cloud.ibm.com/" target="_blank">https://cloud.ibm.com/</a> and authenticate with your IBM Cloud credentials.</li>
-<li>Change from your IBM Cloud account to the <strong>2305900 - ITZ - ADHOC03</strong> account.</li>
+<li>Open the IBM Cloud Portal: <a href="https://cloud.ibm.com/" target="_blank">https://cloud.ibm.com/</a> and authenticate.</li>
+<li>Change to the <strong>2305900 - ITZ - ADHOC03</strong> account.</li>
 </ol>
 <p><img alt="" src="../_attachments/SwitchAccounts-final.gif" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>If your browser window is narrow, you may see this icon: <img alt="" src="../_attachments/SwitchAccountsIcon.png" /> instead of the current account name as shown in the screen capture above.</p>
+<p>If the browser window is narrow, this icon: <img alt="" src="../_attachments/SwitchAccountsIcon.png" /> may be seen instead of the current account name as shown in the screen capture above.</p>
 </div>
 <ol start="3">
 <li>Click <strong>Services and software</strong> under <strong>Resource summary</strong> on the IBM Cloud Dashboard.</li>
@@ -810,7 +810,7 @@
 <p><img alt="" src="../_attachments/Dashboard.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In some cases, after switching accounts you may be prompted with an IBM Cloud new user questionnaire and/or other pop-up windows. Simply cancel these windows. If a the IBM Cloud Dashboard is not displayed as seen in the above figure, click the <strong>IBM Cloud</strong> text at top left of the IBM Cloud Portal.</p>
+<p>In some cases, after switching accounts a new user questionnaire and/or other pop-up window may appear. Simply cancel these windows. If a the IBM Cloud Dashboard is not displayed as seen in the above figure, click the <strong>IBM Cloud</strong> text at top left of the IBM Cloud Portal.</p>
 </div>
 <ol start="4">
 <li>Click <strong>PowerVS-L3-service</strong> under <strong>Services and software</strong>.</li>
@@ -830,16 +830,16 @@
 <li>Click the <strong>Edit details</strong> link.</li>
 </ol>
 <p><img alt="" src="../_attachments/InstanceDetails-EditDetails.png" /></p>
-<p>Explore what instance configuration options can be modified. Depending on the running state of the instance, some options may not be possible. Note, making changes to the instance always requires the user to agree to the service terms. <strong>Hint</strong>: Business Partners should take note of why the <strong>core type</strong> of the virtual instance can not be edited.</p>
+<p>Explore what instance configuration options can be modified. Depending on the running state of the instance, some options may not be possible. Note, making changes to the instance always requires the user to agree to the service terms. <strong>Hint</strong>: Business Partners should take note of why the <strong>core type</strong> of the virtual instance cannot be edited.</p>
 <ol start="9">
-<li>Click the <strong>Cancel</strong> in the <strong>Edit server details</strong> dialog.</li>
+<li>Click <strong>Cancel</strong> in the <strong>Edit server details</strong> dialog.</li>
 </ol>
-<p>The above steps, walked through 2 aspects of managing a single PowerVS instance.</p>
+<p>The above steps walked through two aspects of managing a single PowerVS instance.</p>
 <p>Before proceeding, spend a few minutes exploring other aspects of managing PowerVS instances using the IBM Cloud Portal. Detailed steps are not provided, but typically just click the <strong>Cancel</strong> button to return to the instances detail page. Here are a few things to try:</p>
 <ul>
 <li>Click <strong>Attach volume</strong>. Notice how only existing volumes that are marked as <strong>shareable</strong> are displayed.</li>
 <li>Click <strong>Create volume</strong>. Notice it is now possible to add a <strong>Storage volume</strong> using a different tier of storage than that of the instance boot volume.</li>
-<li>Click the <strong>VM actions</strong> drop-down menu and select <strong>Captures and export</strong>. From this dialog, the storage volumes can be exported to either the PowerVS service Image catalog or to IBM Cloud Object Storage. <strong>Hint</strong>: Business Partners should take note of the <strong>Limited actions available during capture</strong> information dialog that appears on the <strong>Capture and export</strong> panel.</li>
+<li>Click the <strong>VM actions</strong> drop-down menu and select <strong>Capture and export</strong>. From this dialog, the storage volumes can be exported to either the PowerVS service Image catalog or to IBM Cloud Object Storage. <strong>Hint</strong>: Business Partners should take note of the <strong>Limited actions available during capture</strong> information dialog that appears on the <strong>Capture and export</strong> panel.</li>
 </ul>
 
 
