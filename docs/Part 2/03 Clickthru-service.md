@@ -1,4 +1,4 @@
-Now it is time for you to provision a PowerVS service. Use the click-thru demonstration below to practice provisioning a PowerVS service. The click-thru demonstration corresponds to the video from the previous chapter. Refer to the video for talking points if the click-thru demonstration is utilized with clients.
+Now it is time to provision a PowerVS service. Use the click-thru demonstration below to practice provisioning a PowerVS service. The click-thru demonstration corresponds to the video from the previous chapter. Refer to the video for talking points if the click-thru demonstration is utilized with clients.
 
 Note, fields that require a text entry (e.g. service name) are pre-populated in the click-thru demonstration.
 
