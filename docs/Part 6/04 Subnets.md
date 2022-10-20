@@ -6,13 +6,13 @@ A few facts about subnets:
 
 A few facts about Cloud connections:
 
-  - Cloud Connect (Managed Networking Services using Megaport) is available only in USA.
-  - A maximum of 2 connections can be created.
+  <!-- - Cloud Connect (Managed Networking Services using Megaport) is available only in USA. -->
+  - A maximum of 2 connections can be created per region.
   - A subnet must be created prior to creating a Cloud connection.
 
 A few facts about VPN connections:
 
-  - A maximum of 4 connections can be created.
+  - A maximum of 4 connections can be created per account.
   - A subnet must be created prior to creating a Cloud connection.
 
 In the TechZone environment:
