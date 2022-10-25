@@ -14,9 +14,11 @@ This is normal, as full access to the shared environment is **not** provided. To
 !!! tip
     If the browser window is narrow, this icon: ![](_attachments/SwitchAccountsIcon.png) may be seen instead of the current account name as shown in the screen capture above.
 
-3. Click **Services and software** under **Resource summary** on the IBM Cloud Dashboard.
+<!-- 3. Click **Services and software** under **Resource summary** on the IBM Cloud Dashboard. -->
 
-![](_attachments/Dashboard.png)
+3. Click the **Resource List** ![](_attachments/ResourceListIcon.png) icon in the left-hand menu bar.
+
+![](_attachments/NewDashboard.png)
 
 !!! Note
     In some cases, after switching accounts a new user questionnaire and/or other pop-up window may appear. Simply cancel these windows. If a the IBM Cloud Dashboard is not displayed as seen in the above figure, click the **IBM Cloud** text at top left of the IBM Cloud Portal.
