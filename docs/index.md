@@ -1,3 +1,6 @@
+!!! important "Please read this first"
+    It has come to our attention that the IBM Power Systems Virtual Server (PowerVS) pages in the IBM Cloud portal have been updated with a new look and feel. Work is under way to create new screen captures and update the instructions in this demonstration script, but it will take time. Completion of the demonstration script is still possible, but know the example image captures and videos will not align with the current IBM Cloud portal views.
+
 ![type:video](./_videos/IBM Power Systems Virtual Server Level 3 - Introduction.mp4)
 !!! tip "Ways to Watch"
     In addition to the embedded video, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DCGdHJ7DMdqHD8cV7Wp8f4Rg9Bgd" target="_blank">download the recording from Seismic</a>.
