@@ -23,24 +23,24 @@ This is normal, as full access to the shared environment is **not** provided. To
 !!! Note
     In some cases, after switching accounts a new user questionnaire and/or other pop-up window may appear. Simply cancel these windows. If a the IBM Cloud Dashboard is not displayed as seen in the above figure, click the **IBM Cloud** text at top left of the IBM Cloud Portal.
 
-4. Click **{{powerVS.serviceInstanceName}}** under **Services and software**.
+4. Click **{{powerVS.serviceInstanceName}}** under **Compute**.
 
-![](_attachments/step4.png)
+![](_attachments/step4-new.png)
 
 5. Click **{{aixServer1.name}}** in the **Virtual server instances** table.
 
-![](_attachments/InstancesTable.png)
+![](_attachments/InstancesTable-new.png)
 
 6. Click the **VM actions** pull-down.
 
-![](_attachments/InstanceDetails-Actions.png)
+![](_attachments/InstanceDetails-Actions-new.png)
 
 Notice the actions that can be initiated. The actions available will vary depending on the current state of the instance and the operating system of the instance.
 
 7. Click anywhere on the main screen (away from the pop-up menu from step 6).
 8. Click the **Edit details** link.
 
-![](_attachments/InstanceDetails-EditDetails.png)
+![](_attachments/InstanceDetails-EditDetails-new.png)
 
 Explore what instance configuration options can be modified. Depending on the running state of the instance, some options may not be possible. Note, making changes to the instance always requires the user to agree to the service terms. **Hint**: Business Partners should take note of why the **core type** of the virtual instance cannot be edited.
 

@@ -20,11 +20,11 @@ Additionally, VPN and Cloud Connections cannot use the same subnet concurrently.
 In the TechZone environment:
 
   - Explore the **Subnets** page in the IBM Cloud Portal.
-  ![](_attachments/Subnets.png)
+  ![](_attachments/Subnets-new.png)
   - Explore the **Cloud connections** page in the IBM Cloud Portal.
-  ![](_attachments/CloudConnections.png)
+  ![](_attachments/CloudConnections-new.png)
   - Explore the **VPN connections** page in the IBM Cloud Portal.
-  ![](_attachments/VPNConnections.png)
+  ![](_attachments/VPNConnections-new.png)
 
 Learn more about subnets <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-subnet" target="_blank">here</a>.
 

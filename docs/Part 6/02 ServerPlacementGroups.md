@@ -8,7 +8,7 @@ A few facts about server placement groups:
 In the TechZone environment:
 
   - Explore the **Server placement groups** page in the IBM Cloud Portal.
-  ![](_attachments/ServerPlacementGroups.png)
+  ![](_attachments/ServerPlacementGroups-new.png)
 
 Learn more about server placement groups <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-placement-groups" target="_blank">here</a>.
 

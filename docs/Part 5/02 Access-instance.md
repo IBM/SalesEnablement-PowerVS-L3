@@ -15,7 +15,7 @@ Follow the steps below to log in to a running PowerVS instance using the IBM Clo
 
 2. Click the IBM Cloud Shell icon ![](_attachments/CloudShellIcon.png).
 
-![](_attachments/StartCloudShell.png)
+![](_attachments/StartCloudShell-new.png)
 
 The next steps are performed in using the IBM Cloud Shell window that was just opened.
 

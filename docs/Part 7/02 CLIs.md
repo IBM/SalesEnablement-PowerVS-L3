@@ -16,7 +16,7 @@ To get started, first open the IBM Cloud Shell from the IBM Cloud portal:
 
 3. Click the IBM Cloud Shell icon ![](_attachments/CloudShellIcon.png).
 
-![](_attachments/StartCloudShell.png)
+![](_attachments/StartCloudShell-new.png)
 
 The next steps are performed in using the IBM Cloud Shell window that was opened.
 

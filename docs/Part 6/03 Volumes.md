@@ -19,9 +19,9 @@ A few facts about boot volumes/images:
 In the TechZone environment:
 
   - Explore the **Storage volumes** page in the IBM Cloud Portal.
-  ![](_attachments/StorageVolumes.png)
+  ![](_attachments/StorageVolumes-new.png)
   - Explore the **Boot images** page in the IBM Cloud Portal.
-  ![](_attachments/BootImages.png)
+  ![](_attachments/BootImages-new.png)
 
 Learn more about storage volumes <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-modifying-server#modifying-volume-network" target="_blank">here</a>.
 
