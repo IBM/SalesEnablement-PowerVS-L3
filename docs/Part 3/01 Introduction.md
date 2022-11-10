@@ -18,7 +18,7 @@ The key parameters for a PowerVS instance are:
 
 - **OS image**: Users have the ability to choose an operating system image from the PowerVS image catalog or users can bring their own image. Each supported OS has a specific set of images in the PowerVS catalog for supported OS versions. Each instance is provisioned with a boot volume using the storage tier selected.
 
-- **Storage tier**: PowerVS supports both Tier 1 and Tier 3 storage. Tier 1 provides a maximum of 100 input/output operations per second (IOPs) per GB, while Tier 3 provides a maximum of 3 IOPS/GB. Tier 3 storage should only be utilized for non-production workloads.
+- **Storage tier**: PowerVS supports both Tier 1 and Tier 3 storage. Tier 1 provides a maximum of 10 input/output operations per second (IOPs) per GB, while Tier 3 provides a maximum of 3 IOPS/GB. Tier 3 storage should only be utilized for non-production workloads.
 
 - **Storage pool affinity**: Three storage pool affinity options are available: auto-select, affinity, and anti-affinity. The affinity option requires the boot volume to be placed in the same pool as another existing instance or existing boot volume. The new storage volume(s) for the instance will be placed in the same storage pool where the affinity object resides. The anti-affinity specifies a different pool should be used from that of another existing instance or existing boot volume.
 
