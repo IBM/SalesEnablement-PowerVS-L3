@@ -7,7 +7,7 @@ A few facts about server placement groups:
 
 !!! warning "Portal errors when viewing Placement Groups"
     A recent issue has arisen regarding placmenet groups. A support ticket has been created with IBM Cloud to address the issue. When loading the Placement Groups page the following errors are reported.  While the problem is being worked, please skip this chapter of the demonstration guide and proceed to learn more about Volumes.
-    ![](attachments/PlacementGroupErrors.png)
+    ![](_attachments/PlacementGroupErrors.png)
 
 In the TechZone environment:
 

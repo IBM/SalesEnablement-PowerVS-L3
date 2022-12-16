@@ -12,7 +12,7 @@ Welcome to the IBM Power Systems Virtual Server - Level 3 course and demonstrati
 
 !!! warning "Portal errors when viewing Placement Groups"
         A recent issue has arisen regarding placmenet groups. A support ticket has been created with IBM Cloud to address the issue. When loading the Placement Groups page the following errors are reported.  While the problem is being worked, please skip the Server Placmeent Groups chapter in Part 6 of the demonstration guide.
-        ![](attachments/PlacementGroupErrors.png)
+        ![](_attachments/PlacementGroupErrors.png)
 
 The learning material is broken up across distinct chapters. To complete the IBM Power Systems Virtual Server - Level 3 badge requirements, IBM and Business Partner sellers must complete Parts 1, 2, 3, 4, 5, and 8 of this demonstration guide. IBM and Business Partner technical sellers must complete all sections. **All are welcome and encouraged to complete all sections.**
 
