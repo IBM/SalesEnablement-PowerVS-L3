@@ -11,7 +11,7 @@ Welcome to the IBM Power Systems Virtual Server - Level 3 course and demonstrati
     In this demonstration environment, full access to the IBM Cloud account is NOT provided. User identifications (IDs) will be restricted to specific capabilities. Permission to create or modify PowerVS service instances, virtual machines (instances), networks, images, etc. is not provided. The demonstration guide provides videos and click through demonstrations to cover these functions.
 
 !!! warning "Portal errors when viewing Placement Groups"
-        A recent issue has arisen regarding placmenet groups. A support ticket has been created with IBM Cloud to address the issue. When loading the Placement Groups page the following errors are reported.  While the problem is being worked, please skip the Server Placmeent Groups chapter in Part 6 of the demonstration guide.
+        A recent issue has arisen regarding placement groups. A support ticket has been created with IBM Cloud to address the issue. When loading the Placement Groups page the following errors are reported.  While the problem is being worked, please skip the Server Placmeent Groups chapter in Part 6 of the demonstration guide.
         ![](_attachments/PlacementGroupErrors.png)
 
 The learning material is broken up across distinct chapters. To complete the IBM Power Systems Virtual Server - Level 3 badge requirements, IBM and Business Partner sellers must complete Parts 1, 2, 3, 4, 5, and 8 of this demonstration guide. IBM and Business Partner technical sellers must complete all sections. **All are welcome and encouraged to complete all sections.**
