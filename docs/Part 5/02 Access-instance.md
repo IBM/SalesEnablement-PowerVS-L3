@@ -23,6 +23,10 @@ The next steps are performed in using the IBM Cloud Shell window that was just o
 
 ![](_attachments/part5_step10a.png)
 
+!!! tip "Did you record the file name and location?"
+    
+    Earlier, when the key was downloaded the filename may have been different than **ssh_private_key.pem**. In the next steps, be sure to use the name the file was saved as when downloaded. If the file was saved with any special characters (e.g. **ssh_private_key (1).pem**) it is recommended to change the filename to something without any special characters to avoid issues when uploading the file to the IBM Cloud Shell environment.
+
 Locate the **.pem** file in  Downloads folder specified earlier and  wait for the transfer to finish. A dialogue box will appear in the bottom-right corner of the IBM Cloud Shell window when the upload is complete.
 
 ![](_attachments/part5_step10b.png)
