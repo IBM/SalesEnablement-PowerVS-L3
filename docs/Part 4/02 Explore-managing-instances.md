@@ -41,7 +41,7 @@ Notice the actions that can be initiated. The actions available will vary depend
 
     If the browser window is too small, the reactive nature of the IBM Cloud Portal will change the **VM actions** button to an ellipses icon ![](_attachments/elipsesIcon.png). Click the ellipses icon to see the **VM actions** or expand the browser window horizontally.
 
-    ![](_attaachments/bigEllipses.png)
+    ![](_attachments/bigEllipses.png)
 
 7. Click anywhere on the main screen (away from the pop-up menu from step 6).
 8. Click the **Edit details** link.
