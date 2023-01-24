@@ -17,6 +17,12 @@ Follow the steps below to log in to a running PowerVS instance using the IBM Clo
 
 ![](_attachments/StartCloudShell-new.png)
 
+??? error "Get an error openingIBM Cloud Shell?"
+
+    If the following error occurs when attempting to open IBM Cloud Shell, fix it by either deleting the browser cookies for cloud.ibm.com and log back into cloud.ibm.com, or try using a private/incognito browser window.
+
+    ![](_attachments/CloudShellError.png)
+
 The next steps are performed in using the IBM Cloud Shell window that was just opened.
 
 3. In the top-right corner of the IBM Cloud Shell window is a square icon with an "up" arrow. Click this button to upload a file — upload the SSH key downloaded earlier.
