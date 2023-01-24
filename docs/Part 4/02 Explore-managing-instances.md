@@ -37,6 +37,10 @@ This is normal, as full access to the shared environment is **not** provided. To
 
 Notice the actions that can be initiated. The actions available will vary depending on the current state of the instance and the operating system of the instance.
 
+??? error "Don't see a **VM actions** button?"
+
+    If the browser window is too small, the reactive nature of the IBM Cloud Portal will change the **VM actions** button to an ellipses icon ![](_attachments/elipsesIcon.png). Click the ellipses icon to see the **VM actions** or expand the browser window horizontally.
+
 7. Click anywhere on the main screen (away from the pop-up menu from step 6).
 8. Click the **Edit details** link.
 
