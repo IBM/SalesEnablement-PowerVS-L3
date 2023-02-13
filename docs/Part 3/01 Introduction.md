@@ -8,9 +8,11 @@ The key parameters for a PowerVS instance are:
 
 - **Instance name**: The PowerVS instance name will appear in the IBM Cloud Portal under the list of instances within a service. Specify a name that is easily understood and recognized.
 
-- **Server placement group**: Server placement groups provide control over the host or server on which a new virtual machine (VM) is placed. By using server placement groups, high availability solutions can be created within a data center. Apply an affinity or anti-affinity policy to each VM instance within a server placement group. After creating a placement group, provision a new VM instance in the placement group. When setting a placement group with an affinity policy, all VMs in that placement group are launched on the same server. When setting a placement group with an anti-affinity policy, all VMs in that placement group are launched on different servers. Learn more about <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-placement-groups" target="_blank">placement groups<a/>.
+- **Server placement group**: Server placement groups provide control over the host or server on which a new virtual machine (VM) is placed. By using server placement groups, high availability solutions can be created within a data center. Apply an affinity or anti-affinity policy to each VM instance within a server placement group. After creating a placement group, provision a new VM instance in the placement group. When setting a placement group with an affinity policy, all VMs in that placement group are launched on the same server. When setting a placement group with an anti-affinity policy, all VMs in that placement group are launched on different servers. Learn more about placement groups <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-placement-groups" target="_blank">here</a>.
 
-- **VM pinning policy**: VM pinning controls the movement of VMs during disasters and other restart events. Learn more about hard and soft pinning <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-power-iaas-faqs#pinning" target="_blank">here</a>.
+- **Shared processor pool**: A shared processor Pool (SPP) is a pool of processor capacity that is shared between a group of virtual server instances. Unlike a virtual server instance that has a dedicated and defined maximum amount of processing capacity, you can set the reserved cores in SPP that are guaranteed to be available at the pool level. Learn more about shared processor pools <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-manage-SPP" target="_blank">here</a>.
+  
+- **Virtual server pinning**: VM pinning controls the movement of VMs during disasters and other restart events. Learn more about hard and soft pinning <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-power-iaas-faqs#pinning" target="_blank">here</a>.
 
 - **SSH key**: An SSH public/private key pair is required to access the instance. An SSH key must be created and loaded into the IBM Cloud Portal prior to creating an instance. Learn more about using and generating SSH keys <a href="https://cloud.ibm.com/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key" target="_blank">here</a>.
 
@@ -34,4 +36,12 @@ The key parameters for a PowerVS instance are:
 
 - **Networking**: PowerVS instances will always be attached to a private network and can optionally be attached to a public, Internet accessible network. Use private networks to connect to existing subnets or go a new subnet can be created. Learn more about PowerVS networking <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-network-architecture-diagrams" target="_blank">here</a>.
 
-In this chapter, view a video of a PowerVS instance being provisioned and replicate the steps taken using a click-through guided demonstration.
+Prior to provisioning a PowerVS instance, a SSH key must first be created to allow administrative access to the instance. The following video shows how to create a SSH key.  Note, this video was recorded using an earlier version of the IBM Cloud Portal and will have a slightly different look and feel than the current IBM Cloud Portal, but the steps are almost identical.
+
+![type:video](./_videos/Provision-SSH-Key-final.mp4)
+
+Optionally, PowerVS instances can be placed in virtual Local Areas Networks (vLANs). This video shows how to create a private network subnet for PowerVS instances. For this demonstration environment, all PowerVS instances will be placed in a subnet with no public internet facing IP accessibility.  
+
+![type:video](./_videos/Provision-a-Subnet-final.mp4)
+
+In the next sections of this chapter, view a video of a PowerVS instance being provisioned and replicate the steps taken using a click-through guided demonstration.

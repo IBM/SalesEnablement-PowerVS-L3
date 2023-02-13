@@ -57,7 +57,7 @@ When satisfied, scroll down to the bottom of the page and click **Submit** to in
     
     The private key file will be used later when accessing virtual machines on PowerVS. 
 
-6. Just above the blue icon is a field labelled as **User ID** — record this value, as it will be needed later. It should look like the email address used to request the environment but with a period instead of an ampersand.
+6. Just above the blue icon is a field labelled as **User ID** — record this value, as it will be needed later. It should look like the email address used to request the environment but with a period instead of an ampersand and it may be shortened to meet user ID length restrictions.
 
 7. Review the emails received. One will be from **IBM Cloud** with the title **Account: You are invited to join an account in IBM Cloud**. Within the content of the email is a link to **Join Now**. Click the link and then **Accept** the invitation on the IBM Cloud portal.
 

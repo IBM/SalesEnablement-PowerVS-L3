@@ -15,10 +15,10 @@ nav:
   - Introduction: 'index.md'
   - Part 1 - Overview:
     - 'Introduction': 'Part 1/01 Introduction.md'
-  - Part 2 - Provisioning a PowerVS service:
+  - Part 2 - Provisioning a PowerVS workspace:
     - 'Introduction': 'Part 2/01 Introduction.md'
-    - 'Watch a service being provisioned': 'Part 2/02 Watch-service.md'
-    - 'Click through demonstration of a service being provisioned': 'Part 2/03 Clickthru-service.md'
+    - 'Watch a workspace being provisioned': 'Part 2/02 Watch-service.md'
+    - 'Click through demonstration of a workspace being provisioned': 'Part 2/03 Clickthru-service.md'
   - Part 3 - Provisioning a PowerVS instance:
     - 'Introduction': 'Part 3/01 Introduction.md'
     - 'Watch a instance being provisioned': 'Part 3/02 Watch-instance.md'
@@ -92,30 +92,31 @@ extra:
 #  account: "2435442 - ITZ - Satellite"
   account: "2305900 - ITZ - ADHOC03"
   powerVS:
-    serviceInstanceName: "PowerVS-L3-service"
+    serviceInstanceName: "PowerVS-L3-workspace"
     serviceInstanceRG: "PowerVS-L3"
-    serviceInstanceLocation: "Dallas"
+    serviceInstanceLocation: "Washington DC 06"
     placementGroup1: "AffinityGroup"
     placementGroup2: "AntiAffinityGroup"
     sshKey: "PowerVS-key"
+    subnet: "powervs-subnet"
   aixServer1:
     name: "AIX-vm-1"
-    privateIP: "192.168.130.110"
-    publicIP: "52.117.41.110"
-    additonalVolumeName: "aix-volume-1"
+    privateIP: "192.168.196.92"
+    publicIP: "169.59.159.92"
+    additionalVolumeName: "extent1"
   aixServer2:
     name: "AIX-vm-2"
-    privateIP: "192.168.130.106"
-    publicIP: "52.117.41.106"
-    additonalVolumeName: "aix-volume-2"
+    privateIP: "192.168.197.14"
+    publicIP: "169.59.174.14"
+    additionalVolumeName: "extent2"
   rhServer1:
     name: "RH-vm-1"
-    privateIP: "192.168.130.107"
-    publicIP: "52.117.41.107"
-    additonalVolumeName: "rh-volume-1-39907-1"
-    additonalVolumeName2: "rh-volume-1-39907-2"
+    privateIP: "192.168.100.213"
+    publicIP: "169.59.174.12"
+    additionalVolumeName: "extent3"
+    additionalVolumeName2: "shared1"
   rhServer2:
     name: "RH-vm-2"
-    privateIP: "192.168.130.108"
-    publicIP: "52.117.41.108"
-    additonalVolumeName: "rh-volume-2"
+    privateIP: "192.168.100.221"
+    publicIP: "169.59.174.13"
+    additionalVolumeName: "extent4"
