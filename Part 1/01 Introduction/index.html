@@ -286,14 +286,14 @@
       
       
         <label class="md-nav__link" for="__nav_3">
-          Part 2 - Provisioning a PowerVS service
+          Part 2 - Provisioning a PowerVS workspace
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Part 2 - Provisioning a PowerVS service" data-md-level="1">
+      <nav class="md-nav" aria-label="Part 2 - Provisioning a PowerVS workspace" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Part 2 - Provisioning a PowerVS service
+          Part 2 - Provisioning a PowerVS workspace
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -318,7 +318,7 @@
   
     <li class="md-nav__item">
       <a href="../../Part%202/02%20Watch-service/" class="md-nav__link">
-        Watch a service being provisioned
+        Watch a workspace being provisioned
       </a>
     </li>
   
@@ -332,7 +332,7 @@
   
     <li class="md-nav__item">
       <a href="../../Part%202/03%20Clickthru-service/" class="md-nav__link">
-        Click through demonstration of a service being provisioned
+        Click through demonstration of a workspace being provisioned
       </a>
     </li>
   
@@ -408,7 +408,7 @@
   
     <li class="md-nav__item">
       <a href="../../Part%203/03%20Clickthru-instance/" class="md-nav__link">
-        Click through demonstration of a service instance being provisioned
+        Click through demonstration of a virtual machine instance being provisioned
       </a>
     </li>
   
@@ -791,19 +791,19 @@
 
   <h1>Introduction</h1>
 
-<p><div class="video-container"><iframe src="../_videos/IBM%20Power%20Systems%20Virtual%20Server%20Level%203%20-%20Part%201.mp4" style="position: relative; width: 100%; height: 22.172vw" frameborder="0" allowfullscreen></iframe></div></p>
+<p><div class="video-container"><video style="position: relative; width: 100%; height: 22.172vw" controls  ><source src="../_videos/IBM%20Power%20Systems%20Virtual%20Server%20Level%203%20-%20Part%201.mp4" type="video/mp4" /></video></div></p>
 <div class="admonition tip">
 <p class="admonition-title">Ways to Watch</p>
 <p>In addition to the embedded video, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DChpTqJ8dqGH68QMBF6jMVQC92gG" target="_blank">download the recording from Seismic</a>.</p>
 </div>
-<p><strong>IBM Power Systems Virtual Server</strong> (PowerVS) delivers flexible compute capacity for Power Systems workloads. Integrated with the IBM Cloud platform for on-demand provisioning, this offering provides a secure and scalable server virtualization environment built upon the advanced reliability, availability, and serviceability (RAS) features and leading performance of the Power Systems platform.</p>
+<p><strong>IBM Power Systems Virtual Server</strong> (PowerVS) delivers flexible compute capacity for Power Systems workloads. Integrated with IBM Cloud for on-demand provisioning, this offering provides a secure and scalable server virtualization environment built upon the advanced reliability, availability, and serviceability (RAS) features and leading performance of the Power Systems platform.</p>
 <p>Everyone attempting this Level 3 plan should be familiar with PowerVS and should have completed the IBM Power Systems Virtual Server Sales Foundation Badge (Level 2) before embarking on the Level 3 content. The content here is <strong>not</strong> a replacement for the Level 1 and 2 content that is part of the previous learning plans, which are linked in the documentation accompanying this course.</p>
 <ul>
 <li><strong>IBM:</strong> <a href="https://yourlearning.ibm.com/activity/PLAN-4E64FE2FDBF0" target="_blank">https://yourlearning.ibm.com/activity/PLAN-4E64FE2FDBF0</a></li>
 <li><strong>Business Partners:</strong> <a href="https://learn.ibm.com/course/view.php?id=11419" target="_blank">https://learn.ibm.com/course/view.php?id=11419</a></li>
 </ul>
-<p>This demonstration environment has multiple purposes. First, it is meant to educate Sales and Technical Sales on IBM Power Systems Virtual Server (PowerVS) and to hone seller skills to perform PowerVS demonstrations. Additionally, the IBM Technology Zone (TechZone) environment, this demonstration guide and associated click-thru demos and videos can be re-used to perform client demonstrations.</p>
-<p>The primary goal of this Level 3 is to focus on the Infrastructure as a Service capability of PowerVS and not on the operating systems supported by the offering: AIX, IBM i, and Linux. Below is an overview of this 8 Part demonstration guide:</p>
+<p>This demonstration environment has multiple purposes. First, it is meant to educate Sales and Technical Sales on IBM Power Systems Virtual Server (PowerVS) and to hone seller skills to perform PowerVS demonstrations. Additionally, the IBM Technology Zone (TechZone) environment, this demonstration guide, associated click-thru demos, and videos can be re-used to perform client demonstrations.</p>
+<p>The primary goal of this Level 3 is to focus on the Infrastructure as a Service (IaaS) capability of PowerVS and not on the operating systems supported by the offering: AIX, IBM i, and Linux. Below is an overview of this 8 Part demonstration guide:</p>
 <ul>
 <li>In <strong>Parts 1, 2, and 3</strong>, learn how the demonstration environment was built, and how to perform a "baking show" style demonstration using the IBM Cloud Portal, click-thru demonstrations, and videos. New PowerVS resources are not provisioned as part of this demonstration guide. All resources are pre-provisioned in a shared environment to save time and money.</li>
 <li>In <strong>Part 4</strong>, learn how to use the IBM Cloud Portal to manage PowerVS instances.</li>
@@ -854,7 +854,7 @@
 </div>
 <ol start="6">
 <li>
-<p>Just above the blue icon is a field labelled as <strong>User ID</strong> — record this value, as it will be needed later. It should look like the email address used to request the environment but with a period instead of an ampersand.</p>
+<p>Just above the blue icon is a field labelled as <strong>User ID</strong> — record this value, as it will be needed later. It should look like the email address used to request the environment but with a period instead of an <strong>@</strong> and it may be shortened to meet user ID length restrictions.</p>
 </li>
 <li>
 <p>Review the emails received. One will be from <strong>IBM Cloud</strong> with the title <strong>Account: You are invited to join an account in IBM Cloud</strong>. Within the content of the email is a link to <strong>Join Now</strong>. Click the link and then <strong>Accept</strong> the invitation on the IBM Cloud portal.</p>
@@ -870,7 +870,7 @@
 <li>Look for a new notification with the subject: <strong>Action required: You are invited to join an account in IBM Cloud</strong>.</li>
 <li>Click on the notification and then click the <strong>Join now</strong> link.</li>
 </ul>
-<p>If you do not see a notification or an e-mail, try deleting the existing reservation in ITZ and try creating a new one. If that doesn't work, open a support ticket in the #itz-techzone-support Slack channel.  Include the reservation ID and summarize the problem in your message.</p>
+<p>If you do not see a notification or an e-mail, try deleting the existing reservation in ITZ and try creating a new one. If that doesn't work, open a support ticket in the <a href="https://ibm-technology-sales.slack.com/archives/C0124J683GW" target="_blank">#itz-techzone-support</a> Slack channel.  Include the reservation ID and summarize the problem in your message.</p>
 </details>
 
 

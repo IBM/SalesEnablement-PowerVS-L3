@@ -17,7 +17,7 @@
     
     
       
-        <title>Click through demonstration of a service instance being provisioned - IBM Power Systems Virtual Server Level 3 Demonstration Guide</title>
+        <title>Click through demonstration of a virtual machine instance being provisioned - IBM Power Systems Virtual Server Level 3 Demonstration Guide</title>
       
     
     
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Click through demonstration of a service instance being provisioned
+              Click through demonstration of a virtual machine instance being provisioned
             
           </span>
         </div>
@@ -276,14 +276,14 @@
       
       
         <label class="md-nav__link" for="__nav_3">
-          Part 2 - Provisioning a PowerVS service
+          Part 2 - Provisioning a PowerVS workspace
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Part 2 - Provisioning a PowerVS service" data-md-level="1">
+      <nav class="md-nav" aria-label="Part 2 - Provisioning a PowerVS workspace" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Part 2 - Provisioning a PowerVS service
+          Part 2 - Provisioning a PowerVS workspace
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -308,7 +308,7 @@
   
     <li class="md-nav__item">
       <a href="../../Part%202/02%20Watch-service/" class="md-nav__link">
-        Watch a service being provisioned
+        Watch a workspace being provisioned
       </a>
     </li>
   
@@ -322,7 +322,7 @@
   
     <li class="md-nav__item">
       <a href="../../Part%202/03%20Clickthru-service/" class="md-nav__link">
-        Click through demonstration of a service being provisioned
+        Click through demonstration of a workspace being provisioned
       </a>
     </li>
   
@@ -407,7 +407,7 @@
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Click through demonstration of a service instance being provisioned
+        Click through demonstration of a virtual machine instance being provisioned
       </a>
       
     </li>
@@ -789,9 +789,9 @@
                 
 
 
-  <h1>Click through demonstration of a service instance being provisioned</h1>
+  <h1>Click through demonstration of a virtual machine instance being provisioned</h1>
 
-<p>Now it is time for to provision a PowerVS instance. Use the click-thru demonstration below to practice provisioning a PowerVS instance. Unlike the video in previous chapter the creation of the SSH keys to secure initial administrative (root) access to the virtual machine is not included in the click-thru demonstration. Refer to the video for talking points if the click-thru demonstration is utilized with clients.</p>
+<p>Now it is time for to provision a PowerVS instance. Use the click-thru demonstration below to practice provisioning a PowerVS instance. Refer to the video for talking points if the click-thru demonstration is utilized with clients.</p>
 <p>Note, fields that require a text entry (e.g. instance name) are pre-populated in the click-thru demonstration.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -800,61 +800,62 @@
 <ol>
 <li>
 <p>Open the link below and then click the play button <img alt="" src="../_attachments/ClickThruPlayButton.png" /> to begin the demonstration.</p>
-<p><strong>Click-thru demo:</strong> <a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/InstanceCreate/index.html" target ="_blank">Create an IBM Power Virtual Server Instance</a></p>
+<p><strong>Click-thru demo:</strong> <a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/Provisioning-an-Instance/index.html" target ="_blank">Provision an IBM Power Virtual Server Instance</a></p>
 </li>
 <li>
-<p>Click the <strong>Services and software</strong> link under <strong>Resource summary</strong> on the IBM Cloud Portal dashboard.</p>
+<p>Click the <strong>Virtual server instances</strong> link under <strong>Compute</strong> in the left-hand menu.</p>
 </li>
-<li>Click the <strong>PowerVS-L3-service</strong> entry under <strong>Services and Software</strong>.</li>
 <li>Click the <strong>Create instance+</strong> button.</li>
 </ol>
 <p>The next steps refer to the entries in the <strong>General</strong> section of the <strong>Create virtual server instance</strong> form.</p>
-<ol start="5">
+<ol start="4">
 <li>Click in the <strong>Instance name</strong> text entry field.</li>
-<li>Click the <strong>Select VM pinning</strong> pull-down.</li>
-<li>Click <strong>Soft</strong>.</li>
+<li>Click the <strong>Select virtual server pinning</strong> pull-down.</li>
+<li>Click <strong>None</strong>.</li>
 <li>Click the <strong>Select SSH key</strong> pull-down.</li>
 <li>Click <strong>PowerVS-key</strong>.</li>
 <li>Click the <strong>Continue</strong> button under the <strong>General</strong> section.</li>
 </ol>
 <p>The next steps refer to the entries in the <strong>Boot image</strong> section of the <strong>Create virtual server instance</strong> form.</p>
-<ol start="11">
-<li>Click the <strong>Select the OS</strong> pull-down.</li>
-<li>Click <strong>Linux</strong>.</li>
+<ol start="10">
+<li>Click the <strong>Select OS</strong> pull-down.</li>
+<li>Click <strong>AIX</strong>.</li>
 <li>Click the <strong>Select an image</strong> pull-down.</li>
-<li>Click <strong>RHEL8-SP6</strong>. Note: <strong>RHEL8-SP6</strong> is short for <strong>Red Hat version 8 service pack 6</strong>.</li>
+<li>Click the <strong>7300-00-01</strong> image version.</li>
 <li>Click the <strong>Select storage tier</strong> pull-down.</li>
-<li>Click <strong>Tier 3 (3 IPOs / GB)</strong>.</li>
+<li>Click <strong>Tier 3 (3 IOPs / GB)</strong>.</li>
 <li>Click the <strong>Continue</strong> button under the <strong>Boot image</strong> section.</li>
 </ol>
 <p>The next steps refer to the entries in the <strong>Profile</strong> section of the <strong>Create virtual server instance</strong> form.</p>
-<ol start="18">
-<li>Click the <strong>Machine type</strong> pull-down.</li>
+<ol start="17">
+<li>Click the <strong>Select Machine type</strong> pull-down.</li>
 <li>Click <strong>s922</strong>.</li>
 <li>Click the <strong>Continue</strong> button under the <strong>Profile</strong> section.</li>
 </ol>
 <p>The next steps refer to the entries in the <strong>Storage volumes</strong> section of the <strong>Create virtual server instance</strong> form.</p>
-<ol start="21">
+<ol start="20">
 <li>Click the <strong>Create volume +</strong> button.</li>
 <li>Click in the <strong>Name</strong> text entry field.</li>
-<li>Click the <strong>+</strong> icon for the <strong>Number of volumes</strong> field.</li>
-<li>Toggle the <strong>Shareable</strong> button to <strong>On</strong>.</li>
+<li>Click in the <strong>Size</strong> text entry field.</li>
 <li>Click the <strong>Create and attach</strong> button.</li>
 <li>Click the <strong>Continue</strong> button under the <strong>Storage volumes</strong> section.</li>
 </ol>
 <p>The next steps refer to the entries in the <strong>Networking</strong> section of the <strong>Create virtual server instance</strong> form.</p>
-<p>Note: for this demonstration, the instance will be provisioned using a public network (Internet facing). Using the public network makes demonstrating access to instances easy, but most production deployments of PowerVS will utilize private networks and control access using Direct Link, Virtual Private Network (VPN), or Megaport Software Defined Network (SDN). To learn more about PowerVS networking options, look <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-network-architecture-diagrams" target="_blank"> here</a>.</p>
-<ol start="27">
+<p>Note: for this demonstration, the instance will be provisioned using both a public network (Internet facing) address and a private address. Using the public network makes demonstrating access to instances easy, but most production deployments of PowerVS will utilize private networks and control access using Direct Link, Virtual Private Network (VPN), or Megaport Software Defined Network (SDN). To learn more about PowerVS networking options, look <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-network-architecture-diagrams" target="_blank"> here</a>.</p>
+<ol start="25">
 <li>Toggle the <strong>Public networks</strong> button to <strong>On</strong>.</li>
+<li>Click the <strong>Attach existing+</strong> button.</li>
+<li>Click the <strong>Select network</strong> pull-down.</li>
+<li>Click the <strong>powervs-subnet</strong> option.</li>
+<li>Click the <strong>Attach</strong> button.</li>
 <li>Click the <strong>Finish</strong> button under the <strong>Networking</strong> section.</li>
+</ol>
+<p>The next steps refer to the options available in the right-hand <strong>Summary</strong> pane of the window.</p>
+<ol start="31">
 <li>Click the <strong>I agree to the Terms and Conditions</strong> checkbox.</li>
 <li>Click <strong>Create</strong>.</li>
 </ol>
 <p>The PowerVS instance is now being provisioned. This process took approximately 45 minutes when creating the TechZone environment. Notice the value under the <strong>Status</strong> column of the <strong>Virtual server instances</strong> table. Once the status changes to an <strong>Active</strong> state, the instance is ready to be accessed.</p>
-<ol start="31">
-<li>Click the <strong>Refresh</strong> icon <img alt="" src="../_attachments/refreshIcon.png" />.</li>
-<li>Click the <strong>RH-vm-1</strong> link in the <strong>Virtual server instances</strong> table.</li>
-</ol>
 <p>In the next Part of the demonstration script, learn how to use the IBM Cloud Portal to manage PowerVS instances.</p>
 
 
