@@ -40,7 +40,7 @@ Prior to provisioning a PowerVS instance, a SSH key must first be created to all
 
 ![type:video](./_videos/Provision-SSH-Key-final.mp4)
 
-Optionally, PowerVS instances can be placed in virtual Local Areas Networks (vLANs). This video shows how to create a private network subnet for PowerVS instances. For this demonstration environment, all PowerVS instances will be placed in a subnet with no public internet facing IP accessibility.  
+Optionally, PowerVS instances can be placed in virtual Local Areas Networks (vLANs). This video shows how to create a private network subnet for PowerVS instances. 
 
 ![type:video](./_videos/Provision-a-Subnet-final.mp4)
 
