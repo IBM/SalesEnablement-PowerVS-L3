@@ -52,7 +52,7 @@ perl ./itzPowerVSMaintenance.perl
 
 ```
 wget -O getActiveReservations.perl https://raw.githubusercontent.com/IBM/SalesEnablement-PowerVS-L3/main/tools/getActiveReservations.perl
-wget -O cleanUpUsers.bash https://raw.githubusercontent.com/IBM/SalesEnablement-PowerVS-L3/main/tools/cleanUpUsers.perl
+wget -O cleanUpUsers.perl https://raw.githubusercontent.com/IBM/SalesEnablement-PowerVS-L3/main/tools/cleanUpUsers.perl
 
 chmod +x getActiveReservations.perl
 
