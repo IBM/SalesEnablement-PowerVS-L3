@@ -37,7 +37,7 @@ Locate the **.pem** file in  Downloads folder specified earlier and  wait for th
 
 ![](_attachments/part5_step10b.png)
 
-4. With the Public SSH Key now uploaded into the IBM Cloud Shell environment, we need to decode it to base64 and— for ease of reference later —assign the key a simple name such as **mykey**. Do so by issuing the following command into the IBM Cloud Shell prompt at the bottom of the window:
+4. With the Private SSH Key now uploaded into the IBM Cloud Shell environment, we need to decode it to base64 and— for ease of reference later —assign the key a simple name such as **mykey**. Do so by issuing the following command into the IBM Cloud Shell prompt at the bottom of the window:
 
 ```
 base64 --decode ssh_private_key.pem > mykey
