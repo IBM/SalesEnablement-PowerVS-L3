@@ -52,14 +52,27 @@ perl ./itzPowerVSMaintenance.perl
 
 ```
 wget -O getActiveReservations.perl https://raw.githubusercontent.com/IBM/SalesEnablement-PowerVS-L3/main/tools/getActiveReservations.perl
-wget -O cleanUpUsers.bash https://raw.githubusercontent.com/IBM/SalesEnablement-PowerVS-L3/main/tools/cleanUpUsers.bash
+wget -O cleanUpUsers.bash https://raw.githubusercontent.com/IBM/SalesEnablement-PowerVS-L3/main/tools/cleanUpUsers.perl
 
 chmod +x getActiveReservations.perl
 
 perl getActiveReservations.perl
 
 #transfer the file created to each of the 4 VMs
-#ssh to each of the 4 VMs and execute the cleanUpUsers.bash script (it should be in /usr/local/bin on the machine, but it was also transfered above just in case you can't find it.)
+#ssh to each of the 4 VMs and execute the cleanUpUsers.perl script. It should be in /usr/local/bin on the machine, but it was also transferred above just in case you cannot find it. 
+# perl /usr/local/bin/cleanUpUsers.perl
 
 ```
+
+In order to transfer the files, you will need the private key for the root user for the 4 PowerVS VMs. Right, now this is maintained by andrewj@us.ibm.com. Ask him for it.
+
+
+```
+scp -i PowerVSKey activeReservations.txt root@169.59.159.92:/tmp/
+scp -i PowerVSKey activeReservations.txt root@169.59.174.14:/tmp/
+scp -i PowerVSKey activeReservations.txt root@169.59.174.12:/tmp/
+scp -i PowerVSKey activeReservations.txt root@169.59.174.13:/tmp/
+```
+
+
 

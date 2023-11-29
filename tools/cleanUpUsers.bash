@@ -8,13 +8,14 @@ ls -1 > /tmp/allHomeDirs.txt
 
 cat /tmp/allHomeDirs.txt | while read x
 do
-  grep $x /tmp/currentReservations.txt && {
+  grep $x /tmp/activeReservations.txt && {
         echo skipping $x
 }
   grep $x current.txt || {
         echo no reservation for $x
-        
-        rm -fr /home/$x
+        echo delete user $x
+        echo rm -fr /home/$x
+        # rm -fr /home/$x
 }
 
 done
