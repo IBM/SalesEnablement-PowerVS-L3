@@ -41,3 +41,25 @@ chmod +x itzPowerVSMaintenance.perl
 
 perl ./itzPowerVSMaintenance.perl
 ```
+
+2. There is a cronjob that runs on each of the 2 AIX PowerVS VMs that empties the /etc/security/failedlogin file. This file fills up quickly due to the fact these machines are running on the public Internet and folks try to get in. Check each VM to make sure the crontjob is still there and make sure no filesystem is filling up.  The cronjob is:
+
+```
+0 15 * * *  > /etc/security/failedlogin 2>&1
+```
+
+3. In some cases the ITZ automation doesn't remove the users from the the PowerVS VMs when the reservation expires or is deleted. The steps below and associated scripts will help remove old user IDs and their home directories. Make sure you run step 1 above first and clear out any inactive users from the cloud account as we will use the list of "active" users to make sure we don't delete their accounts on the 4 machines.
+
+```
+wget -O getActiveReservations.perl https://raw.githubusercontent.com/IBM/SalesEnablement-PowerVS-L3/main/tools/getActiveReservations.perl
+wget -O cleanUpUsers.bash https://raw.githubusercontent.com/IBM/SalesEnablement-PowerVS-L3/main/tools/cleanUpUsers.bash
+
+chmod +x getActiveReservations.perl
+
+perl getActiveReservations.perl
+
+#transfer the file created to each of the 4 VMs
+#ssh to each of the 4 VMs and execute the cleanUpUsers.bash script (it should be in /usr/local/bin on the machine, but it was also transfered above just in case you can't find it.)
+
+```
+
