@@ -3,7 +3,7 @@
 # This script requires the IBM Cloud CLI along with the following plug-ins.
 # You must have administrative rights to the cloud account: 2305900 - ITZ- ADHOC03.
 # This script will show you all the current users that are part of the PowerVS-L3 access group and the 
-# date their ID was added to the account. 
+# date their ID was added to the account and add them to the file activeReservations.txt
 
 #---------------------------------------------------------------------------------------------
 # functions

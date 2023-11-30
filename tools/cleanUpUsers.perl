@@ -1,11 +1,12 @@
 #/usr/bin/env perl
 
 #
-# This script requires the IBM Cloud CLI along with the following plug-ins.
-# You must have administrative rights to the cloud account: 2305900 - ITZ- ADHOC03.
-# This script will show you all the current users that are part of the PowerVS-L3 access group and the
-# date their ID was added to the account.  It should be safe to remove any user that was added > 2 weeks
-# prior to todays date (maximum ITZ reservation is les than this).
+# This script reads from the a list of active reservations for the PowerVS ITZ environment. It
+# expects to find that list in the file: /tmp/activeReservations.txt. This file can be created
+# by running the getActiveReservations.perl which uses the IBM Cloud CLIs to get all users
+# that are currently in the PowerVS-L3 access group in the ITZ account for the PowerVS L3 env.
+# Care should be given in making sure the /tmp/activeReservations.txt is as current as possible
+# as users could create a reservation between the time each script is run.
 
 #---------------------------------------------------------------------------------------------
 # functions
@@ -34,12 +35,13 @@ my @allHomeDirs=`ls -1 /home`;
 chomp(@allHomeDirs);
 
 # load all the current reservations into an array
-open(my $reservations, "<", "$ACTIVE_RESERVATIONS") or die $!;
+open(my $reservations, "<", "$ACTIVE_RESERVATIONS") or die "$ACTIVE_RESERVATIONS deosn't exist. $!";
 chomp(my @vations = <$reservations>);
 
-# add the system users that have a home dirctory to the list of reservations
-push(@vations,"guest");
-push(@vations,"srvproxy");
+# add the system users that have a home directory in /home to the list of reservations
+push(@vations,"guest"); # AIX
+push(@vations,"srvproxy"); # AIX
+push(@vations,"cloud-user"); # RHEL
 
 
 #print "All home dirs:\n";
@@ -57,7 +59,9 @@ foreach my $user (@allHomeDirs)
                 print "skipping $user\n";
                 $skipcount++;
         } else {
+                # handle special case on AIX
                 if($user eq "lost+found"){
+                        $skipcount++;
                         next;
                 }
                 if(prompt_yn("Do you want to remove $user?")) {
@@ -66,9 +70,8 @@ foreach my $user (@allHomeDirs)
                         $delcount++;
                 }
         }
-        # if user is in the list then skip that user and echo a skipping message
-        # if user not in the list then prompt to delete the user
-        # userdel -r $user
 }
 
-
+print "\n\nSummary:\n";
+print "$delcount users deleted.\n";
+print "$skipcount users skipped.\n\n";

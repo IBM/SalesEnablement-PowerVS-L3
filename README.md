@@ -42,13 +42,9 @@ chmod +x itzPowerVSMaintenance.perl
 perl ./itzPowerVSMaintenance.perl
 ```
 
-2. There is a cronjob that runs on each of the 2 AIX PowerVS VMs that empties the /etc/security/failedlogin file. This file fills up quickly due to the fact these machines are running on the public Internet and folks try to get in. Check each VM to make sure the crontjob is still there and make sure no filesystem is filling up.  The cronjob is:
 
-```
-0 15 * * *  > /etc/security/failedlogin 2>&1
-```
 
-3. In some cases the ITZ automation doesn't remove the users from the the PowerVS VMs when the reservation expires or is deleted. The steps below and associated scripts will help remove old user IDs and their home directories. Make sure you run step 1 above first and clear out any inactive users from the cloud account as we will use the list of "active" users to make sure we don't delete their accounts on the 4 machines.
+2. In some cases the ITZ automation doesn't remove the users from the the PowerVS VMs when the reservation expires or is deleted. The steps below and associated scripts will help remove old user IDs and their home directories. Make sure you run step 1 above first and clear out any inactive users from the cloud account as we will use the list of "active" users to make sure we don't delete their accounts on the 4 machines. You will want to do all the substeps below quickly to minimize possibility of someone creating a reservation between running "getActiveReservations" and "cleanUpUsers".
 
 ```
 wget -O getActiveReservations.perl https://raw.githubusercontent.com/IBM/SalesEnablement-PowerVS-L3/main/tools/getActiveReservations.perl
@@ -57,22 +53,43 @@ wget -O cleanUpUsers.perl https://raw.githubusercontent.com/IBM/SalesEnablement-
 chmod +x getActiveReservations.perl
 
 perl getActiveReservations.perl
-
-#transfer the file created to each of the 4 VMs
-#ssh to each of the 4 VMs and execute the cleanUpUsers.perl script. It should be in /usr/local/bin on the machine, but it was also transferred above just in case you cannot find it. 
-# perl /usr/local/bin/cleanUpUsers.perl
-
 ```
 
-In order to transfer the files, you will need the private key for the root user for the 4 PowerVS VMs. Right, now this is maintained by andrewj@us.ibm.com. Ask him for it.
-
+The getActiveReservations.perl file will generate a "activeReservations.txt" file. 
+You will need to copy this file and the cleanUpUsers.perl script to each of the 4 VMs. Below should be the current IP addresses for the VMs.
+You must have the root ssh key (PowerVSKey) for this to work. Andrew Jones (andrewj@us.ibm.com) has that key.
 
 ```
 scp -i PowerVSKey activeReservations.txt root@169.59.159.92:/tmp/
+scp -i PowerVSKey cleanUpUsers.perl root@169.59.159.92:/tmp/
 scp -i PowerVSKey activeReservations.txt root@169.59.174.14:/tmp/
+scp -i PowerVSKey cleanUpUsers.perl root@169.59.174.14:/tmp/
 scp -i PowerVSKey activeReservations.txt root@169.59.174.12:/tmp/
+scp -i PowerVSKey cleanUpUsers.perlroot@169.59.174.12:/tmp/
 scp -i PowerVSKey activeReservations.txt root@169.59.174.13:/tmp/
+scp -i PowerVSKey cleanUpUsers.perl root@169.59.174.13:/tmp/
 ```
 
+Next, you need to ssh to each of the 4 VMs and execute the cleanUpUsers.perl script. This is an interactive script that will prompt you if you
+want to delete a user that is NOT in the activeReservations.txt file. If you trust the script, you can run it like the second sample below.
 
+```
+perl /tmp/cleanUpUsers.perl
+```
 
+```
+no | perl /tmp/cleanUpUsers.perl # this will say n for each delete to let you see what will be deleted before you run with yes
+yes| perl /tmp/cleanUpUsers.perl
+```
+
+When done, you can remove the 2 files.
+
+```
+rm /tmp/cleanUpUsers.perl /tmp/activeReservations.txt
+```
+
+3. There is a cronjob that runs on each of the 2 AIX PowerVS VMs that empties the /etc/security/failedlogin file. This file fills up quickly due to the fact these machines are running on the public Internet and folks try to get in. Check each VM to make sure the crontjob is still there and make sure no filesystem is filling up.  The cronjob is:
+
+```
+0 15 * * *  > /etc/security/failedlogin 2>&1
+```
