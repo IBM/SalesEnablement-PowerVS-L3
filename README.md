@@ -22,6 +22,22 @@ In the ITZ automation:
 
 - An SSH key is created for the user. The private key is provided to the user via ITZ (via reservation page), and the public key is added to the PowerVS VMs that are pre-provisioned in the environment.
 
+**Note if new PowerVS VSIs must be provisioned**  
+
+In November 2023, the ITZ automation for this lab started breaking. We were able to resolve by changing the MTU size of the public internet facing devices:
+
+On AIX:
+```
+chdev -l en0 -a mtu=1476
+```
+On Linux:
+
+```
+nmcli conn modify "System env2" -a 802-3-ethernet.mtu 1476
+nmcli conn up "System env2"
+```
+Apparently the max MTU PowerVS VSIs is 1476, however this worked for the first year this lab was deployed. We still aren't quite sure why this needed to be done since it was working before.
+
 ## Maintenance
 
 **To perform the maintenance steps below, you must have admin access in the ITZ IBM Cloud account: 2305900 - iTZ - ADHOC03.**
