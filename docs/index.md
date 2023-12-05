@@ -43,6 +43,8 @@ For issues related to specific steps found in the demonstration guide after the 
 - Slack: <a href="{{supportSlack.url}}" target="_blank">{{supportSlack.name}}</a> - IBM only
 - E-mail: <a href="{{supportEmail}}" target="_blank">{{supportEmail}}</a>
 
+Business Partners can also utilize the IBM Training live Chat Support service or other support methods found on the IBM Training portal <a href="https://ibmcpsprod.service-now.com/its?id=sc_category&sys_id=6568bfafdb2f13008ea7d6fa4b961990" target="_blank">here</a>.
+
 ## Using the demonstration guide
 
 The {{guide.name}} is organized in parts and sub-parts or chapters. Most chapters contain numbered steps, which are actions to be performed.
