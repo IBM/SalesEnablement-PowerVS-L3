@@ -27,10 +27,23 @@ All modules are accompanied by recordings and narrated instructions, delivered b
 
 Specific criteria that must be demonstrated as part of the Stand & Deliver recordings is provided within the documentation that accompanies the Level 3 course. Before jumping to part 1, please read the guidance below. Reading and understanding the information will save time while completing the steps in this guide.
 
-!!! tip "FIND HELP"
-    If at any point during the hands-on material you need help from the team of authors and other IBM experts, please connect with us via the <a href="https://ibm-technology-sales.slack.com/archives/C03PQ47KRQE" target="_blank">#cloud-platform-demo-feedback</a> Slack channel. Any comments or suggestions are also welcome in this channel.
+## Support
 
-## Helpful tips for using this demonstration guide and environment
+Think something is down? Check the applicable status pages for current updates:
+
+-  <a href="https://techzone.status.io/" target="_blank">IBM Technology Zone</a>
+-  <a href="https://cloud.ibm.com/status" target="_blank">IBM Cloud</a>
+
+For issues with provisioning or accessing an environment in IBM Technology Zone (ITZ) open a ticket with ITZ support:
+- Web:  <a href="https://ibmsf.force.com/ibminternalproducts/s/createrecord/NewCase?language=en_US" target="_blank">IBM Technology Zone</a>
+- E-mail: <a href="mailto:techzone.help@ibm.com" target="_blank">techzone.help.ibm.com</a>
+
+For issues related to specific steps found in the demonstration guide after the ITZ environment is provisioned, contact the authors:
+
+- Slack: <a href="{{supportSlack.url}}" target="_blank">{{supportSlack.name}}</a> - IBM only
+- E-mail: <a href="{{supportEmail}}" target="_blank">{{supportEmail}}</a>
+
+## Using the demonstration guide
 
 The {{guide.name}} is organized in parts and sub-parts or chapters. Most chapters contain numbered steps, which are actions to be performed.
 

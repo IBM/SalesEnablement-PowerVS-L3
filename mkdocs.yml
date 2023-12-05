@@ -78,6 +78,10 @@ markdown_extensions:
 
 extra:
   generator: false
+  supportEmail: "andrewj@us.ibm.com"
+  supportSlack: 
+    name: "#cloud-platform-demo-feedback"
+    url: "https://ibm-technology-sales.slack.com/archives/C03PQ47KRQE"
   learningplan:
     name: "IBM Power Systems Virtual Server - Level 3"
     url: "https://yourlearning.ibm.com/activity/PLAN-7D757C8B58E7"
