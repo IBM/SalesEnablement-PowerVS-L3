@@ -81,7 +81,7 @@ scp -i PowerVSKey cleanUpUsers.perl root@169.59.159.92:/tmp/
 scp -i PowerVSKey activeReservations.txt root@169.59.174.14:/tmp/
 scp -i PowerVSKey cleanUpUsers.perl root@169.59.174.14:/tmp/
 scp -i PowerVSKey activeReservations.txt root@169.59.174.12:/tmp/
-scp -i PowerVSKey cleanUpUsers.perlroot@169.59.174.12:/tmp/
+scp -i PowerVSKey cleanUpUsers.perl root@169.59.174.12:/tmp/
 scp -i PowerVSKey activeReservations.txt root@169.59.174.13:/tmp/
 scp -i PowerVSKey cleanUpUsers.perl root@169.59.174.13:/tmp/
 ```
