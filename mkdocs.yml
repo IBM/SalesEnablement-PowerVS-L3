@@ -105,21 +105,21 @@ extra:
   aixServer1:
     name: "AIX-vm-1"
     privateIP: "192.168.130.110"
-    publicIP: "52.117.41.110"
+    publicIP: "169.59.159.92"
     additonalVolumeName: "aix-volume-1"
   aixServer2:
     name: "AIX-vm-2"
     privateIP: "192.168.130.106"
-    publicIP: "52.117.41.106"
+    publicIP: "169.59.174.14"
     additonalVolumeName: "aix-volume-2"
   rhServer1:
     name: "RH-vm-1"
     privateIP: "192.168.130.107"
-    publicIP: "52.117.41.107"
+    publicIP: "169.59.174.12"
     additonalVolumeName: "rh-volume-1-39907-1"
     additonalVolumeName2: "rh-volume-1-39907-2"
   rhServer2:
     name: "RH-vm-2"
     privateIP: "192.168.130.108"
-    publicIP: "52.117.41.108"
+    publicIP: "169.59.174.13"
     additonalVolumeName: "rh-volume-2"
