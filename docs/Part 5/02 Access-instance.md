@@ -52,7 +52,7 @@ chmod 600 mykey
 6. We are now ready to remotely connect (SSH) to the PowerVS demonstration environment. Do so with the following command, substituting **<your_user_id>** for the value recorded in <a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/Part%201/01%20Introduction/" target="_blank">Part 1 - Step 6</a>. A prompt asking whether to continue connecting may appear; if so, type **Yes** and then hit Return/Enter. Ignore the message regarding authenticity of the host not being established.
 
 ```
-ssh -i mykey <your_user_id>@52.117.41.110
+ssh -i mykey <your_user_id>@{{aixServer1.publicIP}}
 ```
 
 !!! info "Sample output"
