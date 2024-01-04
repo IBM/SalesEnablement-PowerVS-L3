@@ -55,7 +55,7 @@ ssh -i ssh_private_key.pem <your_user_id>@{{aixServer1.publicIP}}
 
     ![](_attachments/part5_step13.png)
 
-7. Try running a few OS level commands using the following commands.
+6. Try running a few OS level commands using the following commands.
 
 ```
 ls -laR
@@ -71,7 +71,7 @@ ps -ef
 
 All of these commands are basic OS commands. If familiar with AIX or Linux, feel free to try other things out on the instance. Note, users of the shared environment have limited permissions on the PowerVS instances. Administrative access is not provided.
 
-8. Close the SSH connection by running the **exit** command.
+7. Close the SSH connection by running the **exit** command.
 
 ```
 exit
