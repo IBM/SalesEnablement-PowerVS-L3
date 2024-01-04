@@ -37,25 +37,22 @@ Locate the **.pem** file in  Downloads folder specified earlier and  wait for th
 
 ![](_attachments/part5_step10b.png)
 
-4. With the Private SSH Key now uploaded into the IBM Cloud Shell environment, we need to decode it to base64 and— for ease of reference later —assign the key a simple name such as **mykey**. Do so by issuing the following command into the IBM Cloud Shell prompt at the bottom of the window:
+4. Adjust the access permissions on the **ssh_private_key.pem** file using the following command:
 
 ```
-base64 --decode ssh_private_key.pem > mykey
+chmod 600 ssh_private_key.pem
 ```
 
-5. Now adjust the access permissions on the **mykey** file using the following command:
+5. We are now ready to remotely connect (SSH) to the PowerVS demonstration environment. Do so with the following command, substituting **<your_user_id>** for the value recorded in <a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/Part%201/01%20Introduction/" target="_blank">Part 1 - Step 6</a>. A prompt asking whether to continue connecting may appear; if so, type **Yes** and then hit Return/Enter. Ignore the message regarding authenticity of the host not being established.
 
 ```
-chmod 600 mykey
-```
-
-6. We are now ready to remotely connect (SSH) to the PowerVS demonstration environment. Do so with the following command, substituting **<your_user_id>** for the value recorded in <a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/Part%201/01%20Introduction/" target="_blank">Part 1 - Step 6</a>. A prompt asking whether to continue connecting may appear; if so, type **Yes** and then hit Return/Enter. Ignore the message regarding authenticity of the host not being established.
-
-```
-ssh -i mykey <your_user_id>@{{aixServer1.publicIP}}
+ssh -i ssh_private_key.pem <your_user_id>@{{aixServer1.publicIP}}
 ```
 
 !!! info "Sample output"
+
+    Note, the image below shows a different filename for the ssh_private_key.pem file.
+
     ![](_attachments/part5_step13.png)
 
 7. Try running a few OS level commands using the following commands.
@@ -90,7 +87,7 @@ To explore further, use the following public IP addresses to access the other Po
 | {{rhServer2.name}} | {{rhServer2.publicIP}} |
 
 
-Use the ```ssh -i mykey UserName@IPaddress``` command to connect to the other servers. Be sure to replace **UserName** with the **UserName** field found in the TechZone reservation, and **IPaddress** with the instance's public IP address from the table above.
+Use the ```ssh -i ssh_private_key.pem UserName@IPaddress``` command to connect to the other servers. Be sure to replace **UserName** with the **UserName** field found in the TechZone reservation, and **IPaddress** with the instance's public IP address from the table above.
 
 Technical sellers should proceed to Part 6 and explore PowerVS server placement groups, volumes, subnets, and additional services.
 
