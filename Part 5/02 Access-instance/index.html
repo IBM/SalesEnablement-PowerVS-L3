@@ -1038,38 +1038,34 @@
 <p>Locate the <strong>.pem</strong> file in  Downloads folder specified earlier and  wait for the transfer to finish. A dialogue box will appear in the bottom-right corner of the IBM Cloud Shell window when the upload is complete.</p>
 <p><img alt="" src="../_attachments/part5_step10b.png"></p>
 <ol start="4">
-<li>With the Private SSH Key now uploaded into the IBM Cloud Shell environment, we need to decode it to base64 and— for ease of reference later —assign the key a simple name such as <strong>mykey</strong>. Do so by issuing the following command into the IBM Cloud Shell prompt at the bottom of the window:</li>
+<li>Adjust the access permissions on the <strong>ssh_private_key.pem</strong> file using the following command:</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>base64 --decode ssh_private_key.pem &gt; mykey
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>chmod 600 ssh_private_key.pem
 </code></pre></div>
 <ol start="5">
-<li>Now adjust the access permissions on the <strong>mykey</strong> file using the following command:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>chmod 600 mykey
-</code></pre></div>
-<ol start="6">
 <li>We are now ready to remotely connect (SSH) to the PowerVS demonstration environment. Do so with the following command, substituting <strong><your_user_id></your_user_id></strong> for the value recorded in <a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/Part%201/01%20Introduction/" target="_blank">Part 1 - Step 6</a>. A prompt asking whether to continue connecting may appear; if so, type <strong>Yes</strong> and then hit Return/Enter. Ignore the message regarding authenticity of the host not being established.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ssh -i mykey &lt;your_user_id&gt;@169.59.159.92
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ssh -i ssh_private_key.pem &lt;your_user_id&gt;@169.59.159.92
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Sample output</p>
+<p>Note, the image below shows a different filename for the ssh_private_key.pem file.</p>
 <p><img alt="" src="../_attachments/part5_step13.png"></p>
 </div>
 <ol start="7">
 <li>Try running a few OS level commands using the following commands.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ls -laR
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ls -laR
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>who
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>who
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ps -ef
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ps -ef
 </code></pre></div>
 <p>All of these commands are basic OS commands. If familiar with AIX or Linux, feel free to try other things out on the instance. Note, users of the shared environment have limited permissions on the PowerVS instances. Administrative access is not provided.</p>
 <ol start="8">
 <li>Close the SSH connection by running the <strong>exit</strong> command.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>exit
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>exit
 </code></pre></div>
 <p>To explore further, use the following public IP addresses to access the other PowerVM instances:</p>
 <table>
@@ -1098,7 +1094,7 @@
 </tr>
 </tbody>
 </table>
-<p>Use the <code>ssh -i mykey UserName@IPaddress</code> command to connect to the other servers. Be sure to replace <strong>UserName</strong> with the <strong>UserName</strong> field found in the TechZone reservation, and <strong>IPaddress</strong> with the instance's public IP address from the table above.</p>
+<p>Use the <code>ssh -i ssh_private_key.pem UserName@IPaddress</code> command to connect to the other servers. Be sure to replace <strong>UserName</strong> with the <strong>UserName</strong> field found in the TechZone reservation, and <strong>IPaddress</strong> with the instance's public IP address from the table above.</p>
 <p>Technical sellers should proceed to Part 6 and explore PowerVS server placement groups, volumes, subnets, and additional services.</p>
 <p>That concludes the required parts of the demonstration script for IBM and Business Partners Sales. All are encouraged to complete Parts 6 and 7, but at this time IBM and Business Partners Sales may skip to <a href="../../Part%208/01%20Next%20steps/"><strong>Part 8 - Next steps</strong></a>.</p></div>
 
