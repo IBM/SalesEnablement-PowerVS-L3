@@ -26,7 +26,7 @@ The next steps refer to the entries in the **Boot image** section of the **Creat
 10. Click the **Select OS** pull-down.
 11. Click **AIX**.
 12. Click the **Select image** pull-down.
-13. Click **7k300-00-01**.
+13. Click **7300-00-01**.
 14. Click the **Select storage tier** pull-down.
 15. Click **Tier 3 (3 IPOs / GB)**.
 16. Click the **Continue** button under the **Boot image** section.
