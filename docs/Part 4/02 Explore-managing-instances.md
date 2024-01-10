@@ -27,7 +27,7 @@ This is normal, as full access to the shared environment is **not** provided. To
 
 ![](_attachments/step4-new.png)
 
-5. Click **{{aixServer1.name}}** in the **Virtual server instances** table.
+5. Click **{{aixServer1.name}}** in the **Virtual server workspaces** table.
 
 ![](_attachments/InstancesTable-new.png)
 

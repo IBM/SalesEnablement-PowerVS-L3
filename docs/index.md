@@ -1,5 +1,5 @@
 !!! important "Please read this first"
-    It has come to our attention that the IBM Power Systems Virtual Server (PowerVS) pages in the IBM Cloud portal have been updated with a new look and feel. Work is under way to create new screen captures and update the instructions in this demonstration script, but it will take time. Completion of the demonstration script is still possible, but know the example image captures and videos will not align with the current IBM Cloud portal views.
+    It has come to our attention that the IBM Power Systems Virtual Server (PowerVS) pages in the IBM Cloud portal have been updated with a new look and feel. Work is under way to create new screen captures and update the instructions in this demonstration script, but it will take time. Completion of the demonstration script is still possible, but know the example image captures and videos will not align with the current IBM Cloud portal views. One of the main differences of the renaming of a "service instance" to "workspace".
 
 ![type:video](./_videos/IBM Power Systems Virtual Server Level 3 - Introduction.mp4)
 !!! tip "Ways to Watch"
@@ -10,9 +10,6 @@ Welcome to the IBM Power Systems Virtual Server - Level 3 course and demonstrati
 !!! important
     In this demonstration environment, full access to the IBM Cloud account is NOT provided. User identifications (IDs) will be restricted to specific capabilities. Permission to create or modify PowerVS service instances, virtual machines (instances), networks, images, etc. is not provided. The demonstration guide provides videos and click through demonstrations to cover these functions.
 
-!!! warning "Portal errors when viewing Placement Groups"
-        A recent issue has arisen regarding placement groups. A support ticket has been created with IBM Cloud to address the issue. When loading the Placement Groups page the following errors are reported.  While the problem is being worked, please skip the Server Placmeent Groups chapter in Part 6 of the demonstration guide.
-        ![](_attachments/PlacementGroupErrors.png)
 
 The learning material is broken up across distinct chapters. To complete the IBM Power Systems Virtual Server - Level 3 badge requirements, IBM and Business Partner sellers must complete Parts 1, 2, 3, 4, 5, and 8 of this demonstration guide. IBM and Business Partner technical sellers must complete all sections. **All are welcome and encouraged to complete all sections.**
 

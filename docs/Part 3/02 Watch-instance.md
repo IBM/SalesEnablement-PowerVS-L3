@@ -4,7 +4,7 @@ The video has been edited to minimize the viewing time and does not reflect the 
 
 Included in this video is the creation of the SSH keys to secure initial administrative (root) access to the virtual machine. Demonstrating this process to clients should be considered optional depending on the audience.
 
-![type:video](./_videos/CreateInstance-final.mp4)
+![type:video](./_videos/Provision-an-Instance-final.mp4)
 
 !!! tip
     If the video appears blurry, click the fullscreen ![](_attachments/FullScreenVideo.png) or ![](_attachments/FullScreenVideo3.png) icon.

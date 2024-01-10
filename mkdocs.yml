@@ -15,10 +15,10 @@ nav:
   - Introduction: 'index.md'
   - Part 1 - Overview:
     - 'Introduction': 'Part 1/01 Introduction.md'
-  - Part 2 - Provisioning a PowerVS service:
+  - Part 2 - Provisioning a PowerVS workspace:
     - 'Introduction': 'Part 2/01 Introduction.md'
     - 'Watch a service being provisioned': 'Part 2/02 Watch-service.md'
-    - 'Click through demonstration of a service being provisioned': 'Part 2/03 Clickthru-service.md'
+    - 'Click through demonstration of a workspace being provisioned': 'Part 2/03 Clickthru-service.md'
   - Part 3 - Provisioning a PowerVS instance:
     - 'Introduction': 'Part 3/01 Introduction.md'
     - 'Watch a instance being provisioned': 'Part 3/02 Watch-instance.md'
@@ -96,7 +96,7 @@ extra:
 #  account: "2435442 - ITZ - Satellite"
   account: "2305900 - ITZ - ADHOC03"
   powerVS:
-    serviceInstanceName: "PowerVS-L3-service"
+    serviceInstanceName: "PowerVS-L3-workspace"
     serviceInstanceRG: "PowerVS-L3"
     serviceInstanceLocation: "Dallas"
     placementGroup1: "AffinityGroup"

@@ -7,58 +7,57 @@ Note, fields that require a text entry (e.g. instance name) are pre-populated in
 
 1. Open the link below and then click the play button ![](_attachments/ClickThruPlayButton.png) to begin the demonstration.
 
-    **Click-thru demo:** <a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/InstanceCreate/index.html" target ="_blank">Create an IBM Power Virtual Server Instance</a>
+    **Click-thru demo:** <a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/Provisioning-an-Instance/index.html" target ="_blank">Create an IBM Power Virtual Server Instance</a>
 
-2. Click the **Services and software** link under **Resource summary** on the IBM Cloud Portal dashboard.
-3. Click the **{{powerVS.serviceInstanceName}}** entry under **Services and Software**.
-4. Click the **Create instance+** button.
+2. Click **Virtual server instances** in left-hand menu.
+3. Click the **Create instance+** button.
 
 The next steps refer to the entries in the **General** section of the **Create virtual server instance** form.
 
-5. Click in the **Instance name** text entry field.
-6. Click the **Select VM pinning** pull-down.
-7. Click **Soft**.
-8. Click the **Select SSH key** pull-down.
-9. Click **{{powerVS.sshKey}}**.
-10. Click the **Continue** button under the **General** section.
+4. Click in the **Instance name** text entry field.
+5. Click the **Select virtual server pinning** pull-down.
+6. Click **None**.
+7. Click the **Select SSH key** pull-down.
+8. Click **{{powerVS.sshKey}}**.
+9. Click the **Continue** button under the **General** section.
 
 The next steps refer to the entries in the **Boot image** section of the **Create virtual server instance** form.
 
-11. Click the **Select the OS** pull-down.
-12. Click **Linux**.
-13. Click the **Select an image** pull-down.
-14. Click **RHEL8-SP6**. Note: **RHEL8-SP6** is short for **Red Hat version 8 service pack 6**.
-15. Click the **Select storage tier** pull-down.
-16. Click **Tier 3 (3 IPOs / GB)**.
-17. Click the **Continue** button under the **Boot image** section.
+10. Click the **Select OS** pull-down.
+11. Click **AIX**.
+12. Click the **Select image** pull-down.
+13. Click **7k300-00-01**.
+14. Click the **Select storage tier** pull-down.
+15. Click **Tier 3 (3 IPOs / GB)**.
+16. Click the **Continue** button under the **Boot image** section.
 
 The next steps refer to the entries in the **Profile** section of the **Create virtual server instance** form.
 
-18. Click the **Machine type** pull-down.
-19. Click **s922**.
-20. Click the **Continue** button under the **Profile** section.
+17. Click the **Select machine type** pull-down.
+18. Click **s922**.
+19. Click the **Continue** button under the **Profile** section.
 
 The next steps refer to the entries in the **Storage volumes** section of the **Create virtual server instance** form.
 
-21. Click the **Create volume +** button.
-22. Click in the **Name** text entry field.
-23. Click the **+** icon for the **Number of volumes** field.
-24. Toggle the **Shareable** button to **On**.
-25. Click the **Create and attach** button.
-26. Click the **Continue** button under the **Storage volumes** section.
+20. Click the **Create volume +** button.
+21. Click in the **Name** text entry field.
+22. Click the **Size** text entry field.
+23. Click the **Create and attach** button.
+24. Click the **Continue** button under the **Storage volumes** section.
 
 The next steps refer to the entries in the **Networking** section of the **Create virtual server instance** form.
 
 Note: for this demonstration, the instance will be provisioned using a public network (Internet facing). Using the public network makes demonstrating access to instances easy, but most production deployments of PowerVS will utilize private networks and control access using Direct Link, Virtual Private Network (VPN), or Megaport Software Defined Network (SDN). To learn more about PowerVS networking options, look <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-network-architecture-diagrams" target="_blank"> here</a>.
 
-27. Toggle the **Public networks** button to **On**.
-28. Click the **Finish** button under the **Networking** section.
-29. Click the **I agree to the Terms and Conditions** checkbox.
-30. Click **Create**.
+25. Toggle the **Public networks** button to **On**.
+26. Click the **Attach existing +** button.
+27. Click the **Select Network** pull-down.
+28. Click **powervs-subnet**.
+29. Click **Attach**.
+30. Click the **Finish** button under the **Networking** section.
+31. Click the **I agree to the Terms and Conditions** checkbox.
+32. Click **Create**.
 
 The PowerVS instance is now being provisioned. This process took approximately 45 minutes when creating the TechZone environment. Notice the value under the **Status** column of the **Virtual server instances** table. Once the status changes to an **Active** state, the instance is ready to be accessed.
-
-31. Click the **Refresh** icon ![](_attachments/refreshIcon.png).
-32. Click the **{{rhServer1.name}}** link in the **Virtual server instances** table.
 
 In the next Part of the demonstration script, learn how to use the IBM Cloud Portal to manage PowerVS instances.

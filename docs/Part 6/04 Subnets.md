@@ -15,7 +15,7 @@ A few facts about VPN connections:
   - A maximum of 4 connections can be created per account.
   - A subnet must be created prior to creating a VPN connection.
 
-Additionally, VPN and Cloud Connections cannot use the same subnet concurrently. Separate subnets must be used for the Cloud Connection and VPN if leveraged for the same service or workspace.
+Additionally, VPN and Cloud Connections cannot use the same subnet concurrently. Separate subnets must be used for the Cloud Connection and VPN if leveraged for the same workspace.
 
 In the TechZone environment:
 
