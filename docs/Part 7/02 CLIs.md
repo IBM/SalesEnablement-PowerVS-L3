@@ -36,36 +36,36 @@ ibmcloud pi --help | more
 
 Notice the last part of the message says: **Enter 'ibmcloud pi help [command]' for more information about a command.** Use this to get more help on individual PowerVS plugin commands.
 
-6. List all the PowerVS services provisioned in the account.
+6. List all the PowerVS workspaces provisioned in the account.
 
 ```
-ibmcloud pi service-list
+ibmcloud pi workspaces
 ```
 
 !!! info "Sample output"
     ![](_attachments/service-list.png)
 
-To view the PowerVS instances in the service, the service target must first be set for the PowerVS plugin.
+To view the PowerVS instances in the workspace, the workspace target must first be set for the PowerVS plugin.
 
-7. Set the service target using the instance ID of the service.
+7. Set the workspace target using the instance ID of the workspace.
 
 ```
-serviceID=`ibmcloud pi service-list 2>&1 | tail -1 | cut -f1 -d' '`
+workspaceID=`ibmcloud pi workspaces 2>&1 | tail -1 | cut -f1 -d' '`
 ```
 
 ??? tip "Tip for novice Linux users!"
-    The last command did 4 actions. First, it listed the service list like in step 6 and redirected both the error and standard output to the standard output stream (**2>&1**). This output was then sent to the **tail** command which ignores everything but the last line (**-1**). Then the output from the **tail** command is sent to the **cut** command where all the output except the first field up to to the first space character is ignored (**-f -d' '**). And finally, the output from the **cut** command was stored in an environment variable called **serviceID**. Why did we do this? Because no one wants to type **crn:v1:bluemix:public:power-iaas:us-south:a/ba0e33c9056f470ca19de009747ec654:c8bee9ba-f208-442c-9e10-5633624d633f::** in order to run the next command.
+    The last command did 4 actions. First, it listed the workspace list like in step 6 and redirected both the error and standard output to the standard output stream (**2>&1**). This output was then sent to the **tail** command which ignores everything but the last line (**-1**). Then the output from the **tail** command is sent to the **cut** command where all the output except the first field up to to the first space character is ignored (**-f -d' '**). And finally, the output from the **cut** command was stored in an environment variable called **workspaceID**. Why did we do this? Because no one wants to type **crn:v1:bluemix:public:power-iaas:us-south:a/ba0e33c9056f470ca19de009747ec654:c8bee9ba-f208-442c-9e10-5633624d633f::** in order to run the next command.
 
-8. Use the **$serviceID** environment variable to set the target of future PowerVS plugin commands to the service.
+8. Use the **$workspaceID** environment variable to set the target of future PowerVS plugin commands to the workspace.
 
 ```
-ibmcloud pi service-target $serviceID
+ibmcloud pi service-target $workspaceID
 ```
 
 !!! info "Sample output"
     ![](_attachments/service-target.png)
 
-9. List all the PowerVS instances provisioned in the targeted PowerVS service.
+9. List all the PowerVS instances provisioned in the targeted PowerVS workspace.
 
 ```
 ibmcloud pi instances
