@@ -1039,35 +1039,35 @@
 </ol>
 <p>Notice the last part of the message says: <strong>Enter 'ibmcloud pi help [command]' for more information about a command.</strong> Use this to get more help on individual PowerVS plugin commands.</p>
 <ol start="6">
-<li>List all the PowerVS services provisioned in the account.</li>
+<li>List all the PowerVS workspaces provisioned in the account.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ibmcloud pi service-list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ibmcloud pi workspaces
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Sample output</p>
 <p><img alt="" src="../_attachments/service-list.png"></p>
 </div>
-<p>To view the PowerVS instances in the service, the service target must first be set for the PowerVS plugin.</p>
+<p>To view the PowerVS instances in the workspace, the workspace target must first be set for the PowerVS plugin.</p>
 <ol start="7">
-<li>Set the service target using the instance ID of the service.</li>
+<li>Set the workspace target using the instance ID of the workspace.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>serviceID=`ibmcloud pi service-list 2&gt;&amp;1 | tail -1 | cut -f1 -d' '`
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>workspaceID=`ibmcloud pi workspaces 2&gt;&amp;1 | tail -1 | cut -f1 -d' '`
 </code></pre></div>
 <details class="tip">
 <summary>Tip for novice Linux users!</summary>
-<p>The last command did 4 actions. First, it listed the service list like in step 6 and redirected both the error and standard output to the standard output stream (<strong>2&gt;&amp;1</strong>). This output was then sent to the <strong>tail</strong> command which ignores everything but the last line (<strong>-1</strong>). Then the output from the <strong>tail</strong> command is sent to the <strong>cut</strong> command where all the output except the first field up to to the first space character is ignored (<strong>-f -d' '</strong>). And finally, the output from the <strong>cut</strong> command was stored in an environment variable called <strong>serviceID</strong>. Why did we do this? Because no one wants to type <strong>crn:v1:bluemix:public:power-iaas:us-south:a/ba0e33c9056f470ca19de009747ec654:c8bee9ba-f208-442c-9e10-5633624d633f::</strong> in order to run the next command.</p>
+<p>The last command did 4 actions. First, it listed the workspace list like in step 6 and redirected both the error and standard output to the standard output stream (<strong>2&gt;&amp;1</strong>). This output was then sent to the <strong>tail</strong> command which ignores everything but the last line (<strong>-1</strong>). Then the output from the <strong>tail</strong> command is sent to the <strong>cut</strong> command where all the output except the first field up to to the first space character is ignored (<strong>-f -d' '</strong>). And finally, the output from the <strong>cut</strong> command was stored in an environment variable called <strong>workspaceID</strong>. Why did we do this? Because no one wants to type <strong>crn:v1:bluemix:public:power-iaas:us-south:a/ba0e33c9056f470ca19de009747ec654:c8bee9ba-f208-442c-9e10-5633624d633f::</strong> in order to run the next command.</p>
 </details>
 <ol start="8">
-<li>Use the <strong>$serviceID</strong> environment variable to set the target of future PowerVS plugin commands to the service.</li>
+<li>Use the <strong>$workspaceID</strong> environment variable to set the target of future PowerVS plugin commands to the workspace.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ibmcloud pi service-target $serviceID
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ibmcloud pi service-target $workspaceID
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Sample output</p>
 <p><img alt="" src="../_attachments/service-target.png"></p>
 </div>
 <ol start="9">
-<li>List all the PowerVS instances provisioned in the targeted PowerVS service.</li>
+<li>List all the PowerVS instances provisioned in the targeted PowerVS workspace.</li>
 </ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ibmcloud pi instances
 </code></pre></div>
