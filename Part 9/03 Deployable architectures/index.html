@@ -1,0 +1,1532 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="IBM Power Virtual Server Sales Enablement Level 3 Demonstration Guide">
+      
+      
+        <meta name="author" content="Andrew R. Jones (andrewj@us.ibm.com)">
+      
+      
+      
+        <link rel="prev" href="../02%20Dedicated%20hosts/">
+      
+      
+        <link rel="next" href="../../Part%2010/01%20Next%20steps/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+    
+    
+      
+        <title>Deployable architectures - IBM Power Virtual Server Level 3 Demonstration Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IBM Power Virtual Server Level 3 Demonstration Guide" class="md-header__button md-logo" aria-label="IBM Power Virtual Server Level 3 Demonstration Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IBM Power Virtual Server Level 3 Demonstration Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Deployable architectures
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IBM Power Virtual Server Level 3 Demonstration Guide" class="md-nav__button md-logo" aria-label="IBM Power Virtual Server Level 3 Demonstration Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    IBM Power Virtual Server Level 3 Demonstration Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Part 1 - Overview
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part 1 - Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%201/01%20Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%201/02%20Reserve/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reserve the environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Part 2 - Provisioning a PowerVS workspace
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Part 2 - Provisioning a PowerVS workspace
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%202/01%20Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%202/03%20Clickthru-service/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Click through demonstration of a workspace being provisioned
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Part 3 - Provisioning a PowerVS instance
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Part 3 - Provisioning a PowerVS instance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%203/01%20Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%203/03%20Clickthru-AIXvsi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Click through provisioning demonstration - AIX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%203/04%20Clickthru-Linuxvsi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Click through provisioning demonstration - Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%203/05%20Clickthru-IBMivsi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Click through provisioning demonstration - IBM i
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Part 4 - Managing PowerVS instances
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Part 4 - Managing PowerVS instances
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%204/01%20Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%204/02%20Explore-managing-instances/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing instances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Part 5 - Accessing PowerVS instances
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Part 5 - Accessing PowerVS instances
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%205/01%20Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%205/02%20Access-instance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Access an instance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Part 6 - Explore other PowerVS topics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Part 6 - Explore other PowerVS topics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%206/01%20Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%206/02%20VirtualAppliances/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Virtual appliances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%206/03%20SPPsAndServerPlacementGroups/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shared processor pools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%206/04%20SSHKeys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SSH keys
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%206/05%20BootImages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Boot images
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%206/06%20Networking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%206/07%20StorageVolumes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Storage volumes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%206/08%20EventLogs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Event logs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%206/09%20AdditionalServices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Additional products and services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Part 7 - Use the PowerVS command line interfaces (CLI)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Part 7 - Use the PowerVS command line interfaces (CLI)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%207/01%20Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%207/02%20CLIs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Command line exercises
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Part 8 - Observing PowerVS resources
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Part 8 - Observing PowerVS resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%208/01%20Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%208/02%20IBM%20Cloud%20Monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Cloud Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%208/03%20IBM%20Cloud%20Activity%20Tracker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Activity Tracker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Part 9 - New features
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Part 9 - New features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01%20Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02%20Dedicated%20hosts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dedicated hosts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Deployable architectures
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Part 10 - Next steps
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Part 10 - Next steps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%2010/01%20Next%20steps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Next steps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Deployable architectures</h1>
+
+<div><p>A deployable architecture is cloud automation for deploying a common architectural pattern that combines one or more cloud resources. It is designed to provide simplified deployment by users, scalability, and modularity. A deployable architecture incorporates one or more modules. Deployable architectures are coded in Terraform, which you configure with input variables to achieve a wanted behavior. Learn more about deployable architectures <a href="https://cloud.ibm.com/docs/secure-enterprise?topic=secure-enterprise-understand-module-da" target="_blank">here</a>.</p>
+<p>As of July 2024, IBM Power Virtual Server (PowerVS) has 2 deployable architectures in the IBM Cloud Catalog.</p>
+<ul>
+<li>
+<p><strong>Power Virtual Server with VPC landing zone</strong></p>
+<p>Provisioning Power Virtual Server with Virtual Private Cloud (VPC) landing zone by using deployable architectures provides an automated deployment method to create an isolated PowerVS workspace and connect it with IBM Cloud services and public internet. Network management components like DNS, NTP, proxy servers, and NFS as a Service might be installed. Comparing the provisioning through the projects UI, user interaction is minimized and ready-to-go deployment time of a PowerVS workspace is reduced from days to less than 1 hour. Learn more about this deployable architecture <a href="https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-automation-solution-overview" target="_blank">here</a>.</p>
+</li>
+<li>
+<p><strong>Power Virtual Server for SAP HANA</strong></p>
+<p>SAP solution provisioning on PowerVS using deployable architectures provides an automated deployment method to create a PowerVS landscape with SAP HANA systems. User interaction is minimized and SAP system deployment time is reduced from weeks to days. This deployable architecture is a composition or <strong>stack</strong> of this deployable architecture and the Power Virtual Server with VPC. Learn more about this deployable architecture <a href="https://cloud.ibm.com/docs/sap-powervs?topic=sap-powervs-automation-solution-overview" target="_blank">here</a>.</p>
+</li>
+</ul>
+<p>The click through demonstration that follows steps through the provisioning of the <strong>Power Virtual Server with VPC landing zone</strong> deployable architecture. A brief tour of the environment is also provided in the click through demonstration. The deployed solution is available in the IBM Technology Zone environment that is associated with this demonstration guide. You have view-only access to the PowerVS workspace and the associated virtual private cloud (VPC). </p>
+<p>Several prerequisite steps were completed before provisioning the deployable architecture. These include creating an IBM Cloud application programming key (API) and an IBM Cloud Secrets Manager instance. The API key was also added to the secrets manager instance. In addition, an SSH public and private key pair was created to enable access to the VSI create by the deployable architecture.</p>
+<p>Use the click through demonstration to experience provisioning a deployable architecture for PowerVS.</p>
+<p>Note, fields that require a text entry (for example workspace name) are pre-populated in the click through demonstration.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Not sure where to click or what to do next? Click anywhere on the screen and the next spot to click is highlighted.</p>
+</div>
+<ol>
+<li>
+<p>Open the following link and then click play <img alt="" src="../_attachments/ClickThruPlayButton.png"> to begin the demonstration.</p>
+<p><strong>Click through demo:</strong> <a href="https://ibm.github.io/SalesEnablement-test-repo/includes/Provisioning-a-DeployableArchitecture/index.html" target="_blank">Provision the <strong>Power Virtual Server with VPC landing zone</strong>  Deployable Architecture</a></p>
+</li>
+<li>
+<p>Click <strong>Catalog</strong>.</p>
+</li>
+<li>Select <strong>Deployable architectures</strong> under <strong>Type</strong>.</li>
+<li>Click the <strong>**Power Virtual Server with VPC landing zone</strong> tile.</li>
+<li>Click <strong>See more</strong>.</li>
+<li>
+<p>Click <strong>See less</strong>.</p>
+<p>The Power Virtual Server with VPC landing zone as 'Quickstart' variation of 'Create a new architecture' option deploys VPC services and a Power Virtual Server workspace and interconnects them. It also creates one Power virtual server instance of chosen t-shirt size or custom configuration.</p>
+<p><img alt="" src="../_attachments/DAArchitecture.png"></p>
+</li>
+<li>
+<p>Click <strong>Add to project</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>Name</strong> field.</p>
+<p>IBM Cloud projects are a named collection of configurations that are used to manage related resources and deployments across accounts, embracing an Infrastructure as Code (IaC) approach to deployments. They enable teams to configure, deploy, and monitor deployments by using DevOps best practices. Each project includes tools to scan for potentially harmful resource changes, compliance, security, and cost, tracking configuration versioning, and governance. They are designed with an IaC and a compliance-first approach that helps to ensure that a project is managed, secure, and always compliant. Learn more <a href="https://cloud.ibm.com/docs/secure-enterprise?topic=secure-enterprise-understanding-projects" target="_blank">here</a>.</p>
+</li>
+<li>
+<p>Click the <strong>Description</strong> field.</p>
+</li>
+<li>
+<p>Click the <strong>Region</strong> drop-down.</p>
+<p>Note, the availability of deployable architectures vary by data center based on resource availability. </p>
+</li>
+<li>
+<p>Click <strong>Dallas</strong>.</p>
+</li>
+<li>Click the <strong>Resource group</strong> drop-down.</li>
+<li>Click <strong>Create</strong>.</li>
+</ol>
+<p>The next steps specify required configuration parameters for deploying the resources that are defined by the deployable architecture. In addition to the security and other required parameters, optional parameters can be specified. All these parameters are saved with the project and can be used to consistently deploy the same configuration and to manage drift of deployments.</p>
+<ol start="14">
+<li>
+<p>Click the <strong>method</strong> drop-down in the Authentication section.</p>
+<p>Both <strong>Trusted profiles</strong> and <strong>Secrets Manager</strong> are supported for providing authentication credentials.</p>
+</li>
+<li>
+<p>Click <strong>API key using Secrets Manager</strong>.</p>
+</li>
+<li>Click the <img alt="" src="../_attachments/keyIcon.png"> key icon.</li>
+</ol>
+<p>Note, the recording did not capture properly here. In short, the previously uploaded API key was selected from the secrets manager instance.</p>
+<ol start="17">
+<li>Click the <strong>Required</strong> tab.</li>
+<li>Click the <strong>powervs_zone</strong> drop-down.</li>
+<li>Click <strong>Dallas (dallas)</strong>.</li>
+<li>
+<p>Click the <strong>prefix</strong> field.</p>
+<p>The prefix is used in naming resources created during the automation for the deployable architecture.</p>
+</li>
+<li>
+<p>Click the <strong>tshirt-size</strong> field.</p>
+<p>Recall with this deployable architecture, a PowerVS VSI is provisioned. The configuration of the VSI needs to be specified. In addition, although not shown in this click through, the operating system image for the VSI can be specified in the optional parameters.</p>
+</li>
+<li>
+<p>Click <strong>AIX-XS</strong>.</p>
+</li>
+<li>Click the <img alt="" src="../_attachments/pencilIcon.png"> pencil icon under <strong>ssh_public_key</strong>.</li>
+<li>
+<p>Click the <strong>Edit secure value</strong> field.</p>
+<p>As mentioned earlier, an SSH public and private key pair must be created before starting the deployable architecture. This key pair might also be stored and retrieved from the secrets manager instance.</p>
+</li>
+<li>
+<p>Click <strong>OK</strong>.</p>
+</li>
+<li>Click the <img alt="" src="../_attachments/pencilIcon.png"> pencil icon under <strong>ssh_private_key</strong>.</li>
+<li>Click the <strong>Edit secure value</strong> field.</li>
+<li>Click <strong>OK</strong></li>
+<li>Click the <strong>powervs_resource_group_name</strong> drop-down.</li>
+<li>
+<p>Click <strong>PowerVS-L3</strong></p>
+<p>Note the <strong>external_access-ip</strong> addressed specifies the IP address that can be used to access the PowerVS address. A specific route entry is created in the associated VPC network to allow this connection.</p>
+</li>
+<li>
+<p>Click <strong>Save</strong></p>
+</li>
+<li>
+<p>Click <strong>Validate</strong>.</p>
+<p>This step validates the configuration and parameters that were set. The scan looks for code errors, compliance, issues, and calculates the cost of the deployment. The scan took about 15 minutes to complete.</p>
+</li>
+<li>
+<p>Click the <strong>Add a comment</strong> field.</p>
+</li>
+<li>Click <strong>Approve</strong>.</li>
+<li>
+<p>Click <strong>Deploy</strong>.</p>
+<p>The actual deployment of the architecture takes about 30 minutes to complete. While this is processing, examine the underlying activities.</p>
+</li>
+<li>
+<p>Click the <img alt="" src="../_attachments/plusIcon.png"> plus icon to open a new tab to the IBM Cloud portal.</p>
+</li>
+<li>Click the <img alt="" src="../_attachments/hamburgerMenu.png"> hamburger menu.</li>
+<li>Click <strong>Projects</strong>.</li>
+<li>Click <strong>da-pvs-l3</strong>.</li>
+<li>
+<p>Click the <strong>Configurations</strong> tab.</p>
+<p>Notice the deployment status of the configuration.</p>
+</li>
+<li>
+<p>Click the <img alt="" src="../_attachments/hamburgerMenu.png"> hamburger menu.</p>
+</li>
+<li>Click <strong>Workspaces</strong> in the <strong>Schematics</strong> menu.</li>
+<li>Click <strong>deploy-arch-ibm-pvs-inf-c0aa</strong>.</li>
+<li>
+<p>Click <strong>Expand</strong>.</p>
+<p>The log entries that are shown are all the steps that are processed as part of the deployable architecture. You don't need to read them. Understand the automation is creating and validating all the resources that are defined by the deployable architecture. Including the VPC and associated networks, the VSIs in the VPC, and the PowerVS VSI.</p>
+</li>
+<li>
+<p>Click the <strong>deploy-arch-ibm-pvs-inf-c0as</strong> browser tab.</p>
+<p>Notice the information and options presented. The deployment succeeded. It took 29 minutes to complete.</p>
+</li>
+<li>
+<p>Click the <strong>x</strong> to close the dialog.</p>
+</li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The next steps are specific to the click through demonstration, but they can also be used with an active IBM Technology Zone (ITZ) reservation associated with this demonstration guide. You can proceed with the click through demonstration or switch to the IBM Cloud portal. Make sure you are using the <strong>2305900 - ITZ - ADHOCO3</strong> account.</p>
+</div>
+<ol start="47">
+<li>Click the <img alt="" src="../_attachments/hamburgerMenu.png"> hamburger menu.</li>
+<li>Click <strong>Resource list</strong>.</li>
+<li>
+<p>Click the <strong>da-pvs-l3-us-south-power-workspace</strong> entry under <strong>Compute</strong>.</p>
+<p>Notice that the workspace name has the prefix that was specified during the configuration steps of the deployable architecture. Also, the extra small AIX VSI has been provisioned and is active.</p>
+</li>
+<li>
+<p>Click <strong>Subnets</strong>.</p>
+<p>Notice, like shown in the architecture diagram of the deployable architecture, two subnets are created for the workspace. One for a management network and one for a backup network.</p>
+</li>
+<li>
+<p>Click the <img alt="" src="../_attachments/hamburgerMenu.png"> hamburger menu.</p>
+</li>
+<li>Click <strong>VPC Infrastructure</strong>.</li>
+<li>Click <strong>VPC layout</strong>.</li>
+</ol>
+<p>In the next steps, examine the resources that are associated with each subnet.</p>
+<ol start="54">
+<li>Click <strong>da-pvs-l3-edge-vsi-edge-zone-1</strong>.</li>
+<li>Click <strong>da-pvs-l3-edge-vpn-zone-1</strong>.</li>
+<li>Click <strong>da-pvs-l3-edge-vsi-management-zone-1</strong>.</li>
+<li>Click <strong>da-pvs-l3-edge-vpe-zone-1</strong>.</li>
+<li>
+<p>Click <strong>Virtual server instances</strong>.</p>
+<p>Notice the two VSIs provisioned in the VPC for the deployable architecture.</p>
+</li>
+</ol>
+<p>That concludes the click through demonstration. Remember, you can use your active ITZ reservation to explore the deployed architecture in the PowerVS workspace: <strong>da-pvs-l3-us-south-power-workspace</strong> and the provisioned VPC: <strong>da-pvs-l3-edge-vpc</strong>. </p></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 IBM
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+    
+  </body>
+</html>
