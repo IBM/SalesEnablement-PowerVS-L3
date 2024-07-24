@@ -7,7 +7,7 @@ Note: Access to provision a new workspace is not provided in the IBM Technology 
 
 1. Open the following link and then click the play ![](_attachments/ClickThruPlayButton.png) to begin the demonstration.
 
-    **click through demo:** <a href="https://ibm.github.io/SalesEnablement-test-repo/includes/Provisioning-a-Workspace/index.html" target ="_blank">Create an IBM Power Virtual Server workspace</a>
+    **click through demo:** <a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/Provisioning-a-Workspace/index.html" target ="_blank">Create an IBM Power Virtual Server workspace</a>
 
 2. Click **Catalog** in the top menu bar.
 3. Click the **Search the catalog...** field.

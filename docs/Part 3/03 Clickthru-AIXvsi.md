@@ -11,7 +11,7 @@ Note: Access to provision a new VSI is not provided in the IBM Technology Zone c
 
 1. Open the following link and then click the play ![](_attachments/ClickThruPlayButton.png) to begin the demonstration.
 
-    **Click through demonstration:** <a href="https://ibm.github.io/SalesEnablement-test-repo/includes/Provision-AIXVM/index.html" target ="_blank">Create an IBM Power Virtual Server Instance</a>
+    **Click through demonstration:** <a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/Provision-AIXVM/index.html" target ="_blank">Create an IBM Power Virtual Server Instance</a>
 
 2. Click **{{powerVS.serviceInstanceName}}** in the **Workspaces** table.
 3. Click **View virtual servers**.

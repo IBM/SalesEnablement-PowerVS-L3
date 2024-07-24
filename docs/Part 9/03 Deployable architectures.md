@@ -23,7 +23,7 @@ Note, fields that require a text entry (for example workspace name) are pre-popu
 
 1. Open the following link and then click play ![](_attachments/ClickThruPlayButton.png) to begin the demonstration.
 
-    **Click through demo:** <a href="https://ibm.github.io/SalesEnablement-test-repo/includes/Provisioning-a-DeployableArchitecture/index.html" target ="_blank">Provision the **Power Virtual Server with VPC landing zone**  Deployable Architecture</a>
+    **Click through demo:** <a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/Provisioning-a-DeployableArchitecture/index.html" target ="_blank">Provision the **Power Virtual Server with VPC landing zone**  Deployable Architecture</a>
 
 2. Click **Catalog**.
 3. Select **Deployable architectures** under **Type**.

@@ -14,7 +14,7 @@ Note, fields that require a text entry (for example workspace name) are pre-popu
 
 1. Open the following link and then click play ![](_attachments/ClickThruPlayButton.png) to begin the demonstration.
 
-    **Click through demo:** <a href="https://ibm.github.io/SalesEnablement-test-repo/includes/Provisioning-a-DedicatedHost/index.html" target ="_blank">Provision a Dedicated Host</a>
+    **Click through demo:** <a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/Provisioning-a-DedicatedHost/index.html" target ="_blank">Provision a Dedicated Host</a>
 
 2. Click **Dedicated hosts** in the left menu bar.
 3. Click **Reserve host +**.

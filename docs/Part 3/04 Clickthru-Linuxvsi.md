@@ -11,7 +11,7 @@ Note: Access to provision a new VSI is not provided in the IBM Technology Zone c
 
 1. Open the following link and then click play ![](_attachments/ClickThruPlayButton.png) to begin the demonstration.
 
-    **Click through demo:** <a href="https://ibm.github.io/SalesEnablement-test-repo/includes/Provision-LinuxVM/index.html" target ="_blank">Create a Linux IBM Power Virtual Server Instance</a>
+    **Click through demo:** <a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/Provision-LinuxVM/index.html" target ="_blank">Create a Linux IBM Power Virtual Server Instance</a>
 
 2. Click **{{powerVS.serviceInstanceName}}** in **Workspaces** table.
 3. Click **View virtual servers**.
