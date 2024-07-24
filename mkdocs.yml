@@ -1,11 +1,11 @@
 # Project info
-site_name: IBM Power Systems Virtual Server Level 3 Demonstration Guide
-site_description: IBM Power Systems Virtual Server Sales Enablement Level 3 Demonstration Guide
+site_name: IBM Power Virtual Server Level 3 Demonstration Guide
+site_description: IBM Power Virtual Server Sales Enablement Level 3 Demonstration Guide
 site_author: Andrew R. Jones (andrewj@us.ibm.com)
 copyright: Copyright &copy; 2022 IBM
 
 # Repository
-repo_name: IBM/SalesEnablement-PowerVS-L3
+repo_name: IBM/SalesEnablement-test-repo
 #repo_url: https://github.com/IBM/SalesEnablement-PowerVS-L3
 #edit_uri: edit/master/docs
 docs_dir: docs
@@ -15,14 +15,17 @@ nav:
   - Introduction: 'index.md'
   - Part 1 - Overview:
     - 'Introduction': 'Part 1/01 Introduction.md'
+    - 'Reserve the environment': 'Part 1/02 Reserve.md'
   - Part 2 - Provisioning a PowerVS workspace:
     - 'Introduction': 'Part 2/01 Introduction.md'
-    - 'Watch a service being provisioned': 'Part 2/02 Watch-service.md'
+    # - 'Watch a service being provisioned': 'Part 2/02 Watch-service.md'
     - 'Click through demonstration of a workspace being provisioned': 'Part 2/03 Clickthru-service.md'
   - Part 3 - Provisioning a PowerVS instance:
     - 'Introduction': 'Part 3/01 Introduction.md'
-    - 'Watch a instance being provisioned': 'Part 3/02 Watch-instance.md'
-    - 'Click through demonstration of a service instance being provisioned': 'Part 3/03 Clickthru-instance.md'
+    # - 'Watch a instance being provisioned': 'Part 3/02 Watch-instance.md'
+    - 'Click through provisioning demonstration - AIX': 'Part 3/03 Clickthru-AIXvsi.md'
+    - 'Click through provisioning demonstration - Linux': 'Part 3/04 Clickthru-Linuxvsi.md'
+    - 'Click through provisioning demonstration - IBM i': 'Part 3/05 Clickthru-IBMivsi.md'
   - Part 4 - Managing PowerVS instances:
     - 'Introduction': 'Part 4/01 Introduction.md'
     - 'Managing instances': 'Part 4/02 Explore-managing-instances.md'
@@ -31,15 +34,27 @@ nav:
     - 'Access an instance': 'Part 5/02 Access-instance.md'
   - Part 6 - Explore other PowerVS topics:
     - 'Introduction': 'Part 6/01 Introduction.md'
-    - 'Server placement groups': 'Part 6/02 ServerPlacementGroups.md'
-    - 'Storage volumes, boot volumes, and images': 'Part 6/03 Volumes.md'
-    - 'Subnets, Cloud connections, and VPN connections': 'Part 6/04 Subnets.md'
-    - 'Additional services catalog': 'Part 6/05 AdditionalServices.md'
+    - 'Virtual appliances': 'Part 6/02 VirtualAppliances.md'
+    - 'Shared processor pools': 'Part 6/03 SPPsAndServerPlacementGroups.md'
+    - 'SSH keys': 'Part 6/04 SSHKeys.md'
+    - 'Boot images': 'Part 6/05 BootImages.md'
+    - 'Networking': 'Part 6/06 Networking.md'
+    - 'Storage volumes': 'Part 6/07 StorageVolumes.md'
+    - 'Event logs': 'Part 6/08 EventLogs.md'
+    - 'Additional products and services': 'Part 6/09 AdditionalServices.md'
   - Part 7 - Use the PowerVS command line interfaces (CLI):
     - 'Introduction': 'Part 7/01 Introduction.md'
     - 'Command line exercises': 'Part 7/02 CLIs.md'
-  - Part 8 - Next steps:
-    - 'Next steps': 'Part 8/01 Next steps.md'
+  - Part 8 - Observing PowerVS resources:
+    - 'Introduction': 'Part 8/01 Introduction.md'
+    - 'IBM Cloud Monitoring': 'Part 8/02 IBM Cloud Monitoring.md'
+    - 'IBM Activity Tracker': 'Part 8/03 IBM Cloud Activity Tracker.md'
+  - Part 9 - New features:
+    - 'Introduction': 'Part 9/01 Introduction.md'
+    - 'Dedicated hosts': 'Part 9/02 Dedicated hosts.md'
+    - 'Deployable architectures': 'Part 9/03 Deployable architectures.md'
+  - Part 10 - Next steps:
+    - 'Next steps': 'Part 10/01 Next steps.md'
 
 theme:
   name: material
@@ -76,6 +91,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.keys
   - attr_list
+  - md_in_html
 
 extra:
   generator: false
@@ -84,43 +100,46 @@ extra:
     name: "#cloud-platform-demo-feedback"
     url: "https://ibm-technology-sales.slack.com/archives/C03PQ47KRQE"
   learningplan:
-    name: "IBM Power Systems Virtual Server - Level 3"
+    name: "IBM Power Virtual Server for Technical Sales - Level 3"
     url: "https://yourlearning.ibm.com/activity/PLAN-7D757C8B58E7"
   offering:
-    name: "IBM Power Systems Virtual Server"
+    name: "IBM Power Virtual Server"
   guide:
-    name: "IBM Power Systems Virtual Server - Level 3 Demonstration Guide"
+    name: "IBM Power Virtual Server - Level 3 Demonstration Guide"
     url: "https://ibm.github.io/SalesEnablement-PowerVS-L3/"
   tz_environment:
-    name: "IBM Power Systems Virtual Server - Sales Enablment L3"
+    name: "IBM Power Virtual Server - Sales Enablment L3"
     url: "https://techzone.ibm.com/my/reservations"
-#  account: "2435442 - ITZ - Satellite"
   account: "2305900 - ITZ - ADHOC03"
   powerVS:
-    serviceInstanceName: "PowerVS-L3-workspace"
+    serviceInstanceName: "PowerVS-L3-2024"
     serviceInstanceRG: "PowerVS-L3"
-    serviceInstanceLocation: "Dallas"
-    placementGroup1: "AffinityGroup"
-    placementGroup2: "AntiAffinityGroup"
+    serviceInstanceLocation: "WDC07"
+    placementGroup1: "GroupTogether"
+    placementGroup2: "GroupApart"
     sshKey: "PowerVS-key"
+    privateSubnet: "private-powervs-2024"
+    privateSubnetCIDR: "192.168.100.0/24"
+    privateSubnetGW: "192.168.100.15"
+    privateSubnetDNS: "127.0.0.1"
+    publicSubnet: "public-192_168_222_192-29-VLAN_2056
+"
+    monitoringInstance: "PowerVS-L3-Monitoring"
+    atInstance: "AT-PowerVS-L3"
   aixServer1:
-    name: "AIX-vm-1"
-    privateIP: "192.168.130.110"
-    publicIP: "169.59.159.92"
-    additonalVolumeName: "aix-volume-1"
-  aixServer2:
-    name: "AIX-vm-2"
-    privateIP: "192.168.130.106"
-    publicIP: "169.59.174.14"
-    additonalVolumeName: "aix-volume-2"
-  rhServer1:
-    name: "RH-vm-1"
-    privateIP: "192.168.130.107"
-    publicIP: "169.59.174.12"
-    additonalVolumeName: "rh-volume-1-39907-1"
-    additonalVolumeName2: "rh-volume-1-39907-2"
-  rhServer2:
-    name: "RH-vm-2"
-    privateIP: "192.168.130.108"
-    publicIP: "169.59.174.13"
-    additonalVolumeName: "rh-volume-2"
+    name: "AIX-VM"
+    privateIP: "192.168.100.112"
+    publicIP: "150.239.207.227"
+    additionalVolumeName: "aix-av1"
+  linuxServer1:
+    name: "Linux-VM"
+    privateIP: "192.168.100.173"
+    publicIP: "150.239.207.226"
+    additionalVolumeName: "linux-av1"
+  ibmiServer1:
+    name: "IBMi-VM"
+    privateIP: "192.168.100.157"
+    publicIP: "150.239.207.228"
+    additionalVolumeName: "ibmi-av1"
+
+

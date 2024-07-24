@@ -7,4 +7,4 @@ Included in this video is the creation of the SSH keys to secure initial adminis
 ![type:video](./_videos/Provision-an-Instance-final.mp4)
 
 !!! tip
-    If the video appears blurry, click the fullscreen ![](_attachments/FullScreenVideo.png) or ![](_attachments/FullScreenVideo3.png) icon.
+    If the video appears blurry, click the full screen ![](_attachments/FullScreenVideo.png) or ![](_attachments/FullScreenVideo3.png) icon.

@@ -1,5 +1,5 @@
 # SalesEnablement-PowerVS-L3
-This repository is for IBM Sales Enablement Level 3 content for IBM Power Systems Virtual Server.
+This repository is for IBM Sales Enablement Level 3 content for IBM Power Virtual Server (PowerVS).
 
 **ITZ Collection:** https://techzone.ibm.com/collection/ibm-power-systems-virtual-server-level-3
 
@@ -11,7 +11,7 @@ ITZ account: ITZ - ADHOC03
 
 ## Summary of environment and automation
 
-For this lab, no new IBM Cloud resources are provisioned as part of the ITZ automation The lab consists of many click-thru demonstrations, a pre-provisioned PowerVS workspace and 4 PowerVS VMs. **There appears to be an issue with the ITZ automation when reservations expire or are deleted. Users are remaining in the account and in the security group. The instructions below are provided to clean up "leftover" users.**
+For this lab, no new IBM Cloud resources are provisioned as part of the ITZ automation The lab consists of many click-thru demonstrations, a pre-provisioned PowerVS workspace and 3 PowerVS VMs. **There appears to be an issue with the ITZ automation when reservations expire or are deleted. Users are remaining in the account and in the security group. The instructions below are provided to clean up "leftover" users.**
 
 In the ITZ automation:
 
@@ -44,7 +44,7 @@ Apparently the max MTU PowerVS VSIs is 1476, however this worked for the first y
 
 Verify the following resources are available in the account:
 
-**PowerVS Workspace:** PowerVS-L3-workspace
+**PowerVS Workspace:** PowerVS-L3-2024
 **PowerVS Virtual Machines (VMs):** AIX-vm-1, AIX-vm-2, RH-vm-1, RH-vm-2 (these are all provisioned in the above workspace)
 **Boot images:** RH-golden-boot-image, AIX-golden-boot-image (these are only used as examples for users to view)
 

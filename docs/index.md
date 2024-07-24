@@ -1,28 +1,15 @@
-!!! important "Please read this first"
-    It has come to our attention that the IBM Power Systems Virtual Server (PowerVS) pages in the IBM Cloud portal have been updated with a new look and feel. Work is under way to create new screen captures and update the instructions in this demonstration script, but it will take time. Completion of the demonstration script is still possible, but know the example image captures and videos will not align with the current IBM Cloud portal views. One of the main differences of the renaming of a "service instance" to "workspace".
+Welcome to the **{{learningplan.name}}** course and demonstration guide! The goal is to provide IBM and Business Partner technical sellers with the knowledge and tools to perform hands-on demonstrations of **{{offering.name}}** (PowerVS).
 
-![type:video](./_videos/IBM Power Systems Virtual Server Level 3 - Introduction.mp4)
-!!! tip "Ways to Watch"
-    In addition to the embedded video, IBMers and Business Partners can also <a href="https://ibm.seismic.com/Link/Content/DCGdHJ7DMdqHD8cV7Wp8f4Rg9Bgd" target="_blank">download the recording from Seismic</a>.
+!!! Important "Important information about the demonstration environment!"
+    In this demonstration environment, full access to the IBM Cloud account is NOT provided. User identifications (IDs) are restricted to specific capabilities. Permission to create or modify PowerVS service instances, virtual machines (instances), networks, images, and so on, is **NOT** provided. The demonstration guide includes click through demonstrations to cover these functions.
 
-Welcome to the IBM Power Systems Virtual Server - Level 3 course and demonstration guide! The goal is to provide IBM and Business Partner Sales and Technical Sales with the knowledge and tools to perform hands-on demonstrations of IBM Power Systems Virtual Server (PowerVS).
+The learning material is divided across distinct parts, each with one or more chapters. To complete the {{learningplan.name}} badge requirements, IBM and Business Partner technical sellers must complete each part.
 
-!!! important
-    In this demonstration environment, full access to the IBM Cloud account is NOT provided. User identifications (IDs) will be restricted to specific capabilities. Permission to create or modify PowerVS service instances, virtual machines (instances), networks, images, etc. is not provided. The demonstration guide provides videos and click through demonstrations to cover these functions.
+**Business Partners** must pass an accreditation quiz after completion of the hands-on portion of the course. The quiz consists of multiple-choice questions, with four possible responses (and only one correct answer) for each question.
 
+**IBMers** must develop and record a Stand & Deliver presentation. This recorded video is intended to simulate delivery of a “live” demo in front of a client. IBMers have the flexibility to define a hypothetical client, the challenges the client has, and the goals they aspire to achieve. Specific criteria that must be demonstrated as part of the Stand & Deliver recordings are provided within the documentation that accompanies the Level 3 course. 
 
-The learning material is broken up across distinct chapters. To complete the IBM Power Systems Virtual Server - Level 3 badge requirements, IBM and Business Partner sellers must complete Parts 1, 2, 3, 4, 5, and 8 of this demonstration guide. IBM and Business Partner technical sellers must complete all sections. **All are welcome and encouraged to complete all sections.**
-
-All modules are accompanied by recordings and narrated instructions, delivered by your team of authors. Be sure to watch these for a visual demonstration of how to perform the hands-on lab components. In particular, **it is strongly recommended that IBM Sellers and Technical Sellers watch these recordings** — they will be useful for you as you go about creating and recording your own Stand & Deliver presentations for Level 3 accreditation.
-
-!!! tip "IMPORTANT"
-    To receive Level 3 accreditation, IBMers and Business Partners must demonstrate mastery of the skills learned throughout the various modules of these hands-on labs and coursework. Level 3 accreditation requirements— and the way participants will be evaluated before receiving accreditation —differs depending on job role.
-
-**Business Partners** must pass an accreditation quiz after completing the hands-on portion of the course. The quiz consists of multiple choice questions, with four possible responses (and only one correct answer) for each question.
-
-**IBM Sales and Tech Sales** must develop and record a Stand & Deliver presentation. This video is intended to simulate your delivery of a “live” demo in front of a client — on camera. IBMers will have flexibility in defining a hypothetical client, the pain points that customer has, and the goals they aspire to achieve. The recording will then cover the seller’s hands-on demonstration and pitch to the client of the value of the IBM solution using the environments and techniques of this lab.
-
-Specific criteria that must be demonstrated as part of the Stand & Deliver recordings is provided within the documentation that accompanies the Level 3 course. Before jumping to part 1, please read the guidance below. Reading and understanding the information will save time while completing the steps in this guide.
+The following guidance helps save time in completing the demonstration steps.
 
 ## Support
 
@@ -31,56 +18,56 @@ Think something is down? Check the applicable status pages for current updates:
 -  <a href="https://techzone.status.io/" target="_blank">IBM Technology Zone</a>
 -  <a href="https://cloud.ibm.com/status" target="_blank">IBM Cloud</a>
 
-For issues with provisioning or accessing an environment in IBM Technology Zone (ITZ) open a ticket with ITZ support:
+For issues with provisioning or accessing the environment in IBM Technology Zone (ITZ) open a ticket with ITZ support:
 - Web:  <a href="https://ibmsf.force.com/ibminternalproducts/s/createrecord/NewCase?language=en_US" target="_blank">IBM Technology Zone</a>
-- E-mail: <a href="mailto:techzone.help@ibm.com" target="_blank">techzone.help.ibm.com</a>
+- Email: <a href="mailto:techzone.help@ibm.com" target="_blank">techzone.help.ibm.com</a>
 
 For issues related to specific steps found in the demonstration guide after the ITZ environment is provisioned, contact the authors:
 
 - Slack: <a href="{{supportSlack.url}}" target="_blank">{{supportSlack.name}}</a> - IBM only
-- E-mail: <a href="{{supportEmail}}" target="_blank">{{supportEmail}}</a>
+- Email: <a href="{{supportEmail}}" target="_blank">{{supportEmail}}</a>
 
-Business Partners can also utilize the IBM Training live Chat Support service or other support methods found on the IBM Training portal <a href="https://ibmcpsprod.service-now.com/its?id=sc_category&sys_id=6568bfafdb2f13008ea7d6fa4b961990" target="_blank">here</a>.
+Business Partners can also use the IBM Training live Chat Support service or other support methods that are found on the IBM Training portal <a href="https://ibmcpsprod.service-now.com/its?id=sc_category&sys_id=6568bfafdb2f13008ea7d6fa4b961990" target="_blank">here</a>.
 
 ## Using the demonstration guide
 
-The {{guide.name}} is organized in parts and sub-parts or chapters. Most chapters contain numbered steps, which are actions to be performed.
+The {{guide.name}} is organized in parts and chapters. Most chapters contain numbered steps.
 
 Throughout the guide, images are used as examples of the IBM Cloud Portal, IBM Cloud Shell, and PowerVS instance consoles.
 
-!!! warning
-    The IBM Cloud Portal and {{offering.name}} changes on a regular basis and may differ from the images captured in this guide.
+!!! Warning
+    The IBM Cloud Portal and {{offering.name}} changes regularly and can differ from the images that are captured here.
 
-In some images, the following styles of highlighting are utilized:
+In some images, the following styles of highlighting are used:
 
 - Action highlight box: Illustrates where to click, enter, or select an item:
 
-![](_attachments/ClickActionRectangle.png)
+    ![](_attachments/ClickActionRectangle.png)
 
-- Path/explore highlight box: Illustrates one of two things:
+- Path or "explore more" highlight box illustrates one of two things:
 
     - the path to follow to get to a specific location in the user interface
     - areas to explore
 
-![](_attachments/PathExploreHighlight.png)
+    ![](_attachments/PathExploreHighlight.png)
 
-- Copy to clipboard box: The text is copied to the clipboard. Click the copy icon (highlighted below) and then paste using the operating systems paste function, for example, entering ++ctrl++**+v**, ++cmd++**+v**, or right click and select paste.
+- Copy to the clipboard box: The text is copied to the clipboard. Click the copy icon and then paste with the operating system's paste function. For example, entering ++ctrl++**+v**, ++cmd++**+v**, or right click and select paste.
 
-![](_attachments/Usage-Clipboard.png)
+    ![](_attachments/Usage-Clipboard.png)
 
-Additionally, there are several "click-thru" demonstrations. Links to click-thru demonstrations will open in a new browser window or tab with a screen similar to the image below.
+Also, several "click through" demonstrations are included. Links to click through demonstrations open in a new browser window or tab.
 
 ![](_attachments/ClickThruStartPage.png)
 
-Click the play button ![](_attachments/ClickThruPlayButton.png) in the middle of the screen to start the demo. Then, simply follow the steps in the demonstration guide. If unsure where to click, click anywhere on the screen and a highlight box will appear showing where to click next.
+Click **play** ![](_attachments/ClickThruPlayButton.png) in the middle of the screen to start the demo. Then, follow the steps in the demonstration guide. Not sure where to click or what to do next? Click anywhere on the screen and the spot to click next is highlighted.
 
-Just a reminder, **in this demonstration environment, full access to the IBM Cloud account is NOT provided.** User identifications (IDs) will be restricted to specific capabilities. Permission to create or modify PowerVS service instances, virtual machines (instances), networks, images, etc. is not provided.
+Just a reminder, **in this demonstration environment, full access to the IBM Cloud account is NOT provided.** User identifications (IDs) are restricted to specific capabilities. Permission to create or modify PowerVS service instances, virtual machines (instances), networks, images, and so on, is not provided.
 
-!!! warning
-    Attempting to perform an action without the appropriate permissions will result in an error message like the one below. This is not an issue with the IBM Cloud or PowerVS, rather a restriction of the demo environment and the permissions assigned to users.
+!!! Warning
+    Attempting to perform an action without the appropriate permissions results in an error message like the one that follows. This error is not an issue with IBM Cloud or PowerVS, rather a restriction of the demo environment and the permissions assigned to users.
 
     ![](_attachments/ErrorMessage.png)
-
+    
 ## Acronyms
 
 The following acronyms are used throughout this demonstration guide:
@@ -89,20 +76,20 @@ The following acronyms are used throughout this demonstration guide:
     - Classless inter-domain routing (CIDR)
     - Control (ctrl) - The control key on keyboard
     - Command (cmd) - The command key on keyboard
-    - Disaster Recovery (DR)
+    - Disaster recovery (DR)
     - Gigabyte (GB)
-    - High Availability (HA)
+    - High availability (HA)
     - IBM Cloud Object Storage (COS)
-    - IBM Power Systems Virtual Server (PowerVS)
+    - IBM Power Virtual Server (PowerVS)
     - IBM Technology Zone (TechZone)
     - Infrastructure as a Service (IaaS)
     - Input/output operations per second (IOPs)
-    - Internet Protocol (IP)
-    - Operating System (OS)
+    - Internet protocol (IP)
+    - Operating system (OS)
     - Random access memory (RAM)
     - Reliability, Availability, and Serviceability (RAS)
     - Secure Socket Shell (SSH)
     - User identification (ID)
-    - Virtual Machine (VM)
+    - Virtual machine (VM)
 
 It is now time to proceed to Part 1, an overview of {{offering.name}}.
