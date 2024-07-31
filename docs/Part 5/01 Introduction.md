@@ -22,4 +22,10 @@ Usually, clients deploy PowerVS instances that use a secured network like Direct
 
 - IBM Cloud **VPN** access allows users to manage all servers remotely and securely over the IBM Cloud private network. A VPN connection from a remote location to the private network gives the capability for out-of-band management and server rescue through an encrypted VPN tunnel.
 
-Next, learn how to access a running instance by using secure socket shell (SSH) from the IBM Cloud Shell command-line interface, taking a programmatic approach toward managing PowerVS instances.
+!!! Important 
+
+    Due to upcoming changes in IBM internal security policies, direct public internet access to the PowerVS VSIs associated with this demonstration guide will be removed. 
+    
+    If you feel accessing the VSIs should be required as part of this learning plan, please leave feedback. Note, in order to provide this access when the new security policies go into affect users will need to install a VPN client. IBM employees can post to the <a href="https://ibm-technology-sales.slack.com/archives/C03PQ47KRQE" target="_blank">#cloud-platform-demo-feedback</a> slack channel. Business Partners can send an email to **andrewj@us.ibm.com**.  
+
+<!-- Next, use a click through demonstration to learn how to access a VSI with secure socket shell (SSH) from the IBM Cloud Shell command-line interface. -->

@@ -84,9 +84,13 @@ scp -i PowerVSKey activeReservations.txt root@169.59.174.12:/tmp/
 scp -i PowerVSKey cleanUpUsers.perl root@169.59.174.12:/tmp/
 scp -i PowerVSKey activeReservations.txt root@169.59.174.13:/tmp/
 scp -i PowerVSKey cleanUpUsers.perl root@169.59.174.13:/tmp/
+scp -i PowerVSKey activeReservations.txt root@150.239.207.226:/tmp/
+scp -i PowerVSKey cleanUpUsers.perl root@150.239.207.226:/tmp/
+scp -i PowerVSKey activeReservations.txt root@150.239.207.227:/tmp/
+scp -i PowerVSKey cleanUpUsers.perl root@150.239.207.227:/tmp/
 ```
 
-Next, you need to ssh to each of the 4 VMs and execute the cleanUpUsers.perl script. This is an interactive script that will prompt you if you
+Next, you need to ssh to each of the VMs and execute the cleanUpUsers.perl script. This is an interactive script that will prompt you if you
 want to delete a user that is NOT in the activeReservations.txt file. If you trust the script, you can run it like the second sample below.
 
 ```
