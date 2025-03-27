@@ -79,6 +79,7 @@ plugins:
     - mkdocs-video
     - macros
     - search
+      glightbox
 
 markdown_extensions:
   - sane_lists
