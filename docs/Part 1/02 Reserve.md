@@ -61,7 +61,7 @@ The steps that follow outline how to reserve access to the pre-provisioned, IBM 
 
 10. Review the emails received. One is from **IBM Cloud** with the title **Account: You are invited to join an account in IBM Cloud**. In the body of the email is a **Join Now** link. Click the link and **Accept** the invitation on the IBM Cloud portal.
 
-    If you do not receive an e-mail, try deleting the existing reservation in ITZ and try creating a new one. If that doesn't work, open a [support ticket](../../support.md) and include the reservation ID and summarize the problem in your message.
+    If you do not receive an e-mail, try deleting the existing reservation in ITZ and try creating a new one. If that doesn't work, open a [support ticket](../../../support.md) and include the reservation ID and summarize the problem in your message.
 
     ![](_attachments/ReservationEmail.png)
 
