@@ -1,12 +1,12 @@
 # Project info
 site_name: IBM Power Virtual Server Level 3 Demonstration Guide
 site_description: IBM Power Virtual Server Sales Enablement Level 3 Demonstration Guide
-site_author: Andrew R. Jones (andrewj@us.ibm.com)
-copyright: Copyright &copy; 2022 IBM
+site_author: Andrew R. Jones (andrewj@us.ibm.com), Deepak C Shetty (deepakcshetty@in.ibm.com)
+copyright: Copyright &copy; 2025 IBM
 
 # Repository
-repo_name: IBM/SalesEnablement-test-repo
-#repo_url: https://github.com/IBM/SalesEnablement-PowerVS-L3
+# repo_name: IBM/SalesEnablement-test-repo
+repo_url: https://github.com/IBM/SalesEnablement-PowerVS-L3
 #edit_uri: edit/master/docs
 docs_dir: docs
 
@@ -90,6 +90,26 @@ plugins:
     - macros
     - search
     - glightbox
+    - print-site:
+        add_to_navigation: true
+        print_page_title: 'Print Course'
+        add_print_site_banner: true
+        print_site_banner_template: docs/assets/templates/print_site_banner.tpl
+        # Table of contents
+        add_table_of_contents: true
+        toc_title: 'Table of Contents'
+        toc_depth: 6
+        # Content-related
+        add_full_urls: false
+        enumerate_headings: false
+        enumerate_figures: true
+        add_cover_page: true
+        cover_page_template: ""
+        path_to_pdf: ""
+        include_css: true
+        enabled: true
+        exclude:
+          - helpful-tips.md
 
 markdown_extensions:
   - sane_lists
@@ -123,34 +143,31 @@ extra:
     url: "https://techzone.ibm.com/my/reservations"
   account: "2305900 - ITZ - ADHOC03"
   powerVS:
-    serviceInstanceName: "PowerVS-L3-2024"
+    serviceInstanceName: "PowerVS-L3-2025"
     serviceInstanceRG: "PowerVS-L3"
     serviceInstanceLocation: "WDC07"
     placementGroup1: "GroupTogether"
     placementGroup2: "GroupApart"
     sshKey: "PowerVS-key"
-    privateSubnet: "private-powervs-2024"
+    privateSubnet: "private-powervs-2025"
     privateSubnetCIDR: "192.168.100.0/24"
     privateSubnetGW: "192.168.100.15"
     privateSubnetDNS: "127.0.0.1"
-    publicSubnet: "public-192_168_222_192-29-VLAN_2056
-"
+    publicSubnet: "public-192_168_222_224-29-VLAN_2060"
     monitoringInstance: "PowerVS-L3-Monitoring"
     atInstance: "AT-PowerVS-L3"
   aixServer1:
     name: "AIX-VM"
-    privateIP: "192.168.100.112"
-    publicIP: "150.239.207.227"
+    privateIP: "192.168.100.230"
+    publicIP: "150.239.228.4"
     additionalVolumeName: "aix-av1"
   linuxServer1:
     name: "Linux-VM"
-    privateIP: "192.168.100.173"
-    publicIP: "150.239.207.226"
+    privateIP: "192.168.100.223"
+    publicIP: "150.239.228.2"
     additionalVolumeName: "linux-av1"
   ibmiServer1:
     name: "IBMi-VM"
-    privateIP: "192.168.100.157"
-    publicIP: "150.239.207.228"
+    privateIP: "192.168.100.124"
+    publicIP: "150.239.228.3"
     additionalVolumeName: "ibmi-av1"
-
-
