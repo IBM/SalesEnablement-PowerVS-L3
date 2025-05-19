@@ -4,7 +4,7 @@ Use the click through demonstration to practice provisioning an IBM Power Virtua
 
 1. Open the following link and then click the play ![image](https://github.com/user-attachments/assets/67789db8-fd6d-4d68-a26b-3a1d6c0b7e97) button to begin the demonstration.<br>
 
-    **Click through demo:** <a href="https://dpkshetty.github.io/TEST-SalesEnablement-PowerVS-L3/includes/Provisioning-a-Workspace/index.html" target ="_blank">Create an IBM Power Virtual Server workspace</a><br>
+    **Click through demo:** <a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/Provisioning-a-Workspace/index.html" target ="_blank">Create an IBM Power Virtual Server workspace</a><br>
     
     !!! tip "Tips for maximizing the click through experience"
 
