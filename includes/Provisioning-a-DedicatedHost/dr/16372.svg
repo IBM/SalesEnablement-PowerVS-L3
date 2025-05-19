@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" onmouseup="{ if(window.parent.document.onmouseup) window.parent.document.onmouseup(arguments[0]);}" width="36" viewBox="0 0 36 36" id="S_PlayCircle_18_N_2x" height="36" data-name="S_PlayCircle_18_N@2x"><defs><style>
+      .fill {
+        fill: #707070;
+      }
+
+      
+    </style></defs><path data-cppathid="10000" d="M18,2A16,16,0,1,0,34,18,16,16,0,0,0,18,2Zm8.537,16.86-12.027,7A1,1,0,0,1,14,26H13a1,1,0,0,1-1-1V11a1,1,0,0,1,1-1h1a1,1,0,0,1,.51.14l12.027,7A1,1,0,0,1,26.537,18.86Z" class="fill"/></svg>

@@ -5,8 +5,37 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="x-ua-compatible" content="IE=10">
 <title></title>
-<style type="text/css">#initialLoading{background:url(assets/htmlimages/loader.gif) no-repeat center center;background-color:#ffffff;position:absolute;margin:auto;top:0;left:0;right:0;bottom:0;z-index:10010;}</style>
+<style type="text/css">#initialLoading{background:url(assets/htmlimages/loader.gif) no-repeat center center;background-color:#ffffff;position:absolute;margin:auto;top:0;left:0;right:0;bottom:0;z-index:10010;
+ url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght');
+</style>
+              <style type="text/css">
+ {
+1.	font-family: 'IBM Plex Sans', sans-serif; /* replace with font name */
 
+    src: url(data:application/x-font-woff;charset=utf-8;base64,/*put your base64 encoded file here in place of this comment*/) format('woff');
+
+    font-weight: light; /* replace as applicable */
+
+    font-style: regular; /* replace as applicable */
+
+    font-style: italic; /* replace as applicable */
+
+    font-style: medium; /* replace as applicable */
+
+    font-style: semi-bold; /* replace as applicable */
+}
+    </style>
+    <style type="text/css">
+ {
+font-family: 'IBM+Plex+Mono'; /* replace with font name */
+
+    src: url(data:application/x-font-woff;charset=utf-8;base64,/*put your base64 encoded file here in place of this comment*/) format('woff');
+
+    font-style: regular; /* replace as applicable */
+}
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght" type="text/css" rel="stylesheet"/>
 "
 "
 
@@ -67,7 +96,7 @@ function initializeCP()
 
 	function cpInit()
 	{
-		document.body.innerHTML = " <div class='cpMainContainer' id='cpDocument' style='left: 0px; top:0px;' >	<div id='main_container' style='top:0px;position:absolute;'>	<div id='projectBorder' style='top:0px;left:0px;position:absolute;display:block'></div>	<div class='shadow' id='project_container' style='left: 0px; top:0px;position:absolute;' >	<div id='project' class='cp-movie' style='width:1440px ;height:875px '>		<div id='project_main' class='cp-timeline cp-main'>			<div id='div_Slide' onclick='cp.handleClick(event)' style='top:0px; width:1440px ;height:875px ;position:absolute;-webkit-tap-highlight-color: rgba(0,0,0,0);'></div>			<canvas id='slide_transition_canvas'></canvas>		</div>		<div id='autoplayDiv' style='display:block;text-align:center;position:absolute;left:0px;top:0px;'>			<img id='autoplayImage' src='' style='position:absolute;display:block;vertical-align:middle;'/>			<div id='playImage' tabindex='9999' role='button' aria-label='play' onkeydown='cp.CPPlayButtonHandle(event)' onClick='cp.movie.play()' style='position:absolute;display:block;vertical-align:middle;'></div>		</div>		<div id='cc' style='left:0px; float:left;position:absolute;visibility:hidden;pointer-events:none;' onclick='cp.handleCCClick(event)'>			<div id='ccText' style='left:0px;float:left;position:absolute;width:100%;height:100%;'>			<p style='margin-left:8px;margin-right:8px;margin-top:2px;'>			</p>			</div>			<div id='ccClose' style='background-image:url(./assets/htmlimages/ccClose.png);right:0px; float:right;position:absolute;cursor:pointer;width:13px;height:11px;' onclick='cp.showHideCC()'>			</div>		</div>	</div>	<div id='toc' style='left:0px; float:left;position:absolute;-webkit-tap-highlight-color: rgba(0,0,0,0);'>	</div>	<div id='playbar' style='left:0px; float:left;position:absolute'>	</div>	<div id='gestureIcon' class='gestureIcon'>	</div>	<div id='gestureHint' class='gestureHintDiv'>		<div id='gImage' class='gesturesHint'></div>	</div>	<div id='pwdv' style='display:block;text-align:center;position:absolute;width:100%;height:100%;left:0px;top:0px'></div>	<div id='exdv' style='display:block;text-align:center;position:absolute;width:100%;height:100%;left:0px;top:0px'></div>	</div>	</div></div><div id='blockUserInteraction' class='blocker' style='width:100%;height:100%;'>	<table style='width:100%;height:100%;text-align:center;vertical-align:middle' id='loading' class='loadingBackground'>		<tr style='width:100%;height:100%;text-align:center;vertical-align:middle'>			<td style='width:100%;height:100%;text-align:center;vertical-align:middle'>				<image id='preloaderImage'></image>				<div id='loadingString' class='loadingString'>Loading...</div>			</td>		</tr>	</table></div> <div id='initialLoading'></div>";
+		document.body.innerHTML = " <div class='cpMainContainer' id='cpDocument' style='left: 0px; top:0px;' >	<div id='main_container' style='top:0px;position:absolute;'>	<div id='projectBorder' style='top:0px;left:0px;position:absolute;display:block'></div>	<div class='shadow' id='project_container' style='left: 0px; top:0px;position:absolute;' >	<div id='project' class='cp-movie' style='width:1920px ;height:1020px '>		<div id='project_main' class='cp-timeline cp-main'>			<div id='div_Slide' onclick='cp.handleClick(event)' style='top:0px; width:1920px ;height:1020px ;position:absolute;-webkit-tap-highlight-color: rgba(0,0,0,0);'></div>			<canvas id='slide_transition_canvas'></canvas>		</div>		<div id='autoplayDiv' style='display:block;text-align:center;position:absolute;left:0px;top:0px;'>			<img id='autoplayImage' src='' style='position:absolute;display:block;vertical-align:middle;'/>			<div id='playImage' tabindex='9999' role='button' aria-label='play' onkeydown='cp.CPPlayButtonHandle(event)' onClick='cp.movie.play()' style='position:absolute;display:block;vertical-align:middle;'></div>		</div>		<div id='cc' style='left:0px; float:left;position:absolute;visibility:hidden;pointer-events:none;' onclick='cp.handleCCClick(event)'>			<div id='ccText' style='left:0px;float:left;position:absolute;width:100%;height:100%;'>			<p style='margin-left:8px;margin-right:8px;margin-top:2px;'>			</p>			</div>			<div id='ccClose' style='background-image:url(./assets/htmlimages/ccClose.png);right:0px; float:right;position:absolute;cursor:pointer;width:13px;height:11px;' onclick='cp.showHideCC()'>			</div>		</div>	</div>	<div id='toc' style='left:0px; float:left;position:absolute;-webkit-tap-highlight-color: rgba(0,0,0,0);'>	</div>	<div id='playbar' style='left:0px; float:left;position:absolute'>	</div>	<div id='gestureIcon' class='gestureIcon'>	</div>	<div id='gestureHint' class='gestureHintDiv'>		<div id='gImage' class='gesturesHint'></div>	</div>	<div id='pwdv' style='display:block;text-align:center;position:absolute;width:100%;height:100%;left:0px;top:0px'></div>	<div id='exdv' style='display:block;text-align:center;position:absolute;width:100%;height:100%;left:0px;top:0px'></div>	</div>	</div></div><div id='blockUserInteraction' class='blocker' style='width:100%;height:100%;'>	<table style='width:100%;height:100%;text-align:center;vertical-align:middle' id='loading' class='loadingBackground'>		<tr style='width:100%;height:100%;text-align:center;vertical-align:middle'>			<td style='width:100%;height:100%;text-align:center;vertical-align:middle'>				<image id='preloaderImage'></image>				<div id='loadingString' class='loadingString'>Loading...</div>			</td>		</tr>	</table></div> <div id='initialLoading'></div>";
 		cp.DoCPInit();
 		var lCpExit = window["DoCPExit"];
 		window["DoCPExit"] = function()
@@ -93,6 +122,7 @@ function initializeCP()
 	}
 	
 	cpInit();
+    cp.movie.play();
 	initialized = true;
 	if(isLivePreview() === true)
 	{	
@@ -105,7 +135,10 @@ function initializeCP()
 
  </head>
 <body onload="onBodyLoad()">
-		<div id='initialLoading'></div>
+    <div id='initialLoading'></div>
+    <div id="app" style="width: 100%; height: 100%"></div>
+    <script src='assets/js/project.js' charset="utf-8"></script><script src='dist/main.chunk.js' charset="utf-8"></script><script src='dist/runtime~main.bundle.js' charset="utf-8"></script><script src='dist/vendors~main.chunk.js' charset="utf-8"></script>
+
 <script>
 		(function()
 		{
@@ -146,7 +179,7 @@ function initializeCP()
 							var imagesJSONFiles = [ 'dr/imgmd.json' ];
 							cpXHRJSLoader.loadImagesJSON(imagesJSONFiles,function(imageToJSONPathMap){
 								cp.imageToJSONPathMap = imageToJSONPathMap;
-								var imageJSONFiles = [ 'dr/img1.json' ];
+								var imageJSONFiles = [ 'dr/img1.json','dr/img2.json' ];
 								if(window.location.protocol.substr(0,4) == "file")
 									cpXHRJSLoader.preloadURLs(imageJSONFiles, constructDIVs);
 								lJSLoaded = true;
@@ -162,5 +195,6 @@ function initializeCP()
 		
 </script>
 <noscript style="text-align:center;font-size:24px;">Enable Javascript support in the browser.</noscript>
+    
 </body>
 </html>
