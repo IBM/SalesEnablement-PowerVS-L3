@@ -12,9 +12,13 @@ Note, fields that require a text entry (for example workspace name) are pre-popu
 !!! tip
     Not sure where to click or what to do next? Click anywhere on the screen and the next spot to click is highlighted.
 
-1. Open the following link and then click play ![](_attachments/ClickThruPlayButton.png) to begin the demonstration.
+1. Open the following link and then click play ![image](https://github.com/user-attachments/assets/67789db8-fd6d-4d68-a26b-3a1d6c0b7e97) button to begin the demonstration.
 
-    **Click through demo:** <a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/Provisioning-a-DedicatedHost/index.html" target ="_blank">Provision a Dedicated Host</a>
+    **Click through demo:** <a href="https://dpkshetty.github.io/TEST-SalesEnablement-PowerVS-L3/includes/Provisioning-a-DedicatedHost/index.html" target ="_blank">Provision a Dedicated Host</a>
+
+    !!! tip "Tips for maximizing the click through experience"
+
+        Follow this click through guide to complete the demonstration. In case of uncertainty regarding the next click, clicking anywhere on the screen will prompt a green highlight box to indicate the next clickable area. **For optimal performance, adjust the browser’s zoom percentage to ensure the entire demonstration screen fits within the viewable area.**
 
 2. Click **Dedicated hosts** in the left menu bar.
 3. Click **Reserve host +**.
@@ -32,11 +36,18 @@ Note the ability to share the **Dedicated host group** between workspaces. Selec
 7. Click in the **Host name** field.
 8. Click the **Machine type** pull-down menu.
 
-As of July 2024, PowerVS supports reserving either Power S922 or S1022 servers as dedicated hosts. Availability of dedicated hosts varies by data center. At the time this click through demonstration was created, the data center specified by the workspace only had S922 servers available. 
+As of April 2025, PowerVS supports reserving either Power S922, S1022, E1050 or E1080 servers as dedicated hosts. Availability of dedicated hosts varies by data center. At the time this click through demonstration was created, the data center specified by the workspace only had S922 servers available. 
 
-9. Click **S922 (15 cores | 0.98 TB)**.
+9. Click **S922 (15 cores | 1.02 TB)**.
 10. Click **Finish**.
 11. Click **I agree to the Terms and conditions**.
+12. Click **Create**.
 
-After a host is reserved, users are able to provision virtual server instances by using either the provided standard operating system images or imported custom images. Shared processor pools (SPPs) can also be created in a dedicated host. Learn more about dedicated hosts <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-dedicated-host" target="_blank">here</a>.
+A dedicated host is now being provisioned. This process took approximately 10 minutes.
+
+After a host is reserved, users are able to provision virtual server instances by using either the provided standard operating system images or imported custom images. Shared processor pools (SPPs) can also be created in a dedicated host. 
+
+That concludes the click through demonstration. Remember, you can use your active ITZ reservation to explore the deployed architecture in the PowerVS workspace: **PowerVS-L3-workspace**
+
+Learn more about dedicated hosts <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-dedicated-host" target="_blank">here</a>.
 
