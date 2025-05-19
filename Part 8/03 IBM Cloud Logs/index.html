@@ -9,7 +9,7 @@
         <meta name="description" content="IBM Power Virtual Server Sales Enablement Level 3 Demonstration Guide">
       
       
-        <meta name="author" content="Andrew R. Jones (andrewj@us.ibm.com)">
+        <meta name="author" content="Andrew R. Jones (andrewj@us.ibm.com), Deepak C Shetty (deepakcshetty@in.ibm.com)">
       
       
       
@@ -24,7 +24,7 @@
     
     
       
-        <title>IBM Activity Tracker - IBM Power Virtual Server Level 3 Demonstration Guide</title>
+        <title>IBM Cloud Logs - IBM Power Virtual Server Level 3 Demonstration Guide</title>
       
     
     
@@ -49,6 +49,20 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings2.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings3.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings4.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings5.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings6.css">
+    
+      <link rel="stylesheet" href="../../css/print-site.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-material.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -116,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              IBM Activity Tracker
+              IBM Cloud Logs
             
           </span>
         </div>
@@ -192,6 +206,18 @@
 </div>
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/IBM/SalesEnablement-PowerVS-L3" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -226,6 +252,18 @@
     IBM Power Virtual Server Level 3 Demonstration Guide
   </label>
   
+    <div class="md-nav__source">
+      <a href="https://github.com/IBM/SalesEnablement-PowerVS-L3" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
   <ul class="md-nav__list" data-md-scrollfix>
     
       
@@ -254,6 +292,46 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../pre-req/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prerequisites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../helpful-tips/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Helpful tips
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     
     
     
@@ -262,10 +340,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -276,8 +354,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Part 1 - Overview
           </label>
@@ -346,10 +424,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -360,8 +438,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Part 2 - Provisioning a PowerVS workspace
           </label>
@@ -430,10 +508,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -444,8 +522,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Part 3 - Provisioning a PowerVS instance
           </label>
@@ -556,10 +634,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -570,8 +648,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Part 4 - Managing PowerVS instances
           </label>
@@ -640,10 +718,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -654,8 +732,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Part 5 - Accessing PowerVS instances
           </label>
@@ -724,10 +802,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -738,8 +816,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Part 6 - Explore other PowerVS topics
           </label>
@@ -857,6 +935,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Part%206/05.1%20Virtual%20serial%20numbers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Virtual serial numbers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Part%206/06%20Networking/" class="md-nav__link">
         
   
@@ -955,10 +1054,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -969,8 +1068,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             Part 7 - Use the PowerVS command line interfaces (CLI)
           </label>
@@ -1041,10 +1140,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1055,8 +1154,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_9">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             Part 8 - Observing PowerVS resources
           </label>
@@ -1122,7 +1221,7 @@
         
   
   <span class="md-ellipsis">
-    IBM Activity Tracker
+    IBM Cloud Logs
   </span>
   
 
@@ -1154,10 +1253,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1168,8 +1267,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             Part 9 - New features
           </label>
@@ -1238,6 +1337,111 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%209/04%20PER/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power edge router
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%209/05%20RISE%20with%20SAP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RISE with SAP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%209/06%20IBM%20Cloud%20Security%20and%20Compliance%20Center%20Workload%20Protection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBM Cloud SCC WP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%209/07%20Cobalt%20Iron%20automated%20backup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cobalt Iron automated backup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Part%209/08%20DR%20automation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DR automation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1259,10 +1463,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1273,8 +1477,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
             <span class="md-nav__icon md-icon"></span>
             Part 10 - Next steps
           </label>
@@ -1328,6 +1532,26 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../print_page/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Print Course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1358,61 +1582,59 @@
                 
                   
 
+  
+  
 
-  <h1>IBM Activity Tracker</h1>
 
-<div><p>IBM Cloud Activity Tracker is used to record your IBM Cloud activities and monitor the activity of your IBM Cloud account. This service can be used to investigate abnormal activity and critical actions, and comply with regulatory audit requirements. It can also send an alert when specific activities occur.</p>
-<div class="admonition important">
-<p class="admonition-title">IBM Cloud Activity Tracker is deprecated.</p>
+  <h1>IBM Cloud Logs</h1>
+
+<div><p>IBM Cloud Logs is a scalable logging service that persists logs and provides users with capabilities for querying, tailing, and visualizing logs.</p>
+<p>Logs are comprised of events that are typically human-readable and have different formats, for example, unstructured text, JSON, delimiter-separated values, and key-value pairs. You can use the events to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. IBM Power Virtual Server automatically generates events so that you can track activity on your service.</p>
+<div class="admonition note">
+<p class="admonition-title">IBM Cloud Logs replaces IBM Log Analysis and IBM Cloud Activity Tracker</p>
+<p>As of 30 March 2025 the IBM Log Analysis and IBM Cloud Activity Tracker services are no longer supported. IBM Cloud Logs replaces these two services. For information about IBM Cloud Logs, see the <a href="https://cloud.ibm.com/docs/cloud-logs" target="_blank">IBM Cloud Logs documentation</a>. Also it is important to note that while IBM Cloud Activity Tracker is being deprecated, activity tracker events will be supported in both the new IBM Cloud Logs service and with the existing IBM Cloud Activity Tracker Event Routing service. See <a href="https://cloud.ibm.com/docs/activity-tracker?topic=activity-tracker-deprecation_faq" target="_blank">Deprecation FAQ</a> for more details. You may also refer to <a href="https://community.ibm.com/community/user/cloud/blogs/marisa-lopez-de-silanes/2025/03/03/migrating-your-activity-tracker-instances-to-cloud" target="_blank">this blog</a> for guidance on migrating your Activity Tracker instances to Cloud Logs.</p>
 </div>
-<p>IBM Cloud Activity Tracker will be discontinued on 30 March 2025 and replaced by IBM Cloud Logs. A migration tool will be provided to assist with client transitions to the new service. When IBM Cloud Logs is fully operational, this demonstration guide will be updated.</p>
-<p>For this demonstration guide, an IBM Cloud Activity Tracker instance is already provisioned. This instance tracks activities for the resources that are part of the PowerVS-L3 resource group in the shared cloud account. Your user ID has permission to open and view the IBM Cloud Activity Tracker dashboard. </p>
+<p>For this demonstration guide, an IBM Cloud Logs instance is already provisioned. This instance tracks activities for the resources that are part of the PowerVS-L3 resource group in the shared cloud account. Your user ID has permission to open and view the IBM Cloud Logs dashboard.</p>
 <p>In the steps that follow, learn how to:</p>
 <ul>
-<li>access the IBM Cloud Activity Tracker instance by using the IBM Cloud portal</li>
-<li>open the IBM Cloud Activity Tracker dashboard</li>
-<li>explore activities that are related to the PowerVS resources in this environment</li>
+<li>Access the IBM Cloud Logs instance by using the IBM Cloud portal</li>
+<li>Open the IBM Cloud Logs dashboard</li>
+<li>Explore activities that are related to the PowerVS resources in this environment</li>
 </ul>
-<p>Note, this demonstrate guide does not provide detailed information on provisioning, configuring, and customizing IBM Cloud Activity Tracker, nor does it provide details on the meaning of individual activities.</p>
+<p>Note, this demonstration guide does not provide detailed information on provisioning, configuring, and customizing IBM Cloud Logs, nor does it provide details on the meaning of individual activities.</p>
 <ol>
 <li>
-<p>Click the IBM Cloud portal menu <a class="glightbox" href="../_attachments/hamburgerIcon.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../_attachments/hamburgerIcon.png"></a>, expand the <strong>Observability</strong> menu and click <strong>Activity Tracker</strong>.</p>
-<p><a class="glightbox" href="../_attachments/ActivityTrackerMenu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../_attachments/ActivityTrackerMenu.png"></a></p>
+<p>Click the IBM Cloud portal <strong>hamburger (A)</strong> menu, expand the <strong>Observability (B)</strong> menu and click <strong>Logging (C)</strong>.
+   <a class="glightbox" href="https://github.com/user-attachments/assets/0f610b4e-bd70-45c2-acbf-e94818835d76" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/0f610b4e-bd70-45c2-acbf-e94818835d76"></a> <br>
+<a class="glightbox" href="https://github.com/user-attachments/assets/5e8477dc-44be-4b04-876c-d740f2d2e99b" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/5e8477dc-44be-4b04-876c-d740f2d2e99b"></a></p>
 </li>
 <li>
-<p>Click AT-PowerVS-L3.</p>
-<p><a class="glightbox" href="../_attachments/ATInstances.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../_attachments/ATInstances.png"></a></p>
-<p>Explore the settings for this monitoring instance.</p>
+<p>The Observability page will open. Expand <strong>Logging (A)</strong> menu and click <strong>Instances (B)</strong>.
+   <a class="glightbox" href="https://github.com/user-attachments/assets/8f9d0c9b-3d3c-4cc6-bab6-218dad533d52" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/8f9d0c9b-3d3c-4cc6-bab6-218dad533d52"></a></p>
 </li>
 <li>
-<p>Click <strong>Open dashboard</strong>.</p>
-<p><a class="glightbox" href="../_attachments/ATOpenDashboard.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../_attachments/ATOpenDashboard.png"></a></p>
-<p>The IBM Activity Tracker dashboard opens in a new browser tab or window. You may be asked to reauthenticate to IBM Cloud when the new window is opened.</p>
-<div class="admonition note">
-<p class="admonition-title">Your view looks different?</p>
-<p>The images below were captured at a point in time. Activity Tracker provides a live view of events and displays the most recent events at the bottom of the page.</p>
-</div>
+<p>All the Cloud Logs instances will be displayed. As mentioned earlier, an IBM Cloud Logs instance (<strong>CL-PowerVS-L3 (A)</strong>) already provisioned can be seen here. Click <strong>Dashboard (B)</strong>.
+   <a class="glightbox" href="https://github.com/user-attachments/assets/0c7664b5-ccd7-4b81-ac29-74463d52c76b" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/0c7664b5-ccd7-4b81-ac29-74463d52c76b"></a></p>
 </li>
 <li>
-<p>Adjust the <strong>Timeline</strong> on the right to narrow or expand the events that are viewed.</p>
-<p><a class="glightbox" href="../_attachments/ATDashboard-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../_attachments/ATDashboard-1.png"></a>  </p>
+<p>Cloud Logs dashboard page will open up in a new browser tab or window. Navigate to the new browser tab or window, click <strong>Explore Logs (A)</strong> and select <strong>Logs (B)</strong>.
+   <a class="glightbox" href="https://github.com/user-attachments/assets/b93227a2-2c69-454e-ac6f-e24851ba3b5e" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/b93227a2-2c69-454e-ac6f-e24851ba3b5e"></a></p>
 </li>
 <li>
-<p>Expand an event.</p>
-<p>To expand an event, hover the mouse to the left of an event and click the down arrow when it appears for the event. </p>
-<p>This view provides details about the selected event. This includes information like what the event was (action), who initiated it, and the outcome of the event.</p>
-<p>Explore a few of the different events that exist.</p>
-<p><a class="glightbox" href="../_attachments/ATDashboard-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../_attachments/ATDashboard-2.png"></a></p>
+<p>Configure the filters to view only PowerVS specific logs. To do that, select the checkbox <strong>ibm-audit-event (A)</strong> under Application section, enter <strong><code>power-iaas</code> (B)</strong> in the search box under Subsystem section and click <strong>Select All (C)</strong> to select all the power-iaas checkboxes that appear. These settings narrow the events in the current view to those related to the PowerVS infrastructure resources. IBM Cloud Logs can also filter based on the severity level of the event. For example, informational, debug, warning, errors, and critical events.
+   <a class="glightbox" href="https://github.com/user-attachments/assets/34cb0ec1-0c6e-4580-8327-c3f297e43349" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/34cb0ec1-0c6e-4580-8327-c3f297e43349"></a></p>
 </li>
 <li>
-<p>Click the <strong>Sources</strong> pull-down, select <strong>power-iaas</strong>, and click <strong>Apply</strong>.</p>
-<p>IBM Activity Tracker can filter on specific events, specific time frames, and other attributes.</p>
-<p><a class="glightbox" href="../_attachments/AT-ApplyFilter.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../_attachments/AT-ApplyFilter.png"></a></p>
-<p>This filter narrows the events in the current view to those related to the PowerVS infrastructure resources.</p>
-<p>Activity Tracker can also filter based on the <strong>Level</strong> of the event. For example, informational, debug, warning, errors, and critical events. </p>
+<p>The <strong>search results window (A)</strong> displays PowerVS activity events. If no events are visible, click the <strong>Timeline (B)</strong> option and choose a different timeline, by expanding the time range or selecting an earlier time period, until the events appear.
+   <a class="glightbox" href="https://github.com/user-attachments/assets/9e378210-6c42-46de-a600-abe3425d6dff" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/9e378210-6c42-46de-a600-abe3425d6dff"></a></p>
+</li>
+<li>
+<p><strong>Double-click (A)</strong> anywhere on an event to open it and view the details. The <strong>Text</strong> column provides finer details about the selected event. This includes information like what the event was (action), who initiated it, the outcome of the event and many more. Explore a few of the different events that exist.
+   <a class="glightbox" href="https://github.com/user-attachments/assets/49c77d61-bb59-4390-8662-5fc625a41840" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/49c77d61-bb59-4390-8662-5fc625a41840"></a>
+   <a class="glightbox" href="https://github.com/user-attachments/assets/39cf22bd-ce68-42a1-b194-bb1249b20356" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/39cf22bd-ce68-42a1-b194-bb1249b20356"></a></p>
 </li>
 </ol>
-<p>To see the most recent events, click <strong>Live</strong> at the lower right of the dashboard. Take a few minutes exploring some of the recent activities that have been logged. Learn more about IBM Cloud Activity Tracker <a href="https://cloud.ibm.com/docs/activity-tracker?topic=activity-tracker-about" target="_blank">here</a>.</p></div>
+<p>For a complete list of all IBM Cloud Logs events for IBM Power Virtual Server, visit <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-at-events" target="_blank">this page</a></p></div>
 
 
 
@@ -1442,7 +1664,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2022 IBM
+      Copyright &copy; 2025 IBM
     </div>
   
   
@@ -1462,6 +1684,8 @@
     
     
       <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+        <script src="../../js/print-site.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});

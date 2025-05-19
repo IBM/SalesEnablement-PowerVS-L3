@@ -1,18 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 24 24">
-  <defs>
-    <circle id="assessment-hotspot-visited-b" cx="11" cy="11" r="9"/>
-    <filter id="assessment-hotspot-visited-a" width="144.4%" height="144.4%" x="-22.2%" y="-22.2%" filterUnits="objectBoundingBox">
-      <feMorphology in="SourceAlpha" operator="dilate" radius="1" result="shadowSpreadOuter1"/>
-      <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
-      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="1"/>
-      <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
-      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
-    </filter>
-  </defs>
-  <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
-    <rect width="64" height="64" fill="#FF13DC" fill-rule="nonzero" opacity="0"/>
-    <use fill="#000" filter="url(#assessment-hotspot-visited-a)" xlink:href="#assessment-hotspot-visited-b"/>
-    <circle cx="11" cy="11" r="9.5" fill="#3DA64F" stroke="#90EA42"/>
-    <path fill="#FFF" d="M16.6983932,7.4432308 L10.1603932,15.4862308 C10.0710846,15.5961916 9.93932373,15.6631081 9.79784964,15.6703534 C9.65637555,15.6775987 9.51846802,15.6244927 9.41839323,15.5242308 L5.14639323,11.3342308 C4.95120226,11.1389809 4.95120226,10.8224807 5.14639323,10.6272308 L5.85339323,9.9202308 C6.04864315,9.72503983 6.3651433,9.72503983 6.56039323,9.9202308 L9.66039323,12.9342308 L15.1463932,6.1832308 C15.3201942,5.9709935 15.6325415,5.93842014 15.8463932,6.1102308 L16.6223932,6.7412308 C16.8368603,6.9142991 16.8708517,7.22827312 16.6983932,7.4432308 Z"/>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#24A148;}
+	.st1{fill:none;}
+	.st2{fill:#FFFFFF;}
+</style>
+<path class="st0" d="M24,3C12.4,3,3,12.4,3,24s9.4,21,21,21s21-9.4,21-21S35.6,3,24,3z M21,32.4l-7.5-7.5l2.4-2.4l5.1,5.1l11.1-11.1
+	l2.4,2.4L21,32.4z"/>
+<rect id="_Transparent_Rectangle_" class="st1" width="48" height="48"/>
+<polygon id="inner-path" class="st2" points="21,32.4 13.5,24.9 15.9,22.5 21,27.6 32.1,16.5 34.5,18.9 "/>
 </svg>
