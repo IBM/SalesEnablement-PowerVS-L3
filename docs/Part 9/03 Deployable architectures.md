@@ -1,6 +1,6 @@
 A deployable architecture is cloud automation for deploying a common architectural pattern that combines one or more cloud resources. It is designed to provide simplified deployment by users, scalability, and modularity. A deployable architecture incorporates one or more modules. Deployable architectures are coded in Terraform, which you configure with input variables to achieve a wanted behavior. Learn more about deployable architectures <a href="https://cloud.ibm.com/docs/secure-enterprise?topic=secure-enterprise-understand-module-da" target="_blank">here</a>.
 
-As of July 2024, IBM Power Virtual Server (PowerVS) has 2 deployable architectures in the IBM Cloud Catalog.
+As of April 2025, IBM Power Virtual Server (PowerVS) has 2 deployable architectures in the IBM Cloud Catalog.
 
 - **Power Virtual Server with VPC landing zone**
     
