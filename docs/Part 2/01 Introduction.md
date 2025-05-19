@@ -6,10 +6,13 @@ It is important to understand the difference in terminology between a PowerVS **
 
 The key parameters for a PowerVS workspace are:
 
-- **Data center location**: As of June 2024, PowerVS is colocated with 21 IBM Cloud data centers that are located around the world. Consider choosing the data center that is located nearest to most users that access the PowerVS workloads.
+- **Data center location type and location**: Data center **location type** can be either **IBM data center** (for PowerVS in IBM Cloud case) or **Client location** (for PowerVS private cloud case). For the sake of this demonstration, location type IBM data center applies. As of April 2025, PowerVS is colocated with 22 IBM Cloud data centers that are located around the world. Consider choosing the data center location that is located nearest to most users that access the PowerVS workloads.
 
 - **Workspace name**: The PowerVS workspace name appears in the IBM Cloud Portal under the provisioned workspace. Specify a name that is easily understood and recognized.
 
-- **Resource group**: Resource groups are used to organize resources in an IBM Cloud account. Administrative and access rights for all PowerVS resources are associated with the PowerVS workspace and not individual PowerVS instances (VMs). After a PowerVS workspace is assigned to a resource group, the resource group cannot be changed.
+- **Resource group**: Resource groups are used to organize resources in an IBM Cloud account. Administrative and access rights for all PowerVS resources are associated with the PowerVS workspace and not individual PowerVS instances (VMs). After a PowerVS workspace is assigned to a resource group, the resource group cannot be changed.<br>**Tags** can also be specified in the resource group section. Tags are  custom labels that aid in organization, identification, and management. There are 2 types of tags:
+    * **User tags**: User tags are added to resources or service IDs by an authorized user in the account. Add user tags to your resources to organize, track, and manage costs for related resources. For example, `env:dev`, `env:test` tags can be used to identify different development environments.
+    * **Access management tags**: Access management tags are used to manage access to resources. They can be created in advance for use in access policies, which grant access to the resources where access management tags are attached. For example, `project: lw-wizard`, `app: poc-app` tags can be used to manage access to different projects.
+    * For more information on tags, refer to [this document](https://cloud.ibm.com/docs/account?topic=account-tag&interface=ui){target="_blank"}.
 
-- **Integrations**: Optional integrations are also available from IBM Cloud. As of June 2024, the only integration available is with IBM Cloud Monitoring. IBM Cloud Monitoring allows users to gain visibility into the resources (VSIs) in the workspace.
+- **Integrations**: When creating a Power Virtual Server workspace, several optional integration options are available to enhance connectivity and functionality. In this demonstration we will leverage the integration of PowerVS with IBM Cloud Monitoring. IBM Cloud Monitoring allows users to gain visibility into the resources (VSIs) in the PowerVS workspace.
