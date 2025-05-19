@@ -8,7 +8,7 @@ Use this click through demonstration to provision an IBM i virtual server instan
 
 1. Open the following link and then click the play ![image](https://github.com/user-attachments/assets/67789db8-fd6d-4d68-a26b-3a1d6c0b7e97) button to begin the demonstration.
 
-    **Click through demonstration:** <a href="https://dpkshetty.github.io/TEST-SalesEnablement-PowerVS-L3/includes/Provision-IBMiVM/index.html" target ="_blank">Create an IBM Power Virtual Server Instance - IBM i</a>
+    **Click through demonstration:** <a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/Provision-IBMiVM/index.html" target ="_blank">Create an IBM Power Virtual Server Instance - IBM i</a>
 
     !!! tip "Tips for maximizing the click through experience"
 
