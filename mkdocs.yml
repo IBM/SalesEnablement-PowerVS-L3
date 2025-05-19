@@ -40,6 +40,7 @@ nav:
     - 'Shared processor pools': 'Part 6/03 SPPsAndServerPlacementGroups.md'
     - 'SSH keys': 'Part 6/04 SSHKeys.md'
     - 'Boot images': 'Part 6/05 BootImages.md'
+    - 'Virtual serial numbers': 'Part 6/05.1 Virtual serial numbers.md'
     - 'Networking': 'Part 6/06 Networking.md'
     - 'Storage volumes': 'Part 6/07 StorageVolumes.md'
     - 'Event logs': 'Part 6/08 EventLogs.md'
