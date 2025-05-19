@@ -33,4 +33,4 @@ You can choose to enable or disable notifications for events on all workspaces. 
 
 For more information on event logs and notifications, refer to [this](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-manage-event-logs){target="_blank"} link. 
 
-PowerVS clients can use IBM Cloud Monitoring and IBM Cloud Logs services to monitor and log events that are related to their PowerVS deployments. Learn more about these options in [Part 8 - Observing PowerVS resources](https://dpkshetty.github.io/TEST-SalesEnablement-PowerVS-L3/Part%208/01%20Introduction/){target="_blank"}.
+PowerVS clients can use IBM Cloud Monitoring and IBM Cloud Logs services to monitor and log events that are related to their PowerVS deployments. Learn more about these options in [Part 8 - Observing PowerVS resources](https://ibm.github.io/SalesEnablement-PowerVS-L3/Part%208/01%20Introduction/){target="_blank"}.
