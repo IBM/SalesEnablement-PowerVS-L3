@@ -5,9 +5,9 @@ Welcome to the **{{learningplan.name}}** course and demonstration guide! The goa
 
 The learning material is divided across distinct parts, each with one or more chapters. To complete the {{learningplan.name}} badge requirements, IBM and Business Partner technical sellers must complete each part.
 
-**Business Partners** must pass an accreditation quiz after completion of the hands-on portion of the course. The quiz consists of multiple-choice questions, with four possible responses (and only one correct answer) for each question.
+**Business Partners**  must pass an accreditation quiz after completion of the hands-on portion of the course. The quiz consists of multiple-choice questions, with four possible responses (and only one correct answer) for each question.
 
-**IBMers** must develop and record a Stand & Deliver presentation. This recorded video is intended to simulate delivery of a “live” demo in front of a client. IBMers have the flexibility to define a hypothetical client, the challenges the client has, and the goals they aspire to achieve. Specific criteria that must be demonstrated as part of the Stand & Deliver recordings are provided within the documentation that accompanies the Level 3 course. 
+**IBMers**  must develop and record a Stand & Deliver presentation. This recorded video is intended to simulate delivery of a “live” demo in front of a client. IBMers have the flexibility to define a hypothetical client, the challenges the client has, and the goals they aspire to achieve. Specific criteria that must be demonstrated as part of the Stand & Deliver recordings are provided within the documentation that accompanies the Level 3 course. 
 
 ## Acronyms
 
