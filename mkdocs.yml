@@ -51,7 +51,8 @@ nav:
   - Part 8 - Observing PowerVS resources:
     - 'Introduction': 'Part 8/01 Introduction.md'
     - 'IBM Cloud Monitoring': 'Part 8/02 IBM Cloud Monitoring.md'
-    - 'IBM Activity Tracker': 'Part 8/03 IBM Cloud Activity Tracker.md'
+    #- 'IBM Activity Tracker': 'Part 8/03 IBM Cloud Activity Tracker.md'
+    - 'IBM Cloud Logs': 'Part 8/03 IBM Cloud Logs.md'
   - Part 9 - New features:
     - 'Introduction': 'Part 9/01 Introduction.md'
     - 'Dedicated hosts': 'Part 9/02 Dedicated hosts.md'
