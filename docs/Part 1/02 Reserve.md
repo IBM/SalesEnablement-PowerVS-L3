@@ -59,7 +59,7 @@ The steps that follow outline how to reserve access to the pre-provisioned, IBM 
 
     !!! note "Troubleshooting in case email is not received"
     
-        If you do not receive an e-mail, try deleting the existing reservation in TechZone and try creating a new one. If that doesn't work, open a [support ticket](https://dpkshetty.github.io/TEST-SalesEnablement-PowerVS-L3/support/){target="_blank"} and include the reservation ID and summarize the problem in your message.
+        If you do not receive an e-mail, try deleting the existing reservation in TechZone and try creating a new one. If that doesn't work, open a [support ticket](https://ibm.github.io/SalesEnablement-PowerVS-L3/support/){target="_blank"} and include the reservation ID and summarize the problem in your message.
 
 
 Now that you have an active TechZone reservation, you can proceed. Remember, the default duration of the reservation is 2 days. You can extend the reservation for up to an extra four days. IBMers will need an active reservation to record their stand and deliver, and business partners will want it to complete the short quiz as part of the Level 3 learning plan.
