@@ -1,4 +1,3 @@
-
 IBM Power Systems Virtual Server (PowerVS) provides **command-line interfaces (CLI)** as a plug-in to the IBM Cloud CLI. The PowerVS CLIs provide system administrators the ability to manage their PowerVS environment through command-line and scripting. Usually a seller would not demonstrate this capability unless they were doing so to a technical audience, like system administrators that are responsible for provisioning PowerVS resources.
 
 PowerVS provides application programming interfaces (APIs) to automate these actions within an application. The PowerVS APIs are not covered in this demonstration guide. Learn more about the PowerVS APIs <a href="https://cloud.ibm.com/apidocs/power-cloud" target="_blank">here</a>.
