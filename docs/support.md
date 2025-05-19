@@ -19,3 +19,5 @@ For issues related to specific steps found in the demonstration guide after the 
 
 - Email: deepakcshetty@in.ibm.com
 - Email: andrewj@us.ibm.com
+
+Business Partners can also use the IBM Training live Chat Support service or other support methods that are found on the IBM Training portal <a href="https://ibmcpsprod.service-now.com/its?id=sc_category&sys_id=6568bfafdb2f13008ea7d6fa4b961990" target="_blank">here</a>.
