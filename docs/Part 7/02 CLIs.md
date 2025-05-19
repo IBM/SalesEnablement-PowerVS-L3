@@ -116,7 +116,7 @@ Thus far, all of these commands are **read** commands. The PowerVS CLIs also sup
 
     Notice that the two tables are nearly identical, but differences do exist due to the operating systems used on each VSI.
 
-12. There are numerous reasons why one might want to generate an SSH private key for managing a PowerVS environment. In fact, that's exactly what the service's administrators did to authorize your access to the PowerVS instances. Recall when first connecting to the PowerVS virtual machines remotely through the IBM Cloud Shell using the Secure Socket Shell (SSH) command with the supplied key information, in [Part 5 - Accessing PowerVS instances](https://dpkshetty.github.io/TEST-SalesEnablement-PowerVS-L3/Part%205/02%20Access-instance/){target="_blank"} section.<br>
+12. There are numerous reasons why one might want to generate an SSH private key for managing a PowerVS environment. In fact, that's exactly what the service's administrators did to authorize your access to the PowerVS instances. Recall when first connecting to the PowerVS virtual machines remotely through the IBM Cloud Shell using the Secure Socket Shell (SSH) command with the supplied key information, in [Part 5 - Accessing PowerVS instances](https://ibm.github.io/SalesEnablement-PowerVS-L3/Part%205/02%20Access-instance/){target="_blank"} section.<br>
 
     The IBM Cloud Shell can generate an SSH key that can be used to configure password-less authentication (in other words, allowing users to authenticate without needing to also supply a password). Using IBM Cloud Shell, or any Linux environment, run the following ssh-keygen command:
 
