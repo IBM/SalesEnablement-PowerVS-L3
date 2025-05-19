@@ -23,7 +23,7 @@ Throughout the guide, images are used as examples of the IBM Cloud Portal, IBM C
 ??? tip "Printing the demonstration guide"
 
     Need a physical copy? Looking for a printable version? Want a PDF version?<br>
-    Use the ['Print Course'](https://dpkshetty.github.io/TEST-SalesEnablement-PowerVS-L3/print_page/){target="_blank"} option in the navigation bar to access a print-ready version of the course for offline study.<br>You can use your browser's **File > Print > Save to PDF** option to save the whole course into a single PDF.
+    Use the ['Print Course'](https://ibm.github.io/SalesEnablement-PowerVS-L3/print_page/){target="_blank"} option in the navigation bar to access a print-ready version of the course for offline study.<br>You can use your browser's **File > Print > Save to PDF** option to save the whole course into a single PDF.
  
 
 ??? tip "Viewing images"
