@@ -1,10 +1,5 @@
 **{{offering.name}}** (PowerVS) delivers flexible compute capacity for Power-based workloads. PowerVS is integrated with IBM Cloud for on-demand provisioning. PowerVS provides a secure and scalable server virtualization environment. PowerVS is built upon the advanced reliability, availability, and serviceability (RAS) features and leading performance of the Power platform.
 
-Everyone attempting this Level 3 learning plan is encouraged to first complete the IBM Power Systems Virtual Server Sales Foundation Badge (Level 2). This content is not a replacement for the Level 2 content.
-
-- **IBM:** <a href="https://yourlearning.ibm.com/activity/PLAN-4E64FE2FDBF0" target="_blank">IBM Power Virtual Server Sales Foundation</a>
-- **Business Partners:** <a href="https://learn.ibm.com/course/view.php?id=11419" target="_blank">IBM Power Systems Virtual Server Sales Foundation</a>
-
 This demonstration environment has multiple purposes. First, it is meant to educate technical sellers on (PowerVS) and to hone seller skills to deliver PowerVS demonstrations. Also, the IBM Technology Zone (TechZone) environment, this demonstration guide, and associated click through demos can be re-used for client demonstrations.
 
 The primary goal of this Level 3 is to focus on the Infrastructure as a Service (IaaS) capability of PowerVS and not on the operating systems that are supported: AIX, IBM i, and Linux, nor the Power hardware. 
