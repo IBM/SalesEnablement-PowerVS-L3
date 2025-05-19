@@ -14,7 +14,7 @@ Note, fields that require a text entry (for example workspace name) are pre-popu
 
 1. Open the following link and then click play ![image](https://github.com/user-attachments/assets/67789db8-fd6d-4d68-a26b-3a1d6c0b7e97) button to begin the demonstration.
 
-    **Click through demo:** <a href="https://dpkshetty.github.io/TEST-SalesEnablement-PowerVS-L3/includes/Provisioning-a-DedicatedHost/index.html" target ="_blank">Provision a Dedicated Host</a>
+    **Click through demo:** <a href="https://ibm.github.io/SalesEnablement-PowerVS-L3/includes/Provisioning-a-DedicatedHost/index.html" target ="_blank">Provision a Dedicated Host</a>
 
     !!! tip "Tips for maximizing the click through experience"
 
