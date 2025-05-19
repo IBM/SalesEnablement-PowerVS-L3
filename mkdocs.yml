@@ -13,6 +13,8 @@ docs_dir: docs
 
 nav:
   - Introduction: 'index.md'
+  - Prerequisites: 'pre-req.md'
+  - Helpful tips: 'helpful-tips.md'
   - Part 1 - Overview:
     - 'Introduction': 'Part 1/01 Introduction.md'
     - 'Reserve the environment': 'Part 1/02 Reserve.md'
