@@ -3,13 +3,13 @@ The steps that follow outline how to reserve access to the pre-provisioned, IBM 
 !!! tip "Remember, reserve the demonstration environment in IBM Technology Zone"
     Reserve an IBM Technology Zone environment ahead of time so that the instance has time to provision.
 
-1. Open <a href="https://techzone.ibm.com/collection/ibm-power-virtual-server-level-3" target="_blank">IBM Technology Zone collection for PowerVS L3</a> in browser and click **Complete Learning Activity for IBM Power Virtual Server Level 3 Sales Enablement (A)** as shown.
+1. Open the TechZone hosted [PowerVS L3 demonstration environment](https://techzone.ibm.com/collection/ibm-power-virtual-server-level-3/environments){target="_blank"} in browser and click **Environments (A)**.
 
-    ![image](https://github.com/user-attachments/assets/df474600-78de-4fcb-b040-e66622b3f8ca)
+    ![image](https://github.com/user-attachments/assets/27a5457f-1790-408c-bd4b-cf0725a8ef44)
 
 2. In the **Demonstration Environment** tile, click **Reserve (A)** icon to request for a reservation.
 
-    ![image](https://github.com/user-attachments/assets/966434a3-527e-4c57-b12c-b156454e31d6)
+    ![image](https://github.com/user-attachments/assets/53ceb154-df82-4860-aef0-445899fb9ae2)
 
 3. A new browser tab or window will open with a web form for reserving the L3 environment. Navigate to that tab or window and Select **Reserve Now (A)**.
 
