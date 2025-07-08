@@ -47,7 +47,7 @@ A dedicated host is now being provisioned. This process took approximately 10 mi
 
 After a host is reserved, users are able to provision virtual server instances by using either the provided standard operating system images or imported custom images. Shared processor pools (SPPs) can also be created in a dedicated host. 
 
-That concludes the click through demonstration. Remember, you can use your active ITZ reservation to explore the deployed architecture in the PowerVS workspace: **PowerVS-L3-workspace**
+That concludes the click through demonstration. Remember, you can use your active ITZ reservation to explore the pre-created dedicated host in the PowerVS workspace: **PowerVS-L3-workspace**
 
 Learn more about dedicated hosts <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-dedicated-host" target="_blank">here</a>.
 
